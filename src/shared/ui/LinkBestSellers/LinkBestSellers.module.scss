@@ -1,0 +1,24 @@
+.LinkBestSellers {
+    a {
+        text-decoration: none;
+    }
+}
+
+.wrapper {
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    gap: 4px;
+    display: flex;
+    position: relative;
+
+    span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: #fff;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+}

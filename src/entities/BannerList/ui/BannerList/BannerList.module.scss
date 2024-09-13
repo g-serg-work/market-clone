@@ -1,0 +1,60 @@
+// TODO: via var
+$host: 'https://avatars.mds.yandex.net/get-marketcms';
+$uri: '/1668019/img-008f8728-f6b1-4ff5-88b5-ac966a767575.png/optimize';
+
+.Banner {
+    background: url(#{$host}#{$uri});
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.wrapper {
+    display: block;
+    margin: 0 auto;
+    box-sizing: content-box;
+    padding: 0 8px;
+}
+
+@media (min-width: 1024px) {
+    .wrapper {
+        width: 908px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .wrapper {
+        width: 1068px;
+    }
+}
+
+@media (min-width: 1260px) {
+    .wrapper {
+        width: 1192px;
+    }
+}
+
+.inner {
+    width: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: -16px;
+    margin-right: 0;
+}
+
+.itemsWrapper {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    min-width: 0;
+    padding-left: 16px;
+    padding-right: 0;
+    width: 100%;
+    flex-grow: 0;
+}
+
+.linkWrapper {
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+    display: flex;
+}
