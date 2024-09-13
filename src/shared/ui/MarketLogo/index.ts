@@ -1,0 +1,1 @@
+export { MarketLogo } from './MarketLogo';

@@ -1,0 +1,53 @@
+.BannerTitle {
+    position: relative;
+    background: none;
+    padding-left: 20px;
+    flex-direction: column;
+    display: flex;
+}
+
+.inner {
+    width: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: -16px;
+    margin-right: 0;
+}
+
+.hint {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    min-width: 0;
+    padding-left: 16px;
+    padding-right: 0;
+    flex-grow: 0;
+    width: 100%;
+}
+
+.imgWrapper {
+    display: flex;
+}
+
+.img {
+    max-width: 100%;
+    position: relative;
+
+    span {
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        color: #04b;
+        transition: color 0.12s ease-out;
+        text-decoration: none;
+        touch-action: manipulation;
+        outline: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            object-fit: cover;
+        }
+    }
+}
