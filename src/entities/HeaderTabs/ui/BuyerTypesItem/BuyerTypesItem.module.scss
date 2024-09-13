@@ -1,0 +1,56 @@
+.BuyerTypesItem {
+    text-align: center;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    font: inherit;
+    text-align: left;
+    border: none;
+    outline: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    &.nodeTabAble:focus-visible {
+        outline: 2px solid #fce000;
+    }
+
+    a {
+        font-weight: 400;
+        font-style: normal;
+        font-stretch: normal;
+        text-decoration: none;
+        color: #000;
+        line-height: 48px;
+        display: inline-block;
+        transition: color 0.3s;
+        padding: 0 12px;
+        flex-grow: 1;
+        outline: 0;
+        position: relative;
+
+        &:hover {
+            color: #ec0000;
+        }
+
+        &:focus-visible:after {
+            right: 12px;
+            left: 12px;
+            position: absolute;
+            bottom: 2px;
+            content: '';
+            height: 3px;
+            background: #fce000;
+        }
+
+        span {
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            position: relative;
+            top: -2px;
+        }
+    }
+}

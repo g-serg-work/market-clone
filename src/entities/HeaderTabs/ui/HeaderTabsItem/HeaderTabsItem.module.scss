@@ -1,0 +1,52 @@
+.HeaderTabsItem {
+    text-align: center;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    font: inherit;
+    text-align: left;
+    border: none;
+    outline: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    & :hover {
+        color: #ec0000;
+    }
+
+    a {
+        &:focus-visible:after {
+            position: absolute;
+            right: 0;
+            bottom: 2px;
+            left: 0;
+            content: '';
+            height: 3px;
+            background: #fce000;
+        }
+
+        font-weight: 400;
+        font-style: normal;
+        font-stretch: normal;
+        text-decoration: none;
+        color: #000;
+        line-height: 48px;
+        display: inline-block;
+        transition: color 0.3s;
+        padding: 0 12px;
+        flex-grow: 1;
+        outline: 0;
+        position: relative;
+
+        span {
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            position: relative;
+            top: -2px;
+        }
+    }
+}

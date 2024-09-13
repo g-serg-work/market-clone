@@ -1,0 +1,43 @@
+.FavoriteCategoryItem {
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    text-decoration: none;
+    color: #000;
+    line-height: 48px;
+    display: inline-block;
+    transition: color 0.3s;
+    padding: 0 12px;
+    flex-grow: 1;
+    outline: 0;
+    position: relative;
+    outline: none;
+    outline-offset: 2px;
+    cursor: pointer;
+
+    &:focus-visible {
+        outline: 2px solid #fce000;
+
+        &:after {
+            right: 12px;
+            left: 12px;
+            position: absolute;
+            bottom: 2px;
+            content: '';
+            height: 3px;
+            background: #fce000;
+        }
+    }
+
+    &:hover {
+        color: #ec0000;
+    }
+
+    span {
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        position: relative;
+        top: -2px;
+    }
+}
