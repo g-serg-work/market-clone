@@ -20,6 +20,7 @@ export default {
     core: {
         builder: 'webpack5',
     },
+    staticDirs: [{ from: '../../public', to: '/public' }],
     webpackFinal: async (config: Configuration) => {
         const paths = {
             build: '',

@@ -1,6 +1,9 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { BannerTitle } from './BannerTitle';
-import bannerWebp from '@/shared/assets/tests/banner.webp';
+import { BannerTitle, BannerTitleProps } from './BannerTitle';
+
+const props: BannerTitleProps = {
+    bannerId: 'sale',
+};
 
 export default {
     title: 'shared/BannerTitle',
@@ -15,6 +18,4 @@ const Template: ComponentStory<typeof BannerTitle> = (args) => (
 );
 
 export const Primary = Template.bind({});
-Primary.args = {
-    imgPath: bannerWebp,
-};
+Primary.args = props;

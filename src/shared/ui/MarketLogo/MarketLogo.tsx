@@ -3,7 +3,7 @@ import cls from './MarketLogo.module.scss';
 import MarketSvg from '@/shared/assets/icons/market-logo.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
 
-interface MarketLogoProps {
+export interface MarketLogoProps {
     className?: string;
 }
 

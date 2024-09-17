@@ -1,7 +1,14 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { BannerList } from './BannerList';
-import bannerWebp from '@/shared/assets/tests/banner.webp';
+import { BannerList, BannerListProps } from './BannerList';
 import { CaruselList } from '@/entities/Carusel';
+
+const props: BannerListProps = {
+    banner: {
+        id: 'sale',
+        href: 'about:blank',
+    },
+    carusel: <CaruselList />,
+};
 
 export default {
     title: 'entities/BannerList',
@@ -16,8 +23,4 @@ const Template: ComponentStory<typeof BannerList> = (args) => (
 );
 
 export const Primary = Template.bind({});
-Primary.args = {
-    titleImgPath: bannerWebp,
-    body: <CaruselList />,
-    href: 'about:blank',
-};
+Primary.args = props;

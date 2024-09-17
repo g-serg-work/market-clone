@@ -4,7 +4,7 @@ import cls from './LinkBestSellers.module.scss';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import LinkToSvg from '../../assets/icons/link-to-12-12.svg';
 
-interface LinkBestSellersProps {
+export interface LinkBestSellersProps {
     className?: string;
     href: string;
 }
