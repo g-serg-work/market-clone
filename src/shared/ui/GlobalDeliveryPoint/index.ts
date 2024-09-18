@@ -1,0 +1,1 @@
+export { GlobalDeliveryPoint } from './GlobalDeliveryPoint';
