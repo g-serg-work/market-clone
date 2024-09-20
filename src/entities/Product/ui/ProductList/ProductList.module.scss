@@ -1,0 +1,29 @@
+.ProductList {
+    overflow: hidden;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+
+    ul {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        gap: 12px;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        list-style: none;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+
+        li {
+            width: calc(16.666666666666668% - 10px);
+            min-width: auto;
+            max-width: none;
+            padding-right: 0;
+        }
+    }
+}
