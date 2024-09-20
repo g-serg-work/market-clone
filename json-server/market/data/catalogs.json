@@ -1,0 +1,31 @@
+[
+    {
+        "id": "kids-dep",
+        "title": "Детям",
+        "description": "Товары для детей",
+        "banners": [
+            {
+                "href": "/special/bestsellers",
+                "bgImg": "/1668019/img-008f8728-f6b1-4ff5-88b5-ac966a767575",
+                "headerImg": "/1533751/img-892d9976-75a5-4e8b-a04a-1daa16c2f038",
+                "carusel": [
+                    "naduvnaia-vodnaia-gorka-akula-3",
+                    "koliaska-progulochnaia-vsesezonnaia-fiorano-s-nagruzkoi-do-22-kg-chernyi"
+                ]
+            },
+            {
+                "href": "/special/children-17",
+                "bgImg": "/1534436/img-90f5124f-4cb6-476b-9c11-86c74e619fd6",
+                "headerImg": "/1534436/img-fc396ace-9cf5-4fc6-9c18-b7ce93f97658",
+                "carusel": [
+                    "avtokreslo-junion-dino-gruppa-1-2-3-9-36-kg-kapuchino"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "tovary-dlia-krasoty",
+        "title": "Красота",
+        "description": "Товары для красоты"
+    }
+]
