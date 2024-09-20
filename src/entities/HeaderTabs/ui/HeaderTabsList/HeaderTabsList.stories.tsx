@@ -13,5 +13,5 @@ const Template: ComponentStory<typeof HeaderTabsList> = (args) => (
     <HeaderTabsList {...args} />
 );
 
-export const Normal = Template.bind({});
-Normal.args = {};
+export const Primary = Template.bind({});
+Primary.args = {};

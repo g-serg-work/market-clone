@@ -1,6 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { CategoryList } from './CategoryList';
-import categoryWebp from '@/shared/assets/tests/category-item.webp';
 
 export default {
     title: 'entities/Category/CategoryList',
@@ -14,22 +13,22 @@ const Template: ComponentStory<typeof CategoryList> = (args) => (
     <CategoryList {...args} />
 );
 
-export const Normal = Template.bind({});
-Normal.args = {
+export const Primary = Template.bind({});
+Primary.args = {
     items: [
         {
             id: 'item1',
-            img: categoryWebp,
+            img: '/tests/assets/category-item.webp',
             href: 'about:blank',
         },
         {
             id: 'item2',
-            img: categoryWebp,
+            img: '/tests/assets/category-item.webp',
             href: 'about:blank',
         },
         {
             id: 'item3',
-            img: categoryWebp,
+            img: '/tests/assets/category-item.webp',
             href: 'about:blank',
         },
     ],

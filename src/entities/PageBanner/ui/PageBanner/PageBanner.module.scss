@@ -1,9 +1,4 @@
-// TODO: via var
-$host: 'https://avatars.mds.yandex.net/get-marketcms';
-$uri: '/1668019/img-008f8728-f6b1-4ff5-88b5-ac966a767575.png/optimize';
-
 .Banner {
-    background: url(#{$host}#{$uri});
     background-position: top center;
     background-repeat: no-repeat;
     background-size: 100% 100%;

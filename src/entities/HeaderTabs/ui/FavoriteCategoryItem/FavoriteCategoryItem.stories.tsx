@@ -14,5 +14,5 @@ const Template: ComponentStory<typeof FavoriteCategoryItem> = (args) => (
     <FavoriteCategoryItem {...args} />
 );
 
-export const Normal = Template.bind({});
-Normal.args = {};
+export const Primary = Template.bind({});
+Primary.args = {};

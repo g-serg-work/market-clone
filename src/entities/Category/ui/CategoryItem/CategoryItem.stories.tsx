@@ -1,6 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { CategoryItem } from './CategoryItem';
-import categoryWebp from '@/shared/assets/tests/category-item.webp';
 
 export default {
     title: 'entities/Category/CategoryItem',
@@ -10,12 +9,16 @@ export default {
     },
 } as ComponentMeta<typeof CategoryItem>;
 
-const Template: ComponentStory<typeof CategoryItem> = (args) => (
-    <CategoryItem {...args} />
-);
+const Template: ComponentStory<typeof CategoryItem> = (args) => {
+    return (
+        <div style={{ maxWidth: 500 }}>
+            <CategoryItem {...args} />
+        </div>
+    );
+};
 
-export const Normal = Template.bind({});
-Normal.args = {
-    img: categoryWebp,
+export const Primary = Template.bind({});
+Primary.args = {
+    img: '/tests/assets/category-item.webp',
     href: 'about:blank',
 };

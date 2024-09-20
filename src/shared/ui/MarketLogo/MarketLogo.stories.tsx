@@ -1,7 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { MarketLogo, MarketLogoProps } from './MarketLogo';
-
-const props: MarketLogoProps = {};
+import { MarketLogo } from './MarketLogo';
 
 export default {
     title: 'shared/MarketLogo',
@@ -16,4 +14,4 @@ const Template: ComponentStory<typeof MarketLogo> = (args) => (
 );
 
 export const Primary = Template.bind({});
-Primary.args = props;
+Primary.args = {};

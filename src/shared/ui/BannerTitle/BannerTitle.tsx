@@ -1,32 +1,27 @@
 import { memo } from 'react';
 import cls from './BannerTitle.module.scss';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Banner } from '@/entities/BannerList';
-
-const bannerUrl = (id: string) => `/public/assets/banners/${id}.webp`;
 
 export interface BannerTitleProps {
     className?: string;
-    bannerId: Banner['id'];
+    img: string;
 }
 
 export const BannerTitle = memo((props: BannerTitleProps) => {
-    const { className, bannerId } = props;
-
-    const bannerImg = (
-        <div className={cls.imgWrapper}>
-            <div className={cls.img}>
-                <span>
-                    <img src={bannerUrl(bannerId)} alt="" fetchpriority="low" />
-                </span>
-            </div>
-        </div>
-    );
+    const { className, img } = props;
 
     return (
         <div className={classNames(cls.BannerTitle, {}, [className])}>
             <div className={cls.inner}>
-                <div className={cls.hint}>{bannerImg}</div>
+                <div className={cls.hint}>
+                    <div className={cls.imgWrapper}>
+                        <div className={cls.img}>
+                            <span>
+                                <img src={img} alt="" fetchpriority="low" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );

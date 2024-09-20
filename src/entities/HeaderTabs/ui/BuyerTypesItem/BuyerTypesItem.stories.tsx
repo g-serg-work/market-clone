@@ -15,7 +15,7 @@ const Template: ComponentStory<typeof BuyerTypesItem> = (args) => (
     <BuyerTypesItem {...args} />
 );
 
-export const Normal = Template.bind({});
-Normal.args = {
+export const Primary = Template.bind({});
+Primary.args = {
     route: BuyerTypeRoutes.DLYA_BIZNESA,
 };

@@ -14,7 +14,7 @@ const Template: ComponentStory<typeof HeaderTabsItem> = (args) => (
     <HeaderTabsItem {...args} />
 );
 
-export const Normal = Template.bind({});
-Normal.args = {
+export const Primary = Template.bind({});
+Primary.args = {
     route: HeaderTabRoutes.KIDS_DEP,
 };

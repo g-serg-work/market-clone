@@ -1,10 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import {
-    GlobalDeliveryPoint,
-    GlobalDeliveryPointProps,
-} from './GlobalDeliveryPoint';
-
-const props: GlobalDeliveryPointProps = {};
+import { GlobalDeliveryPoint } from './GlobalDeliveryPoint';
 
 export default {
     title: 'shared/GlobalDeliveryPoint',
@@ -19,4 +14,4 @@ const Template: ComponentStory<typeof GlobalDeliveryPoint> = (args) => (
 );
 
 export const Primary = Template.bind({});
-Primary.args = props;
+Primary.args = {};

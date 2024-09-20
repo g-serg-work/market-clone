@@ -1,7 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { LinkBestSellers, LinkBestSellersProps } from './LinkBestSellers';
-
-const props: LinkBestSellersProps = { href: 'about:blank' };
+import { LinkBestSellers } from './LinkBestSellers';
 
 export default {
     title: 'shared/LinkBestSellers',
@@ -18,4 +16,6 @@ const Template: ComponentStory<typeof LinkBestSellers> = (args) => (
 );
 
 export const Primary = Template.bind({});
-Primary.args = props;
+Primary.args = {
+    href: 'about:blank',
+};
