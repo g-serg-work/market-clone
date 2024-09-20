@@ -1,0 +1,108 @@
+.HeaderDesktop {
+    position: sticky;
+    top: 0;
+    z-index: 1002;
+
+    header {
+        background-color: #454545;
+        position: relative;
+        top: unset;
+        z-index: 950;
+    }
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    height: 76px;
+}
+
+@media (min-width: 1200px) {
+    .itemsWrapper {
+        width: calc(100% - 80px);
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+.itemsWrapper {
+    display: flex;
+    background: #fff;
+    height: 72px;
+    width: 100%;
+    min-width: 1024px;
+    padding: 0 25px;
+    margin: 0 auto;
+    max-width: 1456px;
+}
+
+.logoWrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 32px;
+}
+
+.mainWrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.navigationWrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.searchWrapper {
+    flex: 1;
+    align-items: center;
+    margin-right: 32px;
+    width: 100%;
+    display: flex;
+}
+
+.mainMenuWrapper {
+    display: flex;
+
+    nav {
+        @media screen and (min-width: 1250px) {
+            min-width: 370px;
+        }
+        align-items: center;
+        min-width: 230px;
+        font-size: 14px;
+        color: #222;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        transition: opacity 0.2s;
+        display: flex;
+
+        ul {
+            display: flex;
+            align-items: center;
+
+            li {
+                @media (min-width: 1250px) {
+                    &:not(._26b8j) {
+                        width: 65px;
+                        margin-right: 12px;
+                    }
+                }
+                &:not(._26b8j) {
+                    padding: 0;
+                }
+                display: block;
+
+                &._26b8j {
+                    display: flex;
+                    align-items: center;
+                    min-width: 48px;
+                }
+            }
+        }
+    }
+}
