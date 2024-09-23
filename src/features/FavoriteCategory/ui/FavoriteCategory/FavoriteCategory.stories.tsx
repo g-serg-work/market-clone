@@ -46,8 +46,6 @@ Primary.parameters = {
     ],
 };
 
-// img: 'https://avatars.mds.yandex.net/get-marketcms//1523779/img-8b0db0e4-ed89-4b72-a95c-edea827477c0.png/optimize',
-// href: '/category/detskii-sport',
 export const WithoutFavorite = Template.bind({});
 WithoutFavorite.args = {};
 WithoutFavorite.decorators = [
