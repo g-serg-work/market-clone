@@ -14,8 +14,12 @@
     ],
     "favorite-category": [
         {
-            "id": "1",
-            "category": "detskii-sport"
+            "userId": "1",
+            "categoryId": "detskii-sport"
+        },
+        {
+            "userId": "1",
+            "categoryId": "tovary-dlia-tvorchestva-i-khobbi"
         }
     ]
 }

@@ -8,13 +8,19 @@ const marketDataParse = require('./market/reader.js');
 const cfg = require('./market/cfg.json');
 const loginPost = require('./handler/login');
 const catalogGet = require('./market/handler/catalogGet');
+const favoriteCategoryGet = require('./market/handler/favoriteCategoryGet');
 //
 
 const dir = path.resolve(__dirname, './market/data');
-const marketData = marketDataParse(dir);
+const marketDb = marketDataParse(dir);
+
+const mainDbPath = path.resolve(__dirname, 'db.json');
+const mainDbGetter = () => JSON.parse(fs.readFileSync(mainDbPath, 'UTF-8'));
+
+const handlerCfg = { cfg, mainDbGetter, marketDb };
 
 const server = jsonServer.create();
-const jsonDbRouter = jsonServer.router(path.resolve(__dirname, 'db.json'));
+const jsonDbRouter = jsonServer.router(mainDbPath);
 
 server.use(jsonServer.defaults({}));
 server.use(jsonServer.bodyParser);
@@ -28,8 +34,9 @@ server.use(async (req, res, next) => {
 });
 
 // routes
-server.post('/login', loginPost(path.resolve(__dirname, 'db.json')));
-server.get('/catalogs/:id', catalogGet(cfg, marketData));
+server.post('/login', loginPost(handlerCfg));
+server.get('/catalog/:catalogId', catalogGet(handlerCfg));
+server.get('/favorite-category/:userId', favoriteCategoryGet(handlerCfg));
 
 server.use((req, res, next) => {
     // check authorization user

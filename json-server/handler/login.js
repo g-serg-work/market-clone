@@ -1,11 +1,10 @@
-
-const loginPost = (path) => (req, res) => {
+const loginPost = (handlerCfg) => (req, res) => {
     try {
+        const { mainDbGetter } = handlerCfg;
+
         const { username, password } = req.body;
-        const db = JSON.parse(
-            fs.readFileSync(path, 'UTF-8'),
-        );
-        const { users = [] } = db;
+
+        const { users = [] } = mainDbGetter();
 
         const userFromBd = users.find(
             (user) => user.username === username && user.password === password,
@@ -21,6 +20,6 @@ const loginPost = (path) => (req, res) => {
         console.log(e);
         return res.status(500).json({ message: e.message });
     }
-}
+};
 
 module.exports = loginPost;

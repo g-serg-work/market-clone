@@ -1,11 +1,13 @@
 const parseCatalogBanner = require('../../util/parseCatalogBanner');
 const parseCategory = require('../../util/parseCategory');
 
-const catalogGet = (cfg, db) => (req, res) => {
+const catalogGet = (handlerCfg) => (req, res) => {
     try {
-        const { id: catalogId } = req.params;
+        const { cfg, marketDb } = handlerCfg;
 
-        const catalog = db.catalogs?.find(
+        const { catalogId } = req.params;
+
+        const catalog = marketDb.catalogs.find(
             (catalog) => catalog.id === catalogId,
         );
 
@@ -14,9 +16,9 @@ const catalogGet = (cfg, db) => (req, res) => {
 
         const apply = {
             banners: (catalog.banners || []).map((banner) =>
-                parseCatalogBanner(cfg, banner, db.products),
+                parseCatalogBanner(cfg, banner, marketDb.products),
             ),
-            categories: db.categories
+            categories: marketDb.categories
                 .filter((dbCategory) => dbCategory.catalogId === catalogId)
                 .map((category) => parseCategory(cfg, category))
                 .map(({ catalogId, ...rest }) => rest),
