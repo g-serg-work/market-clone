@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './CaruselItem.module.scss';
 import {
-    scrsetAttributesConfigure,
-    scrsetSizesType,
-} from '@/shared/lib/scrsetAttributes';
+    scrSetAttributesConfigure,
+    scrSetSizesType,
+} from '@/shared/lib/scrSetAttributes';
 
 export interface CaruselItemProps {
     className?: string;
@@ -17,7 +17,7 @@ export interface CaruselItemProps {
 
 const sizes = '160px';
 
-const scrsetSizes: scrsetSizesType = [
+const scrSetSizes: scrSetSizesType = [
     [120, 160],
     [180, 240],
     [240, 320],
@@ -35,7 +35,7 @@ export const CaruselItem = memo((props: CaruselItemProps) => {
 
     const imgAttr = imgTest
         ? { src: imgTest }
-        : scrsetAttributesConfigure(img, scrsetSizes);
+        : scrSetAttributesConfigure(img, scrSetSizes);
 
     return (
         <li className={classNames(cls.CaruselItem, {}, [className])}>

@@ -9,13 +9,11 @@ export default {
     },
 } as ComponentMeta<typeof CaruselItem>;
 
-const Template: ComponentStory<typeof CaruselItem> = (args) => {
-    return (
-        <div style={{ maxWidth: 500 }}>
-            <CaruselItem {...args} />
-        </div>
-    );
-};
+const Template: ComponentStory<typeof CaruselItem> = (args) => (
+    <div style={{ maxWidth: 500 }}>
+        <CaruselItem {...args} />
+    </div>
+);
 
 export const Primary = Template.bind({});
 Primary.args = {

@@ -1,5 +1,7 @@
+export type CategoryId = string;
+
 export interface Category {
-    id: string;
+    id: CategoryId;
     img: string;
     href: string;
 }

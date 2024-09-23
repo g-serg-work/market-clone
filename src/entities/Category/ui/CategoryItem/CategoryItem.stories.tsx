@@ -9,13 +9,11 @@ export default {
     },
 } as ComponentMeta<typeof CategoryItem>;
 
-const Template: ComponentStory<typeof CategoryItem> = (args) => {
-    return (
-        <div style={{ maxWidth: 500 }}>
-            <CategoryItem {...args} />
-        </div>
-    );
-};
+const Template: ComponentStory<typeof CategoryItem> = (args) => (
+    <div style={{ maxWidth: 500 }}>
+        <CategoryItem {...args} />
+    </div>
+);
 
 export const Primary = Template.bind({});
 Primary.args = {
