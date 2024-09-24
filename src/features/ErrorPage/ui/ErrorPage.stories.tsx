@@ -1,9 +1,9 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import { ErrorPage } from './ErrorPage';
+import { StoryWrapper } from '@/shared/config/storybook';
 
 export default {
-    title: 'widgets/ErrorPage',
+    title: 'features/ErrorPage',
     component: ErrorPage,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -11,9 +11,9 @@ export default {
 } as ComponentMeta<typeof ErrorPage>;
 
 const Template: ComponentStory<typeof ErrorPage> = (args) => (
-    <div style={{ maxHeight: 300 }}>
+    <StoryWrapper maxHeight={300}>
         <ErrorPage {...args} />
-    </div>
+    </StoryWrapper>
 );
 
 export const Primary = Template.bind({});

@@ -1,5 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { CategoryItem } from './CategoryItem';
+import { StoryWrapper } from '@/shared/config/storybook';
 
 export default {
     title: 'entities/Category/CategoryItem',
@@ -10,9 +11,9 @@ export default {
 } as ComponentMeta<typeof CategoryItem>;
 
 const Template: ComponentStory<typeof CategoryItem> = (args) => (
-    <div style={{ maxWidth: 500 }}>
+    <StoryWrapper maxWidth={500}>
         <CategoryItem {...args} />
-    </div>
+    </StoryWrapper>
 );
 
 export const Primary = Template.bind({});

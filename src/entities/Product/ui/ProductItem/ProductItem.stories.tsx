@@ -1,5 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ProductItem } from './ProductItem';
+import { StoryWrapper } from '@/shared/config/storybook';
 
 export default {
     title: 'entities/Product/ProductItem',
@@ -10,9 +11,9 @@ export default {
 } as ComponentMeta<typeof ProductItem>;
 
 const Template: ComponentStory<typeof ProductItem> = (args) => (
-    <div style={{ maxWidth: 500 }}>
+    <StoryWrapper maxWidth={500}>
         <ProductItem {...args} />
-    </div>
+    </StoryWrapper>
 );
 
 export const Primary = Template.bind({});

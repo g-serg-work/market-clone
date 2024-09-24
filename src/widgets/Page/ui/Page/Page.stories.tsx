@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Page } from './Page';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+import { StoryWrapper } from '@/shared/config/storybook';
 
 export default {
     title: 'widgets/Page',
@@ -11,9 +12,9 @@ export default {
 } as ComponentMeta<typeof Page>;
 
 const Template: ComponentStory<typeof Page> = (args) => (
-    <div style={{ minHeight: 300 }}>
+    <StoryWrapper minHeight={300}>
         <Page {...args} />
-    </div>
+    </StoryWrapper>
 );
 
 export const Primary = Template.bind({});

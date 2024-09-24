@@ -1,5 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { LinkBestSellers } from './LinkBestSellers';
+import { StoryWrapper } from '@/shared/config/storybook';
 
 export default {
     title: 'shared/LinkBestSellers',
@@ -10,9 +11,9 @@ export default {
 } as ComponentMeta<typeof LinkBestSellers>;
 
 const Template: ComponentStory<typeof LinkBestSellers> = (args) => (
-    <div style={{ backgroundColor: '#b474dd' }}>
+    <StoryWrapper backgroundColor={'#b474dd'}>
         <LinkBestSellers {...args} />
-    </div>
+    </StoryWrapper>
 );
 
 export const Primary = Template.bind({});

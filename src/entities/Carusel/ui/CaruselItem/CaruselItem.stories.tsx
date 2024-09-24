@@ -1,5 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { CaruselItem } from './CaruselItem';
+import { StoryWrapper } from '@/shared/config/storybook';
 
 export default {
     title: 'entities/Carusel/CaruselItem',
@@ -10,9 +11,9 @@ export default {
 } as ComponentMeta<typeof CaruselItem>;
 
 const Template: ComponentStory<typeof CaruselItem> = (args) => (
-    <div style={{ maxWidth: 500 }}>
+    <StoryWrapper maxWidth={500}>
         <CaruselItem {...args} />
-    </div>
+    </StoryWrapper>
 );
 
 export const Primary = Template.bind({});
