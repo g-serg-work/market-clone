@@ -1,5 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { RequireAuthPage } from './RequireAuthPage';
+import { StoreDecorator, RouterDecorator } from '@/shared/config/storybook';
 
 export default {
     title: 'pages/RequireAuthPage',
@@ -7,6 +8,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [StoreDecorator({}), RouterDecorator],
 } as ComponentMeta<typeof RequireAuthPage>;
 
 const Template: ComponentStory<typeof RequireAuthPage> = (args) => (

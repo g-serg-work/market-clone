@@ -1,4 +1,8 @@
 .RequireAuthPage {
+    display: block;
+}
+
+.wrapper {
     align-items: center;
     justify-content: center;
     gap: 18px;
@@ -9,7 +13,7 @@
     position: relative;
 }
 
-.wrapper {
+.info {
     align-items: center;
     gap: 4px;
     flex-direction: column;
