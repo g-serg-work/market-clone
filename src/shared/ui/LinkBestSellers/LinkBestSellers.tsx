@@ -1,8 +1,8 @@
 import { memo } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import cls from './LinkBestSellers.module.scss';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import LinkToSvg from '../../assets/icons/link-to-12-12.svg';
+import Svg from '../../assets/icons/link-to-12-12.svg';
 
 export interface LinkBestSellersProps {
     className?: string;
@@ -13,12 +13,12 @@ export const LinkBestSellers = memo((props: LinkBestSellersProps) => {
     const { className, href } = props;
     return (
         <div className={classNames(cls.LinkBestSellers, {}, [className])}>
-            <NavLink to={href}>
+            <Link to={href}>
                 <div className={cls.wrapper}>
                     <span>Посмотреть всё</span>
-                    <LinkToSvg />
+                    <Svg />
                 </div>
-            </NavLink>
+            </Link>
         </div>
     );
 });

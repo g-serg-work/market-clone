@@ -1,10 +1,12 @@
 import { FetchBaseQueryError } from '@reduxjs/toolkit/query/react';
 import { SerializedError } from '@reduxjs/toolkit';
-import { isFetchBaseQueryErrorType } from '@/shared/lib/isFetchBaseQueryErrorType';
 
 export interface ErrorType {
     error: FetchBaseQueryError | SerializedError | undefined;
 }
+
+const isFetchBaseQueryErrorType = (error: any): error is FetchBaseQueryError =>
+    'status' in error;
 
 const ApiError = ({ error }: ErrorType) => {
     const msg = isFetchBaseQueryErrorType(error) ? error?.status : 'unknown';

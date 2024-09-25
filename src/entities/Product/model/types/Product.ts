@@ -1,6 +1,9 @@
+export type ProductId = string;
+
 export interface Product {
-    id: string;
+    id: ProductId;
     title: string;
     href: string;
     img: string;
+    imgTest?: string;
 }

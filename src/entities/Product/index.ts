@@ -1,2 +1,2 @@
 export { ProductList } from './ui/ProductList/ProductList';
-export type { Product } from './model/types/Product'
+export type { Product, ProductId } from './model/types/Product';
