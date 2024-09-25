@@ -1,0 +1,17 @@
+{
+    "i18next.i18nPaths": "r:/projects/market-clone/src/shared/config/i18n",
+    "cSpell.words": [
+        "carusel",
+        "deepmerge",
+        "headlessui",
+        "inited",
+        "languagedetector",
+        "LOCALSTORAGE",
+        "pmmmwh",
+        "reduxjs",
+        "stylelint",
+        "svgr",
+        "testid",
+        "webp"
+    ]
+}
