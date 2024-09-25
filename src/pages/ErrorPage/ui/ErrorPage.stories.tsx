@@ -3,7 +3,7 @@ import { ErrorPage } from './ErrorPage';
 import { StoryWrapper } from '@/shared/config/storybook';
 
 export default {
-    title: 'features/ErrorPage',
+    title: 'pages/ErrorPage',
     component: ErrorPage,
     argTypes: {
         backgroundColor: { control: 'color' },
