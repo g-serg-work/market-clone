@@ -2,7 +2,7 @@ import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ProductItem } from '../ProductItem/ProductItem';
 import cls from './ProductList.module.scss';
-import { Product } from '../../model/types/Product';
+import { Product } from '../../model/types/product';
 
 export interface ProductListProps {
     className?: string;
