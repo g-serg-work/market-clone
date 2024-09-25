@@ -13,5 +13,6 @@
         "svgr",
         "testid",
         "webp"
-    ]
+    ],
+    "cSpell.ignorePaths": ["json-server/db.json", "json-server/market/data/**"]
 }

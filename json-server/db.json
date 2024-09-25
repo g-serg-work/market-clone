@@ -9,7 +9,8 @@
     "profile": [
         {
             "id": "1",
-            "username": "admin"
+            "username": "admin",
+            "theme": "light"
         }
     ],
     "favorite-category": [
