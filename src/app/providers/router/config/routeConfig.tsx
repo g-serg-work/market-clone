@@ -3,7 +3,6 @@ import { NotFoundPage } from '@/pages/NotFoundPage';
 import {
     AppRoutes,
     getRouteMain,
-    getRouteProduct,
     getRouteCatalog,
     getRouteOrders,
 } from '@/shared/const/router';
