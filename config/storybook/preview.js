@@ -1,7 +1,7 @@
 import { addDecorator } from '@storybook/react';
-import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator/StyleDecorator';
-import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { SuspenseDecorator } from '../../src/shared/config/storybook/SuspenseDecorator/SuspenseDecorator';
+import { StyleDecorator } from '../../src/shared/config/storybook';
+import { ThemeDecorator } from '../../src/shared/config/storybook';
+import { SuspenseDecorator } from '../../src/shared/config/storybook';
 import { Theme } from '../../src/shared/const/theme';
 
 export const parameters = {

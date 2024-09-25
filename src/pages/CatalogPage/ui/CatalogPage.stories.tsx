@@ -1,7 +1,9 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import CatalogPage from './CatalogPage';
-import { StoreDecorator } from '@/shared/config/storybook';
-import { MemoryRouterDecorator } from '@/shared/config/storybook/MemoryRouterDecorator/MemoryRouterDecorator';
+import {
+    MemoryRouterDecorator,
+    StoreDecorator,
+} from '@/shared/config/storybook';
 import { getRouteCatalog } from '@/shared/const/router';
 import { routeConfig } from '@/app/providers/router/config/routeConfig';
 
@@ -30,7 +32,7 @@ Normal.decorators = [
 Normal.parameters = {
     mockData: [
         {
-            url: `${__API__}/catalog/catalog1`,
+            url: __API__ + getRouteCatalog('catalog1'),
             method: 'GET',
             status: 200,
             response: {
