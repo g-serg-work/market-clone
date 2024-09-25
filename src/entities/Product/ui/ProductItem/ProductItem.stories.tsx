@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ProductItem } from './ProductItem';
-import { StoryWrapper } from '@/shared/config/storybook';
+import { RouterDecorator, StoryWrapper } from '@/shared/config/storybook';
 
 export default {
     title: 'entities/Product/ProductItem',
@@ -8,6 +8,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [RouterDecorator],
 } as ComponentMeta<typeof ProductItem>;
 
 const Template: ComponentStory<typeof ProductItem> = (args) => (

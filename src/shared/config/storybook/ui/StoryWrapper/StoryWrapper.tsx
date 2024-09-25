@@ -10,6 +10,10 @@ export interface StoryWrapperProps {
     backgroundColor?: string;
 }
 
+/**
+ * TODO: replace on WrapperDecorator(style) and use in decorators: []
+ * @deprecated
+ */
 export const StoryWrapper = memo((props: StoryWrapperProps) => {
     const {
         children,

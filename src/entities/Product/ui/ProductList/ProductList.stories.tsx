@@ -1,5 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ProductList, ProductListProps } from './ProductList';
+import { ProductList } from './ProductList';
+import { RouterDecorator } from '@/shared/config/storybook';
 
 export default {
     title: 'entities/Product/ProductList',
@@ -7,6 +8,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [RouterDecorator],
 } as ComponentMeta<typeof ProductList>;
 
 const Template: ComponentStory<typeof ProductList> = (args) => (

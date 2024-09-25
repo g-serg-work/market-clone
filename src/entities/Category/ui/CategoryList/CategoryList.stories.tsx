@@ -1,5 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { CategoryList } from './CategoryList';
+import { RouterDecorator } from '@/shared/config/storybook';
 
 export default {
     title: 'entities/Category/CategoryList',
@@ -7,6 +8,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [RouterDecorator],
 } as ComponentMeta<typeof CategoryList>;
 
 const Template: ComponentStory<typeof CategoryList> = (args) => (

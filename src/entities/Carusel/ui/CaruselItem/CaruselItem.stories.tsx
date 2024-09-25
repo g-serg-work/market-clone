@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { CaruselItem } from './CaruselItem';
-import { StoryWrapper } from '@/shared/config/storybook';
+import { RouterDecorator, StoryWrapper } from '@/shared/config/storybook';
 
 export default {
     title: 'entities/Carusel/CaruselItem',
@@ -8,6 +8,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [RouterDecorator],
 } as ComponentMeta<typeof CaruselItem>;
 
 const Template: ComponentStory<typeof CaruselItem> = (args) => (

@@ -1,5 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { PageBanner } from './PageBanner';
+import { RouterDecorator } from '@/shared/config/storybook';
 
 export default {
     title: 'entities/PageBanner',
@@ -7,6 +8,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [RouterDecorator],
 } as ComponentMeta<typeof PageBanner>;
 
 const Template: ComponentStory<typeof PageBanner> = (args) => (

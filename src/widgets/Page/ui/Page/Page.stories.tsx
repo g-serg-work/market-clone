@@ -1,6 +1,10 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Page } from './Page';
-import { StoreDecorator, StoryWrapper } from '@/shared/config/storybook';
+import {
+    RouterDecorator,
+    StoreDecorator,
+    StoryWrapper,
+} from '@/shared/config/storybook';
 
 export default {
     title: 'widgets/Page',
@@ -8,6 +12,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [StoreDecorator({}), RouterDecorator],
 } as ComponentMeta<typeof Page>;
 
 const Template: ComponentStory<typeof Page> = (args) => (
@@ -18,4 +23,3 @@ const Template: ComponentStory<typeof Page> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {};
-Primary.decorators = [StoreDecorator({})];

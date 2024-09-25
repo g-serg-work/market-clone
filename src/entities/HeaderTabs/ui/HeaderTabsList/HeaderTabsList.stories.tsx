@@ -1,5 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { HeaderTabsList } from './HeaderTabsList';
+import { RouterDecorator } from '@/shared/config/storybook';
 
 export default {
     title: 'entities/HeaderTabs/HeaderTabsList',
@@ -7,6 +8,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [RouterDecorator],
 } as ComponentMeta<typeof HeaderTabsList>;
 
 const Template: ComponentStory<typeof HeaderTabsList> = (args) => (

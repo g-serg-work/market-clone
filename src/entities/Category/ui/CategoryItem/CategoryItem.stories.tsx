@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { CategoryItem } from './CategoryItem';
-import { StoryWrapper } from '@/shared/config/storybook';
+import { RouterDecorator, StoryWrapper } from '@/shared/config/storybook';
 
 export default {
     title: 'entities/Category/CategoryItem',
@@ -8,6 +8,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [RouterDecorator],
 } as ComponentMeta<typeof CategoryItem>;
 
 const Template: ComponentStory<typeof CategoryItem> = (args) => (
