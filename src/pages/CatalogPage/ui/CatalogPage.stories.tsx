@@ -19,17 +19,17 @@ const Template: ComponentStory<typeof CatalogPage> = (args) => (
     <CatalogPage {...args} />
 );
 
-export const Normal = Template.bind({});
-Normal.args = {};
+export const Primary = Template.bind({});
+Primary.args = {};
 
-Normal.decorators = [
+Primary.decorators = [
     StoreDecorator({}),
     MemoryRouterDecorator(
         getRouteCatalog('catalog1'),
         routeConfig.catalog.path as string,
     ),
 ];
-Normal.parameters = {
+Primary.parameters = {
     mockData: [
         {
             url: __API__ + getRouteCatalog('catalog1'),

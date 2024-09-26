@@ -51,14 +51,14 @@ WithoutFavorite.args = {};
 WithoutFavorite.decorators = [
     StoreDecorator({
         user: {
-            authData: { id: '1' },
+            authData: { id: '2' },
         },
     }),
 ];
 WithoutFavorite.parameters = {
     mockData: [
         {
-            url: `${__API__}/favorite-category/1`,
+            url: `${__API__}/favorite-category/2`,
             method: 'GET',
             status: 200,
             response: [],
