@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import classNames from '@/shared/lib/classNames';
 import cls from './TitleWithBreadcrumbs.module.scss';
 
 export interface TitleWithBreadcrumbsProps {

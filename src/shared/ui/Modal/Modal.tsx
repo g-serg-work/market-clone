@@ -1,10 +1,9 @@
 import { MouseEvent, ReactNode, useCallback } from 'react';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
-import { useModal } from '@/shared/lib/hooks/useModal/useModal';
-import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 import cls from './Modal.module.scss';
 import { Portal } from '../Portal';
 import { ModalTabIndexInitial } from './ModalTabIndexInitial';
+import { useModal, useTheme } from '@/shared/lib/hooks';
 
 export interface ModalProps {
     className: string;

@@ -1,5 +1,5 @@
 import { memo, ReactNode } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import classNames from '@/shared/lib/classNames';
 
 export interface StoryWrapperProps {
     children: ReactNode;

@@ -1,5 +1,5 @@
 import { CSSProperties, memo, ReactNode } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import classNames from '@/shared/lib/classNames';
 import { BannerTitle } from '@/shared/ui/BannerTitle';
 import { LinkBestSellers } from '@/shared/ui/LinkBestSellers';
 import cls from './PageBanner.module.scss';

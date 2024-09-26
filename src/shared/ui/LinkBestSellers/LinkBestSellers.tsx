@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import cls from './LinkBestSellers.module.scss';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import classNames from '@/shared/lib/classNames';
 import Svg from '../../assets/icons/link-to-12-12.svg';
 
 export interface LinkBestSellersProps {

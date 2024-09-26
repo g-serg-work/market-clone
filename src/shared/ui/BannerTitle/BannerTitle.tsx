@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import cls from './BannerTitle.module.scss';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import classNames from '@/shared/lib/classNames';
 
 export interface BannerTitleProps {
     className?: string;

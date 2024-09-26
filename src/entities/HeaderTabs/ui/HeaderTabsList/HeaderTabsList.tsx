@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import classNames from '@/shared/lib/classNames';
 import cls from './HeaderTabsList.module.scss';
 import { GlobalDeliveryPoint } from '@/shared/ui/GlobalDeliveryPoint';
 import { useHeaderItems } from './useHeaderItems';

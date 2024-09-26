@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import cls from './GlobalDeliveryPoint.module.scss';
 import DeliveryPointSvg from '@/shared/assets/icons/delivery-point-20-20.svg';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import classNames from '@/shared/lib/classNames';
 
 export interface GlobalDeliveryPointProps {
     className?: string;

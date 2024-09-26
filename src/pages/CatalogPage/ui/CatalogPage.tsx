@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import classNames from '@/shared/lib/classNames';
 import cls from './CatalogPage.module.scss';
 import { Page } from '@/widgets/Page';
 import { PageBanner } from '@/entities/PageBanner';

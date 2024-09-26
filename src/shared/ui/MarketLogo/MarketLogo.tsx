@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import cls from './MarketLogo.module.scss';
 import MarketSvg from '@/shared/assets/icons/market-logo.svg';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import classNames from '@/shared/lib/classNames';
 
 export interface MarketLogoProps {
     className?: string;

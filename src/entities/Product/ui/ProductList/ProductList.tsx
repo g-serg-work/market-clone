@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import classNames from '@/shared/lib/classNames';
 import { ProductItem } from '../ProductItem/ProductItem';
 import cls from './ProductList.module.scss';
 import { Product } from '../../model/types/product';

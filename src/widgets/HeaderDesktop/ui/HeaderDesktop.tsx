@@ -2,7 +2,7 @@ import { memo, useCallback, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { getUserAuthData } from '@/entities/User';
 import { MarketLogo } from '@/shared/ui/MarketLogo';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import classNames from '@/shared/lib/classNames';
 import cls from './HeaderDesktop.module.scss';
 import { Modal } from '@/shared/ui/Modal';
 
