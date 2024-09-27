@@ -5,7 +5,7 @@ import classNames from '@/shared/lib/classNames';
 import { getUserAuthData } from '@/entities/User';
 import cls from './FavoriteCategory.module.scss';
 import { ApiError } from '@/shared/ui/ApiError';
-import { FavoriteCategoryLoader } from './FavoriteCategoryLoader';
+import { FavoriteCategoryLoader } from '../FavoriteCategoryLoader/FavoriteCategoryLoader';
 
 export interface FavoriteCategoryProps {
     className?: string;

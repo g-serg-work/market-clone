@@ -4,7 +4,7 @@ import FavoriteCategory from './FavoriteCategory';
 import { StoreDecorator } from '@/shared/config/storybook';
 
 export default {
-    title: 'features/FavoriteCategory',
+    title: 'features/FavoriteCategory/FavoriteCategory',
     component: FavoriteCategory,
     argTypes: {
         backgroundColor: { control: 'color' },
