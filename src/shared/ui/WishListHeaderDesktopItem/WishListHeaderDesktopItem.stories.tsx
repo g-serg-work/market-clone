@@ -1,5 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { WishListHeaderDesktopItem } from './WishListHeaderDesktopItem';
+import { RouterDecorator } from '@/shared/config/storybook';
 
 export default {
     title: 'shared/WishListHeaderDesktopItem',
@@ -7,6 +8,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [RouterDecorator],
 } as ComponentMeta<typeof WishListHeaderDesktopItem>;
 
 const Template: ComponentStory<typeof WishListHeaderDesktopItem> = (args) => (
@@ -15,3 +17,8 @@ const Template: ComponentStory<typeof WishListHeaderDesktopItem> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {};
+
+export const WithCount = Template.bind({});
+WithCount.args = {
+    count: 3,
+};

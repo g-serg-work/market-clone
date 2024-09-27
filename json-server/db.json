@@ -10,7 +10,12 @@
         {
             "id": "1",
             "username": "admin",
-            "theme": "light"
+            "theme": "light",
+            "hasNotification": true,
+            "wishList": [
+                "naduvnaia-vodnaia-gorka-akula-3",
+                "koliaska-progulochnaia-vsesezonnaia-fiorano-s-nagruzkoi-do-22-kg-chernyi"
+            ]
         }
     ],
     "favorite-category": [

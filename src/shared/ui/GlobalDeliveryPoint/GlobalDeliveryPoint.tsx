@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import cls from './GlobalDeliveryPoint.module.scss';
-import DeliveryPointSvg from '@/shared/assets/icons/delivery-point-20-20.svg';
+import Svg from '@/shared/assets/icons/delivery-point-20-20.svg';
 import classNames from '@/shared/lib/classNames';
 
 export interface GlobalDeliveryPointProps {
@@ -18,7 +18,7 @@ export const GlobalDeliveryPoint = memo((props: GlobalDeliveryPointProps) => {
                 onClick={onSelectPoint}
             >
                 <div className={cls.button}>
-                    <DeliveryPointSvg />
+                    <Svg />
                     <div className={cls.title}>
                         <div>
                             <span>Дом</span>

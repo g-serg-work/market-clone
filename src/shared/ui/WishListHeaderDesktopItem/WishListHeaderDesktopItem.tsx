@@ -1,17 +1,44 @@
 import { memo } from 'react';
+import { Link } from 'react-router-dom';
 import classNames from '@/shared/lib/classNames';
 import cls from './WishListHeaderDesktopItem.module.scss';
+import Svg from '../../assets/icons/wish-list.svg';
 
 export interface WishListHeaderDesktopItemProps {
     className?: string;
+    count?: number;
 }
 
-export const WishListHeaderDesktopItem = memo((props: WishListHeaderDesktopItemProps) => {
-    const { className } = props;
+export const WishListHeaderDesktopItem = memo(
+    (props: WishListHeaderDesktopItemProps) => {
+        const { className, count } = props;
 
-    return (
-        <div className={classNames(cls.WishListHeaderDesktopItem, {}, [className])}>
-            Избранное
-        </div>
-    );
-});
+        return (
+            <div
+                className={classNames(cls.WishListHeaderDesktopItem, {}, [
+                    className,
+                ])}
+            >
+                <Link className={cls.link} to="/my/wishlist" rel="nofollow">
+                    <div data-baobab-name="favorites">
+                        <div className={cls.svgWrapper} aria-hidden="true">
+                            <span className={cls.count}>{count}</span>
+                            <div className={cls.icon}>
+                                <Svg title="Избранное" />
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        className={cls.titleWrapper}
+                        role="alert"
+                        aria-live="polite"
+                        aria-atomic="true"
+                    >
+                        Избранное
+                        <span className="ds-visuallyHidden">{count}</span>
+                    </div>
+                </Link>
+            </div>
+        );
+    },
+);

@@ -6,6 +6,8 @@ import { CartHeaderDesktopItem } from '@/shared/ui/CartHeaderDesktopItem';
 import { OrdersHeaderDesktopItem } from '@/shared/ui/OrdersHeaderDesktopItem';
 import { WishListHeaderDesktopItem } from '@/shared/ui/WishListHeaderDesktopItem';
 import { PlusHeaderDesktopItem } from '@/shared/ui/PlusHeaderDesktopItem';
+import { getUserAuthData } from '@/entities/User';
+import { useSelector } from 'react-redux';
 
 export interface HeaderDesktopMenuProps {
     className?: string;
@@ -14,12 +16,17 @@ export interface HeaderDesktopMenuProps {
 export const HeaderDesktopMenu = memo((props: HeaderDesktopMenuProps) => {
     const { className } = props;
 
+    const userData = useSelector(getUserAuthData);
+
+    const hasNotification = userData?.hasNotification;
+    const wishListCount = userData?.wishList?.length;
+
     const items = [
         <PlusHeaderDesktopItem />,
         <OrdersHeaderDesktopItem />,
-        <WishListHeaderDesktopItem />,
+        <WishListHeaderDesktopItem count={wishListCount}/>,
         <CartHeaderDesktopItem />,
-        <Avatar hasNotification />,
+        <Avatar hasNotification={hasNotification} />,
     ];
 
     return (

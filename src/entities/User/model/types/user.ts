@@ -7,6 +7,10 @@ export interface User {
     username: string;
     avatar?: string;
     jsonSettings?: JsonSettings;
+    orders?: number;
+    theme?: string;
+    hasNotification?: boolean;
+    wishList?: string[];
 }
 
 export interface UserSchema {
