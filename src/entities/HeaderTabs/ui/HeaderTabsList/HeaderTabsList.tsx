@@ -11,9 +11,10 @@ export interface HeaderTabsListProps {
 
 export const HeaderTabsList = memo((props: HeaderTabsListProps) => {
     const { className, onFavoriteCategoryClick } = props;
-    const { HeaderTabsItems, BuyerTypesItems } = useHeaderItems(
+
+    const { HeaderTabsItems, BuyerTypesItems } = useHeaderItems({
         onFavoriteCategoryClick,
-    );
+    });
 
     return (
         <div className={classNames(cls.HeaderTabsList, {}, [className])}>

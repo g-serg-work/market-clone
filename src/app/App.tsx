@@ -3,13 +3,19 @@ import { useSelector } from 'react-redux';
 import { getUserInited, initAuthData } from '@/entities/User';
 import { HeaderDesktop } from '@/widgets/HeaderDesktop';
 import { AppRouter } from './providers/router';
-import { AppHeaderItems } from '@/widgets/AppHeaderItems';
 import { withTheme } from './providers/ThemeProvider';
 import { useAppDispatch } from '@/shared/lib/hooks';
+import { HeaderTabsList } from '@/entities/HeaderTabs';
+import useJSXModal from '@/shared/lib/hooks/useJSXModal';
+import { FavoriteCategoryModal } from '@/features/FavoriteCategory';
 
 const App = memo(() => {
     const dispatch = useAppDispatch();
     const inited = useSelector(getUserInited);
+    const {
+        doModal: doFavoriteCategoryModal,
+        modalContent: favoriteCategoryModalContent,
+    } = useJSXModal(FavoriteCategoryModal);
 
     useEffect(() => {
         if (!inited) {
@@ -20,7 +26,8 @@ const App = memo(() => {
     return (
         <div id="app">
             <HeaderDesktop />
-            <AppHeaderItems />
+            <HeaderTabsList onFavoriteCategoryClick={doFavoriteCategoryModal} />
+            {favoriteCategoryModalContent}
             <Suspense fallback={<div>Loading....</div>}>
                 <AppRouter />
             </Suspense>

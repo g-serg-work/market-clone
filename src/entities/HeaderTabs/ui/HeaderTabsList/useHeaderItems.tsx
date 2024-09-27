@@ -13,9 +13,12 @@ import { HeaderTabsListProps } from './HeaderTabsList';
 
 const items = Array.from(HeaderTabRouteTitles.keys());
 
-export const useHeaderItems = (
-    onFavoriteCategoryClick: HeaderTabsListProps['onFavoriteCategoryClick'],
-) => {
+interface useHeaderItemsProps {
+    onFavoriteCategoryClick?: HeaderTabsListProps['onFavoriteCategoryClick'];
+}
+
+export const useHeaderItems = (props: useHeaderItemsProps) => {
+    const { onFavoriteCategoryClick } = props;
     let _index = 0;
 
     // eslint-disable-next-line no-plusplus
