@@ -1,6 +1,6 @@
 import { useState, useCallback, memo } from 'react';
 import { HeaderTabsList } from '@/entities/HeaderTabs';
-import { FavoriteCategoryModal } from '@/features/FavoriteCategory/ui/FavoriteCategory/FavoriteCategoryModal';
+import { FavoriteCategoryModal } from '@/features/FavoriteCategory';
 
 export interface AppHeaderItemsProps {
     className?: string;
@@ -8,21 +8,25 @@ export interface AppHeaderItemsProps {
 
 export const AppHeaderItems = memo((props: AppHeaderItemsProps) => {
     const { className } = props;
-    const [isOpen, setIsOpen] = useState(false);
+    const [isFavoriteCategoryActive, setIsFavoriteCategoryActive] =
+        useState(false);
 
-    const onClose = useCallback(() => {
-        setIsOpen(false);
+    const onFavoriteCategoryClose = useCallback(() => {
+        setIsFavoriteCategoryActive(false);
     }, []);
 
-    const onFavorite = useCallback(() => {
-        setIsOpen(true);
+    const onFavoriteCategoryClick = useCallback(() => {
+        setIsFavoriteCategoryActive(true);
     }, []);
 
     return (
         <>
-            <HeaderTabsList onFavoriteCategoryClick={onFavorite} />
-            {isOpen && (
-                <FavoriteCategoryModal isOpen={isOpen} onClose={onClose} />
+            <HeaderTabsList onFavoriteCategoryClick={onFavoriteCategoryClick} />
+            {isFavoriteCategoryActive && (
+                <FavoriteCategoryModal
+                    isOpen={isFavoriteCategoryActive}
+                    onClose={onFavoriteCategoryClose}
+                />
             )}
         </>
     );

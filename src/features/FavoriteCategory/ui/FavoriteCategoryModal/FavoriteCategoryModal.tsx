@@ -1,6 +1,6 @@
 import { Modal } from '@/shared/ui/Modal';
-import FavoriteCategory from './FavoriteCategory';
 import cls from './FavoriteCategoryModal.module.scss';
+import { FavoriteCategory } from '../..';
 
 interface FavoriteCategoryModalProps {
     className?: string;
