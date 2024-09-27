@@ -1,0 +1,1 @@
+export { WishListHeaderDesktopItem } from './WishListHeaderDesktopItem';

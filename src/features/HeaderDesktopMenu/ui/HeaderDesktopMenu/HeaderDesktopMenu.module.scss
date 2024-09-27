@@ -1,0 +1,39 @@
+.HeaderDesktopMenu {
+    align-items: center;
+    min-width: 230px;
+    font-size: 14px;
+    color: #222;
+    user-select: none;
+    transition: opacity 0.2s;
+    display: flex;
+
+    @media screen and (min-width: 1250px) {
+        min-width: 370px;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+
+        li {
+            display: block;
+
+            &:not(:last-child) {
+                padding: 0;
+            }
+
+            @media (min-width: 1250px) {
+                &:not(:last-child) {
+                    width: 65px;
+                    margin-right: 12px;
+                }
+            }
+
+            &:last-child {
+                display: flex;
+                align-items: center;
+                min-width: 48px;
+            }
+        }
+    }
+}
