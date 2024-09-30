@@ -19,7 +19,7 @@ export const Avatar = (props: AvatarProps) => {
             data-baobab-name="profile"
         >
             <button
-                className={cls.button}
+                className={classNames('', {}, [cls.button, 'button-focus-ring'])}
                 aria-haspopup="true"
                 aria-controls="userMenu"
                 aria-expanded="false"

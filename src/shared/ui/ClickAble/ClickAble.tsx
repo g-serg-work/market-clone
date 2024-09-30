@@ -1,15 +1,15 @@
-export interface ClickAbleDivProps
+export interface ClickAbleProps
     extends React.DetailedHTMLProps<
             React.HTMLAttributes<HTMLDivElement>,
             HTMLDivElement
         >,
         React.AriaAttributes {
     children: React.ReactNode;
-    onDivClick?: () => void;
+    onClick?: () => void;
 }
 
-export const ClickAbleDiv = (props: ClickAbleDivProps) => {
-    const { children, onDivClick, ...rest } = props;
+export const ClickAble = (props: ClickAbleProps) => {
+    const { children, onClick, ...otherProps } = props;
 
     const onKeyUp = (e: React.KeyboardEvent) => {
         // console.log(e.currentTarget.value);
@@ -22,12 +22,12 @@ export const ClickAbleDiv = (props: ClickAbleDivProps) => {
 
         if (enterOrSpace) {
             e.preventDefault();
-            onDivClick?.();
+            onClick?.();
         }
     };
 
     return (
-        <div onClick={onDivClick} onKeyUp={onKeyUp} {...rest}>
+        <div onClick={onClick} onKeyUp={onKeyUp} {...otherProps}>
             {children}
         </div>
     );
