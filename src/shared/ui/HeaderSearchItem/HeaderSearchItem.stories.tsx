@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { HeaderSearchItem } from './HeaderSearchItem';
-import { StyledDecorator } from '@/shared/config/storybook/StyledDecorator/StyledDecorator';
+import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
 
 export default {
     title: 'shared/HeaderSearchItem',

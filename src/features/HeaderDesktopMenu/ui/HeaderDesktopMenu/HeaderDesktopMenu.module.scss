@@ -20,6 +20,10 @@
 
             &:not(:last-child) {
                 padding: 0;
+
+                &:not(:first-child) {
+                    height: 100%;
+                }
             }
 
             @media (min-width: 1250px) {

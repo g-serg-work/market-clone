@@ -1,6 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { HeaderDesktopMenu } from './HeaderDesktopMenu';
 import { RouterDecorator, StoreDecorator } from '@/shared/config/storybook';
+import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
 
 export default {
     title: 'entities/HeaderDesktopMenu/HeaderDesktopMenu',
@@ -8,7 +9,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [RouterDecorator],
+    decorators: [RouterDecorator, StyledDecorator({ margin: 20 })],
 } as ComponentMeta<typeof HeaderDesktopMenu>;
 
 const Template: ComponentStory<typeof HeaderDesktopMenu> = (args) => (
@@ -35,6 +36,16 @@ WithWishList.decorators = [
     StoreDecorator({
         user: {
             authData: { wishList: Array(3).fill('') },
+        },
+    }),
+];
+
+export const WithOrdersList = Template.bind({});
+WithOrdersList.args = {};
+WithOrdersList.decorators = [
+    StoreDecorator({
+        user: {
+            authData: { ordersList: Array(2).fill('') },
         },
     }),
 ];

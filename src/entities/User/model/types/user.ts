@@ -11,6 +11,7 @@ export interface User {
     theme?: string;
     hasNotification?: boolean;
     wishList?: string[];
+    ordersList?: string[];
 }
 
 export interface UserSchema {
