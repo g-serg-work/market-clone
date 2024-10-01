@@ -1,6 +1,9 @@
 import { useState, useCallback } from 'react';
 
-export function useJSXModal<T>(jsx: (props: T) => JSX.Element) {
+export function useJSXModal<T>(
+    jsx: (props: T) => JSX.Element,
+    getProps: () => Partial<T> = () => ({}),
+) {
     const [isOpen, setIsOpen] = useState(false);
 
     const doModal = useCallback(() => {
@@ -13,6 +16,6 @@ export function useJSXModal<T>(jsx: (props: T) => JSX.Element) {
 
     return {
         doModal,
-        modalContent: isOpen && jsx({ isOpen, onClose } as T),
+        modalContent: isOpen && jsx({ isOpen, onClose, ...getProps() } as T),
     };
 }

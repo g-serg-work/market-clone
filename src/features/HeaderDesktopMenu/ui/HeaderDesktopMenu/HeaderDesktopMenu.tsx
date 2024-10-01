@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import classNames from '@/shared/lib/classNames';
 import cls from './HeaderDesktopMenu.module.scss';
-import { Avatar } from '@/shared/ui/Avatar';
+import { Avatar, AvatarClickCallback } from '@/shared/ui/Avatar';
 import { CartHeaderDesktopItem } from '@/shared/ui/CartHeaderDesktopItem';
 import { OrdersHeaderDesktopItem } from '@/shared/ui/OrdersHeaderDesktopItem';
 import { WishListHeaderDesktopItem } from '@/shared/ui/WishListHeaderDesktopItem';
@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux';
 
 export interface HeaderDesktopMenuProps {
     className?: string;
-    onAvatarClick?: () => void;
+    onAvatarClick?: AvatarClickCallback;
 }
 
 export const HeaderDesktopMenu = memo((props: HeaderDesktopMenuProps) => {

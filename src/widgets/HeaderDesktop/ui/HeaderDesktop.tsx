@@ -5,10 +5,11 @@ import cls from './HeaderDesktop.module.scss';
 import { HeaderDesktopMenu } from '@/features/HeaderDesktopMenu';
 import { HeaderSearchItem } from '@/shared/ui/HeaderSearchItem';
 import { HeaderNavigationMenuItem } from '@/shared/ui/HeaderNavigationMenuItem';
+import { AvatarClickCallback } from '@/shared/ui/Avatar';
 
 interface HeaderProps {
     className?: string;
-    onAvatarClick?: () => void;
+    onAvatarClick?: AvatarClickCallback;
 }
 
 export const HeaderDesktop = memo((props: HeaderProps) => {

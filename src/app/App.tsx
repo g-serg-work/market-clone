@@ -1,4 +1,4 @@
-import { memo, Suspense, useEffect } from 'react';
+import { memo, Suspense, useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { getUserInited, initAuthData } from '@/entities/User';
 import { HeaderDesktop } from '@/widgets/HeaderDesktop';
@@ -8,14 +8,35 @@ import { useAppDispatch } from '@/shared/lib/hooks';
 import { HeaderTabsList } from '@/entities/HeaderTabs';
 import useJSXModal from '@/shared/lib/hooks/useJSXModal';
 import { FavoriteCategoryModal } from '@/features/FavoriteCategory';
+import { UserProfileModal } from '@/features/UserProfile';
+import callElementBoundingClientRect from '@/shared/lib/callElementBoundingClientRect';
+import { AvatarClickCallback } from '@/shared/ui/Avatar';
+
+const userProfileModalProps = { left: 0, top: 0 };
 
 const App = memo(() => {
     const dispatch = useAppDispatch();
     const inited = useSelector(getUserInited);
+
     const {
         doModal: doFavoriteCategoryModal,
         modalContent: favoriteCategoryModalContent,
     } = useJSXModal(FavoriteCategoryModal);
+
+    const {
+        doModal: doUserProfileModal,
+        modalContent: userProfileModalContent,
+    } = useJSXModal(UserProfileModal, () => userProfileModalProps);
+
+    const onAvatarClick: AvatarClickCallback = useCallback(
+        ({ avatarEl }) => {
+            const rect = callElementBoundingClientRect(avatarEl);
+            userProfileModalProps.left = rect.left + rect.width - 10;
+            userProfileModalProps.top = rect.top;
+            doUserProfileModal();
+        },
+        [doUserProfileModal],
+    );
 
     useEffect(() => {
         if (!inited) {
@@ -25,9 +46,10 @@ const App = memo(() => {
 
     return (
         <div id="app">
-            <HeaderDesktop />
+            <HeaderDesktop onAvatarClick={onAvatarClick} />
             <HeaderTabsList onFavoriteCategoryClick={doFavoriteCategoryModal} />
             {favoriteCategoryModalContent}
+            {userProfileModalContent}
             <Suspense fallback={<div>Loading....</div>}>
                 <AppRouter />
             </Suspense>

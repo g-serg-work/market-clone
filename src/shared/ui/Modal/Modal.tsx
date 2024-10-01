@@ -1,4 +1,4 @@
-import { MouseEvent, ReactNode, useCallback } from 'react';
+import { CSSProperties, MouseEvent, ReactNode, useCallback } from 'react';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Modal.module.scss';
 import { Portal } from '../Portal';
@@ -13,6 +13,10 @@ export interface ModalProps {
     isOpen?: boolean;
     onClose?: () => void;
     lazy?: boolean;
+    left?: number;
+    top?: number;
+    positionAt?: 'center' | 'lt';
+    contentStyle?: CSSProperties;
 }
 
 const ANIMATION_DELAY = 180;
@@ -22,10 +26,14 @@ export const Modal = (props: ModalProps) => {
         className,
         overlayClassName,
         contentClassName,
+        contentStyle = {},
         children: content,
         isOpen,
         onClose,
         lazy,
+        left,
+        top,
+        positionAt = 'center',
     } = props;
 
     const { close, isClosing, isMounted } = useModal({
@@ -43,20 +51,31 @@ export const Modal = (props: ModalProps) => {
         }
     }, []);
 
+    if (lazy && !isMounted) {
+        return null;
+    }
+
     const mods: Mods = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
     };
 
-    if (lazy && !isMounted) {
-        return null;
+    const posStyle: { left?: number; top?: number } = {};
+
+    switch (positionAt) {
+        case 'lt':
+            posStyle.left = left;
+            posStyle.top = top;
+            break;
     }
+
+    const calcStyle = Object.assign({}, posStyle, contentStyle);
 
     return (
         <Portal element={document.getElementById('app') ?? document.body}>
             <div className={classNames('', mods, [className, theme])}>
                 <div className={overlayClassName} onClick={onClose} />
-                <div className={contentClassName}>
+                <div className={contentClassName} style={calcStyle}>
                     <ModalTabIndexInitial tabIndex={1} />
                     <div
                         data-modal-role="close-node"

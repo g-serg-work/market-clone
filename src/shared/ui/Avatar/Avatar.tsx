@@ -1,16 +1,28 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Avatar.module.scss';
 import Png from '../../assets/icons/avatar.png';
+import { MouseEventHandler } from 'react';
+
+export type AvatarClickCallback = ({
+    avatarEl,
+}: {
+    avatarEl: HTMLElement;
+}) => void;
 
 interface AvatarProps {
     className?: string;
     userName?: string;
     hasNotification?: boolean;
-    onClick?: () => void;
+    onClick?: AvatarClickCallback;
 }
 
 export const Avatar = (props: AvatarProps) => {
     const { className, userName, hasNotification, onClick } = props;
+
+    const onButtonClick: MouseEventHandler<HTMLButtonElement> = (e) => {
+        const avatarEl = e.currentTarget;
+        onClick?.({ avatarEl });
+    };
 
     return (
         <div
@@ -19,11 +31,14 @@ export const Avatar = (props: AvatarProps) => {
             data-baobab-name="profile"
         >
             <button
-                className={classNames('', {}, [cls.button, 'button-focus-ring'])}
+                className={classNames('', {}, [
+                    cls.button,
+                    'button-focus-ring',
+                ])}
                 aria-haspopup="true"
                 aria-controls="userMenu"
                 aria-expanded="false"
-                onClick={onClick}
+                onClick={onButtonClick}
             >
                 <img src={Png} alt={userName} />
             </button>
