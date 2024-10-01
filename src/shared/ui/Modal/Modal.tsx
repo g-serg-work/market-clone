@@ -6,7 +6,9 @@ import { ModalTabIndexInitial } from './ModalTabIndexInitial';
 import { useModal, useTheme } from '@/shared/lib/hooks';
 
 export interface ModalProps {
-    className: string;
+    className?: string;
+    overlayClassName: string;
+    contentClassName: string;
     children?: ReactNode;
     isOpen?: boolean;
     onClose?: () => void;
@@ -15,19 +17,16 @@ export interface ModalProps {
 
 const ANIMATION_DELAY = 180;
 
-/**
- * Need use as
- *
- * [className] {
- *
- *  [data-modal-role='overlay'] { ...  }
- *
- *  [data-modal-role='content'] { ...  }
- *
- * }
- */
 export const Modal = (props: ModalProps) => {
-    const { className, children: content, isOpen, onClose, lazy } = props;
+    const {
+        className,
+        overlayClassName,
+        contentClassName,
+        children: content,
+        isOpen,
+        onClose,
+        lazy,
+    } = props;
 
     const { close, isClosing, isMounted } = useModal({
         animationDelay: ANIMATION_DELAY,
@@ -55,9 +54,9 @@ export const Modal = (props: ModalProps) => {
 
     return (
         <Portal element={document.getElementById('app') ?? document.body}>
-            <div className={classNames(className, mods, [theme])}>
-                <div data-modal-role="overlay" onClick={onClose} />
-                <div data-modal-role="content" className={cls.content}>
+            <div className={classNames('', mods, [className, theme])}>
+                <div className={overlayClassName} onClick={onClose} />
+                <div className={contentClassName}>
                     <ModalTabIndexInitial tabIndex={1} />
                     <div
                         data-modal-role="close-node"

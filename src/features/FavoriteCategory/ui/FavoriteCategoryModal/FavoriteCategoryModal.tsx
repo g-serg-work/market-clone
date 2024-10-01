@@ -1,6 +1,7 @@
 import { Modal } from '@/shared/ui/Modal';
 import cls from './FavoriteCategoryModal.module.scss';
 import { FavoriteCategory } from '../..';
+import classNames from '@/shared/lib/classNames';
 
 interface FavoriteCategoryModalProps {
     className?: string;
@@ -10,9 +11,12 @@ interface FavoriteCategoryModalProps {
 
 export const FavoriteCategoryModal = (props: FavoriteCategoryModalProps) => {
     const { className, isOpen, onClose } = props;
+
     return (
         <Modal
-            className={cls.FavoriteCategoryModal}
+            className={classNames('', {}, [className])}
+            overlayClassName={cls.overlay}
+            contentClassName={cls.content}
             isOpen={isOpen}
             onClose={onClose}
             lazy

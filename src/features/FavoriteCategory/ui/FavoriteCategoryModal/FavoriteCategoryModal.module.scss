@@ -1,24 +1,22 @@
-.FavoriteCategoryModal {
-    [data-modal-role='overlay'] {
-        position: fixed;
-        left: 0;
-        right: 0;
-        z-index: 8990;
-        top: 0;
-        bottom: 0;
-        background: #000;
-        opacity: 0.8;
-    }
+.overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.8;
+    z-index: 8990;
+}
 
-    [data-modal-role='content'] {
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 9010;
-        padding: 54px 24px 24px;
-        max-height: 100%;
-        overflow: auto;
-        position: fixed;
-        left: 0;
-        right: 0;
-    }
+.content {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 50%;
+    max-height: 100%;
+    overflow: auto;
+    padding: 54px 24px 24px;
+    transform: translateY(-50%);
+    z-index: 9010;
 }
