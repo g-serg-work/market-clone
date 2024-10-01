@@ -11,10 +11,11 @@ import { useSelector } from 'react-redux';
 
 export interface HeaderDesktopMenuProps {
     className?: string;
+    onAvatarClick?: () => void;
 }
 
 export const HeaderDesktopMenu = memo((props: HeaderDesktopMenuProps) => {
-    const { className } = props;
+    const { className, onAvatarClick } = props;
 
     const userData = useSelector(getUserAuthData);
 
@@ -24,9 +25,9 @@ export const HeaderDesktopMenu = memo((props: HeaderDesktopMenuProps) => {
     const items = [
         <PlusHeaderDesktopItem />,
         <OrdersHeaderDesktopItem />,
-        <WishListHeaderDesktopItem count={wishListCount}/>,
+        <WishListHeaderDesktopItem count={wishListCount} />,
         <CartHeaderDesktopItem />,
-        <Avatar hasNotification={hasNotification} />,
+        <Avatar hasNotification={hasNotification} onClick={onAvatarClick} />,
     ];
 
     return (

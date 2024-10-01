@@ -36,31 +36,31 @@
             color: #ec0000;
         }
     }
+}
 
-    .title {
-        display: inline-block;
-        line-height: 20px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        position: relative;
-        max-width: 298px;
+.title {
+    display: inline-block;
+    line-height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    max-width: 298px;
 
-        div {
-            display: flex;
+    div {
+        display: flex;
 
-            span {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                transition: color 0.3s;
-                font-weight: 400;
-                color: #212121;
-                font-style: normal;
-                font-stretch: normal;
+        span {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: color 0.3s;
+            font-weight: 400;
+            color: #212121;
+            font-style: normal;
+            font-stretch: normal;
 
-                :hover > & {
-                    color: #ec0000;
-                }
+            :hover > & {
+                color: #ec0000;
             }
         }
     }

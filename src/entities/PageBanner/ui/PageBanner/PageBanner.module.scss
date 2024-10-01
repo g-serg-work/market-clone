@@ -10,19 +10,16 @@
     box-sizing: content-box;
     padding: 0 8px;
 }
-
 @media (min-width: 1024px) {
     .wrapper {
         width: 908px;
     }
 }
-
 @media (min-width: 1120px) {
     .wrapper {
         width: 1068px;
     }
 }
-
 @media (min-width: 1260px) {
     .wrapper {
         width: 1192px;

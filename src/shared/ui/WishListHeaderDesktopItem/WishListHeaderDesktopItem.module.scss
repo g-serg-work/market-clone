@@ -16,6 +16,11 @@
     font-size: 12px;
     line-height: 22px;
     text-decoration: none;
+
+    &:focus-visible {
+        outline: 2px solid #fce000;
+        border-radius: 0;
+    }
 }
 
 .svgWrapper {
@@ -41,7 +46,7 @@
     justify-content: center;
     align-items: center;
     vertical-align: top;
-    transition: color .3s;
+    transition: color 0.3s;
     color: #222;
     margin-bottom: 4px;
     min-height: 24px;
@@ -50,9 +55,9 @@
 .titleWrapper {
     line-height: 15px;
     font-size: 12px;
-    transition: color .3s;
+    transition: color 0.3s;
     color: #666;
     white-space: nowrap;
-    letter-spacing: .25px;
+    letter-spacing: 0.25px;
     font-weight: 400;
 }

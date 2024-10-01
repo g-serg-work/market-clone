@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import classNames from '@/shared/lib/classNames';
 import cls from './FavoriteCategoryItem.module.scss';
-import { ClickAbleDiv } from '@/shared/ui/ClickAbleDiv';
+import { ClickAble } from '@/shared/ui/ClickAble';
 
 interface FavoriteCategoryItemProps {
     className?: string;
@@ -15,16 +15,16 @@ export const FavoriteCategoryItem = memo((props: FavoriteCategoryItemProps) => {
 
     return (
         <li role="tab">
-            <ClickAbleDiv
+            <ClickAble
                 className={classNames(cls.FavoriteCategoryItem, {}, [
                     className,
                 ])}
                 tabIndex={0}
                 role="button"
-                onDivClick={onClick}
+                onClick={onClick}
             >
                 <span>{title}</span>
-            </ClickAbleDiv>
+            </ClickAble>
         </li>
     );
 });

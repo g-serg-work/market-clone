@@ -19,42 +19,37 @@
     flex-flow: column;
     overflow: hidden;
     background: #f4f4f4;
+}
 
-    .header {
-        padding: 24px;
-        display: flex;
-        flex-direction: column;
-        gap: 2px;
-        position: sticky;
-        background: linear-gradient(
-            180deg,
-            #fff,
-            #fff 95%,
-            hsla(0, 0%, 100%, 0)
-        );
+.header {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    position: sticky;
+    background: linear-gradient(180deg, #fff, #fff 95%, hsla(0, 0%, 100%, 0));
+}
 
-        .title {
-            line-height: 26px;
-            letter-spacing: -0.0125em;
-            font-size: 24px;
-            font-weight: 700;
-        }
+.title {
+    line-height: 26px;
+    letter-spacing: -0.0125em;
+    font-size: 24px;
+    font-weight: 700;
+}
 
-        .description {
-            line-height: 18px;
-            font-size: 14px;
-            color: var(--text-primary);
-            font-weight: 400;
-        }
-    }
+.description {
+    line-height: 18px;
+    font-size: 14px;
+    color: var(--text-primary);
+    font-weight: 400;
+}
 
-    .contentWrapper {
-        margin-top: -4px;
-        overflow-y: overlay;
-        scrollbar-width: thin;
+.contentWrapper {
+    margin-top: -4px;
+    overflow-y: overlay;
+    scrollbar-width: thin;
+}
 
-        .content {
-            padding: 0 24px 16px;
-        }
-    }
+.content {
+    padding: 0 24px 16px;
 }

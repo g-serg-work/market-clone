@@ -19,7 +19,11 @@ export const HeaderNavigationMenuItem = memo(
                 data-zone-name="catalog"
                 data-baobab-name="catalog"
             >
-                <button className={cls.button}>
+                <button
+                    className={classNames(cls.button, {}, [
+                        'button-focus-ring',
+                    ])}
+                >
                     <Svg id="hamburger" aria-hidden="true" />
                     <span>Каталог</span>
                 </button>
