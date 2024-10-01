@@ -4,7 +4,7 @@ import classNames from '@/shared/lib/classNames';
 import cls from './HeaderDesktop.module.scss';
 import { HeaderDesktopMenu } from '@/features/HeaderDesktopMenu';
 import { HeaderSearchItem } from '@/shared/ui/HeaderSearchItem';
-import { HeaderNavigationMenuItem } from '@/shared/ui/NavigationMenuItem';
+import { HeaderNavigationMenuItem } from '@/shared/ui/HeaderNavigationMenuItem';
 
 interface HeaderProps {
     className?: string;
