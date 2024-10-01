@@ -20,12 +20,12 @@ export const Primary = Template.bind({});
 Primary.args = {};
 Primary.decorators = [StoreDecorator({})];
 
-export const WithNotification = Template.bind({});
-WithNotification.args = {};
-WithNotification.decorators = [
+export const WithOrdersList = Template.bind({});
+WithOrdersList.args = {};
+WithOrdersList.decorators = [
     StoreDecorator({
         user: {
-            authData: { hasNotification: true },
+            authData: { ordersList: Array(2).fill('') },
         },
     }),
 ];
@@ -40,12 +40,22 @@ WithWishList.decorators = [
     }),
 ];
 
-export const WithOrdersList = Template.bind({});
-WithOrdersList.args = {};
-WithOrdersList.decorators = [
+export const WithCartList = Template.bind({});
+WithCartList.args = {};
+WithCartList.decorators = [
     StoreDecorator({
         user: {
-            authData: { ordersList: Array(2).fill('') },
+            authData: { cartList: Array(4).fill('') },
+        },
+    }),
+];
+
+export const WithNotification = Template.bind({});
+WithNotification.args = {};
+WithNotification.decorators = [
+    StoreDecorator({
+        user: {
+            authData: { hasNotification: true },
         },
     }),
 ];

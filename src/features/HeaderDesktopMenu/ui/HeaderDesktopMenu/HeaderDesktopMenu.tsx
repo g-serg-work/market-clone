@@ -22,12 +22,13 @@ export const HeaderDesktopMenu = memo((props: HeaderDesktopMenuProps) => {
     const hasNotification = userData?.hasNotification;
     const ordersListCount = userData?.ordersList?.length;
     const wishListCount = userData?.wishList?.length;
+    const cartListCount = userData?.cartList?.length;
 
     const items = [
         <PlusHeaderDesktopItem />,
         <OrdersHeaderDesktopItem count={ordersListCount} />,
         <WishListHeaderDesktopItem count={wishListCount} />,
-        <CartHeaderDesktopItem />,
+        <CartHeaderDesktopItem count={cartListCount} />,
         <Avatar hasNotification={hasNotification} onClick={onAvatarClick} />,
     ];
 

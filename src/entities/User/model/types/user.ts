@@ -12,6 +12,7 @@ export interface User {
     hasNotification?: boolean;
     wishList?: string[];
     ordersList?: string[];
+    cartList?: string[];
 }
 
 export interface UserSchema {
