@@ -3,6 +3,7 @@ import { User } from '@/entities/User';
 
 import {
     getRouteCompare,
+    getRouteLogout,
     getRouteOrders,
     getRoutePromoCodes,
     getRouteReturns,
@@ -19,7 +20,10 @@ import ReturnsSvg from '@/shared/assets/icons/profile/returns.svg';
 import ReviewsSvg from '@/shared/assets/icons/profile/reviews.svg';
 import PromoCodesSvg from '@/shared/assets/icons/profile/promo-codes.svg';
 import ComparisonSvg from '@/shared/assets/icons/profile/comparison.svg';
+import VacanciesSvg from '@/shared/assets/icons/profile/vacancies.svg';
 import SettingsSvg from '@/shared/assets/icons/profile/settings.svg';
+import HelpSvg from '@/shared/assets/icons/profile/help.svg';
+import LogoutSvg from '@/shared/assets/icons/profile/logout.svg';
 
 interface UserProfileItemsCfg extends UserProfileItemProps {
     getCountSelector?: (user: User) => number | undefined;
@@ -85,9 +89,31 @@ export const UserProfileItemsCfg: Array<
         Svg: ComparisonSvg,
     },
     {
+        name: 'vacancies',
+        title: 'Маркет нанимает',
+        route: 'https://yandex.ru/jobs/services/market/about',
+        Svg: VacanciesSvg,
+    },
+    {
         name: 'settings',
         title: 'Настройки',
         route: getRouteSettings(),
         Svg: SettingsSvg,
+    },
+    {
+        name: 'help',
+        title: 'Справка',
+        route: 'https://yandex.ru/support/market',
+        routeAttr: {
+            target: '_blank',
+            rel: 'nofollow noopener',
+        },
+        Svg: HelpSvg,
+    },
+    {
+        name: 'logout',
+        title: 'Выйти',
+        route: getRouteLogout(),
+        Svg: LogoutSvg,
     },
 ];

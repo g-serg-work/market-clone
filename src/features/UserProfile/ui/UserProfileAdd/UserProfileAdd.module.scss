@@ -1,0 +1,66 @@
+.UserProfileAdd {
+    display: block;
+}
+
+.add {
+    padding: 12px 12px 12px 0;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    touch-action: manipulation;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    outline: 0;
+
+    &:hover {
+        background: #fff;
+    }
+
+    &:focus-visible {
+        outline: 2px solid #fce000;
+    }
+}
+
+/* addContent */
+.addContent {
+    margin-left: 16px;
+    margin-right: 16px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 17px;
+        height: 2px;
+        transform: translate(-50%, -50%);
+        background-color: #222;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 2px;
+        height: 17px;
+        transform: translate(-50%, -50%);
+        background-color: #222;
+    }
+
+    span {
+        color: #000;
+    }
+}
+.add:hover .addContent {
+    background-color: #f7f7f7;
+}

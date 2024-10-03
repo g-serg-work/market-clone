@@ -2,13 +2,15 @@
     pointer-events: auto;
 
     .animation {
-        transition: 0.3s transform;
+        transition: transform 0.1s ease 0s, opacity 0.1s ease 0s;
         transform: scale(1);
+        opacity: 1;
     }
 }
 
 .isClosing {
     .animation {
-        transform: scale(0.2);
+        transform: scale(0.9);
+        opacity: 0;
     }
 }

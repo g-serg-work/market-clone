@@ -10,38 +10,64 @@ export interface UserProfileItemProps {
     name: string;
     title: string;
     route: string;
+    routeAttr?: {};
     Svg: React.VFC<React.SVGProps<SVGSVGElement>>;
     count?: number;
 }
 
 const UserProfileItem = memo((props: UserProfileItemProps) => {
-    const { className, autoFocus, name, title, route, Svg, count } = props;
+    const {
+        className,
+        autoFocus,
+        name,
+        title,
+        route,
+        routeAttr = {},
+        Svg,
+        count,
+    } = props;
     const { autoFocusRef } = useAutoFocus();
+
+    const linkContent = (
+        <>
+            <div className={cls.itemContent} aria-hidden="true">
+                <div className={cls.itemImage} role="img" aria-hidden="true">
+                    <Svg />
+                </div>
+            </div>
+            <span>{title}</span>
+            {count && <span className={cls.count}>{count}</span>}
+        </>
+    );
 
     return (
         <div
             className={classNames(cls.UserProfileItem, {}, [className])}
             data-zone-name={name}
         >
-            <Link
-                ref={autoFocus ? autoFocusRef : undefined}
-                to={route}
-                className={cls.item}
-                role="menuitem"
-                aria-hidden="false"
-            >
-                <div className={cls.itemContent} aria-hidden="true">
-                    <div
-                        className={cls.itemImage}
-                        role="img"
-                        aria-hidden="true"
-                    >
-                        <Svg />
-                    </div>
-                </div>
-                <span>{title}</span>
-                {count && <span className={cls.count}>{count}</span>}
-            </Link>
+            {route.startsWith('/') ? (
+                <Link
+                    ref={autoFocus ? autoFocusRef : undefined}
+                    to={route}
+                    className={cls.item}
+                    role="menuitem"
+                    aria-hidden="false"
+                    {...routeAttr}
+                >
+                    {linkContent}
+                </Link>
+            ) : (
+                <a
+                    ref={autoFocus ? autoFocusRef : undefined}
+                    href={route}
+                    className={cls.item}
+                    role="menuitem"
+                    aria-hidden="false"
+                    {...routeAttr}
+                >
+                    {linkContent}
+                </a>
+            )}
         </div>
     );
 });
