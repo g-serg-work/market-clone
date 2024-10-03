@@ -1,7 +1,6 @@
 import { memo } from 'react';
 import cls from './UserProfileAdd.module.scss';
 import classNames from '@/shared/lib/classNames';
-// TODO: change loader to raw-loader and use original "add-border.svg"
 import useAutoFocus from '@/shared/lib/hooks/useAutoFocus';
 import { Link } from 'react-router-dom';
 

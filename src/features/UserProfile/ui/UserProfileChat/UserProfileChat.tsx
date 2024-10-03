@@ -1,10 +1,7 @@
 import { memo } from 'react';
 import cls from './UserProfileChat.module.scss';
 import classNames from '@/shared/lib/classNames';
-
 import ChatSvg from '@/shared/assets/icons/profile/chat.svg';
-
-// TODO: change loader to raw-loader and use original "add-border.svg"
 import useAutoFocus from '@/shared/lib/hooks/useAutoFocus';
 import { ClickAble } from '@/shared/ui/ClickAble';
 
