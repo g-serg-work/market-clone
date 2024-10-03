@@ -1,3 +1,5 @@
+import { forwardRef, ForwardedRef } from 'react';
+
 export interface ClickAbleProps
     extends React.DetailedHTMLProps<
             React.HTMLAttributes<HTMLDivElement>,
@@ -8,7 +10,10 @@ export interface ClickAbleProps
     onClick?: () => void;
 }
 
-export const ClickAble = (props: ClickAbleProps) => {
+const ClickAble = (
+    props: ClickAbleProps,
+    ref: ForwardedRef<HTMLDivElement>,
+) => {
     const { children, onClick, ...otherProps } = props;
 
     const onKeyUp = (e: React.KeyboardEvent) => {
@@ -27,8 +32,10 @@ export const ClickAble = (props: ClickAbleProps) => {
     };
 
     return (
-        <div onClick={onClick} onKeyUp={onKeyUp} {...otherProps}>
+        <div ref={ref} onClick={onClick} onKeyUp={onKeyUp} {...otherProps}>
             {children}
         </div>
     );
 };
+
+export default forwardRef(ClickAble);

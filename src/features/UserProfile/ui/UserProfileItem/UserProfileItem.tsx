@@ -26,7 +26,8 @@ const UserProfileItem = memo((props: UserProfileItemProps) => {
         Svg,
         count,
     } = props;
-    const { autoFocusRef } = useAutoFocus();
+
+    const { autoFocusRef } = useAutoFocus<HTMLAnchorElement>();
 
     const linkContent = (
         <>

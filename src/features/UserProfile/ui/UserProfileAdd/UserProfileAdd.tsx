@@ -13,7 +13,7 @@ export interface UserProfileAddProps {
 
 const UserProfileAdd = memo((props: UserProfileAddProps) => {
     const { className, autoFocus, href } = props;
-    const { autoFocusRef } = useAutoFocus();
+    const { autoFocusRef } = useAutoFocus<HTMLAnchorElement>();
 
     return (
         <div

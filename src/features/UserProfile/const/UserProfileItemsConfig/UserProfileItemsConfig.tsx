@@ -24,6 +24,7 @@ import VacanciesSvg from '@/shared/assets/icons/profile/vacancies.svg';
 import SettingsSvg from '@/shared/assets/icons/profile/settings.svg';
 import HelpSvg from '@/shared/assets/icons/profile/help.svg';
 import LogoutSvg from '@/shared/assets/icons/profile/logout.svg';
+import UserProfileChat from '../../ui/UserProfileChat/UserProfileChat';
 
 interface UserProfileItemsCfg extends UserProfileItemProps {
     getCountSelector?: (user: User) => number | undefined;
@@ -88,6 +89,13 @@ export const UserProfileItemsCfg: Array<
         route: getRouteCompare(),
         Svg: ComparisonSvg,
     },
+    ({ idx, user, autoFocus }) => (
+        <UserProfileChat
+            key={idx}
+            autoFocus={autoFocus}
+            onClick={() => alert('chat')}
+        />
+    ),
     {
         name: 'vacancies',
         title: 'Маркет нанимает',

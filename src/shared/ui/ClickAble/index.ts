@@ -1,2 +1,2 @@
 export type { ClickAbleProps } from './ClickAble';
-export { ClickAble } from './ClickAble';
+export { default as ClickAble } from './ClickAble';

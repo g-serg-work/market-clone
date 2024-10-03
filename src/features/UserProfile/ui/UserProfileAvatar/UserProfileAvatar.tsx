@@ -17,7 +17,7 @@ export interface UserProfileAvatarProps {
 
 const UserProfileAvatar = memo((props: UserProfileAvatarProps) => {
     const { className, autoFocus, userName, userEmail, href } = props;
-    const { autoFocusRef } = useAutoFocus();
+    const { autoFocusRef } = useAutoFocus<HTMLAnchorElement>();
 
     return (
         <div
