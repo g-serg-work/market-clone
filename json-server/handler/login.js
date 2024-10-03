@@ -2,12 +2,12 @@ const loginPost = (handlerCfg) => (req, res) => {
     try {
         const { mainDbGetter } = handlerCfg;
 
-        const { username, password } = req.body;
+        const { userName, password } = req.body;
 
         const { users = [] } = mainDbGetter();
 
         const userFromBd = users.find(
-            (user) => user.username === username && user.password === password,
+            (user) => user.userName === userName && user.password === password,
         );
 
         if (userFromBd) {

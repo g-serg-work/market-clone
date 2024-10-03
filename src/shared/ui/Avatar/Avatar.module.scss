@@ -1,11 +1,15 @@
+:root {
+    --size: 48px;
+}
+
 .Avatar {
     position: relative;
 }
 
 .button {
     position: relative;
-    width: 48px;
-    height: 48px;
+    width: var(--size);
+    height: var(--size);
     border-radius: 50%;
     border: 2px solid transparent;
     box-sizing: border-box;
@@ -49,7 +53,7 @@
 
 .notification {
     top: 2px;
-    left: calc(100% - 12px);
+    left: calc(var(--size) - 12px);
     width: 14px;
     height: 14px;
     border-radius: 50%;

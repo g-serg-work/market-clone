@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import classNames from '@/shared/lib/classNames';
 import cls from './OrdersHeaderDesktopItem.module.scss';
 import Svg from '../../assets/icons/orders.svg';
+import { getRouteOrders } from '@/shared/const/router';
 
 export interface OrdersHeaderDesktopItemProps {
     className?: string;
@@ -19,7 +20,7 @@ export const OrdersHeaderDesktopItem = memo(
                     className,
                 ])}
             >
-                <Link className={cls.link} to="/my/orders" rel="nofollow">
+                <Link className={cls.link} to={getRouteOrders()} rel="nofollow">
                     <div data-baobab-name="favorites">
                         <div className={cls.svgWrapper} aria-hidden="true">
                             <span className={cls.count}>{count}</span>

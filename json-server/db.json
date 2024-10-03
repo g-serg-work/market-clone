@@ -2,14 +2,15 @@
     "users": [
         {
             "id": "1",
-            "username": "admin",
+            "userName": "admin",
             "password": "123"
         }
     ],
     "profile": [
         {
             "id": "1",
-            "username": "admin",
+            "userName": "admin",
+            "userEmail": "admin@yandex.ru",
             "theme": "light",
             "hasNotification": true,
             "wishList": [

@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import UserProfileItem from './UserProfileItem';
+import UserProfileItem, { UserProfileItemProps } from './UserProfileItem';
 import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
-import ProfileOrdersSvg from '@/shared/assets/icons/profile-orders.svg';
+import ProfileOrdersSvg from '@/shared/assets/icons/profile/orders.svg';
 
 export default {
     title: 'features/UserProfile/UserProfileItem',
@@ -20,10 +20,18 @@ const Template: ComponentStory<typeof UserProfileItem> = (args) => (
     <UserProfileItem {...args} />
 );
 
-export const Orders = Template.bind({});
-Orders.args = {
-    name: 'my-orders',
-    title: 'Заказы',
-    route: '/my/orders',
+const item: UserProfileItemProps = {
+    name: 'item',
+    title: 'Item',
+    route: '/item',
     Svg: ProfileOrdersSvg,
 };
+
+export const Primary = Template.bind({});
+Primary.args = item;
+
+export const WithCount = Template.bind({});
+WithCount.args = { ...item, count: 10 };
+
+export const WithFocus = Template.bind({});
+WithFocus.args = { ...item, autoFocus: true };

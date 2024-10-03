@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import classNames from '@/shared/lib/classNames';
 import cls from './CartHeaderDesktopItem.module.scss';
 import Svg from '../../assets/icons/cart.svg';
+import { getRouteCart } from '@/shared/const/router';
 
 export interface CartHeaderDesktopItemProps {
     className?: string;
@@ -19,7 +20,7 @@ export const CartHeaderDesktopItem = memo(
                     className,
                 ])}
             >
-                <Link className={cls.link} to="/my/Cart" rel="nofollow">
+                <Link className={cls.link} to={getRouteCart()} rel="nofollow">
                     <div data-baobab-name="favorites">
                         <div className={cls.svgWrapper} aria-hidden="true">
                             <span className={cls.count}>{count}</span>

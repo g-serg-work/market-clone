@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { HeaderDesktop } from './HeaderDesktop';
-import { StoreDecorator } from '@/shared/config/storybook';
+import { RouterDecorator, StoreDecorator } from '@/shared/config/storybook';
 
 export default {
     title: 'widgets/HeaderDesktop',
@@ -8,6 +8,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [StoreDecorator({}), RouterDecorator],
 } as ComponentMeta<typeof HeaderDesktop>;
 
 const Template: ComponentStory<typeof HeaderDesktop> = (args) => (
@@ -16,4 +17,3 @@ const Template: ComponentStory<typeof HeaderDesktop> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {};
-Primary.decorators = [StoreDecorator({})];

@@ -1,19 +1,23 @@
 import { memo } from 'react';
 import cls from './UserProfileAvatar.module.scss';
 import classNames from '@/shared/lib/classNames';
-import Avatar from '@/shared/assets/icons/profile-avatar.png';
-import { profileAvatarBorderSvgText } from './assets/profile-avatar-border-svg-text';
+import Avatar from '@/shared/assets/icons/profile/avatar.png';
 import svgTextToBackgroundImage from '@/shared/lib/svgTextToBackgroundImage';
+// TODO: change loader to raw-loader and use original "avatar-border.svg"
+import { profileAvatarBorderSvgText } from '../../assets/profile-avatar-border-svg-text';
+import useAutoFocus from '@/shared/lib/hooks/useAutoFocus';
 
 export interface UserProfileAvatarProps {
     className?: string;
+    autoFocus?: boolean;
     userName: string;
     userEmail: string;
     href: string;
 }
 
 const UserProfileAvatar = memo((props: UserProfileAvatarProps) => {
-    const { className, userName, userEmail, href } = props;
+    const { className, autoFocus, userName, userEmail, href } = props;
+    const { autoFocusRef } = useAutoFocus();
 
     return (
         <div
@@ -21,6 +25,7 @@ const UserProfileAvatar = memo((props: UserProfileAvatarProps) => {
             data-zone-name="profile-badge"
         >
             <a
+                ref={autoFocus ? autoFocusRef : undefined}
                 aria-hidden="false"
                 href={href}
                 className={cls.avatar}

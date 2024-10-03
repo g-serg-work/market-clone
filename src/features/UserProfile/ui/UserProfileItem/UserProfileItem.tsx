@@ -1,26 +1,32 @@
 import { memo } from 'react';
 import cls from './UserProfileItem.module.scss';
 import classNames from '@/shared/lib/classNames';
+import useAutoFocus from '@/shared/lib/hooks/useAutoFocus';
+import { Link } from 'react-router-dom';
 
 export interface UserProfileItemProps {
     className?: string;
+    autoFocus?: boolean;
     name: string;
     title: string;
     route: string;
     Svg: React.VFC<React.SVGProps<SVGSVGElement>>;
+    count?: number;
 }
 
 const UserProfileItem = memo((props: UserProfileItemProps) => {
-    const { className, name, title, route, Svg } = props;
+    const { className, autoFocus, name, title, route, Svg, count } = props;
+    const { autoFocusRef } = useAutoFocus();
 
     return (
         <div
             className={classNames(cls.UserProfileItem, {}, [className])}
             data-zone-name={name}
         >
-            <a
+            <Link
+                ref={autoFocus ? autoFocusRef : undefined}
+                to={route}
                 className={cls.item}
-                href={route}
                 role="menuitem"
                 aria-hidden="false"
             >
@@ -34,7 +40,8 @@ const UserProfileItem = memo((props: UserProfileItemProps) => {
                     </div>
                 </div>
                 <span>{title}</span>
-            </a>
+                {count && <span className={cls.count}>{count}</span>}
+            </Link>
         </div>
     );
 });

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import classNames from '@/shared/lib/classNames';
 import cls from './WishListHeaderDesktopItem.module.scss';
 import Svg from '../../assets/icons/wish-list.svg';
+import { getRouteWishList } from '@/shared/const/router';
 
 export interface WishListHeaderDesktopItemProps {
     className?: string;
@@ -19,7 +20,11 @@ export const WishListHeaderDesktopItem = memo(
                     className,
                 ])}
             >
-                <Link className={cls.link} to="/my/wishlist" rel="nofollow">
+                <Link
+                    className={cls.link}
+                    to={getRouteWishList()}
+                    rel="nofollow"
+                >
                     <div data-baobab-name="favorites">
                         <div className={cls.svgWrapper} aria-hidden="true">
                             <span className={cls.count}>{count}</span>
