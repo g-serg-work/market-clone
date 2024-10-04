@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import UserProfileAdd, { UserProfileAddProps } from './UserProfileAdd';
-import { RouterDecorator } from '@/shared/config/storybook';
+import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 
 export default {
     title: 'features/UserProfile/UserProfileAdd',

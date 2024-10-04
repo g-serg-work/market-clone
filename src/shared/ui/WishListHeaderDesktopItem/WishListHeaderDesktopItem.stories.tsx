@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { WishListHeaderDesktopItem } from './WishListHeaderDesktopItem';
-import { RouterDecorator } from '@/shared/config/storybook';
+import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 
 export default {
     title: 'shared/WishListHeaderDesktopItem',

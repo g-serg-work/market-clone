@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { PageBanner } from './PageBanner';
-import { RouterDecorator } from '@/shared/config/storybook';
+import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 
 export default {
     title: 'entities/PageBanner',

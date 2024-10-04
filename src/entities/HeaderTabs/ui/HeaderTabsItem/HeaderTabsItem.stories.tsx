@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { HeaderTabsItem } from './HeaderTabsItem';
 import { HeaderTabRoutes } from '@/shared/const/headertabroutes';
-import { RouterDecorator } from '@/shared/config/storybook';
+import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 
 export default {
     title: 'entities/HeaderTabs/HeaderTabsItem',

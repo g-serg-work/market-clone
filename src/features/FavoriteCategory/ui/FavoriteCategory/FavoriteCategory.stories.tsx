@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import FavoriteCategory from './FavoriteCategory';
-import { StoreDecorator } from '@/shared/config/storybook';
+import StoreDecorator from '@/shared/config/storybook/StoreDecorator';
 
 export default {
     title: 'features/FavoriteCategory/FavoriteCategory',

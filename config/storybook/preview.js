@@ -1,7 +1,7 @@
 import { addDecorator } from '@storybook/react';
-import { StyleDecorator } from '../../src/shared/config/storybook';
-import { ThemeDecorator } from '../../src/shared/config/storybook';
-import { SuspenseDecorator } from '../../src/shared/config/storybook';
+import StyleDecorator from '../../src/shared/config/storybook/StyleDecorator';
+import ThemeDecorator from '../../src/shared/config/storybook/ThemeDecorator';
+import SuspenseDecorator from '../../src/shared/config/storybook/SuspenseDecorator';
 import StyledDecorator from '../../src/shared/config/storybook/StyledDecorator';
 import { Theme } from '../../src/shared/const/theme';
 

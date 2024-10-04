@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { CaruselItem } from './CaruselItem';
-import { RouterDecorator } from '@/shared/config/storybook';
+import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
 
 export default {

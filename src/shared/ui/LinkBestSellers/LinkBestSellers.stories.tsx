@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { LinkBestSellers } from './LinkBestSellers';
-import { RouterDecorator } from '@/shared/config/storybook';
+import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
 
 export default {

@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import UserProfileFavoriteCategory, {
     UserProfileFavoriteCategoryProps,
 } from './UserProfileFavoriteCategory';
-import { RouterDecorator } from '@/shared/config/storybook';
+import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 
 export default {
     title: 'features/UserProfile/UserProfileFavoriteCategory',

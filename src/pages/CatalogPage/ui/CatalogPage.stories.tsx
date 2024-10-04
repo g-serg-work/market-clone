@@ -1,9 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import CatalogPage from './CatalogPage';
-import {
-    MemoryRouterDecorator,
-    StoreDecorator,
-} from '@/shared/config/storybook';
+import StoreDecorator from '@/shared/config/storybook/StoreDecorator';
+import MemoryRouterDecorator from '@/shared/config/storybook/MemoryRouterDecorator';
 import { getRouteCatalog } from '@/shared/const/router';
 import { routeConfig } from '@/app/providers/router/config/routeConfig';
 

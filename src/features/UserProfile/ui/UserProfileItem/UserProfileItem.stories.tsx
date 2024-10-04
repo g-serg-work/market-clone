@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import UserProfileItem, { UserProfileItemProps } from './UserProfileItem';
 import ProfileOrdersSvg from '@/shared/assets/icons/profile/orders.svg';
-import { RouterDecorator } from '@/shared/config/storybook';
+import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 
 export default {
     title: 'features/UserProfile/UserProfileItem',
