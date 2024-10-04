@@ -1,7 +1,6 @@
-import { classNames } from '@/shared/lib/classNames/classNames';
+import { MouseEvent, useCallback } from 'react';
+import classNames from '@/shared/lib/classNames';
 import cls from './RequireAuthPage.module.scss';
-import { useCallback } from 'react';
-import { AnchorEvent } from '@/shared/types/custom';
 import { Page } from '@/widgets/Page';
 
 interface RequireAuthPageProps {
@@ -13,8 +12,8 @@ export const RequireAuthPage = (props: RequireAuthPageProps) => {
     const { className, onAuthClick } = props;
 
     const onClick = useCallback(
-        (event: AnchorEvent) => {
-            event.preventDefault();
+        (e: MouseEvent<HTMLAnchorElement>) => {
+            e.preventDefault();
             onAuthClick?.();
         },
         [onAuthClick],
