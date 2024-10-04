@@ -102,6 +102,7 @@ export const UserProfileItemsCfg: Array<
     },
     //TODO: UserProfileSocial -> https://help.yandex.ru/roundup_market
     //TODO: UserProfileBusiness -> https://business.market.yandex.ru/pokupayte-dlya-biznesa
+    //TODO: UserProfilePartner -> https://partner.market.yandex.ru/welcome/partners
     ({ idx, user, autoFocus }) => (
         <UserProfileChat
             key={idx}
