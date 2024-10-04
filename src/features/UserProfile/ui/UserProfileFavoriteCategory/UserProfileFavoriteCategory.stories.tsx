@@ -30,5 +30,5 @@ const args: UserProfileFavoriteCategoryProps = {
 export const Primary = Template.bind({});
 Primary.args = args;
 
-export const WithViewed = Template.bind({});
-WithViewed.args = { ...args, viewed: true };
+export const WithSelected = Template.bind({});
+WithSelected.args = { ...args, selected: true };

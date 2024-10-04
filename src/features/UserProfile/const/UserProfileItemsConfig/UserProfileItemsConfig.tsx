@@ -25,6 +25,7 @@ import SettingsSvg from '@/shared/assets/icons/profile/settings.svg';
 import HelpSvg from '@/shared/assets/icons/profile/help.svg';
 import LogoutSvg from '@/shared/assets/icons/profile/logout.svg';
 import UserProfileChat from '../../ui/UserProfileChat/UserProfileChat';
+import UserProfileFavoriteCategory from '../../ui/UserProfileFavoriteCategory/UserProfileFavoriteCategory';
 
 interface UserProfileItemsCfg extends UserProfileItemProps {
     getCountSelector?: (user: User) => number | undefined;
@@ -71,6 +72,15 @@ export const UserProfileItemsCfg: Array<
         route: getRouteReturns(),
         Svg: ReturnsSvg,
     },
+    ({ idx, user, autoFocus }) => (
+        <UserProfileFavoriteCategory
+            key={idx}
+            hint={user.favoriteCategory?.hint}
+            selected={!!user.favoriteCategory?.selected.length}
+            autoFocus={autoFocus}
+            onClick={() => alert('viewFavoriteCategory')}
+        />
+    ),
     {
         name: 'my-reviews',
         title: 'Мои отзывы и вопросы',

@@ -14,6 +14,7 @@ export interface User {
     wishList?: string[];
     ordersList?: string[];
     cartList?: string[];
+    favoriteCategory?: { hint: string; selected: [] };
 }
 
 export interface UserSchema {
