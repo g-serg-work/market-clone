@@ -37,7 +37,7 @@ const UserProfileItem = memo((props: UserProfileItemProps) => {
                 </div>
             </div>
             <span>{title}</span>
-            {count && <span className={cls.count}>{count}</span>}
+            {count ? <span className={cls.count}>{count}</span> : null}
         </>
     );
 

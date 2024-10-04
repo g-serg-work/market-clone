@@ -32,7 +32,7 @@ interface UserProfileItemsCfg extends UserProfileItemProps {
 }
 interface UserProfileItemCreatorArgs {
     idx: number;
-    user: User;
+    user: User | undefined;
     autoFocus?: boolean;
 }
 
@@ -47,8 +47,8 @@ export const UserProfileItemsCfg: Array<
         <UserProfileAvatar
             key={idx}
             autoFocus={autoFocus}
-            userName={user.userName}
-            userEmail={user.userEmail}
+            userName={user?.userName || 'unknown'}
+            userEmail={user?.userEmail || 'unknown'}
             href="https://id.yandex.ru"
         />
     ),
@@ -76,8 +76,8 @@ export const UserProfileItemsCfg: Array<
     ({ idx, user, autoFocus }) => (
         <UserProfileFavoriteCategory
             key={idx}
-            hint={user.favoriteCategory?.hint}
-            selected={!!user.favoriteCategory?.selected.length}
+            hint={user?.favoriteCategory?.hint || 'unknown'}
+            selected={!!user?.favoriteCategory?.selected.length}
             autoFocus={autoFocus}
             onClick={() => alert('viewFavoriteCategory')}
         />

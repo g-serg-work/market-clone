@@ -24,5 +24,8 @@ const args: UserProfileFavoriteCategoryProps = {
 export const Primary = Template.bind({});
 Primary.args = args;
 
+export const WithFocus = Template.bind({});
+WithFocus.args = { autoFocus: true };
+
 export const WithSelected = Template.bind({});
 WithSelected.args = { ...args, selected: true };
