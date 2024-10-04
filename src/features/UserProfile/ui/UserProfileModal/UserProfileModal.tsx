@@ -29,7 +29,7 @@ export const UserProfileModal = (props: UserProfileModalProps) => {
             onClose={onClose}
             lazy
         >
-            <UserProfile />
+            <UserProfile autoFocus />
         </Modal>
     );
 };
