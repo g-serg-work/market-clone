@@ -9,19 +9,19 @@ import { Mods } from '@/shared/lib/classNames/classNames';
 export interface UserProfileFavoriteCategoryProps {
     className?: string;
     autoFocus?: boolean;
-    hint: string;
-    viewed?: boolean;
+    hint?: string;
+    selected?: boolean;
     onClick?: () => void;
 }
 
 const UserProfileFavoriteCategory = memo(
     (props: UserProfileFavoriteCategoryProps) => {
-        const { className, autoFocus, hint, viewed, onClick } = props;
+        const { className, autoFocus, hint, selected, onClick } = props;
 
         const { autoFocusRef } = useAutoFocus<HTMLDivElement>();
 
         const mods: Mods = {
-            [cls.notViewed]: !viewed,
+            [cls.notSelected]: !selected,
         };
 
         return (
@@ -50,7 +50,7 @@ const UserProfileFavoriteCategory = memo(
                                 data-auto="text-primary"
                             >
                                 <div>Любимая категория</div>
-                                {!viewed && (
+                                {!selected && (
                                     <span className="ds-visuallyHidden">
                                         Не просмотрено
                                     </span>

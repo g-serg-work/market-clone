@@ -2,7 +2,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import UserProfileFavoriteCategory, {
     UserProfileFavoriteCategoryProps,
 } from './UserProfileFavoriteCategory';
-import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
 import { RouterDecorator } from '@/shared/config/storybook';
 
 export default {
@@ -11,12 +10,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [
-        StyledDecorator({
-            margin: 20,
-        }),
-        RouterDecorator,
-    ],
+    decorators: [RouterDecorator],
 } as ComponentMeta<typeof UserProfileFavoriteCategory>;
 
 const Template: ComponentStory<typeof UserProfileFavoriteCategory> = (args) => (

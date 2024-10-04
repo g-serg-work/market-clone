@@ -1,7 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { HeaderDesktopMenu } from './HeaderDesktopMenu';
 import { RouterDecorator, StoreDecorator } from '@/shared/config/storybook';
-import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
 
 export default {
     title: 'entities/HeaderDesktopMenu/HeaderDesktopMenu',
@@ -9,7 +8,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [RouterDecorator, StyledDecorator({ margin: 20 })],
+    decorators: [RouterDecorator],
 } as ComponentMeta<typeof HeaderDesktopMenu>;
 
 const Template: ComponentStory<typeof HeaderDesktopMenu> = (args) => (

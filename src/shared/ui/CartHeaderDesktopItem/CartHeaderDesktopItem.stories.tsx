@@ -1,5 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { CartHeaderDesktopItem } from './CartHeaderDesktopItem';
+import { RouterDecorator } from '@/shared/config/storybook';
 
 export default {
     title: 'shared/CartHeaderDesktopItem',
@@ -7,9 +8,12 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [RouterDecorator],
 } as ComponentMeta<typeof CartHeaderDesktopItem>;
 
-const Template: ComponentStory<typeof CartHeaderDesktopItem> = (args) => <CartHeaderDesktopItem {...args} />;
+const Template: ComponentStory<typeof CartHeaderDesktopItem> = (args) => (
+    <CartHeaderDesktopItem {...args} />
+);
 
 export const Primary = Template.bind({});
 Primary.args = {};

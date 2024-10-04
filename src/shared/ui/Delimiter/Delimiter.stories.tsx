@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Delimiter } from './Delimiter';
-import { StoryWrapper } from '@/shared/config/storybook';
+import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
 
 export default {
     title: 'shared/Delimiter',
@@ -8,12 +8,11 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [StyledDecorator({ backgroundColor: '#1f90ae' })],
 } as ComponentMeta<typeof Delimiter>;
 
 const Template: ComponentStory<typeof Delimiter> = (args) => (
-    <StoryWrapper backgroundColor={'#1f90ae'}>
-        <Delimiter {...args} />
-    </StoryWrapper>
+    <Delimiter {...args} />
 );
 
 export const Primary = Template.bind({});

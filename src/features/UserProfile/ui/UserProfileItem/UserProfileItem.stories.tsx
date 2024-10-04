@@ -1,6 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import UserProfileItem, { UserProfileItemProps } from './UserProfileItem';
-import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
 import ProfileOrdersSvg from '@/shared/assets/icons/profile/orders.svg';
 import { RouterDecorator } from '@/shared/config/storybook';
 
@@ -10,12 +9,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [
-        StyledDecorator({
-            margin: 20,
-        }),
-        RouterDecorator,
-    ],
+    decorators: [RouterDecorator],
 } as ComponentMeta<typeof UserProfileItem>;
 
 const Template: ComponentStory<typeof UserProfileItem> = (args) => (

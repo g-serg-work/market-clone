@@ -9,12 +9,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [
-        StyledDecorator({
-            backgroundColor: '#f5f5f5',
-            margin: 20,
-        }),
-    ],
+    decorators: [StyledDecorator({ backgroundColor: '#f5f5f5' })],
 } as ComponentMeta<typeof UserProfileLoader>;
 
 const Template: ComponentStory<typeof UserProfileLoader> = (args) => (

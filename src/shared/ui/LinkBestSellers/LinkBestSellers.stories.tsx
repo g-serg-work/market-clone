@@ -1,6 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { LinkBestSellers } from './LinkBestSellers';
-import { RouterDecorator, StoryWrapper } from '@/shared/config/storybook';
+import { RouterDecorator } from '@/shared/config/storybook';
+import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
 
 export default {
     title: 'shared/LinkBestSellers',
@@ -8,13 +9,14 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [RouterDecorator],
+    decorators: [
+        RouterDecorator,
+        StyledDecorator({ backgroundColor: '#b474dd' }),
+    ],
 } as ComponentMeta<typeof LinkBestSellers>;
 
 const Template: ComponentStory<typeof LinkBestSellers> = (args) => (
-    <StoryWrapper backgroundColor={'#b474dd'}>
-        <LinkBestSellers {...args} />
-    </StoryWrapper>
+    <LinkBestSellers {...args} />
 );
 
 export const Primary = Template.bind({});

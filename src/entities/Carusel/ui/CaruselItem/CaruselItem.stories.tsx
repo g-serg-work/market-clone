@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { CaruselItem } from './CaruselItem';
-import { RouterDecorator, StoryWrapper } from '@/shared/config/storybook';
+import { RouterDecorator } from '@/shared/config/storybook';
+import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
 
 export default {
     title: 'entities/Carusel/CaruselItem',
@@ -8,13 +9,11 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [RouterDecorator],
+    decorators: [RouterDecorator, StyledDecorator({ maxWidth: 500 })],
 } as ComponentMeta<typeof CaruselItem>;
 
 const Template: ComponentStory<typeof CaruselItem> = (args) => (
-    <StoryWrapper maxWidth={500}>
-        <CaruselItem {...args} />
-    </StoryWrapper>
+    <CaruselItem {...args} />
 );
 
 export const Primary = Template.bind({});

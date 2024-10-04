@@ -7,11 +7,11 @@ import { Link } from 'react-router-dom';
 export interface UserProfileAddProps {
     className?: string;
     autoFocus?: boolean;
-    href: string;
+    route: string;
 }
 
 const UserProfileAdd = memo((props: UserProfileAddProps) => {
-    const { className, autoFocus, href } = props;
+    const { className, autoFocus, route } = props;
     const { autoFocusRef } = useAutoFocus<HTMLAnchorElement>();
 
     return (
@@ -22,7 +22,7 @@ const UserProfileAdd = memo((props: UserProfileAddProps) => {
             <Link
                 ref={autoFocus ? autoFocusRef : undefined}
                 aria-hidden="false"
-                to={href}
+                to={route}
                 className={cls.add}
                 role="menuitem"
             >

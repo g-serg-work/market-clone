@@ -1,6 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import UserProfileChat, { UserProfileChatProps } from './UserProfileChat';
-import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
 import { RouterDecorator } from '@/shared/config/storybook';
 
 export default {
@@ -9,12 +8,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [
-        StyledDecorator({
-            margin: 20,
-        }),
-        RouterDecorator,
-    ],
+    decorators: [RouterDecorator],
 } as ComponentMeta<typeof UserProfileChat>;
 
 const Template: ComponentStory<typeof UserProfileChat> = (args) => (

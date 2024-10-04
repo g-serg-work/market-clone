@@ -1,6 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { HeaderSearchItem } from './HeaderSearchItem';
-import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
 
 export default {
     title: 'shared/HeaderSearchItem',
@@ -8,7 +7,6 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [StyledDecorator({ maxWidth: 800, padding: 20 })],
 } as ComponentMeta<typeof HeaderSearchItem>;
 
 const Template: ComponentStory<typeof HeaderSearchItem> = (args) => (

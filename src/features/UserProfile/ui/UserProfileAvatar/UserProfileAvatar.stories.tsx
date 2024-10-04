@@ -1,6 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import UserProfileAvatar, { UserProfileAvatarProps } from './UserProfileAvatar';
-import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
 
 export default {
     title: 'features/UserProfile/UserProfileAvatar',
@@ -8,11 +7,6 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [
-        StyledDecorator({
-            margin: 20,
-        }),
-    ],
 } as ComponentMeta<typeof UserProfileAvatar>;
 
 const Template: ComponentStory<typeof UserProfileAvatar> = (args) => (
