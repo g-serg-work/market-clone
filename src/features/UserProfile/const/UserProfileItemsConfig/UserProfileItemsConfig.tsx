@@ -59,8 +59,7 @@ export const UserProfileItemsCfg: Array<
         Svg: ProfileOrdersSvg,
         getCountSelector: (user) => user.ordersList?.length,
     },
-    // TODO: layout fix
-    // UserProfilePurchased = "/my/purchased"
+    // TODO: UserProfilePurchased -> "/my/purchased"
     {
         name: 'favorites',
         title: 'Избранное',
@@ -101,6 +100,7 @@ export const UserProfileItemsCfg: Array<
         route: getRouteCompare(),
         Svg: ComparisonSvg,
     },
+    //TODO: UserProfileSocial -> htts://help.yandex.ru/roundup_market
     ({ idx, user, autoFocus }) => (
         <UserProfileChat
             key={idx}
