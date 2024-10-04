@@ -59,6 +59,8 @@ export const UserProfileItemsCfg: Array<
         Svg: ProfileOrdersSvg,
         getCountSelector: (user) => user.ordersList?.length,
     },
+    // TODO: layout fix
+    // UserProfilePurchased = "/my/purchased"
     {
         name: 'favorites',
         title: 'Избранное',
