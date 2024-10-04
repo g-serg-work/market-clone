@@ -100,7 +100,8 @@ export const UserProfileItemsCfg: Array<
         route: getRouteCompare(),
         Svg: ComparisonSvg,
     },
-    //TODO: UserProfileSocial -> htts://help.yandex.ru/roundup_market
+    //TODO: UserProfileSocial -> https://help.yandex.ru/roundup_market
+    //TODO: UserProfileBusiness -> https://business.market.yandex.ru/pokupayte-dlya-biznesa
     ({ idx, user, autoFocus }) => (
         <UserProfileChat
             key={idx}

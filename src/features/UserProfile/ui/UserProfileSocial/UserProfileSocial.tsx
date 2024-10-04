@@ -31,7 +31,7 @@ const UserProfileSocial = memo((props: UserProfileSocialProps) => {
                     <div className={cls.css}>
                         <div data-auto="iconHelp">
                             <div>
-                                <SocialSvg fill="none" />
+                                <SocialSvg />
                             </div>
                         </div>
                         <div className={cls.css}>
