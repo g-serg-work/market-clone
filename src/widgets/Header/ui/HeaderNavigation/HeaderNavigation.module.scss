@@ -1,0 +1,28 @@
+.HeaderNavigation {
+    display: block;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    gap: 12px;
+    padding: 12px 14px;
+    height: 44px;
+    background-color: var(--control-primary);
+    color: #21201f;
+    line-height: 17px;
+    justify-content: center;
+    appearance: none;
+    border: none;
+    font-family: YS Text, Helvetica, Arial, sans-serif;
+    border-radius: 7px;
+    font-weight: 500;
+    transition: all 0.12s ease-out;
+    cursor: pointer;
+
+    span {
+        position: relative;
+        z-index: 10;
+    }
+}

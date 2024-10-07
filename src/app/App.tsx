@@ -1,7 +1,7 @@
 import { memo, Suspense, useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { getUserInited, initAuthData } from '@/entities/User';
-import { HeaderDesktop } from '@/widgets/HeaderDesktop';
+import { Header } from '@/widgets/Header';
 import { AppRouter } from './providers/router';
 import { withTheme } from './providers/ThemeProvider';
 import { useAppDispatch } from '@/shared/lib/hooks';
@@ -10,7 +10,7 @@ import useJSXModal from '@/shared/lib/hooks/useJSXModal';
 import { FavoriteCategoryModal } from '@/features/FavoriteCategory';
 import { UserProfileModal } from '@/features/UserProfile';
 import callElementBoundingClientRect from '@/shared/lib/callElementBoundingClientRect';
-import { AvatarClickCallback } from '@/shared/ui/Avatar';
+import { HeaderMenuItemAvatarClickCallback } from '@/widgets/Header/ui/HeaderMenu/HeaderMenuItemAvatar/HeaderMenuItemAvatar';
 
 const userProfileModalProps = { left: 0, top: 0 };
 
@@ -28,15 +28,16 @@ const App = memo(() => {
         modalContent: userProfileModalContent,
     } = useJSXModal(UserProfileModal, () => userProfileModalProps);
 
-    const onAvatarClick: AvatarClickCallback = useCallback(
-        ({ avatarEl }) => {
-            const rect = callElementBoundingClientRect(avatarEl);
-            userProfileModalProps.left = rect.left + rect.width - 10;
-            userProfileModalProps.top = rect.top;
-            doUserProfileModal();
-        },
-        [doUserProfileModal],
-    );
+    const onHeaderMenuItemAvatarClick: HeaderMenuItemAvatarClickCallback =
+        useCallback(
+            ({ avatarEl }) => {
+                const rect = callElementBoundingClientRect(avatarEl);
+                userProfileModalProps.left = rect.left + rect.width - 10;
+                userProfileModalProps.top = rect.top;
+                doUserProfileModal();
+            },
+            [doUserProfileModal],
+        );
 
     useEffect(() => {
         if (!inited) {
@@ -46,7 +47,7 @@ const App = memo(() => {
 
     return (
         <div id="app">
-            <HeaderDesktop onAvatarClick={onAvatarClick} />
+            <Header onHeaderMenuItemAvatarClick={onHeaderMenuItemAvatarClick} />
             <HeaderTabsList onFavoriteCategoryClick={doFavoriteCategoryModal} />
             {favoriteCategoryModalContent}
             {userProfileModalContent}
