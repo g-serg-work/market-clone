@@ -1,18 +1,18 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { HeaderTabsList } from './HeaderTabsList';
 import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
+import { CategoryMenu } from './CategoryMenu';
 
 export default {
-    title: 'entities/HeaderTabs/HeaderTabsList',
-    component: HeaderTabsList,
+    title: 'widgets/CategoryMenu/CategoryMenu/CategoryMenu',
+    component: CategoryMenu,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
     decorators: [RouterDecorator],
-} as ComponentMeta<typeof HeaderTabsList>;
+} as ComponentMeta<typeof CategoryMenu>;
 
-const Template: ComponentStory<typeof HeaderTabsList> = (args) => (
-    <HeaderTabsList {...args} />
+const Template: ComponentStory<typeof CategoryMenu> = (args) => (
+    <CategoryMenu {...args} />
 );
 
 export const Primary = Template.bind({});

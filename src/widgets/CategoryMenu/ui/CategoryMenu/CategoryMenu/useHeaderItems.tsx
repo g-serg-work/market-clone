@@ -6,15 +6,15 @@ import {
     HeaderTabRoutes,
     HeaderTabRouteTitles,
 } from '@/shared/const/headertabroutes';
-import { BuyerTypesItem } from '../BuyerTypesItem/BuyerTypesItem';
-import { FavoriteCategoryItem } from '../FavoriteCategoryItem/FavoriteCategoryItem';
-import { HeaderTabsItem } from '../HeaderTabsItem/HeaderTabsItem';
-import { HeaderTabsListProps } from './HeaderTabsList';
+import { CategoryMenuBuyerItem } from '../CategoryMenuBuyerItem/CategoryMenuBuyerItem';
+import { CategoryMenuFavoriteCategoryItem } from '../CategoryMenuFavoriteCategoryItem/CategoryMenuFavoriteCategoryItem';
+import { CategoryMenuItem } from '../../CategoryMenuItem/CategoryMenuItem';
+import { CategoryMenuProps } from './CategoryMenu';
 
 const items = Array.from(HeaderTabRouteTitles.keys());
 
 interface useHeaderItemsProps {
-    onFavoriteCategoryClick?: HeaderTabsListProps['onFavoriteCategoryClick'];
+    onFavoriteCategoryClick?: CategoryMenuProps['onFavoriteCategoryClick'];
 }
 
 export const useHeaderItems = (props: useHeaderItemsProps) => {
@@ -25,25 +25,25 @@ export const useHeaderItems = (props: useHeaderItemsProps) => {
     const next = () => _index++;
 
     const makeHeaderItem = (route: HeaderTabRoutes) => (
-        <HeaderTabsItem key={next()} route={route} />
+        <CategoryMenuItem key={next()} route={route} />
     );
 
-    const HeaderTabsItems = items
+    const CategoryMenuItems = items
         .slice(0, 2)
         .map(makeHeaderItem)
         .concat(
-            <FavoriteCategoryItem
+            <CategoryMenuFavoriteCategoryItem
                 key={next()}
                 onClick={onFavoriteCategoryClick}
             />,
         )
         .concat(items.slice(2).map(makeHeaderItem));
 
-    const BuyerTypesItems = Array.from(BuyerTypeRouteTitles.keys()).map(
+    const CategoryMenuBuyerItems = Array.from(BuyerTypeRouteTitles.keys()).map(
         (route: BuyerTypeRoutes, index) => (
-            <BuyerTypesItem key={index} route={route} />
+            <CategoryMenuBuyerItem key={index} route={route} />
         ),
     );
 
-    return { HeaderTabsItems, BuyerTypesItems };
+    return { CategoryMenuItems, CategoryMenuBuyerItems };
 };

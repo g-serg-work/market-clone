@@ -22,7 +22,12 @@ export const Button = memo(
         };
 
         return (
-            <button ref={ref} onClick={onButtonClick} {...otherProps}>
+            <button
+                type="button"
+                ref={ref}
+                onClick={onButtonClick}
+                {...otherProps}
+            >
                 {children}
             </button>
         );

@@ -1,24 +1,24 @@
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from '@/shared/lib/classNames';
-import cls from './HeaderTabsItem.module.scss';
+import cls from './CategoryMenuItem.module.scss';
 import {
     HeaderTabRoutes,
     HeaderTabRouteTitles,
 } from '@/shared/const/headertabroutes';
 
-export interface HeaderTabsItemProps {
+export interface CategoryMenuItemProps {
     className?: string;
     route: HeaderTabRoutes;
 }
 
-export const HeaderTabsItem = memo((props: HeaderTabsItemProps) => {
+export const CategoryMenuItem = memo((props: CategoryMenuItemProps) => {
     const { className, route } = props;
     const title = HeaderTabRouteTitles.get(route);
 
     return (
         <li role="tab">
-            <div className={classNames(cls.HeaderTabsItem, {}, [className])}>
+            <div className={classNames(cls.CategoryMenuItem, {}, [className])}>
                 <Link to={route}>
                     <span>{title}</span>
                 </Link>
