@@ -1,11 +1,8 @@
 .CategoryMenuItem {
     text-align: center;
     white-space: nowrap;
-    -webkit-user-select: none;
-    -moz-user-select: none;
     user-select: none;
     font: inherit;
-    text-align: left;
     border: none;
     outline: none;
     background: transparent;
@@ -18,12 +15,12 @@
     }
 
     a {
-        &:focus-visible:after {
+        &:focus-visible::after {
             position: absolute;
             right: 0;
             bottom: 2px;
             left: 0;
-            content: '';
+            content: "";
             height: 3px;
             background: #fce000;
         }

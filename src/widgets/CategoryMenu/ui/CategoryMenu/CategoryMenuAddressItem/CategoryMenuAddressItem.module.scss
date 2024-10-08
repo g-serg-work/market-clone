@@ -25,12 +25,12 @@
     position: relative;
     width: 100%;
 
-    &:focus-visible:after {
+    &:focus-visible::after {
         position: absolute;
         right: 0;
         bottom: 2px;
         left: 0;
-        content: '';
+        content: "";
         height: 3px;
         background: #fce000;
     }

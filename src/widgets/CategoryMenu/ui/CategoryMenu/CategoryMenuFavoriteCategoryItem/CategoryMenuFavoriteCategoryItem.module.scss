@@ -9,7 +9,6 @@
     transition: color 0.3s;
     padding: 0 12px;
     flex-grow: 1;
-    outline: 0;
     position: relative;
     outline: none;
     outline-offset: 2px;
@@ -18,12 +17,12 @@
     &:focus-visible {
         outline: 2px solid #fce000;
 
-        &:after {
+        &::after {
             right: 12px;
             left: 12px;
             position: absolute;
             bottom: 2px;
-            content: '';
+            content: "";
             height: 3px;
             background: #fce000;
         }

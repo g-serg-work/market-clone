@@ -18,6 +18,12 @@
         li {
             display: block;
 
+            &:last-child {
+                display: flex;
+                align-items: center;
+                min-width: 48px;
+            }
+
             &:not(:last-child) {
                 padding: 0;
 
@@ -31,12 +37,6 @@
                     width: 65px;
                     margin-right: 12px;
                 }
-            }
-
-            &:last-child {
-                display: flex;
-                align-items: center;
-                min-width: 48px;
             }
         }
     }

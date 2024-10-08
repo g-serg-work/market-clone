@@ -1,11 +1,8 @@
 .CategoryMenuBuyerItem {
     text-align: center;
     white-space: nowrap;
-    -webkit-user-select: none;
-    -moz-user-select: none;
     user-select: none;
     font: inherit;
-    text-align: left;
     border: none;
     outline: none;
     background: transparent;
@@ -35,12 +32,12 @@
             color: #ec0000;
         }
 
-        &:focus-visible:after {
+        &:focus-visible::after {
             right: 12px;
             left: 12px;
             position: absolute;
             bottom: 2px;
-            content: '';
+            content: "";
             height: 3px;
             background: #fce000;
         }

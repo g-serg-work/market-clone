@@ -17,6 +17,7 @@
 .overlay {
     visibility: hidden;
 }
+
 .searchRow:has(:focus) {
     .overlay {
         opacity: 1;
@@ -63,11 +64,6 @@
     line-height: 36px;
     position: relative;
 }
-.formContent:has(:focus) {
-    .inputBlock {
-        border-color: transparent;
-    }
-}
 
 .inputBlockInner {
     display: flex;
@@ -105,11 +101,13 @@
         opacity: 1;
         display: block;
     }
+
     &:focus-visible .svg {
         opacity: 1;
         display: block;
     }
 }
+
 .inputBlock:has(.inputField:not(:placeholder-shown)) {
     .inputClearButton {
         display: block;
@@ -140,11 +138,6 @@
         box-shadow: none;
     }
 }
-.formContent:has(:focus) {
-    .searchInput {
-        border-color: transparent;
-    }
-}
 
 /* searchButton */
 .searchButton {
@@ -161,7 +154,7 @@
     border: none;
     border-radius: 0 7px 7px 0;
     font-weight: 500;
-    font-family: YS Text, Helvetica, Arial, sans-serif;
+    font-family: "YS Text", Helvetica, Arial, sans-serif;
     appearance: none;
     transition: all 0.12s ease-out;
     cursor: pointer;
@@ -174,8 +167,8 @@
         background-color: var(--control-primary-pressed);
     }
 
-    &:before {
-        content: ' ';
+    &::before {
+        content: " ";
         z-index: 0;
         border-radius: 0 4px 4px 0;
         position: absolute;
@@ -188,8 +181,8 @@
         visibility: hidden;
     }
 
-    &:after {
-        content: ' ';
+    &::after {
+        content: " ";
         z-index: 0;
         padding: 0 15px 0 18px;
         line-height: 34px;
@@ -211,7 +204,16 @@
         z-index: 10;
     }
 }
+
 .formContent:has(:focus) {
+    .inputBlock {
+        border-color: transparent;
+    }
+
+    .searchInput {
+        border-color: transparent;
+    }
+
     .searchButton::before,
     .searchButton::after {
         visibility: visible;

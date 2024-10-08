@@ -36,7 +36,7 @@
     position: relative;
 
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         left: 50%;
@@ -46,8 +46,8 @@
         background-color: #222;
     }
 
-    &:after {
-        content: '';
+    &::after {
+        content: "";
         position: absolute;
         top: 50%;
         left: 50%;
@@ -61,6 +61,7 @@
         color: #000;
     }
 }
+
 .add:hover .addContent {
     background-color: #f7f7f7;
 }

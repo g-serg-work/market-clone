@@ -26,7 +26,7 @@
         letter-spacing: -0.0175em;
         font-size: 32px;
         font-weight: 700;
-        font-family: YS Text, Helvetica, Arial, sans-serif;
+        font-family: "YS Text", Helvetica, Arial, sans-serif;
     }
 
     span {
@@ -36,19 +36,21 @@
         letter-spacing: -0.0025em;
         font-size: 17px;
         font-weight: 400;
-        font-family: YS Text, Helvetica, Arial, sans-serif;
+        font-family: "YS Text", Helvetica, Arial, sans-serif;
     }
 }
 
-a[role='button'] {
+a[role="button"] {
     height: 48px;
     padding: 0 20px;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
+
     --ds-button-bg-primary: var(--control-primary);
     --ds-button-bg-primary-hover: var(--control-primary-hover);
     --ds-button-bg-primary-pressed: var(--control-primary-pressed);
+
     background-color: var(--ds-button-bg-primary);
     appearance: none;
     outline: none;
@@ -84,8 +86,8 @@ a[role='button'] {
         text-align: center;
         overflow: hidden;
         text-overflow: ellipsis;
-        display: -webkit-box;
+        display: box;
         font-weight: 500;
-        font-family: YS Text, Helvetica, Arial, sans-serif;
+        font-family: "YS Text", Helvetica, Arial, sans-serif;
     }
 }
