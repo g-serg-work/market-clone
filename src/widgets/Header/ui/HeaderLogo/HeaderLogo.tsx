@@ -1,9 +1,9 @@
 import { memo } from 'react';
-import cls from './MarketLogo.module.scss';
-import MarketSvg from '@/shared/assets/icons/market-logo.svg';
+import cls from './HeaderLogo.module.scss';
+import Svg from '../../assets/icons/market-logo.svg';
 import classNames from '@/shared/lib/classNames';
 
-export interface MarketLogoProps {
+export interface HeaderLogoProps {
     className?: string;
 }
 
@@ -28,10 +28,10 @@ const clickLinks = [
     </a>
 ));
 
-export const MarketLogo = memo(({ className }: MarketLogoProps) => {
+export const HeaderLogo = memo(({ className }: HeaderLogoProps) => {
     return (
-        <div className={classNames(cls.MarketLogo, {}, [className])}>
-            <MarketSvg />
+        <div className={classNames(cls.HeaderLogo, {}, [className])}>
+            <Svg />
             <div className={cls.clickArea}>{clickLinks}</div>
         </div>
     );

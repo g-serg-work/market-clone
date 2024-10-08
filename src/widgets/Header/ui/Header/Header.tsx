@@ -1,11 +1,11 @@
 import { memo, useCallback, useState } from 'react';
-import { MarketLogo } from '@/shared/ui/MarketLogo';
 import classNames from '@/shared/lib/classNames';
 import cls from './Header.module.scss';
 import { HeaderSearch } from '../HeaderSearch/HeaderSearch';
 import { HeaderMenu } from '../HeaderMenu/HeaderMenu/HeaderMenu';
 import { HeaderMenuItemAvatarClickCallback } from '../HeaderMenu/HeaderMenuItemAvatar/HeaderMenuItemAvatar';
 import { HeaderNavigation } from '../HeaderNavigation/HeaderNavigation';
+import { HeaderLogo } from '../HeaderLogo/HeaderLogo';
 
 interface HeaderProps {
     className?: string;
@@ -26,7 +26,7 @@ export const Header = memo((props: HeaderProps) => {
                 <div className={cls.inner}>
                     <div className={cls.itemsWrapper}>
                         <div className={cls.logoWrapper}>
-                            <MarketLogo />
+                            <HeaderLogo />
                         </div>
                         <div className={cls.mainWrapper}>
                             <div className={cls.navigationWrapper}>

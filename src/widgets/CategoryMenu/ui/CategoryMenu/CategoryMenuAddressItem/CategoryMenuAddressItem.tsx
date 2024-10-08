@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import cls from './CategoryMenuAddressItem.module.scss';
-import Svg from '@/shared/assets/icons/delivery-point-20-20.svg';
+import Svg from '../../assets/icons/delivery-point-20-20.svg';
 import classNames from '@/shared/lib/classNames';
 import { Button } from '@/shared/ui/Button';
 
