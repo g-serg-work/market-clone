@@ -1,0 +1,39 @@
+.FavoriteCategoryClose {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+    z-index: 2;
+    color: #bababa;
+    outline: none;
+    outline-offset: 2px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+    font: inherit;
+    line-height: inherit;
+    text-rendering: inherit;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+    text-transform: inherit;
+    text-indent: inherit;
+    text-shadow: inherit;
+    text-align: inherit;
+    overflow: visible;
+    background: transparent;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    appearance: none;
+
+    &:focus-visible {
+        outline: 2px solid #fce000;
+    }
+
+    svg {
+        fill: currentcolor;
+        width: 20px;
+        min-width: 20px;
+        height: 20px;
+    }
+}

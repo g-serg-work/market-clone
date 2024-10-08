@@ -6,13 +6,15 @@ import { getUserAuthData } from '@/entities/User';
 import cls from './FavoriteCategory.module.scss';
 import { ApiError } from '@/shared/ui/ApiError';
 import { FavoriteCategoryLoader } from '../FavoriteCategoryLoader/FavoriteCategoryLoader';
+import { FavoriteCategoryClose } from '../FavoriteCategoryClose/FavoriteCategoryClose';
 
 export interface FavoriteCategoryProps {
     className?: string;
+    onClose?: () => void;
 }
 
 const FavoriteCategory = memo((props: FavoriteCategoryProps) => {
-    const { className } = props;
+    const { className, onClose } = props;
     const userData = useSelector(getUserAuthData);
 
     const { data, isLoading, isError, error } = useGetFavoriteCategory({
@@ -22,7 +24,7 @@ const FavoriteCategory = memo((props: FavoriteCategoryProps) => {
     if (isLoading) {
         return (
             <div className={classNames(cls.FavoriteCategory, {}, [className])}>
-                <FavoriteCategoryLoader />
+                <FavoriteCategoryLoader onClose={onClose} />
             </div>
         );
     }
@@ -30,7 +32,9 @@ const FavoriteCategory = memo((props: FavoriteCategoryProps) => {
     if (isError) {
         return (
             <div className={classNames(cls.FavoriteCategory, {}, [className])}>
-                <ApiError error={error} />
+                <FavoriteCategoryLoader onClose={onClose}>
+                    <ApiError error={error} />
+                </FavoriteCategoryLoader>
             </div>
         );
     }
@@ -68,6 +72,7 @@ const FavoriteCategory = memo((props: FavoriteCategoryProps) => {
                     <div className={cls.content}>{items}</div>
                 </div>
             </div>
+            <FavoriteCategoryClose onClose={onClose} />
         </div>
     );
 });

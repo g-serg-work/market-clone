@@ -16,3 +16,6 @@ const Template: ComponentStory<typeof FavoriteCategoryLoader> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {};
+
+export const WithError = Template.bind({});
+WithError.args = { children: 'Error Message' };
