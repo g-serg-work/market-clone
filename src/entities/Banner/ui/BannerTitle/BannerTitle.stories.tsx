@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { BannerTitle } from './BannerTitle';
 
 export default {
-    title: 'shared/BannerTitle',
+    title: 'entities/Banner/BannerTitle',
     component: BannerTitle,
     argTypes: {
         backgroundColor: { control: 'color' },

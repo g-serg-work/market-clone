@@ -1,10 +1,10 @@
 import { CSSProperties, memo, ReactNode } from 'react';
 import classNames from '@/shared/lib/classNames';
-import { BannerTitle } from '@/shared/ui/BannerTitle';
-import { LinkBestSellers } from '@/shared/ui/LinkBestSellers';
-import cls from './PageBanner.module.scss';
+import cls from './Banner.module.scss';
+import { BannerLink } from '../BannerLink/BannerLink';
+import { BannerTitle } from '../BannerTitle/BannerTitle';
 
-export interface PageBannerProps {
+export interface BannerProps {
     className?: string;
     href: string;
     bgImg: string;
@@ -12,7 +12,7 @@ export interface PageBannerProps {
     body: ReactNode;
 }
 
-export const PageBanner = memo((props: PageBannerProps) => {
+export const Banner = memo((props: BannerProps) => {
     const { className, href, bgImg, headerImg, body } = props;
 
     const bgStyle: CSSProperties = {
@@ -30,7 +30,7 @@ export const PageBanner = memo((props: PageBannerProps) => {
                         <BannerTitle img={headerImg} />
                         <div className={cls.linkWrapper}>
                             {body}
-                            <LinkBestSellers href={href} />
+                            <BannerLink href={href} />
                         </div>
                     </div>
                 </div>

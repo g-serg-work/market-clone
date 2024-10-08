@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import classNames from '@/shared/lib/classNames';
 import cls from './CatalogPage.module.scss';
 import { Page } from '@/widgets/Page';
-import { PageBanner } from '@/entities/PageBanner';
+import { Banner } from '@/entities/Banner';
 import { CaruselList } from '@/entities/Carusel';
 import { CategoryList } from '@/entities/Category';
 import { Delimiter } from '@/shared/ui/Delimiter';
@@ -44,7 +44,7 @@ const CatalogPage = (props: CatalogPageProps) => {
         return (
             <Fragment key={idx}>
                 {idx > 0 && <Delimiter height={20} />}
-                <PageBanner
+                <Banner
                     href={href}
                     bgImg={bgImg}
                     headerImg={headerImg}

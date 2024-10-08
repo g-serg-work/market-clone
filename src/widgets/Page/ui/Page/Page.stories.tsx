@@ -5,7 +5,7 @@ import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
 
 export default {
-    title: 'widgets/Page',
+    title: 'widgets/Page/Page',
     component: Page,
     argTypes: {
         backgroundColor: { control: 'color' },

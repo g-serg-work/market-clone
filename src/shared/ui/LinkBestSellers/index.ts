@@ -1,1 +1,0 @@
-export { LinkBestSellers } from './LinkBestSellers';

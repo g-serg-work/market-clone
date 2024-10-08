@@ -5,7 +5,6 @@ import { getUIScrollByPath, uiActions } from '@/features/UI';
 import { StateSchema } from '@/app/providers/StoreProvider';
 import cls from './Page.module.scss';
 import { TestProps } from '@/shared/types/tests';
-import { Footer } from '@/widgets/Footer';
 import {
     useAppDispatch,
     useInfiniteScroll,
@@ -13,6 +12,7 @@ import {
     useThrottle,
 } from '@/shared/lib/hooks';
 import classNames from '@/shared/lib/classNames';
+import { Footer } from '../Footer/Footer';
 
 interface PageProps extends TestProps {
     className?: string;

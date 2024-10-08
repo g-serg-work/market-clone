@@ -1,11 +1,11 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { LinkBestSellers } from './LinkBestSellers';
+import { BannerLink } from './BannerLink';
 import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
 
 export default {
-    title: 'shared/LinkBestSellers',
-    component: LinkBestSellers,
+    title: 'entities/Banner/BannerLink',
+    component: BannerLink,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
@@ -13,10 +13,10 @@ export default {
         RouterDecorator,
         StyledDecorator({ backgroundColor: '#b474dd' }),
     ],
-} as ComponentMeta<typeof LinkBestSellers>;
+} as ComponentMeta<typeof BannerLink>;
 
-const Template: ComponentStory<typeof LinkBestSellers> = (args) => (
-    <LinkBestSellers {...args} />
+const Template: ComponentStory<typeof BannerLink> = (args) => (
+    <BannerLink {...args} />
 );
 
 export const Primary = Template.bind({});
