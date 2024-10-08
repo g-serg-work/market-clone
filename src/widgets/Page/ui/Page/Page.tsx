@@ -5,7 +5,7 @@ import { getUIScrollByPath, uiActions } from '@/features/UI';
 import { StateSchema } from '@/app/providers/StoreProvider';
 import cls from './Page.module.scss';
 import { TestProps } from '@/shared/types/tests';
-import { Footer } from '@/entities/Footer';
+import { Footer } from '@/widgets/Footer';
 import {
     useAppDispatch,
     useInfiniteScroll,
