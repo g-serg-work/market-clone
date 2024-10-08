@@ -4,7 +4,7 @@ const parseCategory = (cfg, category) => {
 
     return {
         ...category,
-        img: `${avatarsBaseUrl}{/get-marketcms}${img}.png/optimize`,
+        img: `${avatarsBaseUrl}/get-marketcms${img}.png/optimize`,
         href: `/category/${id}`,
     };
 };

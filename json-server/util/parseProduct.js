@@ -4,7 +4,7 @@ const parseProduct = (cfg, product) => {
 
     return {
         ...product,
-        img: `${avatarsBaseUrl}{/get-mpic}${img}`,
+        img: `${avatarsBaseUrl}/get-mpic${img}`,
         href: `/product/${id}`,
     };
 };

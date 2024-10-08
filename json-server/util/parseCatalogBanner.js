@@ -6,8 +6,8 @@ const parseCatalogBanner = (cfg, banner, dbProducts) => {
 
     return {
         ...banner,
-        bgImg: `${avatarsBaseUrl}{/get-marketcms}${bgImg}.png/optimize`,
-        headerImg: `${avatarsBaseUrl}{/get-marketcms}${headerImg}.png/optimize`,
+        bgImg: `${avatarsBaseUrl}/get-marketcms${bgImg}.png/optimize`,
+        headerImg: `${avatarsBaseUrl}/get-marketcms${headerImg}.png/optimize`,
         carusel: carusel
             .map((id) => dbProducts.find((product) => product.id === id))
             .filter((product) => product)
