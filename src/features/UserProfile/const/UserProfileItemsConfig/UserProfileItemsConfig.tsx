@@ -27,9 +27,10 @@ import LogoutSvg from '@/shared/assets/icons/profile/logout.svg';
 import UserProfileChat from '../../ui/UserProfileChat/UserProfileChat';
 import UserProfileFavoriteCategory from '../../ui/UserProfileFavoriteCategory/UserProfileFavoriteCategory';
 
-interface UserProfileItemsCfg extends UserProfileItemProps {
+interface UserProfileItemCfg extends UserProfileItemProps {
     getCountSelector?: (user: User) => number | undefined;
 }
+
 interface UserProfileItemCreatorArgs {
     idx: number;
     user: User | undefined;
@@ -41,7 +42,7 @@ export type UserProfileItemCreator = (
 ) => JSX.Element;
 
 export const UserProfileItemsCfg: Array<
-    UserProfileItemsCfg | UserProfileItemCreator
+    UserProfileItemCfg | UserProfileItemCreator
 > = [
     ({ idx, user, autoFocus }) => (
         <UserProfileAvatar
@@ -79,6 +80,7 @@ export const UserProfileItemsCfg: Array<
             hint={user?.favoriteCategory?.hint || 'unknown'}
             selected={!!user?.favoriteCategory?.selected.length}
             autoFocus={autoFocus}
+            // eslint-disable-next-line no-alert
             onClick={() => alert('viewFavoriteCategory')}
         />
     ),
@@ -100,13 +102,14 @@ export const UserProfileItemsCfg: Array<
         route: getRouteCompare(),
         Svg: ComparisonSvg,
     },
-    //TODO: UserProfileSocial -> https://help.yandex.ru/roundup_market
-    //TODO: UserProfileBusiness -> https://business.market.yandex.ru/pokupayte-dlya-biznesa
-    //TODO: UserProfilePartner -> https://partner.market.yandex.ru/welcome/partners
+    // TODO: UserProfileSocial -> https://help.yandex.ru/roundup_market
+    // TODO: UserProfileBusiness -> https://business.market.yandex.ru/pokupayte-dlya-biznesa
+    // TODO: UserProfilePartner -> https://partner.market.yandex.ru/welcome/partners
     ({ idx, user, autoFocus }) => (
         <UserProfileChat
             key={idx}
             autoFocus={autoFocus}
+            // eslint-disable-next-line no-alert
             onClick={() => alert('chat')}
         />
     ),

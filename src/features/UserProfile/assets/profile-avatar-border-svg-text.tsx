@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 export const profileAvatarBorderSvgText = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48">
         <mask id="b" fill="#fff">
             <path

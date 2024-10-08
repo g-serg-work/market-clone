@@ -9,9 +9,9 @@ export const UserProfileLoader = (props: UserProfileLoaderProps) => {
     const { className } = props;
     return (
         <div className={classNames(cls.UserProfileLoader, {}, [className])}>
-            <div></div>
+            <div />
             <div>
-                <div className={cls.content}></div>
+                <div className={cls.content} />
             </div>
         </div>
     );

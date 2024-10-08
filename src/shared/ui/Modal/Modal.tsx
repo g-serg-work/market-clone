@@ -44,12 +44,15 @@ export const Modal = (props: ModalProps) => {
 
     const { theme } = useTheme();
 
-    const onContentClick = useCallback((e: MouseEvent<HTMLDivElement>) => {
-        const target = e.target as HTMLDivElement;
-        if (target.dataset?.modalRole === 'close-node') {
-            close();
-        }
-    }, []);
+    const onContentClick = useCallback(
+        (e: MouseEvent<HTMLDivElement>) => {
+            const target = e.target as HTMLDivElement;
+            if (target.dataset?.modalRole === 'close-node') {
+                close();
+            }
+        },
+        [close],
+    );
 
     if (lazy && !isMounted) {
         return null;
@@ -67,9 +70,10 @@ export const Modal = (props: ModalProps) => {
             posStyle.left = left;
             posStyle.top = top;
             break;
+        default:
     }
 
-    const calcStyle = Object.assign({}, posStyle, contentStyle);
+    const calcStyle = { ...posStyle, ...contentStyle };
 
     return (
         <Portal element={document.getElementById('app') ?? document.body}>

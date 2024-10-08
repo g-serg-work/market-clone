@@ -17,6 +17,7 @@ export const Header = memo((props: HeaderProps) => {
 
     const [searchValue, onSearchValueChange] = useState('');
 
+    // eslint-disable-next-line no-alert
     const onSearchSubmit = useCallback((value: string) => alert(value), []);
 
     return (

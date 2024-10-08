@@ -1,7 +1,7 @@
 export const callElementBoundingClientRect = (elem: HTMLElement): DOMRect => {
     const box = elem.getBoundingClientRect();
 
-    const body = document.body;
+    const {body} = document;
     const docEl = document.documentElement;
 
     const scrollTop = window.scrollY || docEl.scrollTop || body.scrollTop;

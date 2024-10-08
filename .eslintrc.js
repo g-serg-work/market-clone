@@ -113,6 +113,11 @@ module.exports = {
         ],
         'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
         'react/no-unstable-nested-components': 'warn',
+        'no-restricted-exports': [
+            'off',
+            { restrictDefaultExports: { defaultFrom: true } },
+        ],
+        'jsx-a11y/tabindex-no-positive': 'off',
     },
     globals: {
         __IS_DEV__: true,

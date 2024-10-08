@@ -1,8 +1,8 @@
 import { memo } from 'react';
+import { Link } from 'react-router-dom';
 import cls from './UserProfileItem.module.scss';
 import classNames from '@/shared/lib/classNames';
 import useAutoFocus from '@/shared/lib/hooks/useAutoFocus';
-import { Link } from 'react-router-dom';
 
 export interface UserProfileItemProps {
     className?: string;

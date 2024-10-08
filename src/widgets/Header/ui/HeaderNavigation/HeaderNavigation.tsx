@@ -2,6 +2,7 @@ import { memo } from 'react';
 import classNames from '@/shared/lib/classNames';
 import cls from './HeaderNavigation.module.scss';
 import Svg from '@/shared/assets/icons/navigation-menu.svg';
+import { Button } from '@/shared/ui/Button';
 
 export interface HeaderNavigationProps {
     className?: string;
@@ -16,12 +17,12 @@ export const HeaderNavigation = memo((props: HeaderNavigationProps) => {
             data-zone-name="catalog"
             data-baobab-name="catalog"
         >
-            <button
+            <Button
                 className={classNames(cls.button, {}, ['button-focus-ring'])}
             >
                 <Svg id="hamburger" aria-hidden="true" />
                 <span>Каталог</span>
-            </button>
+            </Button>
         </div>
     );
 });

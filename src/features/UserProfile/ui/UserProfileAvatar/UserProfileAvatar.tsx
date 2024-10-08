@@ -46,7 +46,7 @@ const UserProfileAvatar = memo((props: UserProfileAvatarProps) => {
                             style={svgTextToBackgroundImage(
                                 profileAvatarBorderSvgText,
                             )}
-                        ></div>
+                         />
                     </div>
                     <div className={cls.avatarInfo}>
                         <div

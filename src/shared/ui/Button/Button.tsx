@@ -3,7 +3,6 @@ import {
     forwardRef,
     ButtonHTMLAttributes,
     MouseEventHandler,
-    memo,
 } from 'react';
 
 type HTMLButtonProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onClick'>;
@@ -13,8 +12,8 @@ interface ButtonProps extends HTMLButtonProps {
     onClick?: () => void;
 }
 
-export const Button = memo(
-    forwardRef((props: ButtonProps, ref: ForwardedRef<HTMLButtonElement>) => {
+export const Button = forwardRef(
+    (props: ButtonProps, ref: ForwardedRef<HTMLButtonElement>) => {
         const { children, onClick, ...otherProps } = props;
 
         const onButtonClick: MouseEventHandler<HTMLButtonElement> = (e) => {
@@ -31,5 +30,5 @@ export const Button = memo(
                 {children}
             </button>
         );
-    }),
+    },
 );

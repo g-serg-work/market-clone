@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import { Fragment } from 'react';
 import classNames from '@/shared/lib/classNames';
 import cls from './CatalogPage.module.scss';
 import { Page } from '@/widgets/Page';
@@ -6,19 +7,17 @@ import { PageBanner } from '@/entities/PageBanner';
 import { CaruselList } from '@/entities/Carusel';
 import { CategoryList } from '@/entities/Category';
 import { Delimiter } from '@/shared/ui/Delimiter';
-import { Fragment } from 'react';
 import { ApiError } from '@/shared/ui/ApiError';
 import { CatalogId } from '@/entities/Catalog';
 import { useCatalogPage } from '../api/catalogPageApi';
 
 interface CatalogPageProps {
     className?: string;
+    catalogId: CatalogId;
 }
 
-const CatalogPage = ({ className }: CatalogPageProps) => {
-    const { catalogId } = useParams<{ catalogId: CatalogId }>();
-
-    if (!catalogId) return <div>Not valid catalogId</div>;
+const CatalogPage = (props: CatalogPageProps) => {
+    const { className, catalogId } = props;
 
     const {
         data: catalog,
@@ -79,4 +78,9 @@ const CatalogPage = ({ className }: CatalogPageProps) => {
     );
 };
 
-export default CatalogPage;
+export default (props: Omit<CatalogPageProps, 'catalogId'>) => {
+    const { catalogId } = useParams<{ catalogId: CatalogId }>();
+    if (!catalogId) return null;
+
+    return <CatalogPage catalogId={catalogId} {...props} />;
+};

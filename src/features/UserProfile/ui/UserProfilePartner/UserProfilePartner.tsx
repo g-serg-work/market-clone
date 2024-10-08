@@ -24,7 +24,7 @@ const UserProfilePartner = memo((props: UserProfilePartnerProps) => {
                 href={href}
                 aria-hidden="false"
                 target="_blank"
-                rel="nofollow noopener"
+                rel="nofollow noopener noreferrer"
                 className={cls.css}
                 role="menuitem"
                 data-auto="side-menu-item-help"

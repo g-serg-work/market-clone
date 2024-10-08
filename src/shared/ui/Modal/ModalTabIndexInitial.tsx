@@ -18,5 +18,5 @@ export const ModalTabIndexInitial = ({
             top: 1,
             left: 1,
         }}
-    ></span>
+     />
 );

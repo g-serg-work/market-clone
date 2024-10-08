@@ -43,10 +43,9 @@ export const HeaderSearch = memo((props: HeaderSearchProps) => {
         (event) => {
             event.preventDefault();
 
-            const value: string = (event.target as HTMLFormElement).search
-                .value;
+            const { value } = (event.target as HTMLFormElement).search;
 
-            if (value.trim().length == 0) return;
+            if (value.trim().length === 0) return;
             onSubmit?.(value);
         },
         [onSubmit],
@@ -85,7 +84,7 @@ export const HeaderSearch = memo((props: HeaderSearchProps) => {
                         aria-label="Стереть"
                         onClick={onReset}
                     >
-                        <div className={cls.svg} style={svgStyle}></div>
+                        <div className={cls.svg} style={svgStyle} />
                     </Button>
                 </div>
             </div>
@@ -122,7 +121,7 @@ export const HeaderSearch = memo((props: HeaderSearchProps) => {
                         className={classNames(cls.overlay, {}, [
                             'mini-suggest__overlay',
                         ])}
-                    ></div>
+                    />
                 </div>
             </div>
         </div>

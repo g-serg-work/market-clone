@@ -1,7 +1,7 @@
+import { MouseEventHandler } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './HeaderMenuItemAvatar.module.scss';
 import Png from '../../../assets/icons/avatar.png';
-import { MouseEventHandler } from 'react';
 
 export type HeaderMenuItemAvatarClickCallback = ({
     avatarEl,
@@ -31,6 +31,7 @@ export const HeaderMenuItemAvatar = (props: HeaderMenuItemAvatarProps) => {
             data-baobab-name="profile"
         >
             <button
+                type="button"
                 className={classNames('', {}, [
                     cls.button,
                     'button-focus-ring',
@@ -42,7 +43,7 @@ export const HeaderMenuItemAvatar = (props: HeaderMenuItemAvatarProps) => {
             >
                 <img src={Png} alt={userName} />
             </button>
-            {hasNotification && <span className={cls.notification}></span>}
+            {hasNotification && <span className={cls.notification} />}
         </div>
     );
 };

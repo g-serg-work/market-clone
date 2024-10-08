@@ -1,7 +1,7 @@
 import { memo, Suspense, useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { getUserInited, initAuthData } from '@/entities/User';
-import { Header } from '@/widgets/Header';
+import { Header, HeaderMenuItemAvatarClickCallback } from '@/widgets/Header';
 import { AppRouter } from './providers/router';
 import { withTheme } from './providers/ThemeProvider';
 import { useAppDispatch } from '@/shared/lib/hooks';
@@ -9,7 +9,6 @@ import useJSXModal from '@/shared/lib/hooks/useJSXModal';
 import { FavoriteCategoryModal } from '@/features/FavoriteCategory';
 import { UserProfileModal } from '@/features/UserProfile';
 import callElementBoundingClientRect from '@/shared/lib/callElementBoundingClientRect';
-import { HeaderMenuItemAvatarClickCallback } from '@/widgets/Header/ui/HeaderMenu/HeaderMenuItemAvatar/HeaderMenuItemAvatar';
 import { CategoryMenu } from '@/widgets/CategoryMenu';
 
 const userProfileModalProps = { left: 0, top: 0 };

@@ -1,5 +1,3 @@
-import { CatalogId } from '@/entities/Catalog';
-
 export enum AppRoutes {
     MAIN = 'main',
     ORDERS = 'my/orders',
@@ -28,9 +26,7 @@ export const getRoutePromoCodes = () => '/promocodes';
 export const getRouteCompare = () => '/compare';
 export const getRouteLogout = () => '/logout';
 export const getRouteAddUser = () => '/adduser';
-
-export const getRouteCatalog = (catalogId: CatalogId) =>
-    `/catalog/${catalogId}`;
+export const getRouteCatalog = (id: string) => `/catalog/${id}`;
 
 export const AppRouteByPathPattern: Record<string, AppRoutes> = {
     [getRouteMain()]: AppRoutes.MAIN,

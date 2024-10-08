@@ -1,6 +1,6 @@
 import { PluginItem } from '@babel/core';
 
-export default function (): PluginItem {
+export default (): PluginItem => {
     return {
         visitor: {
             Program(path, state) {
@@ -18,4 +18,4 @@ export default function (): PluginItem {
             },
         },
     };
-}
+};

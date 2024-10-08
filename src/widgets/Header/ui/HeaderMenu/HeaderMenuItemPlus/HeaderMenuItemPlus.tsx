@@ -16,7 +16,7 @@ const icon = (
                     aria-hidden="true"
                     aria-label="Яндекс Плюс"
                     data-auto="yaPlusBadge"
-                ></Svg>
+                 />
             </div>
         </div>
     </div>
@@ -40,7 +40,7 @@ const link = (
                 aria-atomic="true"
             >
                 Баллы
-                <span className="ds-visuallyHidden"></span>
+                <span className="ds-visuallyHidden" />
             </div>
         </div>
     </a>

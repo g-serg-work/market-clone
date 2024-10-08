@@ -32,7 +32,7 @@ const UserProfileChat = memo((props: UserProfileChatProps) => {
                     <ChatSvg />
                 </div>
             </div>
-            <span>Чат с поддержкой</span>
+            <span>Чат с поддержкой</span>
         </ClickAble>
     );
 });
