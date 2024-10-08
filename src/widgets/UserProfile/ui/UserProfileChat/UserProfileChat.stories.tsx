@@ -1,25 +1,21 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import UserProfilePartner, {
-    UserProfilePartnerProps,
-} from './UserProfilePartner';
+import UserProfileChat, { UserProfileChatProps } from './UserProfileChat';
 import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 
 export default {
-    title: 'features/UserProfile/UserProfilePartner',
-    component: UserProfilePartner,
+    title: 'widgets/UserProfile/UserProfileChat',
+    component: UserProfileChat,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
     decorators: [RouterDecorator],
-} as ComponentMeta<typeof UserProfilePartner>;
+} as ComponentMeta<typeof UserProfileChat>;
 
-const Template: ComponentStory<typeof UserProfilePartner> = (args) => (
-    <UserProfilePartner {...args} />
+const Template: ComponentStory<typeof UserProfileChat> = (args) => (
+    <UserProfileChat {...args} />
 );
 
-const args: UserProfilePartnerProps = {
-    route: '/partner',
-};
+const args: UserProfileChatProps = {};
 
 export const Primary = Template.bind({});
 Primary.args = args;

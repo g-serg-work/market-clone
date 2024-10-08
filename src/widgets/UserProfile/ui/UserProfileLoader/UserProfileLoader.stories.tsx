@@ -4,7 +4,7 @@ import { UserProfileLoader } from './UserProfileLoader';
 import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
 
 export default {
-    title: 'features/UserProfile/UserProfileLoader',
+    title: 'widgets/UserProfile/UserProfileLoader',
     component: UserProfileLoader,
     argTypes: {
         backgroundColor: { control: 'color' },

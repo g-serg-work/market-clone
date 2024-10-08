@@ -5,7 +5,7 @@ import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 import { User } from '@/entities/User';
 
 export default {
-    title: 'features/UserProfile/UserProfile',
+    title: 'widgets/UserProfile/UserProfile',
     component: UserProfile,
     argTypes: {
         backgroundColor: { control: 'color' },

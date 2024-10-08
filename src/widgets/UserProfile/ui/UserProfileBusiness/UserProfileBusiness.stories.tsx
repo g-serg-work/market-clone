@@ -5,7 +5,7 @@ import UserProfileBusiness, {
 import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 
 export default {
-    title: 'features/UserProfile/UserProfileBusiness',
+    title: 'widgets/UserProfile/UserProfileBusiness',
     component: UserProfileBusiness,
     argTypes: {
         backgroundColor: { control: 'color' },

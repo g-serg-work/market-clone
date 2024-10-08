@@ -1,14 +1,18 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import UserProfileAdd, { UserProfileAddProps } from './UserProfileAdd';
 import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
+import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
 
 export default {
-    title: 'features/UserProfile/UserProfileAdd',
+    title: 'widgets/UserProfile/UserProfileAdd',
     component: UserProfileAdd,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [RouterDecorator],
+    decorators: [
+        RouterDecorator,
+        StyledDecorator({ backgroundColor: '#f4f4f4' }),
+    ],
 } as ComponentMeta<typeof UserProfileAdd>;
 
 const Template: ComponentStory<typeof UserProfileAdd> = (args) => (

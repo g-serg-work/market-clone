@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import UserProfileAvatar, { UserProfileAvatarProps } from './UserProfileAvatar';
 
 export default {
-    title: 'features/UserProfile/UserProfileAvatar',
+    title: 'widgets/UserProfile/UserProfileAvatar',
     component: UserProfileAvatar,
     argTypes: {
         backgroundColor: { control: 'color' },

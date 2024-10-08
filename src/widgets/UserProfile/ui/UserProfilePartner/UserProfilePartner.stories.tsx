@@ -1,24 +1,24 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import UserProfileSocial, {
-    UserProfileSocialProps,
-} from './UserProfileSocial';
+import UserProfilePartner, {
+    UserProfilePartnerProps,
+} from './UserProfilePartner';
 import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 
 export default {
-    title: 'features/UserProfile/UserProfileSocial',
-    component: UserProfileSocial,
+    title: 'widgets/UserProfile/UserProfilePartner',
+    component: UserProfilePartner,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
     decorators: [RouterDecorator],
-} as ComponentMeta<typeof UserProfileSocial>;
+} as ComponentMeta<typeof UserProfilePartner>;
 
-const Template: ComponentStory<typeof UserProfileSocial> = (args) => (
-    <UserProfileSocial {...args} />
+const Template: ComponentStory<typeof UserProfilePartner> = (args) => (
+    <UserProfilePartner {...args} />
 );
 
-const args: UserProfileSocialProps = {
-    route: '/social',
+const args: UserProfilePartnerProps = {
+    route: '/partner',
 };
 
 export const Primary = Template.bind({});

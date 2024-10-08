@@ -7,7 +7,7 @@ import { withTheme } from './providers/ThemeProvider';
 import { useAppDispatch } from '@/shared/lib/hooks';
 import useJSXModal from '@/shared/lib/hooks/useJSXModal';
 import { FavoriteCategoryModal } from '@/features/FavoriteCategory';
-import { UserProfileModal } from '@/features/UserProfile';
+import { UserProfileModal } from '@/widgets/UserProfile';
 import callElementBoundingClientRect from '@/shared/lib/callElementBoundingClientRect';
 import { CategoryMenu } from '@/widgets/CategoryMenu';
 

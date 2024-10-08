@@ -4,7 +4,7 @@ import ProfileOrdersSvg from '@/shared/assets/icons/profile/orders.svg';
 import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 
 export default {
-    title: 'features/UserProfile/UserProfileItem',
+    title: 'widgets/UserProfile/UserProfileItem',
     component: UserProfileItem,
     argTypes: {
         backgroundColor: { control: 'color' },

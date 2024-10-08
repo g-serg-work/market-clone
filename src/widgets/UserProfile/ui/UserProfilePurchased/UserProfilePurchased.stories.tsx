@@ -5,7 +5,7 @@ import UserProfilePurchased, {
 import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 
 export default {
-    title: 'features/UserProfile/UserProfilePurchased',
+    title: 'widgets/UserProfile/UserProfilePurchased',
     component: UserProfilePurchased,
     argTypes: {
         backgroundColor: { control: 'color' },

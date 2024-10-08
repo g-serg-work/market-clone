@@ -5,7 +5,7 @@ import UserProfileFavoriteCategory, {
 import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 
 export default {
-    title: 'features/UserProfile/UserProfileFavoriteCategory',
+    title: 'widgets/UserProfile/UserProfileFavoriteCategory',
     component: UserProfileFavoriteCategory,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -25,7 +25,7 @@ export const Primary = Template.bind({});
 Primary.args = args;
 
 export const WithFocus = Template.bind({});
-WithFocus.args = { autoFocus: true };
+WithFocus.args = { ...args, autoFocus: true };
 
 export const WithSelected = Template.bind({});
 WithSelected.args = { ...args, selected: true };
