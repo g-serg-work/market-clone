@@ -1,11 +1,11 @@
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 import cls from './CaruselItem.module.scss';
 import {
     scrSetAttributesConfigure,
     scrSetSizesType,
-} from '@/shared/lib/scrSetAttributes';
+} from '@/shared/lib/helpers/scrSetAttributes';
 
 export interface CaruselItemProps {
     className?: string;

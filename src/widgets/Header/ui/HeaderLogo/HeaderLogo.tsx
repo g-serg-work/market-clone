@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import cls from './HeaderLogo.module.scss';
 import Svg from '../../assets/icons/market-logo.svg';
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 
 export interface HeaderLogoProps {
     className?: string;

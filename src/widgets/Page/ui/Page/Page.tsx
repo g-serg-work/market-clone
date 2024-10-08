@@ -11,7 +11,7 @@ import {
     useInitialEffect,
     useThrottle,
 } from '@/shared/lib/hooks';
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 import { Footer } from '../Footer/Footer';
 
 interface PageProps extends TestProps {

@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import cls from './UserProfileBusiness.module.scss';
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 import useAutoFocus from '@/shared/lib/hooks/useAutoFocus';
 import BusinessSvg from '@/shared/assets/icons/profile/business.svg';
 

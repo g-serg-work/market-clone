@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import cls from './FavoriteCategoryLoader.module.scss';
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 import { FavoriteCategoryClose } from '../FavoriteCategoryClose/FavoriteCategoryClose';
 
 export interface FavoriteCategoryLoaderProps {

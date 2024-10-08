@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 import cls from './HeaderMenuItemPlus.module.scss';
 import Svg from '../../../assets/icons/ya-plus-badge.svg';
 
@@ -16,7 +16,7 @@ const icon = (
                     aria-hidden="true"
                     aria-label="Яндекс Плюс"
                     data-auto="yaPlusBadge"
-                 />
+                />
             </div>
         </div>
     </div>

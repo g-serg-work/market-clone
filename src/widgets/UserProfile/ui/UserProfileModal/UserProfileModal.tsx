@@ -1,6 +1,6 @@
 import { Modal } from '@/shared/ui/Modal';
 import cls from './UserProfileModal.module.scss';
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 import { UserProfile } from '../..';
 
 const modalWidth = 324;

@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 import { CaruselItem } from '../CaruselItem/CaruselItem';
 import cls from './CaruselList.module.scss';
 import { Product } from '@/entities/Product';

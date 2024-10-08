@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 import cls from './HeaderMenuItemWishList.module.scss';
 import Svg from '../../../assets/icons/wish-list.svg';
 import { getRouteWishList } from '@/shared/const/router';

@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { useSelector } from 'react-redux';
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 import cls from './HeaderMenu.module.scss';
 import { getUserAuthData } from '@/entities/User';
 import {

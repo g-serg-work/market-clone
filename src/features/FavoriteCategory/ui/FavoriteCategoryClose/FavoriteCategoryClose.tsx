@@ -1,7 +1,7 @@
 import { Button } from '@/shared/ui/Button';
 import cls from './FavoriteCategoryClose.module.scss';
 import Svg from '../../assets/icons/close.svg';
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 import useAutoFocus from '@/shared/lib/hooks/useAutoFocus';
 
 export interface FavoriteCategoryCloseProps {

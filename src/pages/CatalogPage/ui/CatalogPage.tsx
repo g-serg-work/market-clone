@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { Fragment } from 'react';
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 import cls from './CatalogPage.module.scss';
 import { Page } from '@/widgets/Page';
 import { Banner } from '@/entities/Banner';

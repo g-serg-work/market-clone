@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 import { CategoryItem } from '../CategoryItem/CategoryItem';
 import cls from './CategoryList.module.scss';
 import { Category } from '../../model/types/category';

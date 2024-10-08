@@ -1,7 +1,7 @@
 import { MouseEventHandler } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './HeaderMenuItemAvatar.module.scss';
 import Png from '../../../assets/icons/avatar.png';
+import classNames from '@/shared/lib/helpers/classNames';
 
 export type HeaderMenuItemAvatarClickCallback = ({
     avatarEl,

@@ -1,5 +1,5 @@
 import { CSSProperties, memo, ReactNode } from 'react';
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 import cls from './Banner.module.scss';
 import { BannerLink } from '../BannerLink/BannerLink';
 import { BannerTitle } from '../BannerTitle/BannerTitle';

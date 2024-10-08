@@ -1,4 +1,4 @@
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 import cls from './NotFoundPage.module.scss';
 import Svg from '@/shared/assets/icons/404.svg';
 import { Page } from '@/widgets/Page';

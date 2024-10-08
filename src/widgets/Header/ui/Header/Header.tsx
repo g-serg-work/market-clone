@@ -1,5 +1,5 @@
 import { memo, useCallback, useState } from 'react';
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 import cls from './Header.module.scss';
 import { HeaderSearch } from '../HeaderSearch/HeaderSearch';
 import { HeaderMenu } from '../HeaderMenu/HeaderMenu/HeaderMenu';

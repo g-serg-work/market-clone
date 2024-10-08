@@ -1,5 +1,5 @@
 import { FormEventHandler, memo, useCallback, useRef } from 'react';
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 import cls from './HeaderSearch.module.scss';
 import { Button } from '@/shared/ui/Button';
 import { Input } from '@/shared/ui/Input';

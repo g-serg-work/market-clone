@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 import cls from './HeaderNavigation.module.scss';
 import Svg from '../../assets/icons/navigation-menu.svg';
 import { Button } from '@/shared/ui/Button';

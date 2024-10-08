@@ -1,5 +1,5 @@
 import { MouseEvent, useCallback } from 'react';
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 import cls from './RequireAuthPage.module.scss';
 import { Page } from '@/widgets/Page';
 

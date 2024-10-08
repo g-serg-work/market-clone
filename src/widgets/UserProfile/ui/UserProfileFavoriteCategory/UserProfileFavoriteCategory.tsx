@@ -3,8 +3,7 @@ import cls from './UserProfileFavoriteCategory.module.scss';
 import FavoriteCategorySvg from '@/shared/assets/icons/profile/favoritecategory.svg';
 import useAutoFocus from '@/shared/lib/hooks/useAutoFocus';
 import { ClickAble } from '@/shared/ui/ClickAble';
-import classNames from '@/shared/lib/classNames';
-import { Mods } from '@/shared/lib/classNames/classNames';
+import classNames, { Mods } from '@/shared/lib/helpers/classNames';
 
 export interface UserProfileFavoriteCategoryProps {
     className?: string;

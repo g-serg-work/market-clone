@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { useSelector } from 'react-redux';
 import { useGetFavoriteCategory } from '../../api/favoriteCategoryApi';
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 import { getUserAuthData } from '@/entities/User';
 import cls from './FavoriteCategory.module.scss';
 import { ApiError } from '@/shared/ui/ApiError';

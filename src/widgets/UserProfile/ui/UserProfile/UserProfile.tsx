@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { useSelector } from 'react-redux';
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 import cls from './UserProfile.module.scss';
 import { getUserAuthData } from '@/entities/User';
 import UserProfileItemsCfg from '../../const/UserProfileItemsConfig';

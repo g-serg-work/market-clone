@@ -1,8 +1,8 @@
 import { memo } from 'react';
 import cls from './UserProfileAvatar.module.scss';
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 import Avatar from '@/shared/assets/icons/profile/avatar.png';
-import svgTextToBackgroundImage from '@/shared/lib/svgTextToBackgroundImage';
+import svgTextToBackgroundImage from '@/shared/lib/helpers/svgTextToBackgroundImage';
 // TODO: change loader to raw-loader and use original "avatar-border.svg"
 import { profileAvatarBorderSvgText } from '../../assets/profile-avatar-border-svg-text';
 import useAutoFocus from '@/shared/lib/hooks/useAutoFocus';
@@ -46,7 +46,7 @@ const UserProfileAvatar = memo((props: UserProfileAvatarProps) => {
                             style={svgTextToBackgroundImage(
                                 profileAvatarBorderSvgText,
                             )}
-                         />
+                        />
                     </div>
                     <div className={cls.avatarInfo}>
                         <div

@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import classNames from '@/shared/lib/classNames';
+import classNames from '@/shared/lib/helpers/classNames';
 import cls from './CategoryMenu.module.scss';
 import { useHeaderItems } from './useHeaderItems';
 import { CategoryMenuAddressItem } from '../CategoryMenuAddressItem/CategoryMenuAddressItem';
