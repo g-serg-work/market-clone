@@ -33,10 +33,16 @@ server.use(async (req, res, next) => {
     next();
 });
 
+const badRequest = (req, res) =>
+    res.status(400).json({ message: 'Bad Request' });
+
 // routes
 server.post('/login', loginPost(handlerCfg));
 server.get('/catalog/:catalogId', catalogGet(handlerCfg));
 server.get('/favorite-category/:userId', favoriteCategoryGet(handlerCfg));
+
+server.get('/catalog', badRequest);
+server.get('/favorite-category', badRequest);
 
 server.use((req, res, next) => {
     // check authorization user
