@@ -2,8 +2,6 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import CatalogPage from './CatalogPage';
 import StoreDecorator from '@/shared/config/storybook/StoreDecorator';
 import MemoryRouterDecorator from '@/shared/config/storybook/MemoryRouterDecorator';
-import { getRouteCatalog } from '@/shared/const/router';
-import { routeConfig } from '@/app/providers/router/config/routeConfig';
 
 export default {
     title: 'pages/CatalogPage',
@@ -22,15 +20,12 @@ Primary.args = {};
 
 Primary.decorators = [
     StoreDecorator({}),
-    MemoryRouterDecorator(
-        getRouteCatalog('catalog1'),
-        routeConfig.catalog.path as string,
-    ),
+    MemoryRouterDecorator('/catalog/catalog1', '/catalog/:catalogId'),
 ];
 Primary.parameters = {
     mockData: [
         {
-            url: __API__ + getRouteCatalog('catalog1'),
+            url: `${__API__}/catalog/catalog1`,
             method: 'GET',
             status: 200,
             response: {
