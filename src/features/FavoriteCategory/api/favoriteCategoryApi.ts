@@ -17,6 +17,7 @@ const favoriteCategoryApi = rtkApi.injectEndpoints({
             query: ({ userId }) => ({
                 url: `/favorite-category/${userId}`,
             }),
+            keepUnusedDataFor: 0,
         }),
         favoriteCategory: build.mutation<void, PostFavoriteCategoryArg>({
             query: (arg) => ({

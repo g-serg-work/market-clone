@@ -1,30 +1,68 @@
 import {
-    ForwardedRef,
-    forwardRef,
     ButtonHTMLAttributes,
-    MouseEventHandler,
+    forwardRef,
+    ForwardedRef,
+    useCallback,
 } from 'react';
+import { onClickType } from '@/shared/eventChannels/appEvents';
+import callElementBoundingClientRect from '@/shared/lib/helpers/callElementBoundingClientRect';
 
-type HTMLButtonProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onClick'>;
-
-interface ButtonProps extends HTMLButtonProps {
+interface ButtonProps
+    extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onClick'> {
     children?: React.ReactNode;
-    onClick?: () => void;
+    onClick?: onClickType;
 }
 
 export const Button = forwardRef(
     (props: ButtonProps, ref: ForwardedRef<HTMLButtonElement>) => {
         const { children, onClick, ...otherProps } = props;
 
-        const onButtonClick: MouseEventHandler<HTMLButtonElement> = (e) => {
-            onClick?.();
-        };
+        // TODO: fix DRY with ClickAble
+        const onMouseClick: React.MouseEventHandler<HTMLButtonElement> =
+            useCallback(
+                (e) => {
+                    onClick?.({
+                        source: 'mouse',
+                        elementBoundingClientRect:
+                            callElementBoundingClientRect(
+                                e.currentTarget as HTMLElement,
+                            ),
+                    });
+                },
+                [onClick],
+            );
+
+        const onKeyUp: React.KeyboardEventHandler<HTMLButtonElement> =
+            useCallback(
+                (e) => {
+                    const enterOrSpace =
+                        e.key === 'Enter' ||
+                        e.key === ' ' ||
+                        e.key === 'Spacebar' ||
+                        e.code === 'Enter' ||
+                        e.code === 'Space';
+
+                    if (enterOrSpace) {
+                        e.preventDefault();
+
+                        onClick?.({
+                            source: 'keyboard',
+                            elementBoundingClientRect:
+                                callElementBoundingClientRect(
+                                    e.currentTarget as HTMLElement,
+                                ),
+                        });
+                    }
+                },
+                [onClick],
+            );
 
         return (
             <button
                 type="button"
                 ref={ref}
-                onClick={onButtonClick}
+                onClick={onMouseClick}
+                onKeyUp={onKeyUp}
                 {...otherProps}
             >
                 {children}

@@ -6,15 +6,12 @@ import { CategoryMenuAddressItem } from '../CategoryMenuAddressItem/CategoryMenu
 
 export interface CategoryMenuProps {
     className?: string;
-    onFavoriteCategoryClick?: () => void;
 }
 
 export const CategoryMenu = memo((props: CategoryMenuProps) => {
-    const { className, onFavoriteCategoryClick } = props;
+    const { className } = props;
 
-    const { CategoryMenuItems, CategoryMenuBuyerItems } = useHeaderItems({
-        onFavoriteCategoryClick,
-    });
+    const { CategoryMenuItems, CategoryMenuBuyerItems } = useHeaderItems();
 
     return (
         <div className={classNames(cls.CategoryMenu, {}, [className])}>

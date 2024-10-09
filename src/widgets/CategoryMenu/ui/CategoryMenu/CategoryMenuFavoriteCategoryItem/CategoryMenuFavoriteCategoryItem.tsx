@@ -2,17 +2,26 @@ import { memo } from 'react';
 import classNames from '@/shared/lib/helpers/classNames';
 import cls from './CategoryMenuFavoriteCategoryItem.module.scss';
 import { ClickAble } from '@/shared/ui/ClickAble';
+import {
+    AppEventChannel,
+    AppEventTypes,
+} from '@/shared/eventChannels/appEvents';
 
 interface CategoryMenuFavoriteCategoryItemProps {
     className?: string;
-    onClick?: () => void;
 }
 
 const title = 'Любимая категория';
 
 export const CategoryMenuFavoriteCategoryItem = memo(
     (props: CategoryMenuFavoriteCategoryItemProps) => {
-        const { className, onClick } = props;
+        const { className } = props;
+
+        const onClick = () => {
+            AppEventChannel.emit(
+                AppEventTypes.onCategoryMenuFavoriteCategoryItemClick,
+            );
+        };
 
         return (
             <li role="tab">

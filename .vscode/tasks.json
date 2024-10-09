@@ -21,6 +21,20 @@
             "problemMatcher": [],
             "label": "npm: storybook",
             "detail": "start-storybook -p 6006 -c ./config/storybook"
+        },
+        {
+            "type": "npm",
+            "script": "lint:ts:fix",
+            "problemMatcher": [],
+            "label": "npm: lint:ts:fix",
+            "detail": "eslint \"**/*.{ts,tsx}\" --fix"
+        },
+        {
+            "type": "npm",
+            "script": "lint:scss:fix",
+            "problemMatcher": [],
+            "label": "npm: lint:scss:fix",
+            "detail": "npx stylelint \"**/*.scss\" --fix"
         }
     ]
 }

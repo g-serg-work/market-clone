@@ -3,10 +3,7 @@ import { useSelector } from 'react-redux';
 import classNames from '@/shared/lib/helpers/classNames';
 import cls from './HeaderMenu.module.scss';
 import { getUserAuthData } from '@/entities/User';
-import {
-    HeaderMenuItemAvatarClickCallback,
-    HeaderMenuItemAvatar,
-} from '../HeaderMenuItemAvatar/HeaderMenuItemAvatar';
+import { HeaderMenuItemAvatar } from '../HeaderMenuItemAvatar/HeaderMenuItemAvatar';
 import { HeaderMenuItemOrders } from '../HeaderMenuItemOrders/HeaderMenuItemOrders';
 import { HeaderMenuItemPlus } from '../HeaderMenuItemPlus/HeaderMenuItemPlus';
 import { HeaderMenuItemWishList } from '../HeaderMenuItemWishList/HeaderMenuItemWishList';
@@ -14,11 +11,10 @@ import { HeaderMenuItemCart } from '../HeaderMenuItemCart/HeaderMenuItemCart';
 
 export interface HeaderMenuProps {
     className?: string;
-    onHeaderMenuItemAvatarClick?: HeaderMenuItemAvatarClickCallback;
 }
 
 export const HeaderMenu = memo((props: HeaderMenuProps) => {
-    const { className, onHeaderMenuItemAvatarClick } = props;
+    const { className } = props;
 
     const userData = useSelector(getUserAuthData);
 
@@ -32,10 +28,7 @@ export const HeaderMenu = memo((props: HeaderMenuProps) => {
         <HeaderMenuItemOrders count={ordersListCount} />,
         <HeaderMenuItemWishList count={wishListCount} />,
         <HeaderMenuItemCart count={cartListCount} />,
-        <HeaderMenuItemAvatar
-            hasNotification={hasNotification}
-            onClick={onHeaderMenuItemAvatarClick}
-        />,
+        <HeaderMenuItemAvatar hasNotification={hasNotification} />,
     ];
 
     return (

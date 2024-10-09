@@ -1,27 +1,27 @@
-import { MouseEventHandler } from 'react';
 import cls from './HeaderMenuItemAvatar.module.scss';
 import Png from '../../../assets/icons/avatar.png';
 import classNames from '@/shared/lib/helpers/classNames';
-
-export type HeaderMenuItemAvatarClickCallback = ({
-    avatarEl,
-}: {
-    avatarEl: HTMLElement;
-}) => void;
+import {
+    AppEvent,
+    AppEventChannel,
+    AppEventTypes,
+} from '@/shared/eventChannels/appEvents';
+import { Button } from '@/shared/ui/Button';
 
 interface HeaderMenuItemAvatarProps {
     className?: string;
     userName?: string;
     hasNotification?: boolean;
-    onClick?: HeaderMenuItemAvatarClickCallback;
 }
 
 export const HeaderMenuItemAvatar = (props: HeaderMenuItemAvatarProps) => {
-    const { className, userName, hasNotification, onClick } = props;
+    const { className, userName, hasNotification } = props;
 
-    const onButtonClick: MouseEventHandler<HTMLButtonElement> = (e) => {
-        const avatarEl = e.currentTarget;
-        onClick?.({ avatarEl });
+    const onClick = (appEvent: AppEvent) => {
+        AppEventChannel.emit(
+            AppEventTypes.onHeaderMenuItemAvatarClick,
+            appEvent,
+        );
     };
 
     return (
@@ -30,7 +30,7 @@ export const HeaderMenuItemAvatar = (props: HeaderMenuItemAvatarProps) => {
             data-zone-name="profile"
             data-baobab-name="profile"
         >
-            <button
+            <Button
                 type="button"
                 className={classNames('', {}, [
                     cls.button,
@@ -39,10 +39,10 @@ export const HeaderMenuItemAvatar = (props: HeaderMenuItemAvatarProps) => {
                 aria-haspopup="true"
                 aria-controls="userMenu"
                 aria-expanded="false"
-                onClick={onButtonClick}
+                onClick={onClick}
             >
                 <img src={Png} alt={userName} />
-            </button>
+            </Button>
             {hasNotification && <span className={cls.notification} />}
         </div>
     );

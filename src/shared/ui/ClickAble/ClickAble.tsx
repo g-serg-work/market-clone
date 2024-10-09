@@ -1,13 +1,11 @@
-import { forwardRef, ForwardedRef } from 'react';
+import React, { ForwardedRef, forwardRef, useCallback } from 'react';
+import callElementBoundingClientRect from '@/shared/lib/helpers/callElementBoundingClientRect';
+import { onClickType } from '@/shared/eventChannels/appEvents';
 
-export interface ClickAbleProps
-    extends React.DetailedHTMLProps<
-            React.HTMLAttributes<HTMLDivElement>,
-            HTMLDivElement
-        >,
-        React.AriaAttributes {
-    children: React.ReactNode;
-    onClick?: () => void;
+interface ClickAbleProps
+    extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onClick'> {
+    children?: React.ReactNode;
+    onClick?: onClickType;
 }
 
 const ClickAble = (
@@ -16,23 +14,44 @@ const ClickAble = (
 ) => {
     const { children, onClick, ...otherProps } = props;
 
-    const onKeyUp = (e: React.KeyboardEvent) => {
-        // console.log(e.currentTarget.value);
-        const enterOrSpace =
-            e.key === 'Enter' ||
-            e.key === ' ' ||
-            e.key === 'Spacebar' ||
-            e.code === 'Enter' ||
-            e.code === 'Space';
+    // TODO: fix DRY with Button
+    const onMouseClick: React.MouseEventHandler<HTMLDivElement> = useCallback(
+        (e) => {
+            onClick?.({
+                source: 'mouse',
+                elementBoundingClientRect: callElementBoundingClientRect(
+                    e.currentTarget as HTMLElement,
+                ),
+            });
+        },
+        [onClick],
+    );
 
-        if (enterOrSpace) {
-            e.preventDefault();
-            onClick?.();
-        }
-    };
+    const onKeyUp: React.KeyboardEventHandler<HTMLDivElement> = useCallback(
+        (e) => {
+            const enterOrSpace =
+                e.key === 'Enter' ||
+                e.key === ' ' ||
+                e.key === 'Spacebar' ||
+                e.code === 'Enter' ||
+                e.code === 'Space';
+
+            if (enterOrSpace) {
+                e.preventDefault();
+
+                onClick?.({
+                    source: 'keyboard',
+                    elementBoundingClientRect: callElementBoundingClientRect(
+                        e.currentTarget as HTMLElement,
+                    ),
+                });
+            }
+        },
+        [onClick],
+    );
 
     return (
-        <div ref={ref} onClick={onClick} onKeyUp={onKeyUp} {...otherProps}>
+        <div ref={ref} onClick={onMouseClick} onKeyUp={onKeyUp} {...otherProps}>
             {children}
         </div>
     );
