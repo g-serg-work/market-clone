@@ -2,7 +2,7 @@ import { memo } from 'react';
 import { useSelector } from 'react-redux';
 import classNames from '@/shared/lib/helpers/classNames';
 import cls from './UserProfile.module.scss';
-import { getUserAuthData } from '@/entities/User';
+import { getUserData } from '@/entities/User';
 import UserProfileItemsCfg from '../../const/UserProfileItemsConfig';
 import UserProfileAdd from '../UserProfileAdd/UserProfileAdd';
 import { getRouteAddUser } from '@/shared/const/router';
@@ -15,14 +15,14 @@ export interface UserProfileProps {
 
 const UserProfile = memo((props: UserProfileProps) => {
     const { className, autoFocus } = props;
-    const user = useSelector(getUserAuthData);
+    const userData = useSelector(getUserData);
 
     const profileItems = UserProfileItemsCfg.map((item, idx) => {
         const itemAutoFocus = autoFocus && idx === 1;
         if (typeof item === 'function')
-            return item({ idx, user, autoFocus: itemAutoFocus });
+            return item({ idx, userData, autoFocus: itemAutoFocus });
 
-        const count = user && item.getCountSelector?.(user);
+        const count = userData && item.getCountSelector?.(userData);
         return (
             <UserProfileItem
                 key={idx}

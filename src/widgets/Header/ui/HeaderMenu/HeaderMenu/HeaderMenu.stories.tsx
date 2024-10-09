@@ -25,7 +25,7 @@ WithOrdersList.args = {};
 WithOrdersList.decorators = [
     StoreDecorator({
         user: {
-            authData: { ordersList: Array(2).fill('') },
+            userData: { ordersList: Array(2).fill('') },
         },
     }),
 ];
@@ -35,7 +35,7 @@ WithWishList.args = {};
 WithWishList.decorators = [
     StoreDecorator({
         user: {
-            authData: { wishList: Array(3).fill('') },
+            userData: { wishList: Array(3).fill('') },
         },
     }),
 ];
@@ -45,7 +45,7 @@ WithCartList.args = {};
 WithCartList.decorators = [
     StoreDecorator({
         user: {
-            authData: { cartList: Array(4).fill('') },
+            userData: { cartList: Array(4).fill('') },
         },
     }),
 ];
@@ -55,7 +55,7 @@ WithNotification.args = {};
 WithNotification.decorators = [
     StoreDecorator({
         user: {
-            authData: { hasNotification: true },
+            userData: { hasNotification: true },
         },
     }),
 ];

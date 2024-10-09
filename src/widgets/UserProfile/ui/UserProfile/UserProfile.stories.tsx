@@ -17,7 +17,7 @@ const Template: ComponentStory<typeof UserProfile> = (args) => (
     <UserProfile {...args} />
 );
 
-const authData: User = {
+const userData: User = {
     id: '1',
     userName: 'test',
     userEmail: 'test@yandex.ru',
@@ -35,7 +35,7 @@ Primary.args = {};
 Primary.decorators = [
     StoreDecorator({
         user: {
-            authData,
+            userData,
         },
     }),
 ];
@@ -45,7 +45,7 @@ WithFocus.args = { autoFocus: true };
 WithFocus.decorators = [
     StoreDecorator({
         user: {
-            authData,
+            userData,
         },
     }),
 ];
@@ -55,7 +55,7 @@ WithOrders.args = {};
 WithOrders.decorators = [
     StoreDecorator({
         user: {
-            authData: { ...authData, ordersList: Array(3).fill('') },
+            userData: { ...userData, ordersList: Array(3).fill('') },
         },
     }),
 ];
@@ -65,7 +65,7 @@ WithWishList.args = {};
 WithWishList.decorators = [
     StoreDecorator({
         user: {
-            authData: { ...authData, wishList: Array(3).fill('') },
+            userData: { ...userData, wishList: Array(3).fill('') },
         },
     }),
 ];
@@ -75,10 +75,10 @@ WithFavoriteSelected.args = {};
 WithFavoriteSelected.decorators = [
     StoreDecorator({
         user: {
-            authData: {
-                ...authData,
+            userData: {
+                ...userData,
                 favoriteCategory: {
-                    ...authData.favoriteCategory,
+                    ...userData.favoriteCategory,
                     selected: Array(3).fill(''),
                 },
             },

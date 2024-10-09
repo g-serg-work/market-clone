@@ -2,7 +2,7 @@ import { memo } from 'react';
 import { useSelector } from 'react-redux';
 import classNames from '@/shared/lib/helpers/classNames';
 import cls from './HeaderMenu.module.scss';
-import { getUserAuthData } from '@/entities/User';
+import { getUserData } from '@/entities/User';
 import { HeaderMenuItemAvatar } from '../HeaderMenuItemAvatar/HeaderMenuItemAvatar';
 import { HeaderMenuItemOrders } from '../HeaderMenuItemOrders/HeaderMenuItemOrders';
 import { HeaderMenuItemPlus } from '../HeaderMenuItemPlus/HeaderMenuItemPlus';
@@ -16,7 +16,7 @@ export interface HeaderMenuProps {
 export const HeaderMenu = memo((props: HeaderMenuProps) => {
     const { className } = props;
 
-    const userData = useSelector(getUserAuthData);
+    const userData = useSelector(getUserData);
 
     const hasNotification = userData?.hasNotification;
     const ordersListCount = userData?.ordersList?.length;

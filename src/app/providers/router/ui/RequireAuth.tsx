@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { getUserAuthData, getUserInited } from '@/entities/User';
+import { getUserData, getUserInited } from '@/entities/User';
 import { RequireAuthPage } from '@/pages/RequireAuthPage';
 
 interface RequireAuthProps {
@@ -8,10 +8,10 @@ interface RequireAuthProps {
 
 export function RequireAuth(props: RequireAuthProps) {
     const { children } = props;
-    const auth = useSelector(getUserAuthData);
+    const userData = useSelector(getUserData);
     const inited = useSelector(getUserInited);
 
-    if (!auth) {
+    if (!userData) {
         if (!inited) return <div>Loading....</div>;
 
         // <Navigate to={getRouteMain()} state={{ from: location }} replace />

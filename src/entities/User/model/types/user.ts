@@ -18,7 +18,7 @@ export interface User {
 }
 
 export interface UserSchema {
-    authData?: User;
+    userData?: User;
 
     _inited: boolean;
 }

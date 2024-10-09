@@ -4,8 +4,8 @@ import { USER_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 import { getUserDataByIdQuery } from '../../api/userApi';
 import { User } from '../types/user';
 
-export const initAuthData = createAsyncThunk<User, void, ThunkConfig<string>>(
-    'user/initAuthData',
+export const initUserData = createAsyncThunk<User, void, ThunkConfig<string>>(
+    'user/initUserData',
     async (_, thunkApi) => {
         const { rejectWithValue, dispatch } = thunkApi;
 

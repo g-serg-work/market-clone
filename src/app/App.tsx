@@ -1,6 +1,6 @@
 import { memo, Suspense, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { getUserInited, initAuthData } from '@/entities/User';
+import { getUserInited, initUserData } from '@/entities/User';
 import { AppRouter } from './providers/router';
 import { withTheme } from './providers/ThemeProvider';
 import { useAppDispatch } from '@/shared/lib/hooks';
@@ -15,7 +15,7 @@ const App = memo(() => {
 
     useEffect(() => {
         if (!inited) {
-            dispatch(initAuthData());
+            dispatch(initUserData());
         }
     }, [dispatch, inited]);
 

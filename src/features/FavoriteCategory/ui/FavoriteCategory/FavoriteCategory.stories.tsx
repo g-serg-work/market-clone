@@ -20,7 +20,7 @@ Primary.args = {};
 Primary.decorators = [
     StoreDecorator({
         user: {
-            authData: { id: '1' },
+            userData: { id: '1' },
         },
     }),
 ];
@@ -51,7 +51,7 @@ WithoutFavorite.args = {};
 WithoutFavorite.decorators = [
     StoreDecorator({
         user: {
-            authData: { id: '2' },
+            userData: { id: '2' },
         },
     }),
 ];

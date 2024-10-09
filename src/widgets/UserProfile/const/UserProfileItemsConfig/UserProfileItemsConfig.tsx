@@ -33,7 +33,7 @@ interface UserProfileItemCfg extends UserProfileItemProps {
 
 interface UserProfileItemCreatorArgs {
     idx: number;
-    user: User | undefined;
+    userData: User | undefined;
     autoFocus?: boolean;
 }
 
@@ -44,12 +44,12 @@ export type UserProfileItemCreator = (
 export const UserProfileItemsCfg: Array<
     UserProfileItemCfg | UserProfileItemCreator
 > = [
-    ({ idx, user, autoFocus }) => (
+    ({ idx, userData, autoFocus }) => (
         <UserProfileAvatar
             key={idx}
             autoFocus={autoFocus}
-            userName={user?.userName || 'unknown'}
-            userEmail={user?.userEmail || 'unknown'}
+            userName={userData?.userName || 'unknown'}
+            userEmail={userData?.userEmail || 'unknown'}
             href="https://id.yandex.ru"
         />
     ),
@@ -74,11 +74,11 @@ export const UserProfileItemsCfg: Array<
         route: getRouteReturns(),
         Svg: ReturnsSvg,
     },
-    ({ idx, user, autoFocus }) => (
+    ({ idx, userData, autoFocus }) => (
         <UserProfileFavoriteCategory
             key={idx}
-            hint={user?.favoriteCategory?.hint || 'unknown'}
-            selected={!!user?.favoriteCategory?.selected.length}
+            hint={userData?.favoriteCategory?.hint || 'unknown'}
+            selected={!!userData?.favoriteCategory?.selected.length}
             autoFocus={autoFocus}
             // eslint-disable-next-line no-alert
             onClick={() => alert('viewFavoriteCategory')}
@@ -105,7 +105,7 @@ export const UserProfileItemsCfg: Array<
     // TODO: UserProfileSocial -> https://help.yandex.ru/roundup_market
     // TODO: UserProfileBusiness -> https://business.market.yandex.ru/pokupayte-dlya-biznesa
     // TODO: UserProfilePartner -> https://partner.market.yandex.ru/welcome/partners
-    ({ idx, user, autoFocus }) => (
+    ({ idx, userData, autoFocus }) => (
         <UserProfileChat
             key={idx}
             autoFocus={autoFocus}
