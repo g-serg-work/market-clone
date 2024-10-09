@@ -4,15 +4,18 @@ import classNames from '@/shared/lib/helpers/classNames';
 import cls from './HeaderMenuItemWishList.module.scss';
 import Svg from '../../../assets/icons/wish-list.svg';
 import { getRouteWishList } from '@/shared/const/router';
+import useAutoFocus from '@/shared/lib/hooks/useAutoFocus';
 
 export interface HeaderMenuItemWishListProps {
     className?: string;
     count?: number;
+    autoFocus?: boolean;
 }
 
 export const HeaderMenuItemWishList = memo(
     (props: HeaderMenuItemWishListProps) => {
-        const { className, count } = props;
+        const { className, count, autoFocus } = props;
+        const { autoFocusRef } = useAutoFocus<HTMLAnchorElement>();
 
         return (
             <div
@@ -21,13 +24,16 @@ export const HeaderMenuItemWishList = memo(
                 ])}
             >
                 <Link
+                    ref={autoFocus ? autoFocusRef : undefined}
                     className={cls.link}
                     to={getRouteWishList()}
                     rel="nofollow"
                 >
                     <div data-baobab-name="favorites">
                         <div className={cls.svgWrapper} aria-hidden="true">
-                            <span className={cls.count}>{count}</span>
+                            {count ? (
+                                <span className={cls.count}>{count}</span>
+                            ) : null}
                             <div className={cls.icon}>
                                 <Svg title="Избранное" />
                             </div>

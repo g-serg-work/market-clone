@@ -17,3 +17,9 @@ const Template: ComponentStory<typeof HeaderMenuItemCart> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {};
+
+export const WithCount = Template.bind({});
+WithCount.args = { count: 3 };
+
+export const WithFocus = Template.bind({});
+WithFocus.args = { autoFocus: true };

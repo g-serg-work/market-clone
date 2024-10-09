@@ -4,21 +4,31 @@ import classNames from '@/shared/lib/helpers/classNames';
 import cls from './HeaderMenuItemCart.module.scss';
 import Svg from '../../../assets/icons/cart.svg';
 import { getRouteCart } from '@/shared/const/router';
+import useAutoFocus from '@/shared/lib/hooks/useAutoFocus';
 
 export interface HeaderMenuItemCartProps {
     className?: string;
     count?: number;
+    autoFocus?: boolean;
 }
 
 export const HeaderMenuItemCart = memo((props: HeaderMenuItemCartProps) => {
-    const { className, count } = props;
+    const { className, count, autoFocus } = props;
+    const { autoFocusRef } = useAutoFocus<HTMLAnchorElement>();
 
     return (
         <div className={classNames(cls.HeaderMenuItemCart, {}, [className])}>
-            <Link className={cls.link} to={getRouteCart()} rel="nofollow">
+            <Link
+                ref={autoFocus ? autoFocusRef : undefined}
+                className={cls.link}
+                to={getRouteCart()}
+                rel="nofollow"
+            >
                 <div data-baobab-name="favorites">
                     <div className={cls.svgWrapper} aria-hidden="true">
-                        <span className={cls.count}>{count}</span>
+                        {count ? (
+                            <span className={cls.count}>{count}</span>
+                        ) : null}
                         <div className={cls.icon}>
                             <Svg title="Корзина" />
                         </div>
