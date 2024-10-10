@@ -41,6 +41,7 @@ server.post('/login', loginPost(handlerCfg));
 server.get('/catalog/:catalogId', catalogGet(handlerCfg));
 server.get('/favorite-category/:userId', favoriteCategoryGet(handlerCfg));
 
+server.get('/login', badRequest);
 server.get('/catalog', badRequest);
 server.get('/favorite-category', badRequest);
 

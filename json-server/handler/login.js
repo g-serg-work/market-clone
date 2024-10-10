@@ -2,16 +2,18 @@ const loginPost = (handlerCfg) => (req, res) => {
     try {
         const { mainDbGetter } = handlerCfg;
 
-        const { userName, password } = req.body;
+        const { userName } = req.body;
 
-        const { users = [] } = mainDbGetter();
+        const { users, profiles } = mainDbGetter();
 
-        const userFromBd = users.find(
-            (user) => user.userName === userName && user.password === password,
-        );
+        const userRow = users.find((user) => user.userName === userName);
 
-        if (userFromBd) {
-            return res.json(userFromBd);
+        if (userRow) {
+            const profileRow = profiles.find(
+                (profile) => profile.id === userRow.id,
+            );
+
+            if (profileRow) return res.json(profileRow);
         }
 
         return res.status(403).json({ message: 'User not found' });

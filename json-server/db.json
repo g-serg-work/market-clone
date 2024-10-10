@@ -2,16 +2,15 @@
     "users": [
         {
             "id": "1",
-            "userName": "admin",
-            "password": "123"
+            "userName": "admin"
         }
     ],
-    "profile": [
+    "profiles": [
         {
             "id": "1",
             "userName": "admin",
             "userEmail": "admin@yandex.ru",
-            "theme": "light",
+            "addressList": ["Пункт выдачи: ул. Героя Нахимова"],
             "hasNotification": true,
             "wishList": [
                 "naduvnaia-vodnaia-gorka-akula-3",
