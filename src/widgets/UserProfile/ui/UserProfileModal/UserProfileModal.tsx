@@ -16,20 +16,19 @@ interface UserProfileModalProps {
 export const UserProfileModal = (props: UserProfileModalProps) => {
     const { className, left, top, isOpen, onClose } = props;
 
+    const style = { width: modalWidth, left: left - modalWidth, top };
+
     return (
         <Modal
             className={classNames('', {}, [className])}
-            overlayClassName={cls.overlay}
-            contentClassName={cls.content}
-            contentStyle={{ width: modalWidth }}
-            positionAt="lt"
-            left={left - modalWidth}
-            top={top}
             isOpen={isOpen}
             onClose={onClose}
             lazy
         >
-            <UserProfile autoFocus />
+            <Modal.Overlay className={cls.overlay} />
+            <Modal.Content className={cls.content} style={style}>
+                <UserProfile autoFocus />
+            </Modal.Content>
         </Modal>
     );
 };

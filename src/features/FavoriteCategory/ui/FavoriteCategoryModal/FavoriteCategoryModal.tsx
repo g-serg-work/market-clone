@@ -15,13 +15,14 @@ export const FavoriteCategoryModal = (props: FavoriteCategoryModalProps) => {
     return (
         <Modal
             className={classNames('', {}, [className])}
-            overlayClassName={cls.overlay}
-            contentClassName={cls.content}
             isOpen={isOpen}
             onClose={onClose}
             lazy
         >
-            <FavoriteCategory onClose={onClose} />
+            <Modal.Overlay className={cls.overlay} />
+            <Modal.Content className={cls.content}>
+                <FavoriteCategory onClose={onClose} />
+            </Modal.Content>
         </Modal>
     );
 };
