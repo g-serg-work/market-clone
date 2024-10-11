@@ -1,0 +1,22 @@
+.HeaderMenuItemLogin {
+    position: relative;
+}
+
+.link {
+    height: 44px;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    color: #21201f;
+    appearance: none;
+    border: none;
+    font-family: "YS Text", Helvetica, Arial, sans-serif;
+    border-radius: 7px;
+    transition: all 0.12s ease-out;
+    cursor: pointer;
+    text-decoration: none;
+}
