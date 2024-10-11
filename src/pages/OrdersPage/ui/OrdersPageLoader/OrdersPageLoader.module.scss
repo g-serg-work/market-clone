@@ -1,0 +1,63 @@
+.OrdersPageLoader {
+    margin-bottom: 24px;
+}
+
+.wrapper {
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+    border-radius: 24px;
+    background: var(--bg-secondary);
+    display: flex;
+    position: relative;
+}
+
+.itemWrapper {
+    flex-direction: row;
+    display: flex;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-100%);
+        background-image: linear-gradient(
+            90deg,
+            hsl(0deg 0% 100% / 0%),
+            hsl(0deg 0% 100% / 20%) 20%,
+            hsl(0deg 0% 100% / 50%) 60%,
+            hsl(0deg 0% 100% / 0%)
+        );
+        animation: span-animation 2s infinite;
+    }
+}
+
+@keyframes span-animation {
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.item1 {
+    width: 260px;
+    margin-bottom: 12px;
+    height: 14px;
+    position: relative;
+    overflow: hidden;
+    background-color: #edece8;
+    border-radius: 4px;
+}
+
+.item2 {
+    width: 130px;
+    height: 14px;
+    position: relative;
+    overflow: hidden;
+    background-color: #edece8;
+    border-radius: 4px;
+}

@@ -12,6 +12,7 @@ const ordersPageApi = rtkApi.injectEndpoints({
             query: ({ userId }) => ({
                 url: `/orders/${userId}`,
             }),
+            keepUnusedDataFor: 0,
         }),
     }),
 });
