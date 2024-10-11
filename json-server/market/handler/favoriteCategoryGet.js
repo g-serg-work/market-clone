@@ -9,7 +9,7 @@ const favoriteCategoryGet = (handlerCfg) => (req, res) => {
         const { 'favorite-category': favoriteCategory } = mainDbGetter();
 
         const categories = favoriteCategory
-            .filter((category) => category.userId == userId)
+            .filter((category) => category.userId === userId)
             .map(({ categoryId }) =>
                 marketDb.categories?.find(
                     (category) => category.id === categoryId,

@@ -9,6 +9,7 @@ const cfg = require('./market/cfg.json');
 const loginPost = require('./handler/login');
 const catalogGet = require('./market/handler/catalogGet');
 const favoriteCategoryGet = require('./market/handler/favoriteCategoryGet');
+const ordersByUserGet = require('./market/handler/ordersByUserGet');
 //
 
 const dir = path.resolve(__dirname, './market/data');
@@ -40,6 +41,7 @@ const badRequest = (req, res) =>
 server.post('/login', loginPost(handlerCfg));
 server.get('/catalog/:catalogId', catalogGet(handlerCfg));
 server.get('/favorite-category/:userId', favoriteCategoryGet(handlerCfg));
+server.get('/orders/:userId', ordersByUserGet(handlerCfg));
 
 server.get('/login', badRequest);
 server.get('/catalog', badRequest);

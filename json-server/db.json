@@ -16,9 +16,7 @@
                 "naduvnaia-vodnaia-gorka-akula-3",
                 "koliaska-progulochnaia-vsesezonnaia-fiorano-s-nagruzkoi-do-22-kg-chernyi"
             ],
-            "ordersList": [
-                "koliaska-progulochnaia-vsesezonnaia-fiorano-s-nagruzkoi-do-22-kg-chernyi"
-            ],
+            "ordersList": ["547750624"],
             "cartList": [
                 "naduvnaia-vodnaia-gorka-akula-3",
                 "koliaska-progulochnaia-vsesezonnaia-fiorano-s-nagruzkoi-do-22-kg-chernyi",
@@ -28,6 +26,20 @@
                 "hint": "До –40%. Выбирайте на октябрь",
                 "selected": []
             }
+        }
+    ],
+    "orders": [
+        {
+            "userId": "1",
+            "number": "547750624",
+            "fromDate": "От 18 сентября",
+            "status": "Уже у вас",
+            "statusDate": "Вы получили 20 сентября",
+            "cost": 735,
+            "images": [
+                "/get-marketcms/1357599/img-44df880c-4d97-4052-a2b9-3335296bb855.png/orig",
+                "/get-mpic/4465918/img_id3639862883840481797.jpeg/100x100"
+            ]
         }
     ],
     "favorite-category": [
