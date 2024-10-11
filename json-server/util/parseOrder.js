@@ -3,6 +3,7 @@ const parseOrder = (cfg, order) => {
 
     return {
         ...order,
+        number: order.id,
         images: order.images.map((image) => `${avatarsBaseUrl}${image}`),
     };
 };
