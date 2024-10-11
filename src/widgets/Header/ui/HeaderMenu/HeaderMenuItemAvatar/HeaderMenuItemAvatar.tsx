@@ -3,9 +3,9 @@ import Png from '../../../assets/icons/avatar.png';
 import classNames from '@/shared/lib/helpers/classNames';
 import {
     AppEvent,
-    AppEventChannel,
-    AppEventTypes,
-} from '@/shared/eventChannels/appEvents';
+    modalChannel,
+    modalChannelEvent,
+} from '@/shared/eventChannels/modalChannelEvents';
 import { Button } from '@/shared/ui/Button';
 
 interface HeaderMenuItemAvatarProps {
@@ -18,8 +18,8 @@ export const HeaderMenuItemAvatar = (props: HeaderMenuItemAvatarProps) => {
     const { className, userName, hasNotification } = props;
 
     const onClick = (appEvent: AppEvent) => {
-        AppEventChannel.emit(
-            AppEventTypes.onHeaderMenuItemAvatarClick,
+        modalChannel.emit(
+            modalChannelEvent.onHeaderMenuItemAvatarClick,
             appEvent,
         );
     };

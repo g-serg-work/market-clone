@@ -7,7 +7,7 @@ import { RequireAuth } from './RequireAuth';
 const AppRouter = () => {
     const renderWithWrapper = useCallback((route: AppRoutesProps) => {
         const element = (
-            <Suspense fallback={<div>Loading....</div>}>
+            <Suspense>
                 {route.element}
             </Suspense>
         );

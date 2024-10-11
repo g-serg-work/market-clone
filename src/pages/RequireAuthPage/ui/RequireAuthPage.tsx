@@ -2,22 +2,22 @@ import { MouseEvent, useCallback } from 'react';
 import classNames from '@/shared/lib/helpers/classNames';
 import cls from './RequireAuthPage.module.scss';
 import { Page } from '@/widgets/Page';
+import {
+    modalChannel,
+    modalChannelEvent,
+} from '@/shared/eventChannels/modalChannelEvents';
 
 interface RequireAuthPageProps {
     className?: string;
-    onAuthClick?: () => void;
 }
 
 export const RequireAuthPage = (props: RequireAuthPageProps) => {
-    const { className, onAuthClick } = props;
+    const { className } = props;
 
-    const onClick = useCallback(
-        (e: MouseEvent<HTMLAnchorElement>) => {
-            e.preventDefault();
-            onAuthClick?.();
-        },
-        [onAuthClick],
-    );
+    const onClick = useCallback((e: MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        modalChannel.emit(modalChannelEvent.onHeaderMenuItemLoginClick);
+    }, []);
 
     return (
         <Page

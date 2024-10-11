@@ -4,7 +4,7 @@ import {
     ForwardedRef,
     useCallback,
 } from 'react';
-import { onClickType } from '@/shared/eventChannels/appEvents';
+import { onClickType } from '@/shared/eventChannels/modalChannelEvents';
 import callElementBoundingClientRect from '@/shared/lib/helpers/callElementBoundingClientRect';
 
 interface ButtonProps

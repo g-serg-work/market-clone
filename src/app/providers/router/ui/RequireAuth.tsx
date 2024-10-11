@@ -12,7 +12,7 @@ export function RequireAuth(props: RequireAuthProps) {
     const inited = useSelector(getUserInited);
 
     if (!userData) {
-        if (!inited) return <div>Loading....</div>;
+        if (!inited) return null;
 
         // <Navigate to={getRouteMain()} state={{ from: location }} replace />
         return <RequireAuthPage />;

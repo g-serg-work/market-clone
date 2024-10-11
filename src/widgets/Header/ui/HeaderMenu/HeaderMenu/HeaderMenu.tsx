@@ -8,6 +8,7 @@ import { HeaderMenuItemOrders } from '../HeaderMenuItemOrders/HeaderMenuItemOrde
 import { HeaderMenuItemPlus } from '../HeaderMenuItemPlus/HeaderMenuItemPlus';
 import { HeaderMenuItemWishList } from '../HeaderMenuItemWishList/HeaderMenuItemWishList';
 import { HeaderMenuItemCart } from '../HeaderMenuItemCart/HeaderMenuItemCart';
+import { HeaderMenuItemLogin } from '../HeaderMenuItemLogin/HeaderMenuItemLogin';
 
 export interface HeaderMenuProps {
     className?: string;
@@ -28,8 +29,11 @@ export const HeaderMenu = memo((props: HeaderMenuProps) => {
         <HeaderMenuItemOrders count={ordersListCount} />,
         <HeaderMenuItemWishList count={wishListCount} />,
         <HeaderMenuItemCart count={cartListCount} />,
-        <HeaderMenuItemAvatar hasNotification={hasNotification} />,
-    ];
+    ].concat(
+        userData
+            ? [<HeaderMenuItemAvatar hasNotification={hasNotification} />]
+            : [<HeaderMenuItemLogin />],
+    );
 
     return (
         <nav className={classNames(cls.HeaderMenu, {}, [className])}>

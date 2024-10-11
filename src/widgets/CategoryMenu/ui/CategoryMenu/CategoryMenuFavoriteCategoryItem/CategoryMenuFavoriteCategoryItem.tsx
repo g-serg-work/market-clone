@@ -3,9 +3,9 @@ import classNames from '@/shared/lib/helpers/classNames';
 import cls from './CategoryMenuFavoriteCategoryItem.module.scss';
 import { ClickAble } from '@/shared/ui/ClickAble';
 import {
-    AppEventChannel,
-    AppEventTypes,
-} from '@/shared/eventChannels/appEvents';
+    modalChannel,
+    modalChannelEvent,
+} from '@/shared/eventChannels/modalChannelEvents';
 
 interface CategoryMenuFavoriteCategoryItemProps {
     className?: string;
@@ -18,8 +18,8 @@ export const CategoryMenuFavoriteCategoryItem = memo(
         const { className } = props;
 
         const onClick = () => {
-            AppEventChannel.emit(
-                AppEventTypes.onCategoryMenuFavoriteCategoryItemClick,
+            modalChannel.emit(
+                modalChannelEvent.onCategoryMenuFavoriteCategoryItemClick,
             );
         };
 

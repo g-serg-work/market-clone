@@ -8,6 +8,7 @@ import {
 } from '@/shared/const/router';
 import { AppRoutesProps } from '@/shared/types/router';
 import { CatalogPage } from '@/pages/CatalogPage';
+import { OrdersPage } from '@/pages/OrdersPage';
 
 export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     [AppRoutes.MAIN]: {
@@ -16,7 +17,7 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     },
     [AppRoutes.ORDERS]: {
         path: getRouteOrders(),
-        element: <div>Orders</div>,
+        element: <OrdersPage />,
         authOnly: true,
     },
     [AppRoutes.CATALOG]: {

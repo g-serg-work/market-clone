@@ -8,7 +8,6 @@ export enum AppRoutes {
     CART = 'my/cart',
     PROMOCODES = 'promocodes',
     COMPARE = 'comparison',
-    LOGOUT = 'logout',
     ADDUSER = 'adduser',
     CATALOG = 'catalog',
     // last
@@ -24,7 +23,6 @@ export const getRouteCart = () => '/my/cart';
 export const getRouteReviews = () => '/my/reviews';
 export const getRoutePromoCodes = () => '/promocodes';
 export const getRouteCompare = () => '/compare';
-export const getRouteLogout = () => '/logout';
 export const getRouteAddUser = () => '/adduser';
 export const getRouteCatalog = (id: string) => `/catalog/${id}`;
 
@@ -38,7 +36,6 @@ export const AppRouteByPathPattern: Record<string, AppRoutes> = {
     [getRoutePromoCodes()]: AppRoutes.PROMOCODES,
     [getRouteCompare()]: AppRoutes.COMPARE,
     [getRouteWishList()]: AppRoutes.WISHLIST,
-    [getRouteLogout()]: AppRoutes.LOGOUT,
     [getRouteAddUser()]: AppRoutes.ADDUSER,
     [getRouteCatalog(':catalogId')]: AppRoutes.CATALOG,
 };

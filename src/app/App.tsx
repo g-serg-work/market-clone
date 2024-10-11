@@ -1,12 +1,12 @@
 import { memo, Suspense, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { getUserInited, initUserData } from '@/entities/User';
 import { AppRouter } from './providers/router';
 import { withTheme } from './providers/ThemeProvider';
 import { useAppDispatch } from '@/shared/lib/hooks';
 import { CategoryMenu } from '@/widgets/CategoryMenu';
 import { useAppModals } from './hooks/useAppModals';
 import { Header } from '@/widgets/Header';
+import { getUserInited, initUserData } from '@/entities/User';
 
 const App = memo(() => {
     const dispatch = useAppDispatch();
@@ -24,7 +24,7 @@ const App = memo(() => {
             <Header />
             <CategoryMenu />
             {modalContent}
-            <Suspense fallback={<div>Loading....</div>}>
+            <Suspense>
                 <AppRouter />
             </Suspense>
         </div>

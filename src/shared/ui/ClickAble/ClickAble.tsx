@@ -1,6 +1,6 @@
 import React, { ForwardedRef, forwardRef, useCallback } from 'react';
 import callElementBoundingClientRect from '@/shared/lib/helpers/callElementBoundingClientRect';
-import { onClickType } from '@/shared/eventChannels/appEvents';
+import { onClickType } from '@/shared/eventChannels/modalChannelEvents';
 
 interface ClickAbleProps
     extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onClick'> {
