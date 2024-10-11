@@ -1,0 +1,64 @@
+.overlay {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 8990;
+}
+
+@media only screen and (min-height: 0), only screen and (min-width: 0) {
+    .overlay {
+        background-image: url("https://yastatic.net/s3/passport-auth-customs/customs/_/8fc4eb23.jpg");
+    }
+}
+
+@media only screen and (min-height: 720px),
+    only screen and (min-width: 1280px) {
+    .overlay {
+        background-image: url("https://yastatic.net/s3/passport-auth-customs/customs/_/3e3d544e.jpg");
+    }
+}
+
+@media only screen and (min-height: 810px),
+    only screen and (min-width: 1440px) {
+    .overlay {
+        background-image: url("https://yastatic.net/s3/passport-auth-customs/customs/_/1ef510dd.jpg");
+    }
+}
+
+@media only screen and (min-height: 945px),
+    only screen and (min-width: 1680px) {
+    .overlay {
+        background-image: url("https://yastatic.net/s3/passport-auth-customs/customs/_/a6a24fdb.jpg");
+    }
+}
+
+.content {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 50%;
+    overflow: auto;
+    transform: translateY(-50%);
+    z-index: 9010;
+}
+
+.wrapper {
+    -webkit-box-flex: 1;
+    flex: 1 0 auto;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 376px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}

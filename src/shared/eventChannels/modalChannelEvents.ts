@@ -7,6 +7,7 @@ export enum modalChannelEvent {
     onHeaderMenuItemLoginClick = 'onHeaderMenuItemLoginClick',
     onRequireAuthPageLoginClick = 'onRequireAuthPageLoginClick',
     onUserProfileItemClick = 'onUserProfileItemClick',
+    onUserLoginSuccess = 'onUserLoginSuccess',
 }
 
 export const modalChannel = eventBus<{
@@ -15,4 +16,5 @@ export const modalChannel = eventBus<{
     [modalChannelEvent.onHeaderMenuItemLoginClick]: AppEventCallbackVoid;
     [modalChannelEvent.onRequireAuthPageLoginClick]: AppEventCallbackVoid;
     [modalChannelEvent.onUserProfileItemClick]: AppEventCallbackVoid;
+    [modalChannelEvent.onUserLoginSuccess]: AppEventCallbackVoid;
 }>();

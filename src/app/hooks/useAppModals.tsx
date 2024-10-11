@@ -18,7 +18,8 @@ export const useAppModals = (): JSX.Element | null => {
     const [doUserProfileModal, userProfileModalContent, closeUserProfileModal] =
         useJSXModal(UserProfileModal, () => userProfileModalProps);
 
-    const [doLoginModal, loginModalContent] = useJSXModal(LoginModal);
+    const [doLoginModal, loginModalContent, closeLoginModal] =
+        useJSXModal(LoginModal);
 
     useEffect(() => {
         const unsubscribes = [
@@ -46,6 +47,9 @@ export const useAppModals = (): JSX.Element | null => {
             modalChannel.on(modalChannelEvent.onUserProfileItemClick, () =>
                 closeUserProfileModal?.(),
             ),
+            modalChannel.on(modalChannelEvent.onUserLoginSuccess, () => {
+                closeLoginModal?.();
+            }),
         ];
 
         return () => {
@@ -56,6 +60,7 @@ export const useAppModals = (): JSX.Element | null => {
         doUserProfileModal,
         doLoginModal,
         closeUserProfileModal,
+        closeLoginModal,
     ]);
 
     return (
