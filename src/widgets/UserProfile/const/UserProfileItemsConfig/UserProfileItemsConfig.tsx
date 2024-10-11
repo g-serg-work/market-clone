@@ -3,7 +3,6 @@ import { User } from '@/entities/User';
 
 import {
     getRouteCompare,
-    getRouteLogout,
     getRouteOrders,
     getRoutePromoCodes,
     getRouteReturns,
@@ -27,7 +26,17 @@ import LogoutSvg from '@/shared/assets/icons/profile/logout.svg';
 import UserProfileChat from '../../ui/UserProfileChat/UserProfileChat';
 import UserProfileFavoriteCategory from '../../ui/UserProfileFavoriteCategory/UserProfileFavoriteCategory';
 
-interface UserProfileItemCfg extends UserProfileItemProps {
+export enum RouteType {
+    relative,
+    absolute,
+}
+
+export enum CustomRoute {
+    LOGOUT = '/logout',
+}
+
+interface UserProfileItemCfg
+    extends Omit<UserProfileItemProps, 'onRouteClick'> {
     getCountSelector?: (user: User) => number | undefined;
 }
 
@@ -117,6 +126,7 @@ export const UserProfileItemsCfg: Array<
         name: 'vacancies',
         title: 'Маркет нанимает',
         route: 'https://yandex.ru/jobs/services/market/about',
+        routeType: RouteType.absolute,
         Svg: VacanciesSvg,
     },
     {
@@ -129,6 +139,7 @@ export const UserProfileItemsCfg: Array<
         name: 'help',
         title: 'Справка',
         route: 'https://yandex.ru/support/market',
+        routeType: RouteType.absolute,
         routeAttr: {
             target: '_blank',
             rel: 'nofollow noopener',
@@ -138,7 +149,7 @@ export const UserProfileItemsCfg: Array<
     {
         name: 'logout',
         title: 'Выйти',
-        route: getRouteLogout(),
+        route: CustomRoute.LOGOUT,
         Svg: LogoutSvg,
     },
 ];

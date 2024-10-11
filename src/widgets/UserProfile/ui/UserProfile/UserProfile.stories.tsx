@@ -70,6 +70,17 @@ WithWishList.decorators = [
     }),
 ];
 
+
+export const WithAddressList = Template.bind({});
+WithAddressList.args = {};
+WithAddressList.decorators = [
+    StoreDecorator({
+        user: {
+            userData: { ...userData, addressList: ['address'] },
+        },
+    }),
+];
+
 export const WithFavoriteSelected = Template.bind({});
 WithFavoriteSelected.args = {};
 WithFavoriteSelected.decorators = [

@@ -2,11 +2,20 @@ import { memo } from 'react';
 import { useSelector } from 'react-redux';
 import classNames from '@/shared/lib/helpers/classNames';
 import cls from './UserProfile.module.scss';
-import { getUserData } from '@/entities/User';
-import UserProfileItemsCfg from '../../const/UserProfileItemsConfig';
+import { getUserData, userActions } from '@/entities/User';
+import UserProfileItemsCfg, {
+    CustomRoute,
+} from '../../const/UserProfileItemsConfig';
 import UserProfileAdd from '../UserProfileAdd/UserProfileAdd';
 import { getRouteAddUser } from '@/shared/const/router';
-import UserProfileItem from '../UserProfileItem/UserProfileItem';
+import UserProfileItem, {
+    onRouteClickType,
+} from '../UserProfileItem/UserProfileItem';
+import { useAppDispatch } from '@/shared/lib/hooks';
+import {
+    modalChannel,
+    modalChannelEvent,
+} from '@/shared/eventChannels/modalChannelEvents';
 
 export interface UserProfileProps {
     className?: string;
@@ -15,20 +24,36 @@ export interface UserProfileProps {
 
 const UserProfile = memo((props: UserProfileProps) => {
     const { className, autoFocus } = props;
+    const dispatch = useAppDispatch();
     const userData = useSelector(getUserData);
+
+    const onRouteClick: onRouteClickType = (route, e) => {
+        if (route === CustomRoute.LOGOUT) {
+            e.preventDefault();
+            dispatch(userActions.logout());
+        }
+    };
+
+    const onMenuClick = () => {
+        modalChannel.emit(modalChannelEvent.onUserProfileItemClick);
+    };
 
     const profileItems = UserProfileItemsCfg.map((item, idx) => {
         const itemAutoFocus = autoFocus && idx === 1;
-        if (typeof item === 'function')
-            return item({ idx, userData, autoFocus: itemAutoFocus });
 
-        const count = userData && item.getCountSelector?.(userData);
+        if (typeof item === 'function') {
+            return item({ idx, userData, autoFocus: itemAutoFocus });
+        }
+
+        const count = userData ? item.getCountSelector?.(userData) : undefined;
+
         return (
             <UserProfileItem
                 key={idx}
                 autoFocus={itemAutoFocus}
                 {...item}
                 count={count}
+                onRouteClick={onRouteClick}
             />
         );
     });
@@ -40,11 +65,7 @@ const UserProfile = memo((props: UserProfileProps) => {
             data-baobab-name="profileMenu"
         >
             <div className={cls.profile}>
-                <div
-                    id="userMenu"
-                    role="menubar"
-                    aria-label="Меню пользователя"
-                >
+                <div aria-label="Меню пользователя" onClick={onMenuClick}>
                     <div className={cls.menuItems}>{profileItems}</div>
                     <div className={cls.newUser}>
                         <UserProfileAdd route={getRouteAddUser()} />
