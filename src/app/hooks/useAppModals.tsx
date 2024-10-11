@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
 import { FavoriteCategoryModal } from '@/features/FavoriteCategory';
 import {
-    AppEventChannel,
-    AppEventTypes,
-} from '@/shared/eventChannels/appEvents';
+    modalChannel,
+    modalChannelEvent,
+} from '@/shared/eventChannels/modalChannelEvents';
 import useJSXModal from '@/shared/lib/hooks/useJSXModal';
 import { UserProfileModal } from '@/widgets/UserProfile';
+import { LoginModal } from '@/features/AuthByUsername';
 
 const userProfileModalProps = { left: 0, top: 0 };
 
@@ -14,19 +15,27 @@ export const useAppModals = (): JSX.Element | null => {
         FavoriteCategoryModal,
     );
 
-    const [doUserProfileModal, userProfileModalContent] = useJSXModal(
-        UserProfileModal,
-        () => userProfileModalProps,
-    );
+    const [doUserProfileModal, userProfileModalContent, closeUserProfileModal] =
+        useJSXModal(UserProfileModal, () => userProfileModalProps);
+
+    const [doLoginModal, loginModalContent] = useJSXModal(LoginModal);
 
     useEffect(() => {
         const unsubscribes = [
-            AppEventChannel.on(
-                AppEventTypes.onCategoryMenuFavoriteCategoryItemClick,
+            modalChannel.on(
+                modalChannelEvent.onCategoryMenuFavoriteCategoryItemClick,
                 doFavoriteCategoryModal,
             ),
-            AppEventChannel.on(
-                AppEventTypes.onHeaderMenuItemAvatarClick,
+            modalChannel.on(
+                modalChannelEvent.onHeaderMenuItemLoginClick,
+                doLoginModal,
+            ),
+            modalChannel.on(
+                modalChannelEvent.onRequireAuthPageLoginClick,
+                doLoginModal,
+            ),
+            modalChannel.on(
+                modalChannelEvent.onHeaderMenuItemAvatarClick,
                 (e) => {
                     const rect = e.elementBoundingClientRect;
                     userProfileModalProps.left = rect.left + rect.width - 10;
@@ -34,12 +43,24 @@ export const useAppModals = (): JSX.Element | null => {
                     doUserProfileModal();
                 },
             ),
+            modalChannel.on(modalChannelEvent.onUserProfileItemClick, () =>
+                closeUserProfileModal?.(),
+            ),
         ];
 
         return () => {
             unsubscribes.forEach((c) => c());
         };
-    }, [doFavoriteCategoryModal, doUserProfileModal]);
+    }, [
+        doFavoriteCategoryModal,
+        doUserProfileModal,
+        doLoginModal,
+        closeUserProfileModal,
+    ]);
 
-    return favoriteCategoryModalContent || userProfileModalContent;
+    return (
+        favoriteCategoryModalContent ||
+        userProfileModalContent ||
+        loginModalContent
+    );
 };
