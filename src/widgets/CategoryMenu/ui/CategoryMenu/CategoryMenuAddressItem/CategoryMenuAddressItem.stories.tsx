@@ -14,4 +14,4 @@ const Template: ComponentStory<typeof CategoryMenuAddressItem> = (args) => (
 );
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = { address: 'Delivery address' };

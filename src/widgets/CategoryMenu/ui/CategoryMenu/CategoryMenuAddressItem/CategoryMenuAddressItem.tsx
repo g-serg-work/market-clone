@@ -6,12 +6,17 @@ import { Button } from '@/shared/ui/Button';
 
 export interface CategoryMenuAddressItemProps {
     className?: string;
+    address?: string;
     onSelectPoint?: () => void;
 }
 
 export const CategoryMenuAddressItem = memo(
     (props: CategoryMenuAddressItemProps) => {
-        const { className, onSelectPoint } = props;
+        const {
+            className,
+            onSelectPoint,
+            address,
+        } = props;
         return (
             <div
                 className={classNames(cls.CategoryMenuAddressItem, {}, [
@@ -28,11 +33,13 @@ export const CategoryMenuAddressItem = memo(
                         >
                             <div className={cls.button}>
                                 <Svg />
-                                <div className={cls.title}>
-                                    <div>
-                                        <span>Дом</span>
+                                {address ? (
+                                    <div className={cls.title}>
+                                        <div>
+                                            <span>{address}</span>
+                                        </div>
                                     </div>
-                                </div>
+                                ) : null}
                             </div>
                         </Button>
                     </div>

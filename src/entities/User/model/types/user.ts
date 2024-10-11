@@ -6,10 +6,9 @@ export interface User {
     id: UserId;
     userName: string;
     userEmail: string;
-    avatar?: string;
+    addressList?: string[];
     jsonSettings?: JsonSettings;
     orders?: number;
-    theme?: string;
     hasNotification?: boolean;
     wishList?: string[];
     ordersList?: string[];
