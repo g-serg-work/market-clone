@@ -1,31 +1,27 @@
 import { memo } from 'react';
-import { useSelector } from 'react-redux';
 import classNames from '@/shared/lib/helpers/classNames';
 import cls from './CategoryMenu.module.scss';
 import { useHeaderItems } from './useHeaderItems';
 import { CategoryMenuAddressItem } from '../CategoryMenuAddressItem/CategoryMenuAddressItem';
-import { getUserData } from '@/entities/User';
 
 export interface CategoryMenuProps {
     className?: string;
+    deliveryAddress?: string;
+    isLogged?: boolean;
 }
 
 export const CategoryMenu = memo((props: CategoryMenuProps) => {
-    const { className } = props;
+    const { className, deliveryAddress, isLogged = false } = props;
 
-    const { CategoryMenuItems, CategoryMenuBuyerItems } = useHeaderItems();
-
-    const userData = useSelector(getUserData);
-
-    const address =
-        userData?.addressList.at(0) ??
-        Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const { CategoryMenuItems, CategoryMenuBuyerItems } = useHeaderItems(isLogged);
 
     return (
         <div className={classNames(cls.CategoryMenu, {}, [className])}>
             <nav>
                 <div className={cls.listWrapper}>
-                    <CategoryMenuAddressItem address={address} />
+                    <CategoryMenuAddressItem
+                        deliveryAddress={deliveryAddress}
+                    />
                     <ul
                         className={cls.category}
                         role="tablist"

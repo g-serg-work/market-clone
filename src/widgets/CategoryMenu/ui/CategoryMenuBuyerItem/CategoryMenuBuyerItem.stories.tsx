@@ -4,7 +4,7 @@ import { CategoryMenuBuyerItem } from './CategoryMenuBuyerItem';
 import { BuyerTypeRoutes } from '@/shared/const/buyertype';
 
 export default {
-    title: 'widgets/CategoryMenu/CategoryMenu/CategoryMenuBuyerItem',
+    title: 'widgets/CategoryMenu/CategoryMenuBuyerItem',
     component: CategoryMenuBuyerItem,
     argTypes: {
         backgroundColor: { control: 'color' },

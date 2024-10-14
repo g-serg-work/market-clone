@@ -1,1 +1,1 @@
-export { CategoryMenu } from './ui/CategoryMenu/CategoryMenu/CategoryMenu';
+export { CategoryMenu } from './ui/CategoryMenu/CategoryMenu';

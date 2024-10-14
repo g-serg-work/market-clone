@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { CategoryMenuFavoriteCategoryItem } from './CategoryMenuFavoriteCategoryItem';
 
 export default {
-    title: 'widgets/CategoryMenu/CategoryMenu/CategoryMenuFavoriteCategoryItem',
+    title: 'widgets/CategoryMenu/CategoryMenuFavoriteCategoryItem',
     component: CategoryMenuFavoriteCategoryItem,
     argTypes: {
         backgroundColor: { control: 'color' },

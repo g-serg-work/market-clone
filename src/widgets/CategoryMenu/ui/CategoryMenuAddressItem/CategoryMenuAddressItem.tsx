@@ -1,22 +1,18 @@
 import { memo } from 'react';
 import cls from './CategoryMenuAddressItem.module.scss';
-import Svg from '../../../assets/icons/delivery-point-20-20.svg';
+import Svg from '../../assets/icons/delivery-point-20-20.svg';
 import classNames from '@/shared/lib/helpers/classNames';
 import { Button } from '@/shared/ui/Button';
 
 export interface CategoryMenuAddressItemProps {
     className?: string;
-    address?: string;
+    deliveryAddress?: string;
     onSelectPoint?: () => void;
 }
 
 export const CategoryMenuAddressItem = memo(
     (props: CategoryMenuAddressItemProps) => {
-        const {
-            className,
-            onSelectPoint,
-            address,
-        } = props;
+        const { className, onSelectPoint, deliveryAddress } = props;
         return (
             <div
                 className={classNames(cls.CategoryMenuAddressItem, {}, [
@@ -33,10 +29,10 @@ export const CategoryMenuAddressItem = memo(
                         >
                             <div className={cls.button}>
                                 <Svg />
-                                {address ? (
+                                {deliveryAddress ? (
                                     <div className={cls.title}>
                                         <div>
-                                            <span>{address}</span>
+                                            <span>{deliveryAddress}</span>
                                         </div>
                                     </div>
                                 ) : null}
