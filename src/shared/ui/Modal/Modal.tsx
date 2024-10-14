@@ -1,9 +1,10 @@
-import { CSSProperties, MouseEvent, ReactNode, useCallback } from 'react';
-import cls from './Modal.module.scss';
+import { MouseEvent, ReactNode, useCallback } from 'react';
 import { Portal } from '../Portal';
 import { useModal, useTheme } from '@/shared/lib/hooks';
 import classNames, { Mods } from '@/shared/lib/helpers/classNames';
-import { ModalTabIndexInitial } from './ModalTabIndexInitial';
+import cls from './Modal.module.scss';
+import { ModalContent } from './Modal.Content';
+import { ModalOverlay } from './Modal.Overlay';
 
 export interface ModalProps {
     className?: string;
@@ -13,18 +14,9 @@ export interface ModalProps {
     lazy?: boolean;
 }
 
-export interface ModalOverlayProps {
-    className?: string;
-    children?: ReactNode;
-}
-
-export interface ModalContentProps {
-    className?: string;
-    children?: ReactNode;
-    style?: CSSProperties;
-}
-
 const ANIMATION_DELAY = 180;
+
+const portalElement = document.getElementById('app') ?? document.body;
 
 export const Modal = (props: ModalProps) => {
     const { className, children, isOpen, onClose, lazy } = props;
@@ -57,7 +49,7 @@ export const Modal = (props: ModalProps) => {
     };
 
     return (
-        <Portal element={document.getElementById('app') ?? document.body}>
+        <Portal element={portalElement}>
             <div
                 className={classNames('', mods, [className, theme])}
                 onClick={onClick}
@@ -67,30 +59,5 @@ export const Modal = (props: ModalProps) => {
         </Portal>
     );
 };
-
-Modal.Overlay = function ModalOverlay(props: ModalOverlayProps) {
-    const { className, children } = props;
-
-    return (
-        <div
-            className={classNames('', {}, [className])}
-            data-modal-role="close-on-click"
-        >
-            {children}
-        </div>
-    );
-};
-
-Modal.Content = function ModalContent(props: ModalContentProps) {
-    const { className, children, style = {} } = props;
-
-    return (
-        <div className={classNames('', {}, [className])} style={style}>
-            <ModalTabIndexInitial tabIndex={1} />
-            <div data-modal-role="close-on-click" className={cls.animation}>
-                {children}
-            </div>
-            <ModalTabIndexInitial tabIndex={0} />
-        </div>
-    );
-};
+Modal.Overlay = ModalOverlay;
+Modal.Content = ModalContent;
