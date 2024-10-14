@@ -6,12 +6,20 @@ import { useAppDispatch } from '@/shared/lib/hooks';
 import { CategoryMenu } from '@/widgets/CategoryMenu';
 import { useAppModals } from './hooks/useAppModals';
 import { Header } from '@/widgets/Header';
-import { getUserInited, initUserData } from '@/entities/User';
+import { getUserData, getUserInited, initUserData } from '@/entities/User';
 
 const App = memo(() => {
     const dispatch = useAppDispatch();
     const inited = useSelector(getUserInited);
     const modalContent = useAppModals();
+    const userData = useSelector(getUserData);
+
+    // TODO: refactor - change on use AppContext
+    const deliveryAddress =
+        userData?.addressList?.at(0) ??
+        Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+    const isLogged = !!userData;
 
     useEffect(() => {
         if (!inited) {
@@ -22,7 +30,10 @@ const App = memo(() => {
     return (
         <div id="app">
             <Header />
-            <CategoryMenu />
+            <CategoryMenu
+                deliveryAddress={deliveryAddress}
+                isLogged={isLogged}
+            />
             {modalContent}
             <Suspense>
                 <AppRouter />
