@@ -7,7 +7,7 @@ import classNames from '@/shared/lib/helpers/classNames';
 import { ApiError } from '@/shared/ui/ApiError';
 import { Delimiter } from '@/shared/ui/Delimiter';
 import { Page } from '@/widgets/Page';
-import { useCatalogPage } from '../api/catalogPageApi';
+import { useCatalogPage } from '../../api/catalogPageApi';
 import { CatalogPageProps } from './CatalogPage';
 import cls from './CatalogPage.module.scss';
 

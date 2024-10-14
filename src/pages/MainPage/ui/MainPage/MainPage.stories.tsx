@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import MainPage from './MainPage';
 import StoreDecorator from '@/shared/config/storybook/StoreDecorator';
 import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
+import { MainPage } from '../..';
 
 export default {
     title: 'pages/MainPage',

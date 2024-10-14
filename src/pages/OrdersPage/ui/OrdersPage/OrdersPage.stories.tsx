@@ -1,8 +1,8 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import OrdersPage from './OrdersPage';
 import StoreDecorator from '@/shared/config/storybook/StoreDecorator';
 import MemoryRouterDecorator from '@/shared/config/storybook/MemoryRouterDecorator';
 import { Order } from '@/entities/Order';
+import { OrdersPage } from './OrdersPage';
 
 export default {
     title: 'pages/OrdersPage/OrdersPage',

@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import CatalogPage from './CatalogPage';
 import StoreDecorator from '@/shared/config/storybook/StoreDecorator';
 import MemoryRouterDecorator from '@/shared/config/storybook/MemoryRouterDecorator';
+import { CatalogPage } from '../..';
 
 export default {
     title: 'pages/CatalogPage',
