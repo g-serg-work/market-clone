@@ -340,7 +340,7 @@ const OrdersPageData = (props: Omit<OrdersPageProps, 'className'>) => {
     );
 };
 
-const OrdersPage = (props: OrdersPageProps) => {
+export const OrdersPage = (props: OrdersPageProps) => {
     const { className, ...rest } = props;
 
     return (
@@ -360,5 +360,3 @@ const OrdersPage = (props: OrdersPageProps) => {
         </Page>
     );
 };
-
-export default OrdersPage;

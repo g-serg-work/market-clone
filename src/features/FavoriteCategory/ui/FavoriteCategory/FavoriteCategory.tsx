@@ -13,7 +13,7 @@ export interface FavoriteCategoryProps {
     onClose?: () => void;
 }
 
-const FavoriteCategory = memo((props: FavoriteCategoryProps) => {
+export const FavoriteCategory = memo((props: FavoriteCategoryProps) => {
     const { className, onClose } = props;
     const userData = useSelector(getUserData);
 
@@ -76,5 +76,3 @@ const FavoriteCategory = memo((props: FavoriteCategoryProps) => {
         </div>
     );
 });
-
-export default FavoriteCategory;
