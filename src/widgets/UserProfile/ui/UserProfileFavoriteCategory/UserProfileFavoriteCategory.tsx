@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import cls from './UserProfileFavoriteCategory.module.scss';
-import FavoriteCategorySvg from '@/shared/assets/icons/profile/favoritecategory.svg';
+import FavoriteCategorySvg from '../../assets/icons/favoritecategory.svg';
 import useAutoFocus from '@/shared/lib/hooks/useAutoFocus';
 import { ClickAble } from '@/shared/ui/ClickAble';
 import classNames, { Mods } from '@/shared/lib/helpers/classNames';

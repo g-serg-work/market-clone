@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import cls from './UserProfilePurchased.module.scss';
 import classNames from '@/shared/lib/helpers/classNames';
 import useAutoFocus from '@/shared/lib/hooks/useAutoFocus';
-import PurchasedSvg from '@/shared/assets/icons/profile/purchased.svg';
+import PurchasedSvg from '../../assets/icons/purchased.svg';
 
 export interface UserProfilePurchasedProps {
     className?: string;

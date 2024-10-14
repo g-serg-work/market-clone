@@ -2,7 +2,7 @@ import { memo } from 'react';
 import cls from './UserProfileSocial.module.scss';
 import classNames from '@/shared/lib/helpers/classNames';
 import useAutoFocus from '@/shared/lib/hooks/useAutoFocus';
-import SocialSvg from '@/shared/assets/icons/profile/social.svg';
+import SocialSvg from '../../assets/icons/social.svg';
 
 export interface UserProfileSocialProps {
     className?: string;

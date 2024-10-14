@@ -13,16 +13,16 @@ import {
 
 import UserProfileAvatar from '../../ui/UserProfileAvatar/UserProfileAvatar';
 
-import ProfileOrdersSvg from '@/shared/assets/icons/profile/orders.svg';
-import WishListSvg from '@/shared/assets/icons/profile/wish-list.svg';
-import ReturnsSvg from '@/shared/assets/icons/profile/returns.svg';
-import ReviewsSvg from '@/shared/assets/icons/profile/reviews.svg';
-import PromoCodesSvg from '@/shared/assets/icons/profile/promo-codes.svg';
-import ComparisonSvg from '@/shared/assets/icons/profile/comparison.svg';
-import VacanciesSvg from '@/shared/assets/icons/profile/vacancies.svg';
-import SettingsSvg from '@/shared/assets/icons/profile/settings.svg';
-import HelpSvg from '@/shared/assets/icons/profile/help.svg';
-import LogoutSvg from '@/shared/assets/icons/profile/logout.svg';
+import ProfileOrdersSvg from '../../assets/icons/orders.svg';
+import WishListSvg from '../../assets/icons/wish-list.svg';
+import ReturnsSvg from '../../assets/icons/returns.svg';
+import ReviewsSvg from '../../assets/icons/reviews.svg';
+import PromoCodesSvg from '../../assets/icons/promo-codes.svg';
+import ComparisonSvg from '../../assets/icons/comparison.svg';
+import VacanciesSvg from '../../assets/icons/vacancies.svg';
+import SettingsSvg from '../../assets/icons/settings.svg';
+import HelpSvg from '../../assets/icons/help.svg';
+import LogoutSvg from '../../assets/icons/logout.svg';
 import UserProfileChat from '../../ui/UserProfileChat/UserProfileChat';
 import UserProfileFavoriteCategory from '../../ui/UserProfileFavoriteCategory/UserProfileFavoriteCategory';
 import {

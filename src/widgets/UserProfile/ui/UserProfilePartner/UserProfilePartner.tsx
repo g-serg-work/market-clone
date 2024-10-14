@@ -2,7 +2,7 @@ import { memo } from 'react';
 import cls from './UserProfilePartner.module.scss';
 import classNames from '@/shared/lib/helpers/classNames';
 import useAutoFocus from '@/shared/lib/hooks/useAutoFocus';
-import PartnerSvg from '@/shared/assets/icons/profile/partner.svg';
+import PartnerSvg from '../../assets/icons/partner.svg';
 
 export interface UserProfilePartnerProps {
     className?: string;

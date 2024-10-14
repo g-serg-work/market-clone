@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import cls from './UserProfileChat.module.scss';
 import classNames from '@/shared/lib/helpers/classNames';
-import ChatSvg from '@/shared/assets/icons/profile/chat.svg';
+import ChatSvg from '../../assets/icons/chat.svg';
 import useAutoFocus from '@/shared/lib/hooks/useAutoFocus';
 import { ClickAble } from '@/shared/ui/ClickAble';
 

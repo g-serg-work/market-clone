@@ -1,8 +1,8 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import UserProfile from './UserProfile';
 import StoreDecorator from '@/shared/config/storybook/StoreDecorator';
 import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 import { User } from '@/entities/User';
+import { UserProfile } from './UserProfile';
 
 export default {
     title: 'widgets/UserProfile/UserProfile',
@@ -66,17 +66,6 @@ WithWishList.decorators = [
     StoreDecorator({
         user: {
             userData: { ...userData, wishList: Array(3).fill('') },
-        },
-    }),
-];
-
-
-export const WithAddressList = Template.bind({});
-WithAddressList.args = {};
-WithAddressList.decorators = [
-    StoreDecorator({
-        user: {
-            userData: { ...userData, addressList: ['address'] },
         },
     }),
 ];
