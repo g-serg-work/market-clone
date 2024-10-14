@@ -2,9 +2,8 @@ import { useState, useCallback } from 'react';
 
 type doModal = () => void;
 type modalContent = JSX.Element | null;
-type doClose = (() => void) | null;
 
-type useJSXModalResult = [doModal, modalContent, doClose];
+type useJSXModalResult = [doModal, modalContent];
 
 export function useJSXModal<T>(
     jsx: (props: T) => JSX.Element,
@@ -23,6 +22,5 @@ export function useJSXModal<T>(
     return [
         doModal,
         isOpen ? jsx({ isOpen, onClose, ...getProps() } as T) : null,
-        isOpen ? onClose : null,
     ];
 }

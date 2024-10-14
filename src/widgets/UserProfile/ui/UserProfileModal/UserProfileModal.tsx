@@ -27,7 +27,7 @@ export const UserProfileModal = (props: UserProfileModalProps) => {
         >
             <Modal.Overlay className={cls.overlay} />
             <Modal.Content className={cls.content} style={style}>
-                <UserProfile autoFocus />
+                <UserProfile autoFocus onClose={onClose}/>
             </Modal.Content>
         </Modal>
     );

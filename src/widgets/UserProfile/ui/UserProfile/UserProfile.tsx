@@ -12,18 +12,15 @@ import UserProfileItem, {
     onRouteClickType,
 } from '../UserProfileItem/UserProfileItem';
 import { useAppDispatch } from '@/shared/lib/hooks';
-import {
-    modalChannel,
-    modalChannelEvent,
-} from '@/shared/eventChannels/modalChannelEvents';
 
 export interface UserProfileProps {
     className?: string;
     autoFocus?: boolean;
+    onClose?: () => void;
 }
 
-const UserProfile = memo((props: UserProfileProps) => {
-    const { className, autoFocus } = props;
+export const UserProfile = memo((props: UserProfileProps) => {
+    const { className, autoFocus, onClose } = props;
     const dispatch = useAppDispatch();
     const userData = useSelector(getUserData);
 
@@ -32,10 +29,6 @@ const UserProfile = memo((props: UserProfileProps) => {
             e.preventDefault();
             dispatch(userActions.logout());
         }
-    };
-
-    const onMenuClick = () => {
-        modalChannel.emit(modalChannelEvent.onUserProfileItemClick);
     };
 
     const profileItems = UserProfileItemsCfg.map((item, idx) => {
@@ -65,7 +58,7 @@ const UserProfile = memo((props: UserProfileProps) => {
             data-baobab-name="profileMenu"
         >
             <div className={cls.profile}>
-                <div aria-label="Меню пользователя" onClick={onMenuClick}>
+                <div aria-label="Меню пользователя" onClick={onClose}>
                     <div className={cls.menuItems}>{profileItems}</div>
                     <div className={cls.newUser}>
                         <UserProfileAdd route={getRouteAddUser()} />
@@ -75,5 +68,3 @@ const UserProfile = memo((props: UserProfileProps) => {
         </div>
     );
 });
-
-export default UserProfile;

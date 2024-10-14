@@ -15,11 +15,12 @@ export const useAppModals = (): JSX.Element | null => {
         FavoriteCategoryModal,
     );
 
-    const [doUserProfileModal, userProfileModalContent, closeUserProfileModal] =
-        useJSXModal(UserProfileModal, () => userProfileModalProps);
+    const [doUserProfileModal, userProfileModalContent] = useJSXModal(
+        UserProfileModal,
+        () => userProfileModalProps,
+    );
 
-    const [doLoginModal, loginModalContent, closeLoginModal] =
-        useJSXModal(LoginModal);
+    const [doLoginModal, loginModalContent] = useJSXModal(LoginModal);
 
     useEffect(() => {
         const unsubscribes = [
@@ -44,24 +45,13 @@ export const useAppModals = (): JSX.Element | null => {
                     doUserProfileModal();
                 },
             ),
-            modalChannel.on(modalChannelEvent.onUserProfileItemClick, () =>
-                closeUserProfileModal?.(),
-            ),
-            modalChannel.on(modalChannelEvent.onUserLoginSuccess, () => {
-                closeLoginModal?.();
-            }),
         ];
 
         return () => {
             unsubscribes.forEach((c) => c());
         };
-    }, [
-        doFavoriteCategoryModal,
-        doUserProfileModal,
-        doLoginModal,
-        closeUserProfileModal,
-        closeLoginModal,
-    ]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         favoriteCategoryModalContent ||
