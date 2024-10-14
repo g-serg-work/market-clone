@@ -12,28 +12,28 @@
 
 @media only screen and (min-height: 0), only screen and (min-width: 0) {
     .overlay {
-        background-image: url("https://yastatic.net/s3/passport-auth-customs/customs/_/8fc4eb23.jpg");
+        background-image: url('/public/assets/images/login-1024.jpg');
     }
 }
 
 @media only screen and (min-height: 720px),
     only screen and (min-width: 1280px) {
     .overlay {
-        background-image: url("https://yastatic.net/s3/passport-auth-customs/customs/_/3e3d544e.jpg");
+        background-image: url('/public/assets/images/login-1280.jpg');
     }
 }
 
 @media only screen and (min-height: 810px),
     only screen and (min-width: 1440px) {
     .overlay {
-        background-image: url("https://yastatic.net/s3/passport-auth-customs/customs/_/1ef510dd.jpg");
+        background-image: url('/public/assets/images/login-1440.jpg');
     }
 }
 
 @media only screen and (min-height: 945px),
     only screen and (min-width: 1680px) {
     .overlay {
-        background-image: url("https://yastatic.net/s3/passport-auth-customs/customs/_/a6a24fdb.jpg");
+        background-image: url('/public/assets/images/login-1680.jpg ');
     }
 }
 
