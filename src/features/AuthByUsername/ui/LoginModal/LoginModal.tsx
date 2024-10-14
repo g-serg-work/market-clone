@@ -2,7 +2,7 @@ import { Modal } from '@/shared/ui/Modal';
 import cls from './LoginModal.module.scss';
 import classNames from '@/shared/lib/helpers/classNames';
 import { LoginModalFooter } from '../LoginModalFooter/LoginModalFooter';
-import LoginForm from '../LoginForm/LoginForm';
+import { LoginForm } from '../..';
 
 interface LoginModalProps {
     className?: string;
@@ -23,7 +23,7 @@ export const LoginModal = (props: LoginModalProps) => {
             <Modal.Overlay className={cls.overlay} />
             <Modal.Content className={cls.content}>
                 <div className={cls.wrapper}>
-                    <LoginForm />
+                    <LoginForm autoFocus onClose={onClose} />
                 </div>
                 <LoginModalFooter />
             </Modal.Content>
