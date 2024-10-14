@@ -2,7 +2,7 @@ import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from '@/shared/lib/helpers/classNames';
 import cls from './HeaderMenuItemCart.module.scss';
-import Svg from '../../../assets/icons/cart.svg';
+import Svg from '../../assets/icons/cart.svg';
 import { getRouteCart } from '@/shared/const/router';
 import useAutoFocus from '@/shared/lib/hooks/useAutoFocus';
 

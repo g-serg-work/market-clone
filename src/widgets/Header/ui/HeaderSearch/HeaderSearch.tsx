@@ -5,7 +5,7 @@ import { Button } from '@/shared/ui/Button';
 import { Input } from '@/shared/ui/Input';
 
 // TODO: change on raw load file
-// import Svg from '../../../assets/icons/search-button-clear.svg';
+// import Svg from '../../assets/icons/search-button-clear.svg';
 const svgTxt = encodeURIComponent(
     `<svg viewBox="0 0 10 10" width="10" height="10" xmlns="http://www.w3.org/2000/svg">
 <polygon points="10,0.7 9.3,0 5,4.3 0.7,0 0,0.7 4.3,5 0,9.3 0.7,10 5,5.7 9.3,10 10,9.3 5.7,5"/>

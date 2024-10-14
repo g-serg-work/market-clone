@@ -1,5 +1,5 @@
 import cls from './HeaderMenuItemAvatar.module.scss';
-import Png from '../../../assets/icons/avatar.png';
+import Png from '../../assets/icons/avatar.png';
 import classNames from '@/shared/lib/helpers/classNames';
 import {
     modalChannel,

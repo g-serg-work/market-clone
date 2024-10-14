@@ -1,18 +1,18 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { HeaderMenuItemWishList } from './HeaderMenuItemWishList';
+import { HeaderMenuItemCart } from './HeaderMenuItemCart';
 import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 
 export default {
-    title: 'widgets/Header/HeaderMenu/HeaderMenuItemWishList',
-    component: HeaderMenuItemWishList,
+    title: 'widgets/Header/HeaderMenuItemCart',
+    component: HeaderMenuItemCart,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
     decorators: [RouterDecorator],
-} as ComponentMeta<typeof HeaderMenuItemWishList>;
+} as ComponentMeta<typeof HeaderMenuItemCart>;
 
-const Template: ComponentStory<typeof HeaderMenuItemWishList> = (args) => (
-    <HeaderMenuItemWishList {...args} />
+const Template: ComponentStory<typeof HeaderMenuItemCart> = (args) => (
+    <HeaderMenuItemCart {...args} />
 );
 
 export const Primary = Template.bind({});

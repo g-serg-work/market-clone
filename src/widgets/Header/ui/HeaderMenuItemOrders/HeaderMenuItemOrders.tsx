@@ -2,7 +2,7 @@ import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from '@/shared/lib/helpers/classNames';
 import cls from './HeaderMenuItemOrders.module.scss';
-import Svg from '../../../assets/icons/orders.svg';
+import Svg from '../../assets/icons/orders.svg';
 import { getRouteOrders } from '@/shared/const/router';
 import useAutoFocus from '@/shared/lib/hooks/useAutoFocus';
 

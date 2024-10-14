@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { HeaderMenuItemAvatar } from './HeaderMenuItemAvatar';
 
 export default {
-    title: 'widgets/Header/HeaderMenu/HeaderMenuItemAvatar',
+    title: 'widgets/Header/HeaderMenuItemAvatar',
     component: HeaderMenuItemAvatar,
     argTypes: {
         backgroundColor: { control: 'color' },

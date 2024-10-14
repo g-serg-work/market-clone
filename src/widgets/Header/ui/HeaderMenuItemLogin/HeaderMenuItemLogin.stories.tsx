@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { HeaderMenuItemLogin } from './HeaderMenuItemLogin';
 
 export default {
-    title: 'widgets/Header/HeaderMenu/HeaderMenuItemLogin',
+    title: 'widgets/Header/HeaderMenuItemLogin',
     component: HeaderMenuItemLogin,
     argTypes: {
         backgroundColor: { control: 'color' },

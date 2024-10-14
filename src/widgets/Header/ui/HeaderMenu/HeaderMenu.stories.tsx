@@ -4,7 +4,7 @@ import StoreDecorator from '@/shared/config/storybook/StoreDecorator';
 import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 
 export default {
-    title: 'widgets/Header/HeaderMenu/HeaderMenu',
+    title: 'widgets/Header/HeaderMenu',
     component: HeaderMenu,
     argTypes: {
         backgroundColor: { control: 'color' },

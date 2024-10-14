@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import classNames from '@/shared/lib/helpers/classNames';
 import cls from './HeaderMenuItemPlus.module.scss';
-import Svg from '../../../assets/icons/ya-plus-badge.svg';
+import Svg from '../../assets/icons/ya-plus-badge.svg';
 
 export interface HeaderMenuItemPlusProps {
     className?: string;

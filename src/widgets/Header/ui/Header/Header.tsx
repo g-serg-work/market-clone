@@ -2,7 +2,7 @@ import { memo, useCallback, useState } from 'react';
 import classNames from '@/shared/lib/helpers/classNames';
 import cls from './Header.module.scss';
 import { HeaderSearch } from '../HeaderSearch/HeaderSearch';
-import { HeaderMenu } from '../HeaderMenu/HeaderMenu/HeaderMenu';
+import { HeaderMenu } from '../HeaderMenu/HeaderMenu';
 import { HeaderNavigation } from '../HeaderNavigation/HeaderNavigation';
 import { HeaderLogo } from '../HeaderLogo/HeaderLogo';
 
