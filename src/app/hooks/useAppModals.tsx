@@ -25,26 +25,16 @@ export const useAppModals = (): JSX.Element | null => {
     useEffect(() => {
         const unsubscribes = [
             modalChannel.on(
-                modalChannelEvent.onCategoryMenuFavoriteCategoryItemClick,
+                modalChannelEvent.showFavoriteCategoryModal,
                 doFavoriteCategoryModal,
             ),
-            modalChannel.on(
-                modalChannelEvent.onHeaderMenuItemLoginClick,
-                doLoginModal,
-            ),
-            modalChannel.on(
-                modalChannelEvent.onRequireAuthPageLoginClick,
-                doLoginModal,
-            ),
-            modalChannel.on(
-                modalChannelEvent.onHeaderMenuItemAvatarClick,
-                (e) => {
-                    const rect = e.elementBoundingClientRect;
-                    userProfileModalProps.left = rect.left + rect.width - 10;
-                    userProfileModalProps.top = rect.top;
-                    doUserProfileModal();
-                },
-            ),
+            modalChannel.on(modalChannelEvent.showLoginModal, doLoginModal),
+            modalChannel.on(modalChannelEvent.showUserProfileModal, (e) => {
+                const rect = e.elementBoundingClientRect;
+                userProfileModalProps.left = rect.left + rect.width - 10;
+                userProfileModalProps.top = rect.top;
+                doUserProfileModal();
+            }),
         ];
 
         return () => {

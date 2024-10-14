@@ -16,7 +16,7 @@ export const RequireAuthPage = (props: RequireAuthPageProps) => {
 
     const onClick = useCallback((e: MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
-        modalChannel.emit(modalChannelEvent.onHeaderMenuItemLoginClick);
+        modalChannel.emit(modalChannelEvent.showLoginModal);
     }, []);
 
     return (

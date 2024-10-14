@@ -2,15 +2,13 @@ import eventBus from '@/shared/lib/helpers/EventBus';
 import { AppEventCallbackVoid, AppEventCallbackEvent } from './types';
 
 export enum modalChannelEvent {
-    onCategoryMenuFavoriteCategoryItemClick = 'onCategoryMenuFavoriteCategoryItemClick',
-    onHeaderMenuItemAvatarClick = 'onHeaderMenuItemAvatarClick',
-    onHeaderMenuItemLoginClick = 'onHeaderMenuItemLoginClick',
-    onRequireAuthPageLoginClick = 'onRequireAuthPageLoginClick',
+    showFavoriteCategoryModal = 'showFavoriteCategoryModal',
+    showUserProfileModal = 'showUserProfileModal',
+    showLoginModal = 'showLoginModal',
 }
 
 export const modalChannel = eventBus<{
-    [modalChannelEvent.onCategoryMenuFavoriteCategoryItemClick]: AppEventCallbackVoid;
-    [modalChannelEvent.onHeaderMenuItemAvatarClick]: AppEventCallbackEvent;
-    [modalChannelEvent.onHeaderMenuItemLoginClick]: AppEventCallbackVoid;
-    [modalChannelEvent.onRequireAuthPageLoginClick]: AppEventCallbackVoid;
+    [modalChannelEvent.showFavoriteCategoryModal]: AppEventCallbackVoid;
+    [modalChannelEvent.showUserProfileModal]: AppEventCallbackEvent;
+    [modalChannelEvent.showLoginModal]: AppEventCallbackVoid;
 }>();

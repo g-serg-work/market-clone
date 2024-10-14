@@ -1,3 +1,1 @@
-import { RequireAuthPage } from './ui/RequireAuthPage';
-
-export { RequireAuthPage };
+export { RequireAuthPageAsync as RequireAuthPage } from './ui/RequireAuthPage/RequireAuthPage.async';

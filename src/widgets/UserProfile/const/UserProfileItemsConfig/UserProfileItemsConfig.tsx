@@ -25,6 +25,10 @@ import HelpSvg from '@/shared/assets/icons/profile/help.svg';
 import LogoutSvg from '@/shared/assets/icons/profile/logout.svg';
 import UserProfileChat from '../../ui/UserProfileChat/UserProfileChat';
 import UserProfileFavoriteCategory from '../../ui/UserProfileFavoriteCategory/UserProfileFavoriteCategory';
+import {
+    modalChannel,
+    modalChannelEvent,
+} from '@/shared/eventChannels/modalChannelEvents';
 
 export enum RouteType {
     relative,
@@ -89,8 +93,9 @@ export const UserProfileItemsCfg: Array<
             hint={userData?.favoriteCategory?.hint || 'unknown'}
             selected={!!userData?.favoriteCategory?.selected.length}
             autoFocus={autoFocus}
-            // eslint-disable-next-line no-alert
-            onClick={() => alert('viewFavoriteCategory')}
+            onClick={() => {
+                modalChannel.emit(modalChannelEvent.showFavoriteCategoryModal);
+            }}
         />
     ),
     {

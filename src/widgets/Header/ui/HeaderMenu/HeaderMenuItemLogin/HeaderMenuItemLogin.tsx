@@ -15,7 +15,7 @@ export const HeaderMenuItemLogin = (props: HeaderMenuItemLoginProps) => {
 
     const onClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
-        modalChannel.emit(modalChannelEvent.onHeaderMenuItemLoginClick);
+        modalChannel.emit(modalChannelEvent.showLoginModal);
     }, []);
 
     return (

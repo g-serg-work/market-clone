@@ -1,4 +1,5 @@
-import { memo } from 'react';
+import { memo, useCallback } from 'react';
+import { useSelector } from 'react-redux';
 import classNames from '@/shared/lib/helpers/classNames';
 import cls from './CategoryMenuFavoriteCategoryItem.module.scss';
 import { ClickAble } from '@/shared/ui/ClickAble';
@@ -6,6 +7,7 @@ import {
     modalChannel,
     modalChannelEvent,
 } from '@/shared/eventChannels/modalChannelEvents';
+import { getUserData } from '@/entities/User';
 
 interface CategoryMenuFavoriteCategoryItemProps {
     className?: string;
@@ -17,11 +19,15 @@ export const CategoryMenuFavoriteCategoryItem = memo(
     (props: CategoryMenuFavoriteCategoryItemProps) => {
         const { className } = props;
 
-        const onClick = () => {
-            modalChannel.emit(
-                modalChannelEvent.onCategoryMenuFavoriteCategoryItemClick,
-            );
-        };
+        const userData = useSelector(getUserData);
+
+        const onClick = useCallback(() => {
+            const eventType = userData
+                ? modalChannelEvent.showFavoriteCategoryModal
+                : modalChannelEvent.showLoginModal;
+
+            modalChannel.emit(eventType);
+        }, [userData]);
 
         return (
             <li role="tab">

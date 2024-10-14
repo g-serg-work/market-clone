@@ -2,11 +2,11 @@ import cls from './HeaderMenuItemAvatar.module.scss';
 import Png from '../../../assets/icons/avatar.png';
 import classNames from '@/shared/lib/helpers/classNames';
 import {
-    AppEvent,
     modalChannel,
     modalChannelEvent,
 } from '@/shared/eventChannels/modalChannelEvents';
 import { Button } from '@/shared/ui/Button';
+import { AppEvent } from '@/shared/eventChannels/types';
 
 interface HeaderMenuItemAvatarProps {
     className?: string;
@@ -18,10 +18,7 @@ export const HeaderMenuItemAvatar = (props: HeaderMenuItemAvatarProps) => {
     const { className, userName, hasNotification } = props;
 
     const onClick = (appEvent: AppEvent) => {
-        modalChannel.emit(
-            modalChannelEvent.onHeaderMenuItemAvatarClick,
-            appEvent,
-        );
+        modalChannel.emit(modalChannelEvent.showUserProfileModal, appEvent);
     };
 
     return (
