@@ -1,6 +1,728 @@
-.wrapper {
+:root {
+    --id-typography-heading-m: normal 500 20px / 24px 'YS Text', arial,
+        sans-serif;
+}
+
+.passpFlexWrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     display: flex;
     flex-direction: column;
+}
+
+.passpContent {
+    -webkit-box-flex: 1;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    flex: 1 0 auto;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 376px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.passpAuth {
+    border-radius: 32px;
+    background-color: #fff;
+    color: rgb(0 0 0 / 90%);
+    box-sizing: border-box;
+    margin: 70px 0;
+    position: relative;
+    transition: height 0.2s ease-in;
+    width: 100%;
+}
+
+.previousStepButton {
+    top: 30px;
+    box-shadow: none;
+    left: 20px;
+    background-color: #fff;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    height: 36px;
+    justify-content: center;
+    outline: none;
+    position: absolute;
+    transform: scale(1);
+    transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+    width: 36px;
+    z-index: 999;
+}
+
+.passpAuthContent {
+    padding: 32px;
+    box-sizing: border-box;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.header {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.headerSideBlock {
+    width: 20px;
+}
+
+.headerYaLogoBlock {
+    text-align: center;
+}
+
+.headerLogo {
+    color: rgb(0 0 0 / 90%);
+    margin: 0 auto 32px;
+    margin-bottom: 0;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    outline: none;
+
+    svg {
+        color: rgb(0 0 0 / 90%);
+    }
+}
+
+.passpRouteBack,
+.passpRouteForward {
+    display: flex;
+    position: relative;
+}
+
+.passpRoute {
+    width: 100%;
+    will-change: transform, opacity;
+}
+
+.passpAuthScreen {
+    position: relative;
+    transform: translateZ(0);
+    transform: translateZ(0);
+    width: 100%;
+}
+
+.passpLoginForm {
+    margin-bottom: 0;
+}
+
+.titleWithDescription {
+    color: #272733;
+    text-wrap: balance;
+    font-family: 'YS Text', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 24px;
+}
+
+.titleWithDescriptionTitle {
+    font: var(--id-typography-heading-m);
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.authLoginInputToggleWrapper {
+    border-radius: 20px;
+    margin-top: 24px;
+    border: 1px solid #d8dce6;
+    padding: 2px;
+    align-self: flex-start;
+    display: flex;
+    overflow: hidden;
+}
+
+.authLoginInputToggleType {
+    flex-basis: 50%;
+    position: relative;
+    text-align: center;
+}
+
+.buttonViewDefault {
+    color: rgb(0 0 0 / 90%);
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    line-height: 44px;
+    font-family: 'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.1s ease-out, color 0.15s linear;
+    -moz-user-focus: ignore;
+    -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+    background: transparent;
+    border-width: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    user-select: none;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.buttonText {
+    margin: 0 20px;
+    display: inline-block;
+    pointer-events: none;
+    position: relative;
+    resize: none;
+    white-space: nowrap;
+}
+
+.buttonClear {
+    width: 100%;
+    height: 50px;
+    color: #000;
+    font-size: 16px;
+    line-height: 44px;
+    font-family: 'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    cursor: pointer;
+    -moz-user-focus: ignore;
+    -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+    background: transparent;
+    border-width: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    user-select: none;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.buttonViewDefault,
+.buttonClear {
+    &::before {
+        border-radius: 18px;
+        transition: background-color 0.15s linear;
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    &::after {
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: scale(0);
+        z-index: -1;
+    }
+
+    &[aria-pressed='true']::before {
+        background-color: #f1f2f5;
+    }
+}
+
+.authLoginInputToggleInput {
+    padding-top: 24px;
+}
+
+.authLoginInputToggleLoginField {
+    margin-bottom: 24px;
+    margin-bottom: 32px;
+    position: relative;
+}
+
+.authLoginInputToggleLoginFieldLabel {
+    color: #939cb0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    cursor: pointer;
+    font: var(--id-typography-text-m);
+    user-select: none;
+}
+
+.fieldInputWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.fieldErrorIcon {
+    height: 20px;
+    position: absolute;
+    right: 14px;
+    top: 17px;
+    width: 20px;
+}
+
+.fieldLink {
+    margin-top: 10px;
+
+    a {
+        color: #04b;
+        cursor: pointer;
+        transition: color 0.15s linear;
+        -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+        outline: 0;
+        text-decoration: none;
+        touch-action: manipulation;
+        font-weight: 500;
+        font-size: medium;
+    }
+}
+
+.textInput {
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+}
+
+.textInputControl {
+    font-size: 24px;
+    height: 56px;
+    font-family: 'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #000;
+    -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+    background: none;
+    border: 0 solid transparent;
+    border-width: 2px 16px;
+    box-sizing: border-box;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+    z-index: 2;
+
+    &:placeholder {
+        color: lightgray;
+    }
+}
+
+.textInputBox {
+    height: 56px;
+    border-radius: 20px;
+    border: 1px solid #d8dce6;
+    transition: background-color 0.15s linear, border-color 0.15s linear;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.textInputStateError .textInputBox {
+    border-color: #f33;
+    border-width: 2px;
+}
+
+.fieldInputWrapper:has(:focus) .textInputBox {
+    border-color: #292933;
+    border-width: 2px;
+}
+
+.textInputHintStateError {
+    font-family: 'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: red;
+    display: block;
+    animation: text-input-hint-show 0.1s ease-in forwards;
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+@keyframes text-input-hint-show {
+    0% {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.passpHiddenPasswordField {
+    display: none;
+}
+
+.passpSignInButtonWrapper {
+    margin: 16px 0 0;
+    margin-top: 8px;
+}
+
+.passpSignInButton {
+    color: #fff;
+    height: 56px;
+    font-family: 'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    cursor: pointer;
+    width: 100%;
+    transform: scale(1);
+    transition: transform 0.1s ease-out, color 0.15s linear;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    -moz-user-focus: ignore;
+    -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+    background: transparent;
+    border-width: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    user-select: none;
+    white-space: nowrap;
+
+    &::before {
+        background-color: #292933;
+        border: 1px solid #292933;
+        border-radius: 20px;
+        transition: background-color 0.15s linear;
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    &:focus::before {
+        box-shadow: 0 0 0 4px #292933;
+        outline: 2px solid #fff;
+    }
+
+    &::after {
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: scale(0);
+        z-index: -1;
+    }
+}
+
+.passpWebAuthWrapper {
+    margin: 16px 0 0;
+    margin-top: 8px;
+}
+
+.passpWebAuthButton {
+    color: #222426;
+    height: 56px;
+    font-family: 'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    cursor: pointer;
+    width: 100%;
+    transform: scale(1);
+    transition: transform 0.1s ease-out, color 0.15s linear;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    -moz-user-focus: ignore;
+    -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+    background: transparent;
+    border-width: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    user-select: none;
+    white-space: nowrap;
+
+    &::before {
+        background-color: rgb(180 184 204 / 14%);
+        border-radius: 20px;
+        transition: background-color 0.15s linear;
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    &:focus::before {
+        box-shadow: 0 0 0 4px #292933;
+        outline: 2px solid #fff;
+    }
+
+    &::after {
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: scale(0);
+        z-index: -1;
+    }
+}
+
+.webAuthnAuthButtonContent {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.webAuthAuthButtonIcon {
+    height: 24px;
+    margin: 0 12px 0 -24px;
+    width: 24px;
+}
+
+.passpRegisterButtonWrapper {
+    position: relative;
+    display: block;
+    margin: 16px 0 0;
+    margin-top: 8px;
+}
+
+.passpRegisterButton {
+    line-height: 56px;
+    display: block;
+    color: #222426;
+    height: 56px;
+    font-family: 'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    cursor: pointer;
+    width: 100%;
+    transform: scale(1);
+    transition: transform 0.1s ease-out, color 0.15s linear;
+    font-size: 16px;
+    font-weight: 500;
+    -moz-user-focus: ignore;
+    -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+    background: transparent;
+    border-width: 0;
+    box-sizing: border-box;
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    user-select: none;
+    white-space: nowrap;
+
+    &::before {
+        background-color: #fff;
+        border: 1px solid #d8dce6;
+        border-radius: 20px;
+        transition: background-color 0.15s linear;
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    &:focus::before {
+        box-shadow: 0 0 0 4px #292933;
+        outline: 2px solid #fff;
+    }
+
+    &::after {
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: scale(0);
+        z-index: -1;
+    }
+}
+
+.authSocialBlock {
+    margin-top: 32px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-height: 38em) {
+    .authSocialBlock {
+        margin-top: 24px;
+    }
+}
+
+.authSocialBlockSingleButtons {
+    display: flex;
+    width: 100%;
+}
+
+.authSocialBlockSingleProviderButton {
+    width: 100%;
+
+    &:last-child {
+        margin-left: 8px;
+    }
+}
+
+.authSocialBlockSingleButton {
+    color: #222426;
+    height: 56px;
+    font-family: 'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    cursor: pointer;
+    width: 100%;
+    transform: scale(1);
+    transition: transform 0.1s ease-out, color 0.15s linear;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    -moz-user-focus: ignore;
+    -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+    background: transparent;
+    border-width: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    user-select: none;
+    white-space: nowrap;
+
+    &::before {
+        background-color: #fff;
+        border: 1px solid #d8dce6;
+        border-radius: 20px;
+        transition: background-color 0.15s linear;
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    &:focus::before {
+        box-shadow: 0 0 0 4px #292933;
+        outline: 2px solid #fff;
+    }
+
+    &::after {
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: scale(0);
+        z-index: -1;
+    }
+}
+
+.authSocialBlockSingleButtonContent {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.authSocialBlockSingleButtonIcon {
+    background-size: contain;
+    height: 24px;
+    margin: 0 12px 0 0;
+    width: 24px;
+}
+
+.yaIdPromoText {
+    color: #fff;
+    font-size: 16px;
+    padding: 15px 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 900;
+}
+
+.yaIdPromoTextLink {
+    color: #fff;
+    display: block;
+    font-weight: 700;
+    margin-top: 5px;
+    text-align: center;
+    text-decoration: none;
 }
