@@ -1,6 +1,5 @@
 :root {
-    --id-typography-heading-m: normal 500 20px / 24px 'YS Text', arial,
-        sans-serif;
+    --id-typography-heading-m: normal 500 20px / 24px "YS Text", arial, sans-serif;
 }
 
 .passpFlexWrapper {
@@ -135,7 +134,7 @@
 .titleWithDescription {
     color: #272733;
     text-wrap: balance;
-    font-family: 'YS Text', Arial, sans-serif;
+    font-family: "YS Text", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     margin: 0;
@@ -170,7 +169,7 @@
     height: 50px;
     font-size: 16px;
     line-height: 44px;
-    font-family: 'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: "YS Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
     cursor: pointer;
     transform: scale(1);
     transition: transform 0.1s ease-out, color 0.15s linear;
@@ -208,7 +207,7 @@
     color: #000;
     font-size: 16px;
     line-height: 44px;
-    font-family: 'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: "YS Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
     cursor: pointer;
     -moz-user-focus: ignore;
     -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
@@ -235,7 +234,7 @@
         border-radius: 18px;
         transition: background-color 0.15s linear;
         bottom: 0;
-        content: '';
+        content: "";
         left: 0;
         position: absolute;
         right: 0;
@@ -245,7 +244,7 @@
 
     &::after {
         bottom: 0;
-        content: '';
+        content: "";
         left: 0;
         position: absolute;
         right: 0;
@@ -254,7 +253,7 @@
         z-index: -1;
     }
 
-    &[aria-pressed='true']::before {
+    &[aria-pressed="true"]::before {
         background-color: #f1f2f5;
     }
 }
@@ -323,7 +322,7 @@
 .textInputControl {
     font-size: 24px;
     height: 56px;
-    font-family: 'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: "YS Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #000;
     -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
     background: none;
@@ -368,7 +367,7 @@
 }
 
 .textInputHintStateError {
-    font-family: 'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: "YS Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: red;
     display: block;
     animation: text-input-hint-show 0.1s ease-in forwards;
@@ -401,7 +400,7 @@
 .passpSignInButton {
     color: #fff;
     height: 56px;
-    font-family: 'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: "YS Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
     cursor: pointer;
     width: 100%;
     transform: scale(1);
@@ -432,7 +431,7 @@
         border-radius: 20px;
         transition: background-color 0.15s linear;
         bottom: 0;
-        content: '';
+        content: "";
         left: 0;
         position: absolute;
         right: 0;
@@ -447,7 +446,7 @@
 
     &::after {
         bottom: 0;
-        content: '';
+        content: "";
         left: 0;
         position: absolute;
         right: 0;
@@ -465,7 +464,7 @@
 .passpWebAuthButton {
     color: #222426;
     height: 56px;
-    font-family: 'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: "YS Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
     cursor: pointer;
     width: 100%;
     transform: scale(1);
@@ -495,7 +494,7 @@
         border-radius: 20px;
         transition: background-color 0.15s linear;
         bottom: 0;
-        content: '';
+        content: "";
         left: 0;
         position: absolute;
         right: 0;
@@ -503,14 +502,14 @@
         z-index: -1;
     }
 
-    &:focus::before {
+    &:is(:focus, :hover)::before {
         box-shadow: 0 0 0 4px #292933;
         outline: 2px solid #fff;
     }
 
     &::after {
         bottom: 0;
-        content: '';
+        content: "";
         left: 0;
         position: absolute;
         right: 0;
@@ -548,7 +547,7 @@
     display: block;
     color: #222426;
     height: 56px;
-    font-family: 'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: "YS Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
     cursor: pointer;
     width: 100%;
     transform: scale(1);
@@ -577,7 +576,7 @@
         border-radius: 20px;
         transition: background-color 0.15s linear;
         bottom: 0;
-        content: '';
+        content: "";
         left: 0;
         position: absolute;
         right: 0;
@@ -592,7 +591,7 @@
 
     &::after {
         bottom: 0;
-        content: '';
+        content: "";
         left: 0;
         position: absolute;
         right: 0;
@@ -635,7 +634,7 @@
 .authSocialBlockSingleButton {
     color: #222426;
     height: 56px;
-    font-family: 'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: "YS Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
     cursor: pointer;
     width: 100%;
     transform: scale(1);
@@ -666,7 +665,7 @@
         border-radius: 20px;
         transition: background-color 0.15s linear;
         bottom: 0;
-        content: '';
+        content: "";
         left: 0;
         position: absolute;
         right: 0;
@@ -681,7 +680,7 @@
 
     &::after {
         bottom: 0;
-        content: '';
+        content: "";
         left: 0;
         position: absolute;
         right: 0;

@@ -1,10 +1,7 @@
 import { FormEventHandler, memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { loginReducer } from '../../model/slice/loginSlice';
-import {
-    ReducersList,
-    DynamicModuleLoader,
-} from '@/shared/lib/components/DynamicModuleLoader';
+import { ReducersList, DynamicModuleLoader } from '@/shared/lib/components/DynamicModuleLoader';
 
 import cls from './LoginForm.module.scss';
 import { PreviousStepButton } from './ui/LoginForm.PreviousStepButton';

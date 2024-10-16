@@ -1,4 +1,13 @@
 {
+    // Excluding the generated directories keeps your file view clean and speeds up search.
+    "files.exclude": {
+        "**/.git": true
+    },
+    "search.exclude": {
+        "**/.git": true
+    },
+
+    //cSpell
     "cSpell.words": [
         "ADDUSER",
         "BIZNESA",
