@@ -1,0 +1,38 @@
+.flex {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    flex-shrink: 0;
+    margin-right: 48px;
+}
+
+@media (min-width: 1260px) {
+    .flex {
+        margin-right: 60px;
+    }
+}
+
+.title {
+    font-weight: 700;
+    color: #212121;
+    line-height: 36px;
+    font-size: 28px;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+.wrapper {
+    display: flex;
+    margin-top: 24px;
+}
+
+.item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    height: 40px;
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,43 @@
+.wrapper {
+    box-sizing: content-box;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+}
+
+@media (min-width: 1024px) {
+    .content {
+        width: 908px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .content {
+        width: 1068px;
+    }
+}
+
+@media (min-width: 1260px) {
+    .content {
+        width: 1192px;
+    }
+}
+
+.flex {
+    width: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: -16px;
+    margin-right: 0;
+}
+
+.grow {
+    width: 100%;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    flex-grow: 0;
+    min-width: 0;
+    padding-left: 16px;
+    padding-right: 0;
+}

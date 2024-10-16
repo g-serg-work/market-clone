@@ -20,7 +20,7 @@ const Template: ComponentStory<typeof UserProfile> = (args) => (
 const userData: User = {
     id: '1',
     userName: 'test',
-    userEmail: 'test@yandex.ru',
+    userEmail: 'test@market-clone.ru',
     wishList: [],
     ordersList: [],
     cartList: [],

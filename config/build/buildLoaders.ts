@@ -31,7 +31,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
 
     const cssLoader = buildCssLoader(isDev);
 
-    // Если не используем тайпскрипт - нужен babel-loader
+    // Если не используем typescript - нужен babel-loader
     // const typescriptLoader = {
     //     test: /\.tsx?$/,
     //     use: 'ts-loader',

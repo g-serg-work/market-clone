@@ -29,9 +29,7 @@ export const Page = memo((props: PageProps) => {
 
     const dispatch = useAppDispatch();
     const { pathname } = useLocation();
-    const scrollPosition = useSelector((state: StateSchema) =>
-        getUIScrollByPath(state, pathname),
-    );
+    const scrollPosition = useSelector((state: StateSchema) => getUIScrollByPath(state, pathname));
 
     useInfiniteScroll({
         triggerRef,
@@ -61,9 +59,7 @@ export const Page = memo((props: PageProps) => {
         >
             {children}
             <Footer />
-            {onScrollEnd ? (
-                <div className={cls.trigger} ref={triggerRef} />
-            ) : null}
+            {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
         </div>
     );
 });

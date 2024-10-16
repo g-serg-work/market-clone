@@ -1,7 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import FavoriteCategory from './FavoriteCategory';
 import StoreDecorator from '@/shared/config/storybook/StoreDecorator';
+import { FavoriteCategory } from './FavoriteCategory';
 
 export default {
     title: 'features/FavoriteCategory/FavoriteCategory',
@@ -11,9 +10,7 @@ export default {
     },
 } as ComponentMeta<typeof FavoriteCategory>;
 
-const Template: ComponentStory<typeof FavoriteCategory> = (args) => (
-    <FavoriteCategory {...args} />
-);
+const Template: ComponentStory<typeof FavoriteCategory> = (args) => <FavoriteCategory {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {};

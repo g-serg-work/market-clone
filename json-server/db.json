@@ -2,14 +2,14 @@
     "users": [
         {
             "id": "1",
-            "userName": "admin"
+            "userName": "guest"
         }
     ],
     "profiles": [
         {
             "id": "1",
-            "userName": "admin",
-            "userEmail": "admin@yandex.ru",
+            "userName": "guest",
+            "userEmail": "guest@market-clone.ru",
             "addressList": ["Пункт выдачи: ул. Героя Нахимова"],
             "hasNotification": true,
             "wishList": [

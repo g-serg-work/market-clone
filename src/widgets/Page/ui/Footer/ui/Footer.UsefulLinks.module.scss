@@ -1,0 +1,148 @@
+.wrapper {
+    padding: 1px 0;
+    background: #f4f4f4;
+}
+
+.links {
+    padding: 48px 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 1000px;
+}
+
+@media (min-width: 1230px) {
+    .links {
+        width: auto;
+        max-width: 1440px;
+        padding-right: 130px;
+        padding-left: 130px;
+    }
+}
+
+.linksInfo {
+    display: flex;
+    flex: 1;
+}
+
+.linkInfoItem {
+    flex: 1;
+
+    h3 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        line-height: 20px;
+        margin: 0;
+        margin: 0 0 16px;
+        color: #454545;
+        font-style: normal;
+        font-stretch: normal;
+        padding: 0;
+    }
+
+    a {
+        font-style: normal;
+        font-stretch: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        padding: 0 0 8px;
+        color: #666;
+        display: block;
+        text-decoration: none;
+    }
+}
+
+.linkSocialWrapper {
+    display: flex;
+}
+
+.linkSocialContent {
+    display: flex;
+
+    h3 {
+        font-weight: 700;
+        font-style: normal;
+        font-stretch: normal;
+        font-size: 16px;
+        line-height: 24px;
+        line-height: 20px;
+        margin: 0;
+        margin: 0 0 16px;
+        color: #454545;
+        padding: 0;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+    }
+
+    svg {
+        width: 24px;
+        height: 26px;
+        background-repeat: no-repeat;
+        display: inline-block;
+    }
+}
+
+.linkSocialTitle {
+    font-size: 13px;
+    line-height: 18px;
+    color: #666;
+}
+
+.copyRights {
+    display: flex;
+    align-items: center;
+    padding: 18px 24px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    font-size: 13px;
+    line-height: 16px;
+    line-height: 20px;
+    background: #e8e8e8;
+    color: #999;
+}
+
+.copyRightItem {
+    margin-left: 28px;
+    color: #999;
+    text-decoration: none;
+}
+
+.copyRightContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 1;
+}
+
+.copyRightSign {
+    color: #999;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.copyRightProject {
+    display: flex;
+    align-items: center;
+    color: #999;
+
+    a {
+        margin-left: 4px;
+        padding-top: 5px;
+        text-decoration: none;
+
+        svg {
+            width: 50px;
+            height: 16px;
+        }
+    }
+}

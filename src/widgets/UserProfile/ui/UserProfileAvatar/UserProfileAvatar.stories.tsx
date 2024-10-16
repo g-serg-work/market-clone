@@ -15,8 +15,8 @@ const Template: ComponentStory<typeof UserProfileAvatar> = (args) => (
 
 const args: UserProfileAvatarProps = {
     userName: 'test',
-    userEmail: 'test@test.ru',
-    href: 'https://test.ru',
+    userEmail: 'test@market-clone.ru',
+    href: 'https://market-clone.ru',
 };
 
 export const Primary = Template.bind({});
