@@ -1,1 +1,1 @@
-export { callElementBoundingClientRect as default } from './callElementBoundingClientRect';
+export { callElementBoundingClientRect } from './callElementBoundingClientRect';

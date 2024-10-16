@@ -1,10 +1,10 @@
-import { ReactNode } from 'react';
+import { ReactElement } from 'react';
 import classNames from '@/shared/lib/helpers/classNames';
 import cls from './OrdersPageLoader.module.scss';
 
 export interface OrdersPageLoaderProps {
     className?: string;
-    children?: ReactNode;
+    children?: ReactElement;
 }
 
 export const OrdersPageLoader = (props: OrdersPageLoaderProps) => {
@@ -17,16 +17,12 @@ export const OrdersPageLoader = (props: OrdersPageLoaderProps) => {
                     <>
                         <div className={cls.itemWrapper}>
                             <div className={cls.item1}>
-                                <span className="ds-visuallyHidden">
-                                    Загрузка
-                                </span>
+                                <span className="ds-visuallyHidden">Загрузка</span>
                             </div>
                         </div>
                         <div className={cls.itemWrapper}>
                             <div className={cls.item2}>
-                                <span className="ds-visuallyHidden">
-                                    Загрузка
-                                </span>
+                                <span className="ds-visuallyHidden">Загрузка</span>
                             </div>
                         </div>
                     </>
