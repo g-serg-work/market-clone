@@ -1,10 +1,10 @@
-import { ReactElement } from 'react';
+import { ReactNode } from 'react';
 import classNames from '@/shared/lib/helpers/classNames';
 import cls from './OrdersPageLoader.module.scss';
 
 export interface OrdersPageLoaderProps {
     className?: string;
-    children?: ReactElement;
+    children?: ReactNode;
 }
 
 export const OrdersPageLoader = (props: OrdersPageLoaderProps) => {

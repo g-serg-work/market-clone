@@ -1,11 +1,11 @@
-import { CSSProperties, ReactElement } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import classNames from '@/shared/lib/helpers/classNames';
 import cls from './Modal.module.scss';
 import { ModalTabIndexInitial } from './ModalTabIndexInitial';
 
 export interface ModalContentProps {
     className?: string;
-    children?: ReactElement;
+    children?: ReactNode;
     style?: CSSProperties;
 }
 

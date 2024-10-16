@@ -1,11 +1,11 @@
-import { ReactElement } from 'react';
+import { ReactNode } from 'react';
 import { Provider } from 'react-redux';
 import { ReducersMapObject } from '@reduxjs/toolkit';
 import { createReduxStore } from '../config/store';
 import { StateSchema } from '../config/StateSchema';
 
 interface StoreProviderProps {
-    children?: ReactElement;
+    children?: ReactNode;
     initialState?: DeepPartial<StateSchema>;
     asyncReducers?: DeepPartial<ReducersMapObject<StateSchema>>;
 }

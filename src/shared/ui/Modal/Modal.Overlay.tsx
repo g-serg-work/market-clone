@@ -1,9 +1,9 @@
-import { ReactElement } from 'react';
+import { ReactNode } from 'react';
 import classNames from '@/shared/lib/helpers/classNames';
 
 export interface ModalOverlayProps {
     className?: string;
-    children?: ReactElement;
+    children?: ReactNode;
 }
 
 export const ModalOverlay = (props: ModalOverlayProps) => {

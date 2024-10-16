@@ -1,11 +1,11 @@
-import { ReactElement } from 'react';
+import { ReactNode } from 'react';
 import cls from './FavoriteCategoryLoader.module.scss';
 import classNames from '@/shared/lib/helpers/classNames';
 import { FavoriteCategoryClose } from '../FavoriteCategoryClose/FavoriteCategoryClose';
 
 export interface FavoriteCategoryLoaderProps {
     className?: string;
-    children?: ReactElement;
+    children?: ReactNode;
     onClose?: () => void;
 }
 
