@@ -20,6 +20,7 @@ import { useAppDispatch } from '@/shared/lib/hooks';
 import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
 import { loginByUserName } from '../../model/services/loginByUserName/loginByUserName';
 import { PageOverlay } from './ui/LoginForm.PageOverlay';
+import classNames from '@/shared/lib/helpers/classNames';
 
 export interface LoginFormProps {
     className?: string;
@@ -70,7 +71,7 @@ export const LoginForm = memo((props: LoginFormProps) => {
 
     return (
         <DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>
-            <div className={cls.passpFlexWrapper}>
+            <div className={classNames(cls.passpFlexWrapper, {}, [className])}>
                 <div className={cls.passpContent}>
                     <div className={cls.passpAuth}>
                         <PageOverlay isLoading={isLoading} />

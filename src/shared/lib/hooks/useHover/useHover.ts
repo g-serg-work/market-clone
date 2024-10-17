@@ -19,7 +19,7 @@ export const useHover = () => {
     }, []);
 
     return useMemo(
-        () => [
+        (): UseHoverResult => [
             isHover,
             {
                 onMouseEnter,

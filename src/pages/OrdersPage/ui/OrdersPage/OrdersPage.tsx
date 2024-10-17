@@ -26,11 +26,7 @@ const OrderNumberButtonCopy = (props: OrderNumberButtonCopyProps) => {
     const parts = number.match(/.{1,3}/g);
 
     return (
-        <button
-            type="button"
-            className={cls.orderNumberCopy}
-            aria-label="Скопировать номер заказа"
-        >
+        <button type="button" className={cls.orderNumberCopy} aria-label="Скопировать номер заказа">
             <div className={cls.orderNumberParts}>
                 <span className={cls.orderNumberPart}>
                     {parts?.map((part, idx) => (
@@ -145,9 +141,7 @@ const GradeItems = (props: GradeItemsProps) => {
                         to={`/my/order/${number}`}
                         className={cls.gradeItemsLink}
                     >
-                        <span className={cls.gradeItemsSpan}>
-                            Оценить товары
-                        </span>
+                        <span className={cls.gradeItemsSpan}>Оценить товары</span>
                     </Link>
                 </div>
             </div>
@@ -164,12 +158,10 @@ const OrderItemsGallery = (props: OrderItemsGalleryProps) => {
 
     const contentItems = images
         .slice(0, 3)
-        .map((image, idx) => <img src={image} alt="" />)
+        .map((image, idx) => <img key={idx} src={image} alt="" />)
         .concat(
             images.length > 3 ? (
-                <span className={cls.orderImagesMore3}>
-                    +{images.length - 3}
-                </span>
+                <span className={cls.orderImagesMore3}>+{images.length - 3}</span>
             ) : (
                 []
             ),
@@ -225,10 +217,7 @@ const OrderCard = (props: OrderCardProps) => {
             data-apiary-widget-name="@marketfront/OrderCardView"
         >
             <div data-zone-name="order-card-view">
-                <div
-                    className={cls.orderCardView}
-                    aria-label={`Заказ ${order.number}`}
-                >
+                <div className={cls.orderCardView} aria-label={`Заказ ${order.number}`}>
                     <OrderCardTitle order={order} />
                     <Link
                         className={cls.orderDetailLink}
@@ -293,7 +282,7 @@ const PurchasedItems = () => {
     );
 };
 
-const OrdersPageData = (props: Omit<OrdersPageProps, 'className'>) => {
+const OrdersPageData = () => {
     const userData = useSelector(getUserData);
 
     const {
@@ -341,20 +330,17 @@ const OrdersPageData = (props: Omit<OrdersPageProps, 'className'>) => {
 };
 
 export const OrdersPage = (props: OrdersPageProps) => {
-    const { className, ...rest } = props;
+    const { className } = props;
 
     return (
-        <Page
-            data-testid="OrdersPage"
-            className={classNames(cls.OrdersPage, {}, [className])}
-        >
-            <div id="myOrders" className={cls.wrapper}>
+        <Page data-testid="OrdersPage" className={classNames(cls.OrdersPage, {}, [className])}>
+            <div className={cls.wrapper}>
                 <main className={cls.main}>
                     <div className={cls.title}>
                         <h1>Заказы</h1>
                     </div>
                     <PurchasedItems />
-                    <OrdersPageData {...rest} />
+                    <OrdersPageData />
                 </main>
             </div>
         </Page>

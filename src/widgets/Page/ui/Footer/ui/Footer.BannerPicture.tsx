@@ -9,6 +9,7 @@ export const BannerPicture = () => (
                 fetchpriority="low"
                 loading="lazy"
                 data-auto="bannerPicture"
+                alt=""
             />
         </div>
     </div>

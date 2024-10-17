@@ -1,5 +1,5 @@
-import cls from './Footer.DistributionFooterDesktop.module.scss';
 import { ReactNode, memo } from 'react';
+import cls from './Footer.DistributionFooterDesktop.module.scss';
 
 export interface DistributionFooterDesktopProps {
     children: ReactNode;

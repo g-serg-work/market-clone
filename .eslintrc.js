@@ -104,20 +104,15 @@ module.exports = {
             'error',
             {
                 alias: '@',
-                testFilesPatterns: [
-                    '**/*.test.*',
-                    '**/*.story.*',
-                    '**/StoreDecorator.tsx',
-                ],
+                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
             },
         ],
-        'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
+        //'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
         'react/no-unstable-nested-components': 'warn',
-        'no-restricted-exports': [
-            'off',
-            { restrictDefaultExports: { defaultFrom: true } },
-        ],
+        'no-restricted-exports': ['off', { restrictDefaultExports: { defaultFrom: true } }],
         'jsx-a11y/tabindex-no-positive': 'off',
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': ['error'],
     },
     globals: {
         __IS_DEV__: true,
