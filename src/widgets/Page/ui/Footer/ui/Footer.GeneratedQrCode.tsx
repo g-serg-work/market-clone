@@ -3,6 +3,7 @@ import QrCodeSvg from '../assets/icons/qr-code.svg';
 
 export const GeneratedQrCode = () => (
     <div
+        className={cls.GeneratedQrCode}
         data-apiary-widget-id="/footer/appPromoLoader/cmsDistributionWidget/0/135167782-DistributionFooterDesktop/qrCode"
         data-apiary-widget-name="@marketfront/GeneratedQrCode"
     >

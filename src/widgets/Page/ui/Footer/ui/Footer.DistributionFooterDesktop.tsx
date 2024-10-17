@@ -1,9 +1,11 @@
 import cls from './Footer.DistributionFooterDesktop.module.scss';
-import { BannerPicture } from './Footer.BannerPicture';
-import { GeneratedQrCode } from './Footer.GeneratedQrCode';
-import { AppBlock } from './Footer.AppBlock';
+import { ReactNode, memo } from 'react';
 
-export const DistributionFooterDesktop = () => (
+export interface DistributionFooterDesktopProps {
+    children: ReactNode;
+}
+
+export const DistributionFooterDesktop = memo(({ children }: DistributionFooterDesktopProps) => (
     <div
         data-apiary-widget-id="/footer/appPromoLoader/cmsDistributionWidget/0/135167782-DistributionFooterDesktop"
         data-apiary-widget-name="@marketfront/DistributionFooterDesktop"
@@ -12,20 +14,10 @@ export const DistributionFooterDesktop = () => (
             <div data-zone-name="appPromoDesktop">
                 <div className={cls.wrapper}>
                     <div className={cls.content}>
-                        <div className={cls.flexInner}>
-                            <div className={cls.column1}>
-                                <AppBlock />
-                            </div>
-                            <div className={cls.column2}>
-                                <BannerPicture />
-                            </div>
-                            <div className={cls.column3}>
-                                <GeneratedQrCode />
-                            </div>
-                        </div>
+                        <div className={cls.items}>{children}</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-);
+));

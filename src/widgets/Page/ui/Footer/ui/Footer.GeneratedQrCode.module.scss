@@ -1,3 +1,14 @@
+.GeneratedQrCode {
+    margin-left: 32px;
+    flex-shrink: 0;
+}
+
+@media (min-width: 1260px) {
+    .GeneratedQrCode {
+        margin-left: 48px;
+    }
+}
+
 .flex {
     position: relative;
     background: none;

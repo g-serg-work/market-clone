@@ -1,7 +1,17 @@
+.BannerPicture {
+    position: relative;
+    background: none;
+    margin-top: 20px;
+    flex-direction: column;
+    display: flex;
+}
+
 .flex {
     flex-direction: column;
     display: flex;
     position: relative;
+    width: 180;
+    height: 216.34;
 
     img {
         width: 180px;

@@ -1,7 +1,11 @@
-import { ReactNode } from 'react';
+import { memo, ReactNode } from 'react';
 import cls from './Footer.AppPromoLoader.module.scss';
 
-export const AppPromoLoader = ({ children }: { children: ReactNode }) => (
+export interface AppPromoLoaderProps {
+    children: ReactNode;
+}
+
+export const AppPromoLoader = memo(({ children }: AppPromoLoaderProps) => (
     <div
         data-apiary-widget-id="/footer/appPromoLoader"
         data-apiary-widget-name="@marketfront/DistributionLoader"
@@ -26,4 +30,4 @@ export const AppPromoLoader = ({ children }: { children: ReactNode }) => (
             </div>
         </div>
     </div>
-);
+));

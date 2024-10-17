@@ -40,35 +40,8 @@
     }
 }
 
-.flexInner {
+.items {
     justify-content: flex-start;
     align-items: center;
     display: flex;
-}
-
-.column1 {
-    position: relative;
-    background: none;
-    margin-right: 44px;
-    flex-direction: column;
-    display: flex;
-}
-
-.column2 {
-    position: relative;
-    background: none;
-    margin-top: 20px;
-    flex-direction: column;
-    display: flex;
-}
-
-.column3 {
-    margin-left: 32px;
-    flex-shrink: 0;
-}
-
-@media (min-width: 1260px) {
-    .column3 {
-        margin-left: 48px;
-    }
 }

@@ -1,3 +1,11 @@
+.AppBlock {
+    position: relative;
+    background: none;
+    margin-right: 44px;
+    flex-direction: column;
+    display: flex;
+}
+
 .flex {
     display: flex;
     flex-direction: column;
