@@ -2,7 +2,7 @@
     "extends": "stylelint-config-standard-scss",
     "rules": {
         "indentation": [4],
-        "max-line-length": 100,
+        "max-line-length": 80,
         "selector-class-pattern": null
     }
 }

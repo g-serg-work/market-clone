@@ -1,7 +1,10 @@
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import '@/app/styles/index.scss';
+/* 
+    disable to reduce bundle size
 import './shared/config/i18n/i18n';
+*/
 import { ThemeProvider } from '@/app/providers/ThemeProvider';
 import { StoreProvider } from '@/app/providers/StoreProvider';
 import { ForceUpdateProvider } from '@/shared/lib/render/forceUpdate';
