@@ -9,8 +9,8 @@
     top: 0;
     z-index: 8990;
 
-    &:before {
-        background: rgba(0, 0, 0, 0.2);
+    &::before {
+        background: rgb(0 0 0 / 20%);
         bottom: 0;
         content: "";
         left: 0;

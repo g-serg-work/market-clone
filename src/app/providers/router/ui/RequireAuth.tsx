@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
-import { getUserData, getUserInited } from '@/entities/User';
 import { Suspense } from 'react';
+import { getUserData, getUserInited } from '@/entities/User';
 import { RequireAuthPage } from '@/pages/RequireAuthPage';
 
 interface RequireAuthProps {
@@ -17,7 +17,7 @@ export function RequireAuth(props: RequireAuthProps) {
 
         // <Navigate to={getRouteMain()} state={{ from: location }} replace />
         return (
-            <Suspense>
+            <Suspense fallback={<div className="pageIsLoading" />}>
                 <RequireAuthPage />
             </Suspense>
         );

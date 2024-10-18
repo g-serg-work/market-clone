@@ -307,7 +307,7 @@ const OrdersPageData = () => {
 
     if (isLoading) {
         return (
-            <div>
+            <div className="pageIsLoading">
                 <OrdersPageLoader />
                 <OrdersPageLoader />
                 <OrdersPageLoader />

@@ -1,1 +1,1 @@
-export { default as ApiError } from './ApiError';
+export { ApiError, isFetchBaseQueryErrorType } from './ApiError';

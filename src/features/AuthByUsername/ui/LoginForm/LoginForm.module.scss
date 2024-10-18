@@ -322,7 +322,7 @@
     &:-webkit-autofill:active,
     &:-webkit-autofill:focus,
     &:-webkit-autofill:hover {
-        -webkit-box-shadow: inset 0 0 0 30px #b30909 !important;
+        box-shadow: inset 0 0 0 30px #b30909 !important;
     }
 }
 

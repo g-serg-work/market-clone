@@ -5,12 +5,12 @@ export interface ErrorType {
     error: FetchBaseQueryError | SerializedError | undefined;
 }
 
-const isFetchBaseQueryErrorType = (error: any): error is FetchBaseQueryError =>
-    'status' in error;
+export const isFetchBaseQueryErrorType = (
+    error: any,
+): error is FetchBaseQueryError => 'status' in error;
 
-const ApiError = ({ error }: ErrorType) => {
-    const msg = isFetchBaseQueryErrorType(error) ? error?.status : 'unknown';
-    return <div>Error: {msg}</div>;
+export const ApiError = ({ error }: ErrorType) => {
+    const status = isFetchBaseQueryErrorType(error) && error?.status;
+
+    return <div>Error: {status ?? 'unknown'}</div>;
 };
-
-export default ApiError;

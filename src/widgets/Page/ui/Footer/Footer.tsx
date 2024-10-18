@@ -25,11 +25,15 @@ export const Footer = memo((props: FooterProps) => {
 
     return (
         <div
-            className={classNames(cls.Footer, {}, [className])}
+            className={classNames(cls.Footer, {}, [className, 'Footer'])}
             data-apiary-widget-id="/footer"
             data-apiary-widget-name="@marketfront/Footer"
         >
-            <div className={cls.footerWrapper} data-zone-name="footer" data-baobab-name="footer">
+            <div
+                className={cls.footerWrapper}
+                data-zone-name="footer"
+                data-baobab-name="footer"
+            >
                 <footer className={cls.footerContent} data-sins-no-track="true">
                     <div>
                         <AppPromoLoader>
@@ -43,7 +47,11 @@ export const Footer = memo((props: FooterProps) => {
                                 <GeneratedQrCode />
                             </DistributionFooterDesktop>
                         </AppPromoLoader>
-                        {userData && <FooterSubscriptions userEmail={userData.userEmail} />}
+                        {userData && (
+                            <FooterSubscriptions
+                                userEmail={userData.userEmail}
+                            />
+                        )}
                         <UsefulLinks />
                     </div>
                 </footer>

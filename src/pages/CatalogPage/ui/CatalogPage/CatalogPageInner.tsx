@@ -4,12 +4,13 @@ import { CaruselList } from '@/entities/Carusel';
 import { CatalogId } from '@/entities/Catalog';
 import { CategoryList } from '@/entities/Category';
 import classNames from '@/shared/lib/helpers/classNames';
-import { ApiError } from '@/shared/ui/ApiError';
+import { ApiError, isFetchBaseQueryErrorType } from '@/shared/ui/ApiError';
 import { Delimiter } from '@/shared/ui/Delimiter';
 import { Page } from '@/widgets/Page';
 import { useCatalogPage } from '../../api/catalogPageApi';
 import { CatalogPageProps } from './CatalogPage';
 import cls from './CatalogPage.module.scss';
+import { StubPage } from '@/pages/StubPage';
 
 export const CatalogPageInner = (
     props: {
@@ -28,10 +29,16 @@ export const CatalogPageInner = (
     });
 
     if (isLoading) {
-        return null;
+        return <div className="pageIsLoading" />;
     }
 
     if (isError) {
+        const status = isFetchBaseQueryErrorType(error) && error?.status;
+
+        if (status === 404) {
+            return <StubPage />;
+        }
+
         return <ApiError error={error} />;
     }
 
