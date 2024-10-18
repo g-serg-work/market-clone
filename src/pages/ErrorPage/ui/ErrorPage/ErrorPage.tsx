@@ -1,7 +1,7 @@
 import classNames from '@/shared/lib/helpers/classNames';
 import cls from './ErrorPage.module.scss';
 
-interface ErrorPageProps {
+export interface ErrorPageProps {
     className?: string;
 }
 

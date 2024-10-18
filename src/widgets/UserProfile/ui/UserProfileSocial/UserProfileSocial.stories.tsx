@@ -1,7 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import UserProfileSocial, {
-    UserProfileSocialProps,
-} from './UserProfileSocial';
+import UserProfileSocial, { UserProfileSocialProps } from './UserProfileSocial';
 import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 
 export default {
@@ -18,7 +16,7 @@ const Template: ComponentStory<typeof UserProfileSocial> = (args) => (
 );
 
 const args: UserProfileSocialProps = {
-    route: '/social',
+    href: '/social',
 };
 
 export const Primary = Template.bind({});

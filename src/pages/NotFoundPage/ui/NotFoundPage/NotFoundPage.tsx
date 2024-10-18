@@ -3,7 +3,7 @@ import cls from './NotFoundPage.module.scss';
 import Svg from '@/shared/assets/icons/404.svg';
 import { Page } from '@/widgets/Page';
 
-interface NotFoundPageProps {
+export interface NotFoundPageProps {
     className?: string;
 }
 

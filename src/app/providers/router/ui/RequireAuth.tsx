@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import { getUserData, getUserInited } from '@/entities/User';
+import { Suspense } from 'react';
 import { RequireAuthPage } from '@/pages/RequireAuthPage';
 
 interface RequireAuthProps {
@@ -15,7 +16,11 @@ export function RequireAuth(props: RequireAuthProps) {
         if (!inited) return null;
 
         // <Navigate to={getRouteMain()} state={{ from: location }} replace />
-        return <RequireAuthPage />;
+        return (
+            <Suspense>
+                <RequireAuthPage />
+            </Suspense>
+        );
     }
 
     return children;

@@ -12,7 +12,6 @@ import {
     useThrottle,
 } from '@/shared/lib/hooks';
 import classNames from '@/shared/lib/helpers/classNames';
-import { Footer } from '../Footer/Footer';
 
 interface PageProps extends TestProps {
     className?: string;
@@ -58,7 +57,6 @@ export const Page = memo((props: PageProps) => {
             data-testid={props['data-testid'] ?? 'Page'}
         >
             {children}
-            <Footer />
             {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
         </div>
     );

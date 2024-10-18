@@ -15,8 +15,3 @@ const Template: ComponentStory<typeof HeaderMenuItemLogin> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {};
-
-export const WithNotification = Template.bind({});
-WithNotification.args = {
-    hasNotification: true,
-};

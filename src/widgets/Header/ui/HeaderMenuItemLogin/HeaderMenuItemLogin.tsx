@@ -6,7 +6,7 @@ import {
     modalChannelEvent,
 } from '@/shared/eventChannels/modalChannelEvents';
 
-interface HeaderMenuItemLoginProps {
+export interface HeaderMenuItemLoginProps {
     className?: string;
 }
 

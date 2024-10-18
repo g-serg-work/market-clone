@@ -1,7 +1,10 @@
 import { FormEventHandler, memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { loginReducer } from '../../model/slice/loginSlice';
-import { ReducersList, DynamicModuleLoader } from '@/shared/lib/components/DynamicModuleLoader';
+import {
+    ReducersList,
+    DynamicModuleLoader,
+} from '@/shared/lib/components/DynamicModuleLoader';
 
 import cls from './LoginForm.module.scss';
 import { PreviousStepButton } from './ui/LoginForm.PreviousStepButton';
@@ -50,25 +53,6 @@ export const LoginForm = memo((props: LoginFormProps) => {
         [dispatch, userName, onClose],
     );
 
-    const form = (
-        <FormWrapper>
-            <form onSubmit={onSubmit}>
-                <div className={cls.layoutContainer}>
-                    <LayoutHead />
-                    <LayoutContent>
-                        <FormFieldInput autoFocus={autoFocus} />
-                    </LayoutContent>
-                    <div className={cls.layoutControls}>
-                        <SignInButton isLoading={isLoading} />
-                        <WebAuthButton />
-                        <RegisterButton />
-                        <AllSocialBlock />
-                    </div>
-                </div>
-            </form>
-        </FormWrapper>
-    );
-
     return (
         <DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>
             <div className={classNames(cls.passpFlexWrapper, {}, [className])}>
@@ -79,7 +63,26 @@ export const LoginForm = memo((props: LoginFormProps) => {
                         <div className={cls.passpAuthContent}>
                             <LoginHeader />
                             <div className={cls.passpPageVisibility} />
-                            {form}
+                            <FormWrapper>
+                                <form onSubmit={onSubmit}>
+                                    <div className={cls.layoutContainer}>
+                                        <LayoutHead />
+                                        <LayoutContent>
+                                            <FormFieldInput
+                                                autoFocus={autoFocus}
+                                            />
+                                        </LayoutContent>
+                                        <div className={cls.layoutControls}>
+                                            <SignInButton
+                                                isLoading={isLoading}
+                                            />
+                                            <WebAuthButton />
+                                            <RegisterButton />
+                                            <AllSocialBlock />
+                                        </div>
+                                    </div>
+                                </form>
+                            </FormWrapper>
                         </div>
                         <Promo />
                     </div>

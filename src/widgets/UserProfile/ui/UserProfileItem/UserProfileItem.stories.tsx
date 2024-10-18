@@ -21,6 +21,7 @@ const item: UserProfileItemProps = {
     title: 'Item',
     route: '/item',
     Svg: ProfileOrdersSvg,
+    onRouteClick: () => {},
 };
 
 export const Primary = Template.bind({});

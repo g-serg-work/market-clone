@@ -12,7 +12,7 @@ import { getUserData } from '@/entities/User';
 import { Order } from '@/entities/Order';
 import { OrdersPageLoader } from '../OrdersPageLoader/OrdersPageLoader';
 
-interface OrdersPageProps {
+export interface OrdersPageProps {
     className?: string;
 }
 
@@ -26,7 +26,11 @@ const OrderNumberButtonCopy = (props: OrderNumberButtonCopyProps) => {
     const parts = number.match(/.{1,3}/g);
 
     return (
-        <button type="button" className={cls.orderNumberCopy} aria-label="Скопировать номер заказа">
+        <button
+            type="button"
+            className={cls.orderNumberCopy}
+            aria-label="Скопировать номер заказа"
+        >
             <div className={cls.orderNumberParts}>
                 <span className={cls.orderNumberPart}>
                     {parts?.map((part, idx) => (
@@ -141,7 +145,9 @@ const GradeItems = (props: GradeItemsProps) => {
                         to={`/my/order/${number}`}
                         className={cls.gradeItemsLink}
                     >
-                        <span className={cls.gradeItemsSpan}>Оценить товары</span>
+                        <span className={cls.gradeItemsSpan}>
+                            Оценить товары
+                        </span>
                     </Link>
                 </div>
             </div>
@@ -161,7 +167,9 @@ const OrderItemsGallery = (props: OrderItemsGalleryProps) => {
         .map((image, idx) => <img key={idx} src={image} alt="" />)
         .concat(
             images.length > 3 ? (
-                <span className={cls.orderImagesMore3}>+{images.length - 3}</span>
+                <span className={cls.orderImagesMore3}>
+                    +{images.length - 3}
+                </span>
             ) : (
                 []
             ),
@@ -217,7 +225,10 @@ const OrderCard = (props: OrderCardProps) => {
             data-apiary-widget-name="@marketfront/OrderCardView"
         >
             <div data-zone-name="order-card-view">
-                <div className={cls.orderCardView} aria-label={`Заказ ${order.number}`}>
+                <div
+                    className={cls.orderCardView}
+                    aria-label={`Заказ ${order.number}`}
+                >
                     <OrderCardTitle order={order} />
                     <Link
                         className={cls.orderDetailLink}
@@ -298,6 +309,8 @@ const OrdersPageData = () => {
         return (
             <div>
                 <OrdersPageLoader />
+                <OrdersPageLoader />
+                <OrdersPageLoader />
             </div>
         );
     }
@@ -333,7 +346,10 @@ export const OrdersPage = (props: OrdersPageProps) => {
     const { className } = props;
 
     return (
-        <Page data-testid="OrdersPage" className={classNames(cls.OrdersPage, {}, [className])}>
+        <Page
+            data-testid="OrdersPage"
+            className={classNames(cls.OrdersPage, {}, [className])}
+        >
             <div className={cls.wrapper}>
                 <main className={cls.main}>
                     <div className={cls.title}>

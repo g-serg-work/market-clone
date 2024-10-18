@@ -47,9 +47,12 @@ export function buildPlugins({
     }
 
     if (isProd) {
+        plugins.push(new BundleAnalyzerPlugin({
+            openAnalyzer: true,
+        }));
         plugins.push(new MiniCssExtractPlugin({
-            filename: 'css/[name].[contenthash:8].css',
-            chunkFilename: 'css/[name].[contenthash:8].css',
+            filename: 'css/[name].[contenthash:4].css',
+            chunkFilename: 'css/[name].[contenthash:4].css',
         }));
         plugins.push(new CopyPlugin({
             patterns: [

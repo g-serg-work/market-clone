@@ -18,7 +18,7 @@ const Template: ComponentStory<typeof UserProfilePartner> = (args) => (
 );
 
 const args: UserProfilePartnerProps = {
-    route: '/partner',
+    href: '/partner',
 };
 
 export const Primary = Template.bind({});

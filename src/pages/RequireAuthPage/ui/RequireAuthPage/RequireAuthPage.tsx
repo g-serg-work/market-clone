@@ -7,7 +7,7 @@ import {
     modalChannelEvent,
 } from '@/shared/eventChannels/modalChannelEvents';
 
-interface RequireAuthPageProps {
+export interface RequireAuthPageProps {
     className?: string;
 }
 

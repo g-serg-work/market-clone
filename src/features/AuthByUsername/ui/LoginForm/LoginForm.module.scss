@@ -1,5 +1,6 @@
 :root {
-    --id-typography-heading-m: normal 500 20px / 24px "YS Text", arial, sans-serif;
+    --id-typography-heading-m: normal 500 20px / 24px "YS Text", arial,
+        sans-serif;
 }
 
 .passpFlexWrapper {
@@ -317,6 +318,12 @@
     position: relative;
     vertical-align: top;
     width: 100%;
+
+    &:-webkit-autofill:active,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:hover {
+        -webkit-box-shadow: inset 0 0 0 30px #b30909 !important;
+    }
 }
 
 .textInputControl {

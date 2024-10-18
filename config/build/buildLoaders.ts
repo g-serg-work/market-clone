@@ -10,19 +10,19 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
         test: /\.svg$/,
         use: [{
             loader: '@svgr/webpack',
-            options: {
-                icon: true,
-                svgoConfig: {
-                    plugins: [
-                        {
-                            name: 'convertColors',
-                            params: {
-                                currentColor: true,
-                            }
-                        }
-                    ]
-                }
-            }
+            // options: {
+            //     icon: true,
+            //     svgoConfig: {
+            //         plugins: [
+            //             {
+            //                 name: 'convertColors',
+            //                 params: {
+            //                     // currentColor: true,
+            //                 }
+            //             }
+            //         ]
+            //     }
+            // }
         }],
     };
 
@@ -38,17 +38,27 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     //     exclude: /node_modules/,
     // };
 
-    const fileLoader = {
-        test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+    const mediaTest = /\.(png|jpe?g|gif|woff2|woff|webp)$/i;
+
+    const fileLoader : webpack.RuleSetRule = {
+        test: mediaTest,
+        exclude: /public/,
         use: [
             {
                 loader: 'file-loader',
             },
-        ],
+        ]
+    };
+
+    const rawLoader : webpack.RuleSetRule = {
+        test: mediaTest,
+        include: /public/,
+        type: 'asset/resource',
     };
 
     return [
         fileLoader,
+        rawLoader,
         svgLoader,
         codeBabelLoader,
         tsxCodeBabelLoader,
