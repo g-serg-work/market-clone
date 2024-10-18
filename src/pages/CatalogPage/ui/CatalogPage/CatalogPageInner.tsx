@@ -10,6 +10,7 @@ import { Page } from '@/widgets/Page';
 import { useCatalogPage } from '../../api/catalogPageApi';
 import { CatalogPageProps } from './CatalogPage';
 import cls from './CatalogPage.module.scss';
+// eslint-disable-next-line feature-sliced-project/import-only-underlying
 import { StubPage } from '@/pages/StubPage';
 
 export const CatalogPageInner = (

@@ -36,6 +36,7 @@ export const useAppModals = (): useAppModalsResult => {
                 doFavoriteCategoryModal,
             ),
             modalChannel.on(modalChannelEvent.showLoginModal, () => {
+                // eslint-disable-next-line react-hooks/exhaustive-deps
                 exclusiveMode = true;
                 doLoginModal();
             }),

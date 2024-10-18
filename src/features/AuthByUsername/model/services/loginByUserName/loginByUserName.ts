@@ -1,5 +1,5 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from '@/app/providers/StoreProvider';
 import { User, userActions } from '@/entities/User';
 
@@ -32,6 +32,7 @@ export const loginByUserName = createAsyncThunk<
             return rejectWithValue(error.message);
         }
 
+        // eslint-disable-next-line no-console
         console.log('unexpected error: ', error);
         return rejectWithValue('An unexpected error occurred');
     }
