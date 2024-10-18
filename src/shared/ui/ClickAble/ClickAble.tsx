@@ -10,7 +10,7 @@ import {
 import { AppEventCallbackEvent } from '@/shared/eventChannels/types';
 import { callElementBoundingClientRect } from '@/shared/lib/helpers/callElementBoundingClientRect';
 
-interface ClickAbleProps extends Omit<ComponentPropsWithoutRef<'div'>, 'onClick'> {
+export interface ClickAbleProps extends Omit<ComponentPropsWithoutRef<'div'>, 'onClick'> {
     children?: ReactNode;
     onClick?: AppEventCallbackEvent;
 }

@@ -5,7 +5,7 @@ export type UserId = string;
 export interface User {
     id: UserId;
     userName: string;
-    userEmail: string;
+    userEmail?: string;
     addressList?: string[];
     jsonSettings?: JsonSettings;
     orders?: number;

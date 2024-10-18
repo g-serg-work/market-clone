@@ -4,8 +4,9 @@ type doModal = () => void;
 type modalContent = JSX.Element | null;
 
 type useJSXModalResult = [doModal, modalContent];
+type JSXComponentType<T> = { isOpen: boolean; onClose: () => void } & Partial<T>;
 
-export function useJSXModal<T>(
+export function useJSXModal<T extends JSXComponentType<T>>(
     jsx: (props: T) => JSX.Element,
     getProps: () => Partial<T> = () => ({}),
 ): useJSXModalResult {
@@ -19,8 +20,5 @@ export function useJSXModal<T>(
         setIsOpen(false);
     }, []);
 
-    return [
-        doModal,
-        isOpen ? jsx({ isOpen, onClose, ...getProps() } as T) : null,
-    ];
+    return [doModal, isOpen ? jsx({ isOpen, onClose, ...getProps() } as T) : null];
 }

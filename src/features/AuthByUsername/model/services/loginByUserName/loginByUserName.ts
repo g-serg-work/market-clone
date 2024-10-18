@@ -1,4 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 import { ThunkConfig } from '@/app/providers/StoreProvider';
 import { User, userActions } from '@/entities/User';
 
@@ -26,21 +27,12 @@ export const loginByUserName = createAsyncThunk<
 
         dispatch(userActions.setUserData(response.data));
         return response.data;
-    } catch (e) {
-        // TODO: fix typescript types
-        if (e && typeof e === 'object' && 'response' in e) {
-            const { response } = e;
-            if (
-                response &&
-                typeof response === 'object' &&
-                'data' in response
-            ) {
-                const { data } = response;
-                if (data && typeof data === 'object' && 'message' in data)
-                    return rejectWithValue(data.message as string);
-            }
+    } catch (error) {
+        if (axios.isAxiosError(error)) {
+            return rejectWithValue(error.message);
         }
 
-        return rejectWithValue('Error');
+        console.log('unexpected error: ', error);
+        return rejectWithValue('An unexpected error occurred');
     }
 });
