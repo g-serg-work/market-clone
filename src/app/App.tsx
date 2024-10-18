@@ -7,11 +7,12 @@ import { CategoryMenu } from '@/widgets/CategoryMenu';
 import { useAppModals } from './hooks/useAppModals';
 import { Header } from '@/widgets/Header';
 import { getUserData, getUserInited, initUserData } from '@/entities/User';
+import { Footer } from '@/widgets/Page';
 
 const App = memo(() => {
     const dispatch = useAppDispatch();
     const inited = useSelector(getUserInited);
-    const modalContent = useAppModals();
+    const { modalContent, exclusiveMode } = useAppModals();
     const userData = useSelector(getUserData);
 
     // TODO: refactor - change on use AppContext
@@ -27,6 +28,9 @@ const App = memo(() => {
         }
     }, [dispatch, inited]);
 
+    if (modalContent && exclusiveMode)
+        return <div id="app">{modalContent}</div>;
+
     return (
         <div id="app">
             <Header />
@@ -34,10 +38,11 @@ const App = memo(() => {
                 deliveryAddress={deliveryAddress}
                 isLogged={isLogged}
             />
-            {modalContent}
+            <AppRouter />
             <Suspense>
-                <AppRouter />
+                <Footer />
             </Suspense>
+            {modalContent}
         </div>
     );
 });

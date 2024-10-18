@@ -10,7 +10,12 @@ import { LoginModal } from '@/features/AuthByUsername';
 
 const userProfileModalProps = { left: 0, top: 0 };
 
-export const useAppModals = (): JSX.Element | null => {
+type useAppModalsResult = {
+    modalContent: JSX.Element | null;
+    exclusiveMode: boolean;
+};
+
+export const useAppModals = (): useAppModalsResult => {
     const [doFavoriteCategoryModal, favoriteCategoryModalContent] = useJSXModal(
         FavoriteCategoryModal,
     );
@@ -22,13 +27,18 @@ export const useAppModals = (): JSX.Element | null => {
 
     const [doLoginModal, loginModalContent] = useJSXModal(LoginModal);
 
+    let exclusiveMode = false;
+
     useEffect(() => {
         const unsubscribes = [
             modalChannel.on(
                 modalChannelEvent.showFavoriteCategoryModal,
                 doFavoriteCategoryModal,
             ),
-            modalChannel.on(modalChannelEvent.showLoginModal, doLoginModal),
+            modalChannel.on(modalChannelEvent.showLoginModal, () => {
+                exclusiveMode = true;
+                doLoginModal();
+            }),
             modalChannel.on(modalChannelEvent.showUserProfileModal, (e) => {
                 const rect = e.elementBoundingClientRect;
                 userProfileModalProps.left = rect.left + rect.width - 10;
@@ -43,9 +53,13 @@ export const useAppModals = (): JSX.Element | null => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    return (
+    const modalContent =
         favoriteCategoryModalContent ||
         userProfileModalContent ||
-        loginModalContent
-    );
+        loginModalContent;
+
+    return {
+        modalContent,
+        exclusiveMode,
+    };
 };
