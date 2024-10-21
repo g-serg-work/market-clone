@@ -12,10 +12,11 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
         mode,
         entry: paths.entry,
         output: {
-            filename: '[name].[contenthash].js',
+            filename: 'js/[name].[contenthash:4].js',
             path: paths.build,
             clean: true,
             publicPath: '/',
+            assetModuleFilename: 'assets/[name].[contenthash:4][ext]',
         },
         plugins: buildPlugins(options),
         module: {

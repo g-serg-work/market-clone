@@ -47,9 +47,6 @@ export function buildPlugins({
     }
 
     if (isProd) {
-        plugins.push(new BundleAnalyzerPlugin({
-            openAnalyzer: true,
-        }));
         plugins.push(new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash:4].css',
             chunkFilename: 'css/[name].[contenthash:4].css',
@@ -57,6 +54,7 @@ export function buildPlugins({
         plugins.push(new CopyPlugin({
             patterns: [
                 { from: paths.locales, to: paths.buildLocales },
+                { from: paths.favicon },
             ],
         }));
     }
