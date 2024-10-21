@@ -3,13 +3,6 @@
     "tasks": [
         {
             "type": "npm",
-            "script": "start:dev:server",
-            "problemMatcher": [],
-            "label": "npm: start:dev:server",
-            "detail": "node ./json-server/index.js"
-        },
-        {
-            "type": "npm",
             "script": "start:vite",
             "problemMatcher": [],
             "label": "npm: start:vite",
