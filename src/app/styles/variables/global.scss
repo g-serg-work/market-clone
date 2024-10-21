@@ -1,0 +1,127 @@
+:root {
+    // Colors
+    --overlay-color: rgba(0 0 0 / 60%);
+    --red-light: #f00;
+    --red-dark: #ce0505;
+
+    // redesigned
+    --dark-bg-color: #fff3d6;
+    --bg-color: #f0c048;
+    --modal-bg-color: #f2d791;
+    --text-color: #1b1311;
+    --hint-color: #b8b2a2;
+    --cancel-color: #ff5e5e;
+    --save-color: #52fa81;
+    --icon-color: #4875f0;
+    --accent-color: #1d59ff;
+
+    // skeleton
+    --skeleton-color: #fff;
+    --skeleton-shadow: rgba(0 0 0 / 20%);
+
+    // market-var
+    --shadow-bottom-day-far: 0 8px 20px 0 rgb(0 0 0 / 5.9%),
+        0 5px 10px 0 rgb(0 0 0 / 5.9%), 0 0 1px 0 rgb(0 0 0 / 10.2%);
+    --shadow-bottom-day-normal: 0 3px 6px 0 rgb(0 0 0 / 10.2%),
+        0 0 1px 0 rgb(0 0 0 / 10.2%);
+    --shadow-bottom-day-close: 0 1px 4px 0 rgb(0 0 0 / 10.2%),
+        0 0 1px 0 rgb(0 0 0 / 10.2%);
+    --shadow-top-day-far: 0 -4px 20px 0 rgb(0 0 0 / 5.9%),
+        0 -2px 10px 0 rgb(0 0 0 / 5.9%), 0 0 1px 0 rgb(0 0 0 / 10.2%);
+    --shadow-top-day-normal: 0 -3px 6px 0 rgb(0 0 0 / 10.2%),
+        0 0 1px 0 rgb(0 0 0 / 10.2%);
+    --shadow-top-day-close: 0 -1px 4px 0 rgb(0 0 0 / 10.2%),
+        0 0 1px 0 rgb(0 0 0 / 10.2%);
+    --shadow-a11y: 0 0 0 2px #ff8205;
+    --bg-primary-hover: #eee;
+    --bg-secondary-hover: #eee;
+    --bg-secondary-pressed: #e7e7e7;
+    --border-primary-active: #3d3d3d;
+    --border-primary-hover: rgb(0 0 0 / 45.9%);
+    --control-black-hover: #292929;
+    --control-black-pressed: #1a1a1a;
+    --control-primary-hover: #fcd604;
+    --control-primary-pressed: #fcd006;
+    --control-primary-ultima-hover: #292929;
+    --control-primary-ultima-pressed: #1a1a1a;
+    --control-secondary-hover: rgb(0 0 0 / 9%);
+    --control-secondary-pressed: rgb(0 0 0 / 12.2%);
+    --link-primary-hover-pressed: #ff5226;
+    --text-invert-primary-hover-pressed: hsl(0deg 0% 100% / 80%);
+    --text-invert-secondary-hover-pressed: hsl(0deg 0% 100% / 80%);
+    --text-primary-hover-pressed: #ff5226;
+    --text-secondary-hover-pressed: #1a1a1a;
+    --badge-black-dark: #21201f;
+    --badge-black-high: #edece8;
+    --badge-black-normal: #21201f;
+    --badge-blue-dark: #55558c;
+    --badge-blue-high: #e6e6f6;
+    --badge-blue-normal: #6c6cde;
+    --badge-cinnabar-normal: #fa6a3c;
+    --badge-cyan-dark: #258bb0;
+    --badge-cyan-high: #c8e9f7;
+    --badge-cyan-normal: #32b3e5;
+    --badge-green-dark: #297149;
+    --badge-green-high: #e1f0e8;
+    --badge-green-normal: #3d9966;
+    --badge-indigo-dark: #5a5ac8;
+    --badge-indigo-high: #e0e0ff;
+    --badge-indigo-normal: #8585ff;
+    --badge-mint-dark: #3a8e4a;
+    --badge-mint-high: #cfe7d4;
+    --badge-mint-normal: #52ba63;
+    --badge-orange-dark: #b15501;
+    --badge-orange-high: #fbe9d9;
+    --badge-orange-normal: #e8912e;
+    --badge-pink-dark: #be4f85;
+    --badge-pink-high: #fee6f1;
+    --badge-pink-normal: #f571b8;
+    --badge-red-dark: #9c341f;
+    --badge-red-high: #f8d8d2;
+    --badge-red-normal: #e35539;
+    --badge-sky-dark: #006dc7;
+    --badge-sky-high: #d9f3ff;
+    --badge-sky-normal: #00adff;
+    --badge-teal-dark: #417386;
+    --badge-teal-high: #deedf3;
+    --badge-teal-normal: #417386;
+    --market-warmred: #ff5226;
+    --plus: #d11da5;
+    --split-gradient: linear-gradient(270deg, #55d48e, #adebc9);
+    --badge-ad: hsl(0deg 0% 100% / 40%);
+    --badge-alert: #fc5230;
+    --badge-express: #d95cff;
+    --badge-onclick: #00adff;
+    --badge-sale: #e35539;
+    --badge-term: #3d9966;
+    --bg-floating: #fff;
+    --bg-primary: #fff;
+    --bg-sale: #fa3e2c;
+    --bg-secondary: #f8f8f8;
+    --bg-warning: rgb(247 105 22 / 20%);
+    --black: #000;
+    --border-primary: rgb(0 0 0 / 14.1%);
+    --control-black: #3d3d3d;
+    --control-primary: #fce000;
+    --control-primary-ultima: #3d3d3d;
+    --control-secondary: rgb(0 0 0 / 5.9%);
+    --divider-card: #f4f4f4;
+    --divider-primary: rgb(0 0 0 / 7.1%);
+    --fade: rgb(33 32 31 / 54.1%);
+    --focus: #ff8205;
+    --icon-filled-secondary: rgb(0 0 0 / 36.1%);
+    --link-primary: #1f59b8;
+    --price-sale: #9c341f;
+    --price-term: #006933;
+    --text-error: #fc5230;
+    --text-favorite: #fa6a3c;
+    --text-invert-primary: #fff;
+    --text-invert-secondary: hsl(0deg 0% 100% / 45.9%);
+    --text-primary: #1a1a1a;
+    --text-rating: #b0824a;
+    --text-secondary: rgb(0 0 0 / 45.9%);
+    --text-secondary-solid: #8a8a8a;
+    --text-warning: #f76916;
+    --transparent: hsl(0deg 0% 100% / 0%);
+    --white: #fff;
+}
