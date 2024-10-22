@@ -50,7 +50,10 @@ export const Modal = (props: ModalProps) => {
 
     return (
         <Portal element={portalElement}>
-            <div className={classNames('', mods, [className, theme])} onClick={onClick}>
+            <div
+                className={classNames('', mods, [className, theme])}
+                onClick={onClick}
+            >
                 {children}
             </div>
         </Portal>

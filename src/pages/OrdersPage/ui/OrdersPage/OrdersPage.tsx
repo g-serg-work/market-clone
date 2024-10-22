@@ -317,11 +317,9 @@ const OrdersPageData = () => {
 
     if (isError) {
         return (
-            <div>
-                <OrdersPageLoader>
-                    <ApiError error={error} />
-                </OrdersPageLoader>
-            </div>
+            <OrdersPageLoader>
+                <ApiError error={error} />
+            </OrdersPageLoader>
         );
     }
 

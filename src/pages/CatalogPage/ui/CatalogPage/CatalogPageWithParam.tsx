@@ -13,7 +13,7 @@ import cls from './CatalogPage.module.scss';
 // eslint-disable-next-line feature-sliced-project/import-only-underlying
 import { StubPage } from '@/pages/StubPage';
 
-export const CatalogPageInner = (
+export const CatalogPageWithParam = (
     props: {
         catalogId: CatalogId;
     } & CatalogPageProps,

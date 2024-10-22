@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { CatalogId } from '@/entities/Catalog';
-import { CatalogPageInner } from './CatalogPageInner';
+import { CatalogPageWithParam } from './CatalogPageWithParam';
 
 export interface CatalogPageProps {
     className?: string;
@@ -11,5 +11,5 @@ export const CatalogPage = (props: Omit<CatalogPageProps, 'catalogId'>) => {
 
     if (!catalogId) return null;
 
-    return <CatalogPageInner catalogId={catalogId} {...props} />;
+    return <CatalogPageWithParam catalogId={catalogId} {...props} />;
 };

@@ -6,7 +6,7 @@ import { HeaderMenu } from '../HeaderMenu/HeaderMenu';
 import { HeaderNavigation } from '../HeaderNavigation/HeaderNavigation';
 import { HeaderLogo } from '../HeaderLogo/HeaderLogo';
 
-interface HeaderProps {
+export interface HeaderProps {
     className?: string;
 }
 
