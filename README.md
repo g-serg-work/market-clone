@@ -4,7 +4,7 @@
 
 ## Introduction
 
-The project is a visual copy of the famous online store market.yandex.ru
+The project is a visual copy of the famous online store [market.yandex.ru](https://market.yandex.ru)
 
 Created for educational purposes.Tries to present some of the best tools in the React ecosystem with a good project structure, which is very well scalable.
 
@@ -15,8 +15,9 @@ Feel free to study the code’s code base in order to extract maximum benefits f
 ## Table Of Contents:
 
 -   [⚙️ Project Standards](docs/project-standards.md)
+-   [🔧 Project Configure](docs/project-configure.md)
+-   [🗄️ Project Structure](docs/project-structure.md)
 -   [🧱 Components And Styling](docs/components-and-styling.md)
 -   [📡 API Layer](docs/api-layer.md)
--   [🗃️ State Management](docs/state-management.md)
 -   [⚠️ Error Handling](docs/error-handling.md)
 -   [🌐 Deployment](docs/deployment.md)
