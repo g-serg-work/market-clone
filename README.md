@@ -1,6 +1,6 @@
 # Market-clone
 
-[![Project](https://img.shields.io/badge/Vercel-blue?logo=vercel&logoColor=white)](https://market-clone-tau.vercel.app/my/wishlist)
+[![Vercel Status][vercel-image]][vercel-url]
 
 ## Introduction
 
@@ -21,3 +21,6 @@ Feel free to study the code’s code base in order to extract maximum benefits f
 -   [📡 API Layer](docs/api-layer.md)
 -   [⚠️ Error Handling](docs/error-handling.md)
 -   [🌐 Deployment](docs/deployment.md)
+
+[vercel-image]: https://vercelbadge.vercel.app/api/g-serg-work/market-clone
+[vercel-url]: https://github.com/g-serg-work/market-clone/deployments
