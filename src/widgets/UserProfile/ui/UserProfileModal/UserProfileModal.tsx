@@ -20,7 +20,7 @@ export const UserProfileModal = (props: UserProfileModalProps) => {
 
     return (
         <Modal
-            className={classNames('', {}, [className])}
+            className={classNames('', {}, [className, 'userProfileModal'])}
             isOpen={isOpen}
             onClose={onClose}
             lazy
