@@ -20,6 +20,7 @@ export const LoginModal = (props: LoginModalProps) => {
             onClose={onClose}
             lazy
             exclusive
+            onContentClickDisableClose
         >
             <Modal.Overlay className={cls.overlay} />
             <Modal.Content className={cls.content}>

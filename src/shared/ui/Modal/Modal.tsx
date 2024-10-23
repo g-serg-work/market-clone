@@ -12,6 +12,7 @@ export interface ModalProps {
     children?: ReactNode;
     isOpen?: boolean;
     onClose?: () => void;
+    onContentClickDisableClose?: boolean;
     lazy?: boolean;
 }
 
@@ -20,7 +21,15 @@ const ANIMATION_DELAY = 180;
 const portalElement = document.getElementById('app') ?? document.body;
 
 export const Modal = (props: ModalProps) => {
-    const { className, children, isOpen, onClose, lazy, exclusive } = props;
+    const {
+        className,
+        children,
+        isOpen,
+        onClose,
+        lazy,
+        exclusive,
+        onContentClickDisableClose,
+    } = props;
 
     const { close, isClosing, isMounted } = useModal({
         animationDelay: ANIMATION_DELAY,
@@ -34,10 +43,10 @@ export const Modal = (props: ModalProps) => {
         (e: MouseEvent<HTMLDivElement>) => {
             const target = e.target as HTMLDivElement;
             if (target.dataset?.modalRole === 'close-on-click') {
-                close();
+                if (!onContentClickDisableClose) close();
             }
         },
-        [close],
+        [close, onContentClickDisableClose],
     );
 
     if (lazy && !isMounted) {
