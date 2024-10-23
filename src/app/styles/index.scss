@@ -6,10 +6,11 @@
 
 body {
     font: 0.8em "YS Text", Arial, Helvetica, sans-serif;
-    color: #2b2b2b;
     margin: 0;
     padding: 0;
     border: 0;
+    color: #2b2b2b;
+    background-color: white;
     vertical-align: baseline;
     text-size-adjust: none;
     -webkit-font-smoothing: antialiased;
@@ -20,7 +21,11 @@ body {
     line-height: 1;
 }
 
-body:has(.pageIsLoading) .Footer {
+body:has(.pageIsLoading) #footer {
+    display: none;
+}
+
+body:has(.ModalExclusive) #app {
     display: none;
 }
 

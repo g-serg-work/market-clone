@@ -8,6 +8,7 @@ import { ModalOverlay } from './Modal.Overlay';
 
 export interface ModalProps {
     className?: string;
+    exclusive?: boolean;
     children?: ReactNode;
     isOpen?: boolean;
     onClose?: () => void;
@@ -19,7 +20,7 @@ const ANIMATION_DELAY = 180;
 const portalElement = document.getElementById('app') ?? document.body;
 
 export const Modal = (props: ModalProps) => {
-    const { className, children, isOpen, onClose, lazy } = props;
+    const { className, children, isOpen, onClose, lazy, exclusive } = props;
 
     const { close, isClosing, isMounted } = useModal({
         animationDelay: ANIMATION_DELAY,
@@ -46,6 +47,7 @@ export const Modal = (props: ModalProps) => {
     const mods: Mods = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
+        ModalExclusive: exclusive,
     };
 
     return (

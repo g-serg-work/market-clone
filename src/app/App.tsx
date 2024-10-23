@@ -12,7 +12,7 @@ import { Footer } from '@/widgets/Page';
 const App = memo(() => {
     const dispatch = useAppDispatch();
     const inited = useSelector(getUserInited);
-    const { modalContent, exclusiveMode } = useAppModals();
+    const { modalContent } = useAppModals();
     const userData = useSelector(getUserData);
 
     // TODO: refactor - change on use AppContext
@@ -28,22 +28,21 @@ const App = memo(() => {
         }
     }, [dispatch, inited]);
 
-    if (modalContent && exclusiveMode)
-        return <div id="app">{modalContent}</div>;
-
     return (
-        <div id="app">
-            <Header />
-            <CategoryMenu
-                deliveryAddress={deliveryAddress}
-                isLogged={isLogged}
-            />
-            <AppRouter />
-            <Suspense>
-                <Footer />
-            </Suspense>
+        <>
+            <div id="app">
+                <Header />
+                <CategoryMenu
+                    deliveryAddress={deliveryAddress}
+                    isLogged={isLogged}
+                />
+                <AppRouter />
+                <Suspense>
+                    <Footer />
+                </Suspense>
+            </div>
             {modalContent}
-        </div>
+        </>
     );
 });
 

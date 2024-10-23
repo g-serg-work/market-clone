@@ -19,6 +19,7 @@ export const LoginModal = (props: LoginModalProps) => {
             isOpen={isOpen}
             onClose={onClose}
             lazy
+            exclusive
         >
             <Modal.Overlay className={cls.overlay} />
             <Modal.Content className={cls.content}>
