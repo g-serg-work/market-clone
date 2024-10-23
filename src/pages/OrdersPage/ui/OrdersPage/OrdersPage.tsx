@@ -1,4 +1,3 @@
-import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import classNames from '@/shared/lib/helpers/classNames';
 import cls from './OrdersPage.module.scss';
@@ -8,7 +7,6 @@ import OrderCopySvg from '../../assets/icons/order-copy.svg';
 import OrderReorderSvg from '../../assets/icons/order-reorder.svg';
 import { ApiError } from '@/shared/ui/ApiError';
 import { useOrdersPage } from '../../api/ordersPageApi';
-import { getUserData } from '@/entities/User';
 import { Order } from '@/entities/Order';
 import { OrdersPageLoader } from '../OrdersPageLoader/OrdersPageLoader';
 
@@ -294,16 +292,7 @@ const PurchasedItems = () => {
 };
 
 const OrdersPageData = () => {
-    const userData = useSelector(getUserData);
-
-    const {
-        data: orders,
-        isLoading,
-        isError,
-        error,
-    } = useOrdersPage({
-        userId: userData?.id ?? '',
-    });
+    const { data: orders, isLoading, isError, error } = useOrdersPage();
 
     if (isLoading) {
         return (

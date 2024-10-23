@@ -1,9 +1,9 @@
 import { JsonSettings } from './jsonSettings';
 
-export type UserId = string;
+export type UserToken = string;
 
 export interface User {
-    id: UserId;
+    token: UserToken;
     userName: string;
     userEmail?: string;
     addressList?: string[];

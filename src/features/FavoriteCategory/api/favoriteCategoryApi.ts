@@ -1,21 +1,15 @@
 import { rtkApi } from '@/shared/api/rtkApi';
 import { Category, CategoryId } from '@/entities/Category';
-import { UserId } from '@/entities/User';
-
-interface GetFavoriteCategoryArg {
-    userId: UserId;
-}
 
 interface PostFavoriteCategoryArg {
-    userId: UserId;
     categoryIds: CategoryId[];
 }
 
 const favoriteCategoryApi = rtkApi.injectEndpoints({
     endpoints: (build) => ({
-        getFavoriteCategory: build.query<Category[], GetFavoriteCategoryArg>({
-            query: ({ userId }) => ({
-                url: `/favorite-category/${userId}`,
+        getFavoriteCategory: build.query<Category[], void>({
+            query: () => ({
+                url: `/favorite-category`,
             }),
             keepUnusedDataFor: 0,
         }),

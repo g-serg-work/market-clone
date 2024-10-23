@@ -1,8 +1,8 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import StoreDecorator from '@/shared/config/storybook/StoreDecorator';
 import MemoryRouterDecorator from '@/shared/config/storybook/MemoryRouterDecorator';
 import { Order } from '@/entities/Order';
 import { OrdersPage } from './OrdersPage';
+import StoreDecorator from '@/shared/config/storybook/StoreDecorator';
 
 export default {
     title: 'pages/OrdersPage/OrdersPage',
@@ -11,12 +11,8 @@ export default {
         backgroundColor: { control: 'color' },
     },
     decorators: [
-        StoreDecorator({
-            user: {
-                userData: { id: '1' },
-            },
-        }),
-        MemoryRouterDecorator('/orders/user1', '/orders/:userId'),
+        StoreDecorator({}),
+        MemoryRouterDecorator('/orders', '/orders'),
     ],
 } as ComponentMeta<typeof OrdersPage>;
 
@@ -38,7 +34,7 @@ Primary.args = {};
 Primary.parameters = {
     mockData: [
         {
-            url: `${__API__}/orders/1`,
+            url: `${__API__}/orders`,
             method: 'GET',
             status: 200,
             response: [
@@ -59,7 +55,7 @@ MoreThreeItems.args = {};
 MoreThreeItems.parameters = {
     mockData: [
         {
-            url: `${__API__}/orders/1`,
+            url: `${__API__}/orders`,
             method: 'GET',
             status: 200,
             response: [

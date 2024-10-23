@@ -18,7 +18,7 @@ const Template: ComponentStory<typeof UserProfile> = (args) => (
 );
 
 const userData: User = {
-    id: '1',
+    token: '1',
     userName: 'test',
     userEmail: 'test@market-clone.ru',
     wishList: [],

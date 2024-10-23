@@ -1,8 +1,6 @@
 import { memo } from 'react';
-import { useSelector } from 'react-redux';
 import { useGetFavoriteCategory } from '../../api/favoriteCategoryApi';
 import classNames from '@/shared/lib/helpers/classNames';
-import { getUserData } from '@/entities/User';
 import cls from './FavoriteCategory.module.scss';
 import { ApiError } from '@/shared/ui/ApiError';
 import { FavoriteCategoryLoader } from '../FavoriteCategoryLoader/FavoriteCategoryLoader';
@@ -15,11 +13,8 @@ export interface FavoriteCategoryProps {
 
 export const FavoriteCategory = memo((props: FavoriteCategoryProps) => {
     const { className, onClose } = props;
-    const userData = useSelector(getUserData);
 
-    const { data, isLoading, isError, error } = useGetFavoriteCategory({
-        userId: userData?.id ?? '',
-    });
+    const { data, isLoading, isError, error } = useGetFavoriteCategory();
 
     if (isLoading) {
         return (

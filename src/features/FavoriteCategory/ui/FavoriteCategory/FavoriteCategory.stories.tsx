@@ -8,23 +8,19 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof FavoriteCategory>;
 
-const Template: ComponentStory<typeof FavoriteCategory> = (args) => <FavoriteCategory {...args} />;
+const Template: ComponentStory<typeof FavoriteCategory> = (args) => (
+    <FavoriteCategory {...args} />
+);
 
 export const Primary = Template.bind({});
 Primary.args = {};
-Primary.decorators = [
-    StoreDecorator({
-        user: {
-            userData: { id: '1' },
-        },
-    }),
-];
 Primary.parameters = {
     mockData: [
         {
-            url: `${__API__}/favorite-category/1`,
+            url: `${__API__}/favorite-category`,
             method: 'GET',
             status: 200,
             response: [
@@ -45,17 +41,10 @@ Primary.parameters = {
 
 export const WithoutFavorite = Template.bind({});
 WithoutFavorite.args = {};
-WithoutFavorite.decorators = [
-    StoreDecorator({
-        user: {
-            userData: { id: '2' },
-        },
-    }),
-];
 WithoutFavorite.parameters = {
     mockData: [
         {
-            url: `${__API__}/favorite-category/2`,
+            url: `${__API__}/favorite-category`,
             method: 'GET',
             status: 200,
             response: [],
