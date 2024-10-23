@@ -1,4 +1,10 @@
-import { ChangeEvent, FormEventHandler, memo, useCallback, useState } from 'react';
+import {
+    ChangeEvent,
+    FormEventHandler,
+    memo,
+    useCallback,
+    useState,
+} from 'react';
 import { Link } from 'react-router-dom';
 import cls from './Footer.FooterSubscriptions.module.scss';
 import SubscribeSvg from '../assets/icons/subscribe.svg';
@@ -19,9 +25,12 @@ export const FooterSubscriptions = memo((props: FooterSubscriptionsProps) => {
         [onEmailChange],
     );
 
-    const onFormSubmit: FormEventHandler<HTMLFormElement> = useCallback((event) => {
-        event.preventDefault();
-    }, []);
+    const onFormSubmit: FormEventHandler<HTMLFormElement> = useCallback(
+        (event) => {
+            event.preventDefault();
+        },
+        [],
+    );
 
     return (
         <div
@@ -35,8 +44,8 @@ export const FooterSubscriptions = memo((props: FooterSubscriptionsProps) => {
                             <form className={cls.form} onSubmit={onFormSubmit}>
                                 <SubscribeSvg />
                                 <div className={cls.title}>
-                                    Будьте в курсе скидок на электронику, товары для детей и для
-                                    дома
+                                    Будьте в курсе скидок на электронику, товары
+                                    для детей и для дома
                                 </div>
                                 <div className={cls.mailBox}>
                                     <input

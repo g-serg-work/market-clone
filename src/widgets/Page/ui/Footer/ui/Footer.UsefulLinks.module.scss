@@ -1,6 +1,10 @@
 .wrapper {
     padding: 1px 0;
     background: #f4f4f4;
+
+    a:hover {
+        color: red !important;
+    }
 }
 
 .links {
@@ -93,6 +97,10 @@
     font-size: 13px;
     line-height: 18px;
     color: #666;
+}
+
+.linkSocialContent a:hover .linkSocialTitle {
+    color: red;
 }
 
 .copyRights {
