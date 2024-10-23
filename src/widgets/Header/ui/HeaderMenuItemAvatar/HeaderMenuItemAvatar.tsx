@@ -4,9 +4,8 @@ import classNames from '@/shared/lib/helpers/classNames';
 import {
     modalChannel,
     modalChannelEvent,
-} from '@/shared/eventChannels/modalChannelEvents';
+} from '@/shared/eventsChannels/modalEventsChannel';
 import { Button } from '@/shared/ui/Button';
-import { AppEvent } from '@/shared/eventChannels/types';
 
 interface HeaderMenuItemAvatarProps {
     className?: string;
@@ -17,12 +16,13 @@ interface HeaderMenuItemAvatarProps {
 export const HeaderMenuItemAvatar = (props: HeaderMenuItemAvatarProps) => {
     const { className, userName, hasNotification } = props;
 
-    const onClick = (appEvent: AppEvent) => {
-        modalChannel.emit(modalChannelEvent.showUserProfileModal, appEvent);
+    const onClick = () => {
+        modalChannel.emit(modalChannelEvent.showUserProfileModal);
     };
 
     return (
         <div
+            id="headerMenuItemAvatar"
             className={classNames(cls.Avatar, {}, [className])}
             data-zone-name="profile"
             data-baobab-name="profile"

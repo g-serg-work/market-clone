@@ -1,5 +1,4 @@
 import eventBus from '@/shared/lib/helpers/EventBus';
-import { AppEventCallbackVoid, AppEventCallbackEvent } from './types';
 
 export enum modalChannelEvent {
     showFavoriteCategoryModal = 'showFavoriteCategoryModal',
@@ -8,7 +7,7 @@ export enum modalChannelEvent {
 }
 
 export const modalChannel = eventBus<{
-    [modalChannelEvent.showFavoriteCategoryModal]: AppEventCallbackVoid;
-    [modalChannelEvent.showUserProfileModal]: AppEventCallbackEvent;
-    [modalChannelEvent.showLoginModal]: AppEventCallbackVoid;
+    [modalChannelEvent.showFavoriteCategoryModal]: () => void;
+    [modalChannelEvent.showUserProfileModal]: () => void;
+    [modalChannelEvent.showLoginModal]: () => void;
 }>();

@@ -4,7 +4,7 @@ import classNames from '@/shared/lib/helpers/classNames';
 import {
     modalChannel,
     modalChannelEvent,
-} from '@/shared/eventChannels/modalChannelEvents';
+} from '@/shared/eventsChannels/modalEventsChannel';
 
 export interface HeaderMenuItemLoginProps {
     className?: string;

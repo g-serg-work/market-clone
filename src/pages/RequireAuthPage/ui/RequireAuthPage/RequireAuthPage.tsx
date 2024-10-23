@@ -5,7 +5,7 @@ import { Page } from '@/widgets/Page';
 import {
     modalChannel,
     modalChannelEvent,
-} from '@/shared/eventChannels/modalChannelEvents';
+} from '@/shared/eventsChannels/modalEventsChannel';
 
 export interface RequireAuthPageProps {
     className?: string;

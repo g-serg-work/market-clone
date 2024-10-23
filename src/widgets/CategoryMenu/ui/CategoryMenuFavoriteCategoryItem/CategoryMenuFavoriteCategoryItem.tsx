@@ -5,7 +5,7 @@ import { ClickAble } from '@/shared/ui/ClickAble';
 import {
     modalChannel,
     modalChannelEvent,
-} from '@/shared/eventChannels/modalChannelEvents';
+} from '@/shared/eventsChannels/modalEventsChannel';
 
 interface CategoryMenuFavoriteCategoryItemProps {
     className?: string;

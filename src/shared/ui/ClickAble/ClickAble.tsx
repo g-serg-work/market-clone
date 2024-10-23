@@ -7,29 +7,23 @@ import {
     ReactNode,
     useCallback,
 } from 'react';
-import { AppEventCallbackEvent } from '@/shared/eventChannels/types';
-import { callElementBoundingClientRect } from '@/shared/lib/helpers/callElementBoundingClientRect';
 
-export interface ClickAbleProps extends Omit<ComponentPropsWithoutRef<'div'>, 'onClick'> {
+export interface ClickAbleProps
+    extends Omit<ComponentPropsWithoutRef<'div'>, 'onClick'> {
     children?: ReactNode;
-    onClick?: AppEventCallbackEvent;
+    onClick?: () => void;
 }
 
-const ClickAble = (props: ClickAbleProps, ref: ForwardedRef<HTMLDivElement>) => {
+const ClickAble = (
+    props: ClickAbleProps,
+    ref: ForwardedRef<HTMLDivElement>,
+) => {
     const { children, onClick, ...otherProps } = props;
 
     // TODO: fix DRY with Button
-    const onMouseClick: MouseEventHandler<HTMLDivElement> = useCallback(
-        (e) => {
-            onClick?.({
-                source: 'mouse',
-                elementBoundingClientRect: callElementBoundingClientRect(
-                    e.currentTarget as HTMLElement,
-                ),
-            });
-        },
-        [onClick],
-    );
+    const onMouseClick: MouseEventHandler<HTMLDivElement> = useCallback(() => {
+        onClick?.();
+    }, [onClick]);
 
     const onKeyUp: KeyboardEventHandler<HTMLDivElement> = useCallback(
         (e) => {
@@ -42,13 +36,7 @@ const ClickAble = (props: ClickAbleProps, ref: ForwardedRef<HTMLDivElement>) => 
 
             if (enterOrSpace) {
                 e.preventDefault();
-
-                onClick?.({
-                    source: 'keyboard',
-                    elementBoundingClientRect: callElementBoundingClientRect(
-                        e.currentTarget as HTMLElement,
-                    ),
-                });
+                onClick?.();
             }
         },
         [onClick],

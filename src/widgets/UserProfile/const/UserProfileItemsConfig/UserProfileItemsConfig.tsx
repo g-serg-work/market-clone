@@ -25,7 +25,10 @@ import HelpSvg from '../../assets/icons/help.svg';
 import LogoutSvg from '../../assets/icons/logout.svg';
 import UserProfileChat from '../../ui/UserProfileChat/UserProfileChat';
 import UserProfileFavoriteCategory from '../../ui/UserProfileFavoriteCategory/UserProfileFavoriteCategory';
-import { modalChannel, modalChannelEvent } from '@/shared/eventChannels/modalChannelEvents';
+import {
+    modalChannel,
+    modalChannelEvent,
+} from '@/shared/eventsChannels/modalEventsChannel';
 
 export enum RouteType {
     relative,
@@ -36,7 +39,8 @@ export enum CustomRoute {
     LOGOUT = '/logout',
 }
 
-interface UserProfileItemCfg extends Omit<UserProfileItemProps, 'onRouteClick'> {
+interface UserProfileItemCfg
+    extends Omit<UserProfileItemProps, 'onRouteClick'> {
     getCountSelector?: (user: User) => number | undefined;
 }
 
@@ -46,9 +50,13 @@ interface UserProfileItemCreatorArgs {
     autoFocus?: boolean;
 }
 
-export type UserProfileItemCreator = (args: UserProfileItemCreatorArgs) => JSX.Element;
+export type UserProfileItemCreator = (
+    args: UserProfileItemCreatorArgs,
+) => JSX.Element;
 
-export const UserProfileItemsCfg: Array<UserProfileItemCfg | UserProfileItemCreator> = [
+export const UserProfileItemsCfg: Array<
+    UserProfileItemCfg | UserProfileItemCreator
+> = [
     ({ idx, userData, autoFocus }) => (
         <UserProfileAvatar
             key={idx}

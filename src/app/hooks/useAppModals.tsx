@@ -1,27 +1,28 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { FavoriteCategoryModal } from '@/features/FavoriteCategory';
 import {
     modalChannel,
     modalChannelEvent,
-} from '@/shared/eventChannels/modalChannelEvents';
+} from '@/shared/eventsChannels/modalEventsChannel';
 import useJSXModal from '@/shared/lib/hooks/useJSXModal';
 import { UserProfileModal } from '@/widgets/UserProfile';
 import { LoginModal } from '@/features/AuthByUsername';
-
-const userProfileModalProps = { left: 0, top: 0 };
+import { callElementBoundingClientRect } from '@/shared/lib/helpers/callElementBoundingClientRect';
 
 type useAppModalsResult = {
     modalContent: JSX.Element | null;
 };
 
 export const useAppModals = (): useAppModalsResult => {
+    const userProfileModalProps = useRef({ left: 0, top: 0 });
+
     const [doFavoriteCategoryModal, favoriteCategoryModalContent] = useJSXModal(
         FavoriteCategoryModal,
     );
 
     const [doUserProfileModal, userProfileModalContent] = useJSXModal(
         UserProfileModal,
-        () => userProfileModalProps,
+        () => userProfileModalProps.current,
     );
 
     const [doLoginModal, loginModalContent] = useJSXModal(LoginModal);
@@ -33,10 +34,14 @@ export const useAppModals = (): useAppModalsResult => {
                 doFavoriteCategoryModal,
             ),
             modalChannel.on(modalChannelEvent.showLoginModal, doLoginModal),
-            modalChannel.on(modalChannelEvent.showUserProfileModal, (e) => {
-                const rect = e.elementBoundingClientRect;
-                userProfileModalProps.left = rect.left + rect.width - 10;
-                userProfileModalProps.top = rect.top;
+            modalChannel.on(modalChannelEvent.showUserProfileModal, () => {
+                const el = document.getElementById('headerMenuItemAvatar');
+                if (!el) return;
+
+                const rect = callElementBoundingClientRect(el);
+                userProfileModalProps.current.left =
+                    rect.left + rect.width - 10;
+                userProfileModalProps.current.top = rect.top;
                 doUserProfileModal();
             }),
         ];
