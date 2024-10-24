@@ -19,6 +19,7 @@ Feel free to study the code’s code base in order to extract maximum benefits f
 -   [🗄️ Project Structure](docs/project-structure.md)
 -   [🧱 Components And Styling](docs/components-and-styling.md)
 -   [📡 API Layer](docs/api-layer.md)
+-   [🧪 Testing](docs/testing.md)
 -   [⚠️ Error Handling](docs/error-handling.md)
 -   [🌐 Deployment](docs/deployment.md)
 
