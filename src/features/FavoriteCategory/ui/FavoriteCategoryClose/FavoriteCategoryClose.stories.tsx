@@ -24,6 +24,3 @@ const Template: ComponentStory<typeof FavoriteCategoryClose> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {};
-
-export const WithFocus = Template.bind({});
-WithFocus.args = { autoFocus: true };

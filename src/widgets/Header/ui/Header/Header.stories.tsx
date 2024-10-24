@@ -16,3 +16,13 @@ const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {};
+
+export const WithUserData = Template.bind({});
+WithUserData.args = {};
+WithUserData.decorators = [
+    StoreDecorator({
+        user: {
+            userData: {},
+        },
+    }),
+];

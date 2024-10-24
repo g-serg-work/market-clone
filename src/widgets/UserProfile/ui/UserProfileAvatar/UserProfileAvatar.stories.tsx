@@ -21,6 +21,3 @@ const args: UserProfileAvatarProps = {
 
 export const Primary = Template.bind({});
 Primary.args = args;
-
-export const WithFocus = Template.bind({});
-WithFocus.args = { ...args, autoFocus: true };

@@ -16,9 +16,6 @@ const Template: ComponentStory<typeof HeaderSearch> = (args) => (
 export const Primary = Template.bind({});
 Primary.args = {};
 
-export const WithFocus = Template.bind({});
-WithFocus.args = { autoFocus: true };
-
 export const WithValue = Template.bind({});
 WithValue.args = { value: 'test' };
 

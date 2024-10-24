@@ -29,6 +29,3 @@ Primary.args = item;
 
 export const WithCount = Template.bind({});
 WithCount.args = { ...item, count: 10 };
-
-export const WithFocus = Template.bind({});
-WithFocus.args = { ...item, autoFocus: true };

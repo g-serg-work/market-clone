@@ -7,7 +7,7 @@ import {
 } from '@/shared/eventsChannels/modalEventsChannel';
 import { Button } from '@/shared/ui/Button';
 
-interface HeaderMenuItemAvatarProps {
+export interface HeaderMenuItemAvatarProps {
     className?: string;
     userName?: string;
     hasNotification?: boolean;

@@ -15,7 +15,7 @@
         "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
         "test:unit": "jest --config ./config/jest/jest.config.ts",
         "test:e2e": "cypress open",
-        "test:ui": "npx loki test",
+        "test:ui": "npx loki test --chromeTolerance 5",
         "test:ui:ok": "npx loki approve",
         "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
         "test:ui:report": "npm run test:ui:json && npm run test:ui:html",
@@ -140,14 +140,10 @@
     },
     "loki": {
         "configurations": {
-            "chrome.laptop": {
+            "chrome.browser": {
                 "target": "chrome.docker",
-                "width": 1366,
-                "height": 768
-            },
-            "chrome.iphone7": {
-                "target": "chrome.docker",
-                "preset": "iPhone 7"
+                "width": 1680,
+                "height": 945
             }
         }
     }

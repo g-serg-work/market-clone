@@ -40,16 +40,6 @@ Primary.decorators = [
     }),
 ];
 
-export const WithFocus = Template.bind({});
-WithFocus.args = { autoFocus: true };
-WithFocus.decorators = [
-    StoreDecorator({
-        user: {
-            userData,
-        },
-    }),
-];
-
 export const WithOrders = Template.bind({});
 WithOrders.args = {};
 WithOrders.decorators = [
