@@ -3,7 +3,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from '@/app/providers/StoreProvider';
 import { User, userActions } from '@/entities/User';
 
-interface loginByUserNameProps {
+export interface loginByUserNameProps {
     userName: string;
 }
 
@@ -32,8 +32,6 @@ export const loginByUserName = createAsyncThunk<
             return rejectWithValue(error.message);
         }
 
-        // eslint-disable-next-line no-console
-        console.log('unexpected error: ', error);
         return rejectWithValue('An unexpected error occurred');
     }
 });
