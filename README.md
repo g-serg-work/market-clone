@@ -1,6 +1,7 @@
 # Market-clone
 
 [![Vercel Status][vercel-image]][vercel-url]
+[![Build Status][build-image]][build-url]
 
 ## Introduction
 
@@ -25,3 +26,5 @@ Feel free to study the code’s code base in order to extract maximum benefits f
 
 [vercel-image]: https://vercelbadge.vercel.app/api/g-serg-work/market-clone
 [vercel-url]: https://github.com/g-serg-work/market-clone/deployments
+[build-image]: https://github.com/g-serg-work/market-clone/actions/workflows/deploy-storybook.yml/badge.svg
+[build-url]: https://github.com/g-serg-work/market-clone/actions
