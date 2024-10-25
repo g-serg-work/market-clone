@@ -1,4 +1,4 @@
-name: Build and Publish Storybook to GitHub Pages
+name: Storybook
 
 on:
     push:
@@ -12,7 +12,7 @@ permissions:
 jobs:
     deploy:
         environment:
-            name: github-pages
+            name: Storybook
             url: ${{ steps.build-publish.outputs.page_url }}
         runs-on: ubuntu-latest
         steps:
