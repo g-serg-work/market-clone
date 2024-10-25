@@ -7,7 +7,7 @@ import {
 } from '@/shared/const/buyertype';
 import classNames, { Mods } from '@/shared/lib/helpers/classNames';
 
-interface CategoryMenuBuyerItemProps {
+export interface CategoryMenuBuyerItemProps {
     className?: string;
     route: BuyerTypeRoutes;
 }

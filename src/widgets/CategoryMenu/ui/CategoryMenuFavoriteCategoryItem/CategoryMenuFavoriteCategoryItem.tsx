@@ -7,7 +7,7 @@ import {
     modalChannelEvent,
 } from '@/shared/eventsChannels/modalEventsChannel';
 
-interface CategoryMenuFavoriteCategoryItemProps {
+export interface CategoryMenuFavoriteCategoryItemProps {
     className?: string;
     isLogged?: boolean;
 }

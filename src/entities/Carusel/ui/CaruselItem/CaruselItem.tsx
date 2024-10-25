@@ -51,7 +51,7 @@ export const CaruselItem = memo((props: CaruselItemProps) => {
                                 sizes={sizes}
                                 alt={title}
                                 loading="eager"
-                                fetchpriority="high"
+                                fetchPriority="high"
                             />
                         </div>
                     </div>

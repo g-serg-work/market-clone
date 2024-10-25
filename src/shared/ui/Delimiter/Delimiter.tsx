@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import classNames from '@/shared/lib/helpers/classNames';
 
-interface DelimiterProps {
+export interface DelimiterProps {
     className?: string;
     height: number;
 }
