@@ -18,6 +18,6 @@ const Template: ComponentStory<typeof ProductItem> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-    img: '/tests/assets/product-item.webp',
+    img: 'tests/assets/product-item.webp',
     href: 'about:blank',
 };

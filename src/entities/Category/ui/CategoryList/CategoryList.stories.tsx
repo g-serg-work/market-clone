@@ -20,17 +20,17 @@ Primary.args = {
     items: [
         {
             id: 'item1',
-            img: '/tests/assets/category-item.webp',
+            img: 'tests/assets/category-item.webp',
             href: 'about:blank',
         },
         {
             id: 'item2',
-            img: '/tests/assets/category-item.webp',
+            img: 'tests/assets/category-item.webp',
             href: 'about:blank',
         },
         {
             id: 'item3',
-            img: '/tests/assets/category-item.webp',
+            img: 'tests/assets/category-item.webp',
             href: 'about:blank',
         },
     ],

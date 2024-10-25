@@ -20,6 +20,6 @@ export const Primary = Template.bind({});
 Primary.args = {
     title: 'carusel-item',
     img: '',
-    imgTest: '/tests/assets/carusel-item.webp',
+    imgTest: 'tests/assets/carusel-item.webp',
     href: 'about:blank',
 };

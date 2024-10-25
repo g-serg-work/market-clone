@@ -26,12 +26,12 @@ Primary.parameters = {
             response: [
                 {
                     id: 'item1',
-                    img: '/tests/assets/category-item.webp',
+                    img: 'tests/assets/category-item.webp',
                     href: 'about:blank',
                 },
                 {
                     id: 'item2',
-                    img: '/tests/assets/category-item.webp',
+                    img: 'tests/assets/category-item.webp',
                     href: 'about:blank',
                 },
             ],

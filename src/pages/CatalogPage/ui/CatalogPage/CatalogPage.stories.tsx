@@ -42,14 +42,14 @@ Primary.parameters = {
                                 id: 'item1',
                                 title: 'item1',
                                 img: '',
-                                imgTest: '/tests/assets/product-item.webp',
+                                imgTest: 'tests/assets/product-item.webp',
                                 href: 'about:blank',
                             },
                             {
                                 id: 'item2',
                                 title: 'item2',
                                 img: '',
-                                imgTest: '/tests/assets/product-item.webp',
+                                imgTest: 'tests/assets/product-item.webp',
                                 href: 'about:blank',
                             },
                         ],
@@ -58,12 +58,12 @@ Primary.parameters = {
                 categories: [
                     {
                         id: 'item1',
-                        img: '/tests/assets/category-item.webp',
+                        img: 'tests/assets/category-item.webp',
                         href: 'about:blank',
                     },
                     {
                         id: 'item2',
-                        img: '/tests/assets/category-item.webp',
+                        img: 'tests/assets/category-item.webp',
                         href: 'about:blank',
                     },
                 ],

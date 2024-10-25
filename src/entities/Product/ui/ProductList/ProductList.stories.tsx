@@ -21,19 +21,19 @@ Primary.args = {
         {
             id: 'item1',
             title: 'item1',
-            img: '/tests/assets/product-item.webp',
+            img: 'tests/assets/product-item.webp',
             href: 'about:blank',
         },
         {
             id: 'item2',
             title: 'item2',
-            img: '/tests/assets/product-item.webp',
+            img: 'tests/assets/product-item.webp',
             href: 'about:blank',
         },
         {
             id: 'item3',
             title: 'item3',
-            img: '/tests/assets/product-item.webp',
+            img: 'tests/assets/product-item.webp',
             href: 'about:blank',
         },
     ],

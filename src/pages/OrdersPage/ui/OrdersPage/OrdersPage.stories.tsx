@@ -41,8 +41,8 @@ Primary.parameters = {
                 {
                     ...item,
                     images: [
-                        '/tests/assets/order-item0.png',
-                        '/tests/assets/order-item1.jpg',
+                        'tests/assets/order-item0.png',
+                        'tests/assets/order-item1.jpg',
                     ],
                 },
             ],
@@ -62,11 +62,11 @@ MoreThreeItems.parameters = {
                 {
                     ...item,
                     images: [
-                        '/tests/assets/order-item0.png',
-                        '/tests/assets/order-item1.jpg',
-                        '/tests/assets/order-item1.jpg',
-                        '/tests/assets/order-item1.jpg',
-                        '/tests/assets/order-item1.jpg',
+                        'tests/assets/order-item0.png',
+                        'tests/assets/order-item1.jpg',
+                        'tests/assets/order-item1.jpg',
+                        'tests/assets/order-item1.jpg',
+                        'tests/assets/order-item1.jpg',
                     ],
                 },
             ],
