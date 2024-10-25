@@ -5,6 +5,6 @@ import { Footer } from './Footer';
 describe('footer', () => {
     test('component is render', () => {
         componentRender(<Footer />);
-        expect(screen.getByTestId('footer')).toBeInTheDocument();
+        expect(screen.getByTestId('Footer')).toBeInTheDocument();
     });
 });

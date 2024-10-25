@@ -24,6 +24,7 @@ export const HeaderMenu = memo((props: HeaderMenuProps) => {
     const wishListCount = userData?.wishList?.length;
     const cartListCount = userData?.cartList?.length;
 
+    // TODO: Responsive fix
     const items = [
         <HeaderMenuItemPlus />,
         <HeaderMenuItemOrders count={ordersListCount} />,

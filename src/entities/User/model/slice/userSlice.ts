@@ -21,6 +21,9 @@ export const userSlice = createSlice({
             state.userData = undefined;
             localStorage.removeItem(USER_LOCALSTORAGE_KEY);
         },
+        setInited: (state) => {
+            state._inited = true;
+        },
     },
     extraReducers: (builder) => {
         builder.addCase(

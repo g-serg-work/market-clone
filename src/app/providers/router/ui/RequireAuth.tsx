@@ -1,5 +1,5 @@
-import { useSelector } from 'react-redux';
 import { Suspense } from 'react';
+import { useSelector } from 'react-redux';
 import { getUserData, getUserInited } from '@/entities/User';
 import { RequireAuthPage } from '@/pages/RequireAuthPage';
 

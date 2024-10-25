@@ -15,4 +15,7 @@ export default defineConfig({
             bundler: 'webpack',
         },
     },
+
+    viewportWidth: 1680,
+    viewportHeight: 945,
 });

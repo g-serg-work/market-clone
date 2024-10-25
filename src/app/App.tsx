@@ -6,7 +6,13 @@ import { useAppDispatch } from '@/shared/lib/hooks';
 import { CategoryMenu } from '@/widgets/CategoryMenu';
 import { useAppModals } from './hooks/useAppModals';
 import { Header } from '@/widgets/Header';
-import { getUserData, getUserInited, initUserData } from '@/entities/User';
+import {
+    getUserData,
+    getUserHasToken,
+    getUserInited,
+    initUserData,
+    userActions,
+} from '@/entities/User';
 import { Footer } from '@/widgets/Page';
 
 const App = memo(() => {
@@ -14,6 +20,7 @@ const App = memo(() => {
     const inited = useSelector(getUserInited);
     const { modalContent } = useAppModals();
     const userData = useSelector(getUserData);
+    const userHasToken = useSelector(getUserHasToken);
 
     // TODO: refactor - change on use AppContext
     const deliveryAddress =
@@ -24,9 +31,10 @@ const App = memo(() => {
 
     useEffect(() => {
         if (!inited) {
-            dispatch(initUserData());
+            if (userHasToken) dispatch(initUserData());
+            else dispatch(userActions.setInited());
         }
-    }, [dispatch, inited]);
+    }, [dispatch, inited, userHasToken]);
 
     return (
         <>
