@@ -4,7 +4,7 @@
 
 -   Unit tests with `jest` [jest.config.ts](..\config\jest\jest.config.ts)
     <br>
--   Tests for components with `React testing library`
+-   Integration tests components with `React testing library`
     <br>
 -   Screenshot testing with `loki` [loki.js.org - visual regression tool ](https://loki.js.org)
 

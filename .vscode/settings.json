@@ -7,6 +7,9 @@
         "**/.git": true
     },
 
+    //jest
+    "jest.jestCommandLine": "npx jest --config ./config/jest/jest.config.ts",
+
     //cSpell
     "cSpell.words": [
         "ADDUSER",

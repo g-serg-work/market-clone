@@ -29,6 +29,7 @@ export const Footer = memo((props: FooterProps) => {
             className={classNames(cls.Footer, {}, [className])}
             data-apiary-widget-id="/footer"
             data-apiary-widget-name="@marketfront/Footer"
+            data-testid="footer"
         >
             <div
                 className={cls.footerWrapper}
