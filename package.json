@@ -15,7 +15,7 @@
         "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
         "test:unit": "jest --config ./config/jest/jest.config.ts",
         "test:e2e": "cypress open",
-        "test:ui": "npx loki test --chromeTolerance 5",
+        "test:ui": "npx loki test --chromeTolerance 1",
         "test:ui:ok": "npx loki approve",
         "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
         "test:ui:report": "npm run test:ui:json && npm run test:ui:html",

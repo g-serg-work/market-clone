@@ -18,6 +18,3 @@ Primary.args = {};
 
 export const WithValue = Template.bind({});
 WithValue.args = { value: 'test' };
-
-export const WithValueAndFocus = Template.bind({});
-WithValueAndFocus.args = { value: 'test', autoFocus: true };
