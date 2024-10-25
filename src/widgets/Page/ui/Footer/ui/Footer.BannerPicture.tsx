@@ -6,7 +6,7 @@ export const BannerPicture = () => (
         <div className={cls.flex}>
             <img
                 src={FooterBannerWebp}
-                fetchPriority="low"
+                fetchpriority="low"
                 loading="lazy"
                 data-auto="bannerPicture"
                 alt=""

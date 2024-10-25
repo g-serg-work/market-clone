@@ -25,7 +25,7 @@ export const CategoryItem = memo((props: CategoryItemProps) => {
                                 src={img}
                                 alt=""
                                 loading="lazy"
-                                fetchPriority="low"
+                                fetchpriority="low"
                             />
                         </div>
                     </div>

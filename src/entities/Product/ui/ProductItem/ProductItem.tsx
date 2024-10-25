@@ -25,7 +25,7 @@ export const ProductItem = memo((props: ProductItemProps) => {
                                 src={img}
                                 alt=""
                                 loading="lazy"
-                                fetchPriority="low"
+                                fetchpriority="low"
                             />
                         </div>
                     </div>

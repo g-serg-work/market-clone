@@ -17,7 +17,7 @@ export const BannerTitle = memo((props: BannerTitleProps) => {
                     <div className={cls.imgWrapper}>
                         <div className={cls.img}>
                             <span>
-                                <img src={img} alt="" fetchPriority="low" />
+                                <img src={img} alt="" fetchpriority="low" />
                             </span>
                         </div>
                     </div>
