@@ -2,7 +2,7 @@
 
 #### The project uses 4 types of tests:
 
--   Unit tests with `jest` [jest.config.ts](..\config\jest\jest.config.ts)
+-   Unit tests with `jest` [jest.config.ts](../config/jest/jest.config.ts)
     <br>
 -   Integration tests components with `React testing library`
     <br>
@@ -18,7 +18,7 @@ An example of an error in the code when a toolbar, if you have data from a user,
 
 ![header-menu-user-data-error](images/header-menu-user-data-error.png 'header-menu-user-data-error')
 
--   E2E testing with `Cypress` [../cypress](..\cypress)
+-   E2E testing with `Cypress` [../cypress](../cypress)
 
 End-to-End Testing is a method that evaluates an application as a whole. These tests involve automating the complete application, including both the frontend and backend, to confirm that the entire system functions correctly. End-to-End tests simulate how a user would interact with the application.
 
