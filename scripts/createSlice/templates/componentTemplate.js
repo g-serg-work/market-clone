@@ -1,23 +1,21 @@
 const interfaceConst = 'interface';
 
-module.exports = (
-    componentName,
-) => `import classNames from 'shared/lib/classNames';
-import { useTranslation } from 'react-i18next';
-import cls from './${componentName}.module.scss';
-import { memo } from 'react';
+// import { useTranslation } from 'react-i18next';
+// const { t } = useTranslation();
 
-${interfaceConst} ${componentName}Props {
+module.exports = (componentName) => `import { memo } from 'react';
+import classNames from '@/shared/lib/helpers/classNames';
+import cls from './${componentName}.module.scss';
+
+export ${interfaceConst} ${componentName}Props {
     className?: string;
 }
 
 export const ${componentName} = memo((props: ${componentName}Props) => {
     const { className } = props;
-    const { t } = useTranslation();
     
     return (
         <div className={classNames(cls.${componentName}, {}, [className])}>
-           
         </div>
     );
 });`;

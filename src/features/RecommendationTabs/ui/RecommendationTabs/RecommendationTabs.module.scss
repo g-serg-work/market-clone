@@ -1,0 +1,100 @@
+.RecommendationTabs {
+    display: block;
+}
+
+.flex {
+    justify-content: center;
+    margin-bottom: 12px;
+    margin-top: 4px;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+}
+
+.wrapper {
+    position: relative;
+    display: inline-flex;
+    height: 40px;
+    padding: 2px;
+    margin: auto;
+    background-color: #f1f0ed;
+    border-radius: 13px;
+}
+
+.itemForYou {
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, opacity 0.3s;
+    width: 162px;
+    height: 36px;
+    border-radius: 11px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    z-index: 100;
+
+    span {
+        color: #fff;
+        cursor: pointer;
+        font-weight: 500;
+        transition: color 0.05s;
+        white-space: nowrap;
+        font-size: 14px;
+        line-height: 18px;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+}
+
+.itemSale {
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, opacity 0.3s;
+    width: 162px;
+    height: 36px;
+    border-radius: 11px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 100;
+    position: relative;
+    gap: 4px;
+    flex-direction: row;
+
+    img {
+        max-width: 36px;
+        max-height: 36px;
+        margin-right: 4px;
+    }
+
+    span {
+        color: rgba(33, 32, 31, 0.502);
+        cursor: pointer;
+        font-weight: 500;
+        transition: color 0.05s;
+        white-space: nowrap;
+        font-size: 14px;
+        line-height: 18px;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+}
+
+.marker {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transform: translateX(0);
+    width: 162px;
+    height: 36px;
+    background-color: #42413e;
+    border-radius: 11px;
+    z-index: 1;
+    transition: transform .175s, width .175s;
+}
