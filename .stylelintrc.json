@@ -3,6 +3,8 @@
     "rules": {
         "indentation": [4],
         "max-line-length": 80,
+        "declaration-colon-newline-after": null,
+        "value-list-comma-newline-after": null,
         "selector-class-pattern": null
     }
 }
