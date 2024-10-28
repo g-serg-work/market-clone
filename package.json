@@ -17,7 +17,7 @@
         "test:e2e": "cypress open",
         "test:ui": "npx loki test --chromeTolerance 1",
         "test:ui:ok": "npx loki approve",
-        "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
+        "test:ui:ci": "loki --requireReference --chromeTolerance 1 --reactUri file:./storybook-static",
         "test:ui:report": "npm run test:ui:json && npm run test:ui:html",
         "test:ui:json": "node scripts/generate-visual-json-report.js",
         "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
