@@ -27,5 +27,5 @@ Feel free to study the code’s code base in order to extract maximum benefits f
 [vercel-url]: https://github.com/g-serg-work/market-clone/deployments/Production
 [storybook-image]: https://github.com/g-serg-work/market-clone/actions/workflows/deploy-storybook.yml/badge.svg
 [storybook-url]: https://github.com/g-serg-work/market-clone/actions/workflows/deploy-storybook.yml
-[ci-image]: https://github.com/g-serg-work/market-clone/actions/workflows/deploy-ci.yml/badge.svg
-[ci-url]: https://github.com/g-serg-work/market-clone/actions/workflows/deploy-ci.yml
+[ci-image]: https://github.com/g-serg-work/market-clone/actions/workflows/CI.yml/badge.svg
+[ci-url]: https://github.com/g-serg-work/market-clone/actions/workflows/CI.yml
