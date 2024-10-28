@@ -1,6 +1,7 @@
 /build
 node_modules
-.idea
+.vercel
+/coverage
 /storybook-static
 .loki/report.html
 .loki/report.json
