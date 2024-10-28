@@ -10,8 +10,6 @@ There are multiple ways to style a react application. Some good options are:
 
 ## Storybook
 
-[📋 Storybook (market-clone)](https://g-serg-work.github.io/market-clone)
-
 [Storybook](https://storybook.js.org/) is a great tool for developing and testing components in isolation. Think of it as a catalogue of all the components your application is using. Very useful for developing and detectability of components.
 
 The project for each component describes the celebrations. Requests to the server are mocked using `storybook-addon-mock`.
