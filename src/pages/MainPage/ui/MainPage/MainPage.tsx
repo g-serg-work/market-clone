@@ -1,4 +1,4 @@
-import { RecommendationTabs } from '@/features/RecommendationTabs';
+import { RecommendationTabs } from '@/entities/RecommendationTabs';
 import { Page } from '@/widgets/Page';
 
 export const MainPage = () => {
