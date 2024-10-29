@@ -31,7 +31,12 @@
     "lint-staged": {
         "**/*.{ts,tsx}": [
             "prettier --list-different",
+            "eslint --fix",
             "eslint"
+        ],
+        "**/*.scss": [
+            "npx stylelint --fix",
+            "npx stylelint"
         ]
     },
     "keywords": [],
