@@ -13,6 +13,7 @@ interface UseModalProps {
 }
 
 export function useModal({ animationDelay, isOpen, onClose }: UseModalProps) {
+    // TODO: need refactor , change on useBool()
     const [isClosing, setIsClosing] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
     const timerRef = useRef() as MutableRefObject<
