@@ -4,6 +4,6 @@ export interface Product {
     id: ProductId;
     title: string;
     href: string;
-    img: string;
+    images: string[];
     imgTest?: string;
 }
