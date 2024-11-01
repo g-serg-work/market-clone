@@ -30,7 +30,6 @@
     },
     "lint-staged": {
         "**/*.{ts,tsx}": [
-            "prettier --list-different",
             "eslint --fix",
             "eslint"
         ],

@@ -28,6 +28,20 @@
             "problemMatcher": [],
             "label": "npm: lint:scss:fix",
             "detail": "npx stylelint \"**/*.scss\" --fix"
+        },
+        {
+            "type": "npm",
+            "script": "test:ui",
+            "problemMatcher": [],
+            "label": "npm: test:ui",
+            "detail": "npx loki test --chromeTolerance 1"
+        },
+        {
+            "type": "npm",
+            "script": "test:ui:report",
+            "problemMatcher": [],
+            "label": "npm: test:ui:report",
+            "detail": "npm run test:ui:json && npm run test:ui:html"
         }
     ]
 }

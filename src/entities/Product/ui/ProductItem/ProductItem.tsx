@@ -34,7 +34,6 @@ export const ProductItem = memo((props: ProductItemProps) => {
                             <img
                                 {...imgAttr}
                                 sizes={sizes}
-                                src={img}
                                 alt=""
                                 loading="lazy"
                                 fetchpriority="low"

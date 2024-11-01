@@ -19,7 +19,7 @@ const Template: ComponentStory<typeof CaruselItem> = (args) => (
 export const Primary = Template.bind({});
 Primary.args = {
     title: 'carusel-item',
-    img: '',
+    images: [],
     imgTest: 'tests/assets/carusel-item.webp',
     href: 'about:blank',
 };

@@ -12,8 +12,8 @@ export interface ProductListProps {
 export const ProductList = memo((props: ProductListProps) => {
     const { className, items } = props;
 
-    const ProductItems = items.map(({ id, images, href }) => (
-        <ProductItem key={id} images={images} href={href} />
+    const ProductItems = items.map(({ id, ...item }) => (
+        <ProductItem key={id} {...item} />
     ));
 
     return (

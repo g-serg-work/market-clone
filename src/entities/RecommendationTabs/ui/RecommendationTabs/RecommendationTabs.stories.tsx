@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { RecommendationTabs } from './RecommendationTabs';
 
 export default {
-    title: 'entries/RecommendationTabs',
+    title: 'entities/RecommendationTabs',
     component: RecommendationTabs,
     argTypes: {
         backgroundColor: { control: 'color' },
