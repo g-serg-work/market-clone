@@ -7,4 +7,3 @@ export { useInitialEffect } from './useInitialEffect/useInitialEffect';
 export { useModal } from './useModal/useModal';
 export { useTheme } from './useTheme/useTheme';
 export { useThrottle } from './useThrottle/useThrottle';
-export { useBool } from './useBool/useBool';

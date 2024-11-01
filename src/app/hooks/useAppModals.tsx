@@ -4,7 +4,7 @@ import {
     modalChannel,
     modalChannelEvent,
 } from '@/shared/eventsChannels/modalEventsChannel';
-import useJSXModal from '@/shared/lib/hooks/useJSXModal';
+import { useJSXModal } from '@/shared/lib/hooks/useJSXModal';
 import { UserProfileModal } from '@/widgets/UserProfile';
 import { LoginModal } from '@/features/AuthByUsername';
 import { callElementBoundingClientRect } from '@/shared/lib/helpers/callElementBoundingClientRect';

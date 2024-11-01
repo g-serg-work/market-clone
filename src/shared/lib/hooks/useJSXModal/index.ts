@@ -1,1 +1,1 @@
-export { useJSXModal as default } from './useJSXModal';
+export { useJSXModal } from './useJSXModal';
