@@ -1,0 +1,25 @@
+.ChefBankAlfa {
+    height: 20px;
+    gap: 2px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    svg {
+        width: 23px;
+        height: 12px;
+        color: #8a8784;
+    }
+}
+
+.text {
+    line-height: 18px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: box;
+    -webkit-box-orient: vertical;
+    font-weight: 400;
+}

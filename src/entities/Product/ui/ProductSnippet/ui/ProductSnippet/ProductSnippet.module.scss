@@ -1,0 +1,48 @@
+.ProductSnippet {
+    height: 100%;
+    position: relative;
+}
+
+.nude {
+    height: 100%;
+}
+
+.nudeGrid {
+    padding: 8px;
+    border-radius: 18px;
+    position: relative;
+    display: grid;
+    grid-template-rows: auto auto auto minmax(0, 100%);
+    grid-auto-columns: minmax(0, auto);
+    height: 100%;
+}
+
+.imageWrapper {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.costWrapper {
+    margin-bottom: 10px;
+    padding: 0 10px;
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.navigate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+a.navigate {
+    text-decoration: none;
+}
+
+.breaker {
+    position: relative;
+    left: 0;
+    top: 0;
+}

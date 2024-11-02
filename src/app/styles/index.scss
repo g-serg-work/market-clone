@@ -87,6 +87,47 @@ body {
     clip: rect(0 0 0 0);
 }
 
+.ds-textLine {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.ds-textLine_gap_2 {
+    gap: 2px;
+}
+
+.ds-textLine__iconWrapper {
+    display: inline-flex;
+    flex-shrink: 0;
+}
+
+.ds-valueLine {
+    display: inline-flex;
+    align-items: baseline;
+    position: relative;
+    font-variant-numeric: lining-nums proportional-nums;
+}
+
+.ds-valueLine_gap_1 {
+    gap: 1px;
+}
+
+.ds-valueLine_gap_2 {
+    gap: 2px;
+}
+
+.ds-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ds-badge__textContent {
+    line-height: normal;
+    white-space: nowrap;
+}
+
 .skeleton {
     background: #e0deda;
     position: relative;
