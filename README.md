@@ -8,19 +8,14 @@ API: [market-clone-api.vercel.app](https://market-clone-api.vercel.app)
 
 ## ScreenShots
 
-<style>
-  p.screenshots {float: left}
-  p.screenshots img {height:150px;margin:5px;border:dotted 1px lightgray}
-</style>
-
-<p class="screenshots">
-  <img src="docs/screenshots/001.png" />
-  <img src="docs/screenshots/002.png" />
-  <img src="docs/screenshots/003.png" />
-  <img src="docs/screenshots/004.png" />
-  <img src="docs/screenshots/005.png" />
-  <img src="docs/screenshots/006.png" />
-  <img src="docs/screenshots/007.png" />
+<p float="left">
+  <img src="docs/screenshots/001.png" style="height:150px;margin:5px;border:dotted 1px lightgray" />
+  <img src="docs/screenshots/002.png" style="height:150px;margin:5px;border:dotted 1px lightgray" />
+  <img src="docs/screenshots/003.png" style="height:150px;margin:5px;border:dotted 1px lightgray" />
+  <img src="docs/screenshots/004.png" style="height:150px;margin:5px;border:dotted 1px lightgray" />
+  <img src="docs/screenshots/005.png" style="height:150px;margin:5px;border:dotted 1px lightgray" />
+  <img src="docs/screenshots/006.png" style="height:150px;margin:5px;border:dotted 1px lightgray" />
+  <img src="docs/screenshots/007.png" style="height:150px;margin:5px;border:dotted 1px lightgray" />
 </p>
 
 ## Introduction
