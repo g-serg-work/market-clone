@@ -1,0 +1,1 @@
+export { splitDigitsByThinSpace } from './splitDigitsByThinSpace';

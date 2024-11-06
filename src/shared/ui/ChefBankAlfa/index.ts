@@ -1,1 +1,0 @@
-export { ChefBankAlfa } from './ChefBankAlfa';

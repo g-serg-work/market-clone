@@ -1,35 +1,21 @@
-import { memo, ReactNode } from 'react';
+import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from '@/shared/lib/helpers/classNames';
+import { Product } from '../../../../model/types/product';
+import { ProductSnippetCostText } from './ui/ProductSnippetCostText/ProductSnippetCostText';
+import { ChefBankByName } from '@/entities/ChefBank';
+import { splitDigitsByThinSpace } from '@/shared/lib/helpers/splitDigitsByThinSpace';
+import { priceFromCost } from '../../../../model/helper/priceFromCost';
 import cls from './ProductSnippetCost.module.scss';
 
 export interface ProductSnippetCostProps {
     className?: string;
     href: string;
-    cost: number;
-    chefBank?: ReactNode;
+    cost: NonNullable<Product['cost']>;
 }
 
-const Cost = ({ children, cost }: { children: ReactNode; cost: string }) => (
-    <div className={cls.wrapper}>
-        <span className={cls.content}>
-            <span
-                className="ds-valueLine ds-valueLine_gap_2"
-                data-auto="snippet-price-current"
-                aria-hidden="true"
-            >
-                <span className={cls.priceDigit}>{cost}</span>
-                <span className={cls.priceCurrency}>₽</span>
-            </span>
-            {children}
-        </span>
-    </div>
-);
-
 export const ProductSnippetCost = memo((props: ProductSnippetCostProps) => {
-    const { className, href, cost, chefBank } = props;
-
-    const costStr = cost.toString().replace(/\B(?=(?:\d{3})+\b)/g, '\u2009'); // == '&thinsp;'
+    const { className, href, cost } = props;
 
     return (
         <div className={classNames(cls.ProductSnippetCost, {}, [className])}>
@@ -42,9 +28,14 @@ export const ProductSnippetCost = memo((props: ProductSnippetCostProps) => {
                     >
                         <div tabIndex={0}>
                             <span className="ds-visuallyHidden">
-                                Цена {costStr} ₽
+                                Цена{' '}
+                                {splitDigitsByThinSpace(priceFromCost(cost))} ₽
                             </span>
-                            <Cost cost={costStr}>{chefBank}</Cost>
+                            <ProductSnippetCostText cost={cost}>
+                                {cost.chefBank && (
+                                    <ChefBankByName name={cost.chefBank.name} />
+                                )}
+                            </ProductSnippetCostText>
                         </div>
                     </Link>
                 </div>

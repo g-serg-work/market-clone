@@ -1,3 +1,5 @@
+import { ProductCost } from './productCost';
+
 export type ProductId = string;
 
 export interface Product {
@@ -6,4 +8,5 @@ export interface Product {
     href: string;
     images: string[];
     imgTest?: string;
+    cost?: ProductCost;
 }

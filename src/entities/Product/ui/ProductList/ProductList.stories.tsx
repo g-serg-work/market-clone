@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ProductList } from './ProductList';
+import { ProductList, ProductListProps } from './ProductList';
 import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 
 export default {
@@ -15,8 +15,7 @@ const Template: ComponentStory<typeof ProductList> = (args) => (
     <ProductList {...args} />
 );
 
-export const Primary = Template.bind({});
-Primary.args = {
+const args: ProductListProps = {
     items: [
         {
             id: 'item1',
@@ -41,3 +40,6 @@ Primary.args = {
         },
     ],
 };
+
+export const Primary = Template.bind({});
+Primary.args = args;

@@ -1,23 +1,22 @@
 import { Link } from 'react-router-dom';
-import { memo, ReactNode } from 'react';
+import { memo } from 'react';
 import classNames from '@/shared/lib/helpers/classNames';
 import cls from './ProductSnippet.module.scss';
 import { ProductSnippetCost } from '../ProductSnippetCost/ProductSnippetCost';
 import { ProductSnippetImage } from '../ProductSnippetImage/ProductSnippetImage';
+import { Product } from '../../../../model/types/product';
 
 export interface ProductSnippetProps {
     className?: string;
-    images: string[];
-    imgTest?: string;
-    href: string;
-    cost: number;
-    discount?: number;
-    chefBank?: ReactNode;
+    product: Product;
 }
 
 export const ProductSnippet = memo((props: ProductSnippetProps) => {
-    const { className, images, href, imgTest, cost, discount, chefBank } =
-        props;
+    const {
+        className,
+        product,
+        product: { href, cost },
+    } = props;
 
     return (
         <div
@@ -29,20 +28,13 @@ export const ProductSnippet = memo((props: ProductSnippetProps) => {
             <div className={cls.nude} data-auto-theme-name="nude">
                 <div className={cls.nudeGrid}>
                     <div className={cls.imageWrapper}>
-                        <ProductSnippetImage
-                            href={href}
-                            discount={discount}
-                            images={images}
-                            imgTest={imgTest}
-                        />
+                        <ProductSnippetImage product={product} />
                     </div>
-                    <div className={cls.costWrapper}>
-                        <ProductSnippetCost
-                            href={href}
-                            cost={cost}
-                            chefBank={chefBank}
-                        />
-                    </div>
+                    {cost && (
+                        <div className={cls.costWrapper}>
+                            <ProductSnippetCost href={href} cost={cost} />
+                        </div>
+                    )}
                     <div data-cs-name="navigate" className={cls.navigate}>
                         <Link
                             to={href}

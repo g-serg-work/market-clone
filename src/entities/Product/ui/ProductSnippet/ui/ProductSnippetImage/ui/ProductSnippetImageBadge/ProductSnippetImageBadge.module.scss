@@ -1,0 +1,48 @@
+.wrapper {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 2;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.badge {
+    border-radius: 5px;
+    padding: 0 4px;
+    gap: 3px;
+    height: 18px;
+}
+
+.superPriceBadge {
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: var(--badge-red-normal);
+}
+
+.text {
+    line-height: 16px;
+    font-size: 14px;
+    color: var(--text-invert-primary);
+    font-weight: 500;
+}
+
+.textUp {
+    line-height: 16px;
+    font-size: 14px;
+    color: var(--text-invert-primary);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.textPercent {
+    line-height: 14px;
+    font-size: 12px;
+    color: var(--text-invert-primary);
+    font-weight: 500;
+}

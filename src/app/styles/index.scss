@@ -123,9 +123,33 @@ body {
     justify-content: center;
 }
 
+.ds-badge_bgColor_badge-green-normal {
+    background-color: var(--badge-green-normal);
+}
+
+.ds-badge_bgColor_badge-red-normal {
+    background-color: var(--badge-red-normal);
+}
+
 .ds-badge__textContent {
     line-height: normal;
     white-space: nowrap;
+}
+
+.ds-text_color_text-primary {
+    color: var(--text-primary);
+}
+
+.ds-text_color_price-sale {
+    color: var(--price-sale);
+}
+
+.ds-text_color_price-term {
+    color: var(--price-term);
+}
+
+.ds-text_color_text-secondary {
+    color: var(--text-secondary);
 }
 
 .skeleton {
