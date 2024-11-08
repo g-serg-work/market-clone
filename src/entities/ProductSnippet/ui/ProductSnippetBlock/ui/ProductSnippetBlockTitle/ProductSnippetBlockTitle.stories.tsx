@@ -5,7 +5,7 @@ import {
 } from './ProductSnippetBlockTitle';
 
 export default {
-    title: 'entities/Product/ProductSnippetBlock/ProductSnippetBlockTitle',
+    title: 'entities/ProductSnippet/ProductSnippetBlock/ProductSnippetBlockTitle',
     component: ProductSnippetBlockTitle,
     argTypes: {
         backgroundColor: { control: 'color' },

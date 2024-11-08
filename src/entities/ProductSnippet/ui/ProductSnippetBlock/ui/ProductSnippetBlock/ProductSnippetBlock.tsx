@@ -3,7 +3,8 @@ import classNames from '@/shared/lib/helpers/classNames';
 import { ProductSnippetBlockLink } from '../ProductSnippetBlockLink/ProductSnippetBlockLink';
 import { ProductSnippetBlockTitle } from '../ProductSnippetBlockTitle/ProductSnippetBlockTitle';
 import cls from './ProductSnippetBlock.module.scss';
-import { Product, ProductSnippet } from '@/entities/Product';
+import { Product } from '@/entities/Product';
+import { ProductSnippet } from '../../../ProductSnippet/ui/ProductSnippet/ProductSnippet';
 
 export interface ProductSnippetBlockProps {
     className?: string;

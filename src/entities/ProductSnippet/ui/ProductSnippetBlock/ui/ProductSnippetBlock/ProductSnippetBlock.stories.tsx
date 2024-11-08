@@ -8,7 +8,7 @@ import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
 import { Product } from '@/entities/Product';
 
 export default {
-    title: 'entities/Product/ProductSnippetBlock/ProductSnippetBlock',
+    title: 'entities/ProductSnippet/ProductSnippetBlock/ProductSnippetBlock',
     component: ProductSnippetBlock,
     argTypes: {
         bgColor: { control: 'color' },

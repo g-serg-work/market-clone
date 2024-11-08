@@ -7,7 +7,7 @@ import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
 
 export default {
-    title: 'entities/Product/ProductSnippet/ProductSnippetImage',
+    title: 'entities/ProductSnippet/ProductSnippet/ProductSnippetImage',
     component: ProductSnippetImage,
     argTypes: {
         backgroundColor: { control: 'color' },

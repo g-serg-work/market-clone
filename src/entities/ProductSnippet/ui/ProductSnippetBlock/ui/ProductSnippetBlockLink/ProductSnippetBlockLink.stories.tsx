@@ -6,7 +6,7 @@ import {
 import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 
 export default {
-    title: 'entities/Product/ProductSnippetBlock/ProductSnippetBlockLink',
+    title: 'entities/ProductSnippet/ProductSnippetBlock/ProductSnippetBlockLink',
     component: ProductSnippetBlockLink,
     argTypes: {
         backgroundColor: { control: 'color' },
