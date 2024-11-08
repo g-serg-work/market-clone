@@ -1,0 +1,35 @@
+.ProductSnippetBlockTitle {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    row-gap: 2px;
+    overflow: hidden;
+    /* stylelint-disable */
+    container-type: inline-size;
+}
+
+.header {
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #21201f;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.title {
+    max-height: 93px;
+    word-wrap: break-word;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 31px;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    color: #21201f;
+    hyphens: auto;
+}

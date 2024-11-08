@@ -1,11 +1,11 @@
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from '@/shared/lib/helpers/classNames';
-import { Product } from '../../../../model/types/product';
+import { Product } from '../../../../../Product/model/types/product';
 import { ProductSnippetCostText } from './ui/ProductSnippetCostText/ProductSnippetCostText';
 import { ChefBankByName } from '@/entities/ChefBank';
 import { splitDigitsByThinSpace } from '@/shared/lib/helpers/splitDigitsByThinSpace';
-import { priceFromCost } from '../../../../model/helper/priceFromCost';
+import { priceFromCost } from '../../../../../Product/model/helper/priceFromCost';
 import cls from './ProductSnippetCost.module.scss';
 
 export interface ProductSnippetCostProps {

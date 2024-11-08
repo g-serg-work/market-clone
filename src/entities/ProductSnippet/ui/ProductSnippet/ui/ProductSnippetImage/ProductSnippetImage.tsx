@@ -2,7 +2,7 @@ import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from '@/shared/lib/helpers/classNames';
 import cls from './ProductSnippetImage.module.scss';
-import { Product } from '../../../../model/types/product';
+import { Product } from '../../../../../Product/model/types/product';
 import { ProductSnippetImageBadge } from './ui/ProductSnippetImageBadge/ProductSnippetImageBadge';
 import { ProductSnippetImagePicture } from './ui/ProductSnippetImagePicture/ProductSnippetImagePicture';
 

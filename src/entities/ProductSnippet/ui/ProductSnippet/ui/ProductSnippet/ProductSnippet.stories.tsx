@@ -1,25 +1,23 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import {
-    ProductSnippetImage,
-    ProductSnippetImageProps,
-} from './ProductSnippetImage';
+import { ProductSnippet, ProductSnippetProps } from './ProductSnippet';
 import RouterDecorator from '@/shared/config/storybook/RouterDecorator';
 import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
+import { ChefBankNames } from '@/entities/ChefBank';
 
 export default {
-    title: 'entities/Product/ProductSnippetImage',
-    component: ProductSnippetImage,
+    title: 'entities/Product/ProductSnippet/ProductSnippet',
+    component: ProductSnippet,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
     decorators: [RouterDecorator, StyledDecorator({ maxWidth: 500 })],
-} as ComponentMeta<typeof ProductSnippetImage>;
+} as ComponentMeta<typeof ProductSnippet>;
 
-const Template: ComponentStory<typeof ProductSnippetImage> = (args) => (
-    <ProductSnippetImage {...args} />
+const Template: ComponentStory<typeof ProductSnippet> = (args) => (
+    <ProductSnippet {...args} />
 );
 
-const args: ProductSnippetImageProps = {
+const args: ProductSnippetProps = {
     product: {
         id: 'id',
         title: 'product-title',
@@ -31,6 +29,15 @@ const args: ProductSnippetImageProps = {
 
 export const Primary = Template.bind({});
 Primary.args = args;
+
+export const WithCost = Template.bind({});
+WithCost.args = {
+    ...args,
+    product: {
+        ...args.product,
+        cost: { value: 1000 },
+    },
+};
 
 export const WithSale = Template.bind({});
 WithSale.args = {
@@ -65,5 +72,29 @@ WithDiscountSuperPrice.args = {
     product: {
         ...args.product,
         cost: { value: 1000, discount: { percent: 15, isSuperPrice: true } },
+    },
+};
+
+export const WithChefBankAlfa = Template.bind({});
+WithChefBankAlfa.args = {
+    ...args,
+    product: {
+        ...args.product,
+        cost: {
+            value: 1000,
+            chefBank: { name: ChefBankNames.ALFA, percent: 5 },
+        },
+    },
+};
+
+export const WithChefBankYaPay = Template.bind({});
+WithChefBankYaPay.args = {
+    ...args,
+    product: {
+        ...args.product,
+        cost: {
+            value: 1000,
+            chefBank: { name: ChefBankNames.YA_PAY, percent: 5 },
+        },
     },
 };

@@ -8,7 +8,7 @@ import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
 import { ChefBankNames } from '@/entities/ChefBank';
 
 export default {
-    title: 'entities/Product/ProductSnippetCost',
+    title: 'entities/Product/ProductSnippet/ProductSnippetCost',
     component: ProductSnippetCost,
     argTypes: {
         backgroundColor: { control: 'color' },

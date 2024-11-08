@@ -1,0 +1,27 @@
+.ProductSnippetBlockLink {
+    position: relative;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 68px;
+    height: 32px;
+    border: 0.5px solid rgb(33 32 31 / 50.2%);
+    border-radius: 10px;
+
+    &:hover {
+        border: 0.5px solid #21201f;
+    }
+}
+
+.all {
+    margin-left: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #21201f;
+    word-wrap: break-word;
+    hyphens: auto;
+}

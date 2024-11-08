@@ -4,7 +4,7 @@ import classNames from '@/shared/lib/helpers/classNames';
 import cls from './ProductSnippet.module.scss';
 import { ProductSnippetCost } from '../ProductSnippetCost/ProductSnippetCost';
 import { ProductSnippetImage } from '../ProductSnippetImage/ProductSnippetImage';
-import { Product } from '../../../../model/types/product';
+import { Product } from '../../../../../Product/model/types/product';
 
 export interface ProductSnippetProps {
     className?: string;

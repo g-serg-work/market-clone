@@ -1,6 +1,6 @@
 import classNames from '@/shared/lib/helpers/classNames';
 import cls from './ProductSnippetImageBadge.module.scss';
-import { Product } from '../../../../../../model/types/product';
+import { Product } from '../../../../../../../Product/model/types/product';
 
 export interface ProductSnippetImageBadgeProps {
     cost: NonNullable<Product['cost']>;

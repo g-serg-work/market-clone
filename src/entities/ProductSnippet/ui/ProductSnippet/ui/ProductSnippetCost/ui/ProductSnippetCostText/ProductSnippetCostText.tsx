@@ -1,8 +1,8 @@
 import { memo, ReactNode } from 'react';
-import { Product } from '../../../../../../model/types/product';
+import { Product } from '../../../../../../../Product/model/types/product';
 import { splitDigitsByThinSpace } from '@/shared/lib/helpers/splitDigitsByThinSpace';
 import classNames from '@/shared/lib/helpers/classNames';
-import { priceFromCost } from '../../../../../../model/helper/priceFromCost';
+import { priceFromCost } from '../../../../../../../Product/model/helper/priceFromCost';
 import cls from './ProductSnippetCostText.module.scss';
 
 export interface ProductSnippetCostTextProps {
