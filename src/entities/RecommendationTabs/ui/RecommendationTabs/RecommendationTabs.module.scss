@@ -36,7 +36,7 @@
     z-index: 100;
 
     span {
-        color: #fff;
+        color: rgb(33 32 31 / 50.2%);
         cursor: pointer;
         font-weight: 500;
         transition: color 0.05s;
@@ -81,6 +81,12 @@
         line-height: 18px;
         word-wrap: break-word;
         hyphens: auto;
+    }
+}
+
+.itemActive {
+    span {
+        color: #fff;
     }
 }
 

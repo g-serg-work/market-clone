@@ -1,5 +1,8 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { RecommendationTabs } from './RecommendationTabs';
+import {
+    RecommendationTabs,
+    RecommendationTabsProps,
+} from './RecommendationTabs';
 
 export default {
     title: 'entities/RecommendationTabs',
@@ -13,5 +16,10 @@ const Template: ComponentStory<typeof RecommendationTabs> = (args) => (
     <RecommendationTabs {...args} />
 );
 
+const args: RecommendationTabsProps = {};
+
 export const Normal = Template.bind({});
-Normal.args = {};
+Normal.args = args;
+
+export const TabSale = Template.bind({});
+TabSale.args = { ...args, isSale: true };
