@@ -8,5 +8,5 @@ export function priceFromCost(cost: ProductCost): number {
     if (discount) value -= (value * discount.percent) / 100;
     if (chefBank) value -= (value * chefBank.percent) / 100;
 
-    return value;
+    return Math.trunc(value);
 }

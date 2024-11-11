@@ -6,6 +6,7 @@ import {
 } from './ProductSnippetBlock';
 import StyledDecorator from '@/shared/config/storybook/StyledDecorator';
 import { Product } from '@/entities/Product';
+import { ChefBankNames } from '@/entities/ChefBank';
 
 export default {
     title: 'entities/ProductSnippet/ProductSnippetBlock/ProductSnippetBlock',
@@ -53,4 +54,27 @@ MoreOne.args = {
             id: 'id3',
         },
     ],
+};
+
+export const WithDiscountCost = Template.bind({});
+WithDiscountCost.args = {
+    ...args,
+    products: [
+        product,
+        {
+            ...product,
+            id: 'id2',
+        },
+        {
+            ...product,
+            id: 'id3',
+        },
+    ].map((product) => ({
+        ...product,
+        cost: {
+            value: 1000,
+            discount: { percent: 15, forYou: true, isSuperPrice: true },
+            chefBank: { name: ChefBankNames.ALFA, percent: 5 },
+        },
+    })),
 };
