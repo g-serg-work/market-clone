@@ -1,7 +1,7 @@
-import { useLocation , Link } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { Page } from '@/widgets/Page';
 
-const uriList = ['/catalog/kids-dep', '/my/orders'].map((uri, idx) => (
+const uriList = ['/', '/catalog/kids-dep', '/my/orders'].map((uri, idx) => (
     <li key={idx}>
         <Link to={uri} style={{ textDecoration: 'underline' }}>
             {uri}
