@@ -43,33 +43,13 @@ Primary.args = args;
 export const MoreOne = Template.bind({});
 MoreOne.args = {
     ...args,
-    products: [
-        product,
-        {
-            ...product,
-            id: 'id2',
-        },
-        {
-            ...product,
-            id: 'id3',
-        },
-    ],
+    products: [product, product, product],
 };
 
 export const WithDiscountCost = Template.bind({});
 WithDiscountCost.args = {
     ...args,
-    products: [
-        product,
-        {
-            ...product,
-            id: 'id2',
-        },
-        {
-            ...product,
-            id: 'id3',
-        },
-    ].map((product) => ({
+    products: [product, product, product].map((product) => ({
         ...product,
         cost: {
             value: 1000,

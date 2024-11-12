@@ -1,0 +1,23 @@
+.MainPage {
+    position: relative;
+}
+
+.wrapper {
+    margin-top: 16px;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+    background: none;
+}
+
+.container {
+    display: block;
+}
+
+.tabsWrapper {
+    max-width: 1490px;
+    margin: auto;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+}

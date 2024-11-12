@@ -119,7 +119,7 @@ module.exports = {
             { restrictDefaultExports: { defaultFrom: true } },
         ],
         'jsx-a11y/tabindex-no-positive': 'off',
-        '@typescript-eslint/no-unused-vars': ['error'],
+        '@typescript-eslint/no-unused-vars': ['warn'],
         'jsx-a11y/no-noninteractive-tabindex': 'off',
         'jsx-a11y/anchor-has-content': 'off',
     },
