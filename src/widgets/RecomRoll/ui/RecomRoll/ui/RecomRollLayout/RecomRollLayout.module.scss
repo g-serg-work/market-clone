@@ -1,0 +1,19 @@
+.RecomRollLayout {
+    position: relative;
+}
+
+.wrapper {
+    flex-direction: column;
+    display: flex;
+    position: relative;
+}
+
+.rollWrapper {
+    margin-top: 8px;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+    background: none;
+}
+
+.roll { display: block; }

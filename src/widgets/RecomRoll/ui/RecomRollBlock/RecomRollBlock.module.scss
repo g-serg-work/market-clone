@@ -1,0 +1,18 @@
+.RecomRollBlock {
+    position: relative;
+}
+
+.wrapper {
+    grid-template-columns: repeat(6, 1fr);
+    display: grid;
+    list-style: none;
+    list-style-type: none;
+    padding: 0;
+    column-gap: 4px;
+    grid-auto-columns: 1fr;
+}
+
+.item {
+    margin-bottom: 4px;
+    height: 100%;
+}
