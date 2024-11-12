@@ -30,7 +30,7 @@ export const CatalogPageWithParam = (
     });
 
     if (isLoading) {
-        return <div className="pageIsLoading" />;
+        return <div className="footerHide" />;
     }
 
     if (isError) {

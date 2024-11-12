@@ -17,7 +17,7 @@ export function RequireAuth(props: RequireAuthProps) {
 
         // <Navigate to={getRouteMain()} state={{ from: location }} replace />
         return (
-            <Suspense fallback={<div className="pageIsLoading" />}>
+            <Suspense fallback={<div className="footerHide" />}>
                 <RequireAuthPage />
             </Suspense>
         );

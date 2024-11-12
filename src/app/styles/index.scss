@@ -24,11 +24,11 @@ body {
         overflow-y: hidden;
     }
 
-    &:has(.pageIsLoading) #footer {
+    &:has(.footerHide) #footer {
         display: none;
     }
 
-    &:has(.ModalExclusive) #app {
+    &:has(.modalExclusive) #app {
         display: none;
     }
 }

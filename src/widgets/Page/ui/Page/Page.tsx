@@ -22,7 +22,7 @@ export interface PageProps extends TestProps {
 export const PAGE_DATA_ZONE_NAME = 'CmsPage';
 
 export const Page = memo((props: PageProps) => {
-    const { className, children, onScrollEnd } = props;
+    const { className, children, onScrollEnd, ...rest } = props;
     const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>;
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
 
@@ -34,6 +34,7 @@ export const Page = memo((props: PageProps) => {
 
     useInfiniteScroll({
         triggerRef,
+        wrapperRef,
         callback: onScrollEnd,
     });
 
@@ -57,6 +58,7 @@ export const Page = memo((props: PageProps) => {
             onScroll={onScroll}
             data-zone-name={PAGE_DATA_ZONE_NAME}
             data-testid={props['data-testid'] ?? 'Page'}
+            {...rest}
         >
             {children}
             {onScrollEnd ? (
