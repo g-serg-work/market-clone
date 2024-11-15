@@ -9,6 +9,7 @@ API: [market-clone-api.vercel.app](https://market-clone-api.vercel.app)
 ## ScreenShots
 
 <p float="left">
+  <img src="docs/screenshots/008.png" style="height:150px;margin:5px;border:dotted 1px lightgray" />
   <img src="docs/screenshots/001.png" style="height:150px;margin:5px;border:dotted 1px lightgray" />
   <img src="docs/screenshots/002.png" style="height:150px;margin:5px;border:dotted 1px lightgray" />
   <img src="docs/screenshots/003.png" style="height:150px;margin:5px;border:dotted 1px lightgray" />
@@ -16,6 +17,8 @@ API: [market-clone-api.vercel.app](https://market-clone-api.vercel.app)
   <img src="docs/screenshots/005.png" style="height:150px;margin:5px;border:dotted 1px lightgray" />
   <img src="docs/screenshots/006.png" style="height:150px;margin:5px;border:dotted 1px lightgray" />
   <img src="docs/screenshots/007.png" style="height:150px;margin:5px;border:dotted 1px lightgray" />
+  <img src="docs/screenshots/009.png" style="height:150px;margin:5px;border:dotted 1px lightgray" />
+  <img src="docs/screenshots/010.png" style="height:150px;margin:5px;border:dotted 1px lightgray" />
 </p>
 
 ## Introduction
