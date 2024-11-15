@@ -1,18 +1,19 @@
 import { useEffect } from 'react';
 import { RecomRollSkeleton } from '../RecomRollSkeleton/RecomRollSkeleton';
 import { useRecomRoll } from '../../api/recomRollApi';
-import { ApiError } from '@/shared/ui/ApiError';
 import { RecomRollRow, RecomRollTypes } from '@/entities/RecomRoll';
+import { ApiErrorType } from '@/shared/ui/ApiError';
 
 export interface RecomRollLoaderProps {
     type: RecomRollTypes;
     offset: number;
-    onLoad?: (row: RecomRollRow) => void;
-    isFirstLoad?: boolean;
+    onLoad?: (row: RecomRollRow | undefined) => void;
+    onError?: (error: ApiErrorType) => void;
+    showSkeleton?: boolean;
 }
 
 export const RecomRollLoader = (props: RecomRollLoaderProps) => {
-    const { type, offset, onLoad, isFirstLoad } = props;
+    const { type, offset, onLoad, onError, showSkeleton } = props;
 
     const {
         data: row,
@@ -22,26 +23,12 @@ export const RecomRollLoader = (props: RecomRollLoaderProps) => {
     } = useRecomRoll({ type, offset });
 
     useEffect(() => {
-        if (!isLoading && !isError && row) {
+        if (isError) {
+            onError?.(error);
+        } else if (!isLoading) {
             onLoad?.(row);
         }
-    }, [onLoad, type, row, isLoading, isError]);
+    }, [error, isError, onLoad, onError, row, isLoading]);
 
-    if (isLoading && !isFirstLoad) {
-        return (
-            <div>
-                <RecomRollSkeleton />
-            </div>
-        );
-    }
-
-    if (isError) {
-        return (
-            <RecomRollSkeleton>
-                <ApiError error={error} />
-            </RecomRollSkeleton>
-        );
-    }
-
-    return null;
+    return isLoading && showSkeleton ? <RecomRollSkeleton /> : null;
 };

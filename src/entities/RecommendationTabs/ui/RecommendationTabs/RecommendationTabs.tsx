@@ -37,13 +37,13 @@ export const RecommendationTabs = memo((props: RecommendationTabsProps) => {
                             itemForYouMods,
                             [],
                         )}
-                        onClick={toggle}
+                        onClick={isSale ? toggle : undefined}
                     >
                         <span>Для вас</span>
                     </ClickAble>
                     <ClickAble
                         className={classNames(cls.itemSale, itemSaleMods, [])}
-                        onClick={toggle}
+                        onClick={isSale ? undefined : toggle}
                     >
                         <img src={isSale ? SaleActiveWebp : SaleWebp} alt="" />
                         <span>Распродажа</span>
