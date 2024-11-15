@@ -3,6 +3,7 @@ import { useState, useMemo } from 'react';
 interface UseBoolHandlers {
     on: () => void;
     off: () => void;
+    set: (bool: boolean) => void;
     toggle: () => void;
     reset: () => void;
 }
@@ -14,6 +15,7 @@ export function useBool(bool: boolean = false): [boolean, UseBoolHandlers] {
         () => ({
             on: () => setState(true),
             off: () => setState(false),
+            set: (bool: boolean) => setState(bool),
             toggle: () => setState((s) => !s),
             reset: () => setState(bool),
         }),

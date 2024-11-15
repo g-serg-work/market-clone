@@ -21,23 +21,25 @@ export const RecomRoll = memo((props: RecomRollProps) => {
 
     const [rows, setRows] = useState<RecomRollRow[]>([]);
     const [needLoad, setNeedLoad] = useBool();
+    const [hasNext, setHasNext] = useBool(true);
     const isFirstLoad = rows.length === 0;
 
     useEffect(() => {
         return elementOnScreenChannel.on(
             elementOnChannelEvent.footerOnScreen,
             (onScreen) => {
-                if (onScreen && !isFirstLoad) setNeedLoad.on();
+                if (onScreen && !isFirstLoad && hasNext) setNeedLoad.on();
             },
         );
-    }, [setNeedLoad, isFirstLoad]);
+    }, [setNeedLoad, isFirstLoad, hasNext]);
 
     const onLoad = useCallback(
-        (rows: RecomRollRow[]) => {
+        (row: RecomRollRow) => {
             setNeedLoad.off();
-            setRows((state) => state.concat(rows));
+            setHasNext.set(row.hasNext);
+            setRows((state) => state.concat([row]));
         },
-        [setRows, setNeedLoad],
+        [setRows, setNeedLoad, setHasNext],
     );
 
     return (

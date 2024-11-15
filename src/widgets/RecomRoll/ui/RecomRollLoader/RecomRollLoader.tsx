@@ -7,7 +7,7 @@ import { RecomRollRow, RecomRollTypes } from '@/entities/RecomRoll';
 export interface RecomRollLoaderProps {
     type: RecomRollTypes;
     offset: number;
-    onLoad?: (rows: RecomRollRow[]) => void;
+    onLoad?: (row: RecomRollRow) => void;
     isFirstLoad?: boolean;
 }
 
@@ -15,17 +15,17 @@ export const RecomRollLoader = (props: RecomRollLoaderProps) => {
     const { type, offset, onLoad, isFirstLoad } = props;
 
     const {
-        data: rows,
+        data: row,
         isLoading,
         isError,
         error,
     } = useRecomRoll({ type, offset });
 
     useEffect(() => {
-        if (!isLoading && !isError && rows) {
-            onLoad?.(rows);
+        if (!isLoading && !isError && row) {
+            onLoad?.(row);
         }
-    }, [onLoad, type, rows, isLoading, isError]);
+    }, [onLoad, type, row, isLoading, isError]);
 
     if (isLoading && !isFirstLoad) {
         return (

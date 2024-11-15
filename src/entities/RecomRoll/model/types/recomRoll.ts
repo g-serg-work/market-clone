@@ -2,6 +2,7 @@ import { Product } from '@/entities/Product';
 import { SnippetBlock } from '@/entities/ProductSnippet';
 
 export interface RecomRollRow {
+    hasNext: boolean;
     products: Product[];
     snippetBlocks: SnippetBlock[];
 }

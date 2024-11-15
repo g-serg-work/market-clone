@@ -8,7 +8,7 @@ export interface RecomRollArg {
 
 const recomRollApi = rtkApi.injectEndpoints({
     endpoints: (build) => ({
-        getRecomRoll: build.query<RecomRollRow[], RecomRollArg>({
+        getRecomRoll: build.query<RecomRollRow, RecomRollArg>({
             query: ({ type, offset }) => ({
                 url: '/recom-roll',
                 params: {

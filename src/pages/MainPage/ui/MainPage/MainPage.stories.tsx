@@ -33,12 +33,11 @@ const snippetBlock: SnippetBlock = {
     products: [product],
 };
 
-const rows: RecomRollRow[] = [
-    {
-        products: [product, product],
-        snippetBlocks: [snippetBlock],
-    },
-];
+const row: RecomRollRow = {
+    hasNext: true,
+    products: [product, product],
+    snippetBlocks: [snippetBlock],
+};
 
 export const Primary = Template.bind({});
 Primary.args = {};
@@ -49,7 +48,7 @@ Primary.parameters = {
             url: `${__API__}/recom-roll?type=guest&offset=0`,
             method: 'GET',
             status: 200,
-            response: rows,
+            response: row,
         },
     ],
 };

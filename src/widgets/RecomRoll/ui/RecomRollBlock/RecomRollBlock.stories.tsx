@@ -37,6 +37,7 @@ const snippetBlock: SnippetBlock = {
 
 const args: RecomRollBlockProps = {
     row: {
+        hasNext: true,
         products: [product, product],
         snippetBlocks: [snippetBlock],
     },
